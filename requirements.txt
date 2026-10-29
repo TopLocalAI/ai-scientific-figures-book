@@ -1,0 +1,2 @@
+# Optional: regenerate the deterministic data figures.
+matplotlib==3.9.4

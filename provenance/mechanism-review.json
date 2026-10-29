@@ -1,0 +1,18 @@
+{
+  "asset": "figures/mechanism-codex.png",
+  "created": "2026-10-29",
+  "generator": "Codex built-in image generation",
+  "model": "Not exposed by the generation tool",
+  "prompt": "provenance/mechanism-prompt.txt",
+  "sha256": "4b51475ed23a8bb71e9b547c811f13615a88f991954640b3304bac04b1c3f0ca",
+  "status": "Accepted as a teaching candidate after visual review",
+  "review": {
+    "nodes": "R, K, P, I each appear once",
+    "relations": "R → K solid arrow; K → P dashed arrow; I inhibits K with a T-bar",
+    "unsupported_scientific_content": "None; all relationships are fictional teaching assumptions",
+    "style_deviation": "Soft tonal variation remains in nodes despite the flat-style request",
+    "scientific_validation": "Not applicable to a fictional model; not evidence for a biological mechanism"
+  },
+  "postprocessing": "Original tool output copied without visual edits",
+  "product_claim": "Generated in Codex, not in SciDraw AI"
+}

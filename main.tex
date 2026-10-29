@@ -1,0 +1,47 @@
+% !TeX program = xelatex
+\documentclass[UTF8,openany,fontset=fandol,zihao=-4]{ctexbook}
+\input{shared/preamble}
+\ctexset{chapter={format=\Large\bfseries,beforeskip=12pt,afterskip=22pt}}
+\hypersetup{pdftitle={用 AI 画好科研图：从研究思路到论文配图},pdfauthor={TopLocalAI contributors},pdflang={zh-CN}}
+\begin{document}
+\begin{titlepage}
+\color{BookInk}
+\vspace*{18mm}
+{\sffamily\large TopLocalAI 开源书籍\par}
+\vspace{18mm}
+{\Huge\bfseries 用 AI 画好科研图\par}
+\vspace{8mm}
+{\Large 从研究思路到论文配图\par}
+\vspace{14mm}
+{\large 以 SciDraw AI 为实践平台\par}
+\vfill
+{\large 中文版 · 工作稿 v\bookversion\par}
+\vspace{3mm}
+{\normalsize \bookdate\par}
+\vspace{8mm}
+{\small 前言与第一、二章；其余章节列入写作计划。\par}
+\end{titlepage}
+\frontmatter
+\chapter*{版本与使用说明}
+本书由 TopLocalAI 开放维护，采用 LaTeX 编写，提供中文和英文两个版本。当前工作稿包含前言、第一章和第二章，以及完整章节计划、练习材料和案例来源说明。
+
+正文以 SciDraw AI 组织实践路线。本版图例由 Codex 辅助制作：数据图来自公开的模拟 CSV 和可运行脚本，机制图来自 Codex 内置图像生成。它们不被描述为 SciDraw AI 的生成结果。界面截图来自本地开发版，向导的公开上线状态须另行确认。
+
+书稿、原创教学数据和图版按 \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0} 提供；构建脚本、绘图程序与通用排版代码按 MIT 许可证提供。许可范围及素材说明见仓库中的 LICENSE、ASSETS.md 和 provenance 目录。产品名称与商标不因开源而转让。
+
+请引用：TopLocalAI contributors. \emph{用 AI 画好科研图：从研究思路到论文配图}. 工作稿 v\bookversion, \bookdate.
+
+\url{https://github.com/TopLocalAI/ai-scientific-figures-book}
+\begingroup\small\linespread{1.0}\selectfont
+\setlength{\parskip}{0pt}
+\tableofcontents
+\endgroup
+\input{chapters/zh/00-preface}
+\mainmatter
+\input{chapters/zh/01-workflow}
+\input{chapters/zh/02-brief}
+\appendix
+\input{chapters/zh/appendices}
+\backmatter
+\input{shared/references}
+\end{document}

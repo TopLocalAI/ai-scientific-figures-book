@@ -1,0 +1,47 @@
+% !TeX program = xelatex
+% SPDX-License-Identifier: CC-BY-4.0
+\documentclass[11pt,openany]{book}
+\input{shared/preamble}
+\hypersetup{pdftitle={Use AI to Make Better Scientific Figures: From Research Ideas to Paper Figures},pdfauthor={TopLocalAI contributors},pdflang={en}}
+\begin{document}
+\begin{titlepage}
+\color{BookInk}
+\vspace*{18mm}
+{\sffamily\large An open book by TopLocalAI\par}
+\vspace{18mm}
+{\Huge\bfseries Use AI to Make Better Scientific Figures\par}
+\vspace{8mm}
+{\Large From Research Ideas to Paper Figures\par}
+\vspace{14mm}
+{\large Practical workflows with SciDraw AI\par}
+\vfill
+{\large English edition · Working draft v\bookversion\par}
+\vspace{3mm}
+{\normalsize \bookdate\par}
+\vspace{8mm}
+{\small Preface and Chapters 1--2; later chapters remain on the writing roadmap.\par}
+\end{titlepage}
+\frontmatter
+\chapter*{Version and use}
+This open book is maintained by TopLocalAI in LaTeX, with Chinese and English editions. The current draft contains the preface, Chapters 1 and 2, a complete chapter plan, exercises, and asset provenance.
+
+SciDraw AI provides the practical workflow used throughout the book. In this edition, Codex assists with the example figures: the data plot is rendered from a published simulated CSV by a reproducible script, and the mechanism illustration is an actual output of Codex's built-in image generation. Neither is presented as a SciDraw AI generation result. Interface screenshots show a local development version; public availability of the guide must be checked separately.
+
+The manuscript, original teaching data, and figures are offered under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}. Build scripts, plotting code, and shared typesetting code use the MIT license. See LICENSE, ASSETS.md, and the provenance directory for scope and source details. Product names and trademarks are not transferred by these licenses.
+
+Suggested citation: TopLocalAI contributors. \emph{Use AI to Make Better Scientific Figures: From Research Ideas to Paper Figures}. Working draft v\bookversion, \bookdate.
+
+\url{https://github.com/TopLocalAI/ai-scientific-figures-book}
+\begingroup\small\linespread{1.0}\selectfont
+\setlength{\parskip}{0pt}
+\tableofcontents
+\endgroup
+\input{chapters/en/00-preface}
+\mainmatter
+\input{chapters/en/01-workflow}
+\input{chapters/en/02-brief}
+\appendix
+\input{chapters/en/appendices}
+\backmatter
+\input{shared/references}
+\end{document}

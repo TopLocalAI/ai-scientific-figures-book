@@ -1,0 +1,17 @@
+build/
+__pycache__/
+.venv/
+.DS_Store
+.env
+.env.*
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+/main.pdf
+/main-en.pdf

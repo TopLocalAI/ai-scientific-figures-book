@@ -1,0 +1,50 @@
+\chapter{Book roadmap and companion materials}
+
+This edition contains drafts of the preface and Chapters 1 and 2. Later chapters follow research communication tasks. Each will cover AI assistance, a SciDraw AI workflow, author review, a revision example, and deliverables.
+
+\begin{longtable}{p{0.08\linewidth}p{0.38\linewidth}p{0.43\linewidth}}
+\toprule
+\textbf{Ch.} & \textbf{Topic} & \textbf{Main deliverable} \\
+\midrule
+\endhead
+1 & AI figure workflows & Brief, route, source archive; drafted \\
+2 & Research to drawing brief & Relationship table and acceptance criteria; drafted \\
+3 & Composition and sketches & Two candidates and a selection rationale \\
+4 & Visual language & Color, type, labels, and arrow conventions \\
+5 & Data visualization & Data, figure, revisions, and checks \\
+6 & Methods and workflows & Step table, diagram, and conditions \\
+7 & Mechanisms and structures & Relationship table, corrections, and legend \\
+8 & Experimental images & Originals, panel plan, processing record \\
+9 & Panels and legends & Assembled figure and reviewed legend \\
+10 & Graphical abstracts & Brief, layout candidates, final figure \\
+11 & Effective revisions & Issue list and reviewed iterations \\
+12 & Presentations and posters & Versions for different viewing situations \\
+13 & Checks and delivery & Figures, legends, sources, AI-use record \\
+\bottomrule
+\end{longtable}
+
+\section{A reusable brief}
+\begin{Prompt}
+[Audience and use]
+[One-sentence purpose]
+[Materials and sources]
+[Required content]
+[Relationships and order]
+[Evidence: observation, interpretation, hypothesis, unknown]
+[Visual plan]
+[Constraints: what must not change]
+[Delivery requirements and date checked]
+[Acceptance criteria]
+\end{Prompt}
+
+\section{Simulated-data dictionary}
+\texttt{data/paired-example.csv} contains manually constructed teaching data. Eight fictional objects each have two measurements in arbitrary units. There are no missing values or predefined exclusion criteria. Seven objects increase; SIM04 decreases from 18 to 17. The before mean is 13.125 and the after mean is 16.5. These descriptions support no real research, causal, or treatment-effect claim.
+
+\texttt{scripts/plot\_paired.py} reads the original CSV, checks these properties, and renders the plots. It produces PDF and PNG figures with Chinese or English labels. It does not invent, remove, or alter observations.
+
+\section{Figure provenance and AI-use records}
+The mechanism image comes from Codex's built-in image generation. The executed prompt is in \texttt{provenance/mechanism-prompt.txt}; the review is in \texttt{mechanism-review.json} in the same directory. The tool did not expose a specific model name, so the book does not infer one. The original output is preserved without visual postprocessing.
+
+The executed prompt moves explanations of relationships to the caption instead of placing words inside the image. This preserves their meaning and lets both editions share the figure. Review covers object counts, directions, line styles, and unsupported additions. Slight tonal variation within nodes is recorded as a style deviation. The fictional relationships have no status as biological evidence.
+
+The workflow is a Codex-authored TikZ diagram, and interface images are real development screenshots. ASSETS.md lists sources and uses. Future real-research cases must add source material, any necessary permission, actual tool operations, and revision records.

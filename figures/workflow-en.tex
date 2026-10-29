@@ -1,0 +1,16 @@
+\begin{tikzpicture}[
+  box/.style={draw=BookTeal,rounded corners=2pt,fill=BookPale,minimum width=34mm,minimum height=12mm,align=center,font=\small},
+  link/.style={-{Stealth[length=2mm]},thick,draw=BookInk}
+]
+\node[box] (a) {Define the task};
+\node[box,right=9mm of a] (b) {Prepare materials};
+\node[box,right=9mm of b] (c) {Create a draft};
+\node[box,below=14mm of c] (d) {Review and revise};
+\node[box,left=9mm of d] (e) {Panels and legend};
+\node[box,left=9mm of e] (f) {Check and deliver};
+\draw[link] (a)--(b);
+\draw[link] (b)--(c);
+\draw[link] (c)--(d);
+\draw[link] (d)--(e);
+\draw[link] (e)--(f);
+\end{tikzpicture}

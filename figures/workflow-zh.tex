@@ -1,0 +1,16 @@
+\begin{tikzpicture}[
+  box/.style={draw=BookTeal,rounded corners=2pt,fill=BookPale,minimum width=34mm,minimum height=12mm,align=center,font=\small},
+  link/.style={-{Stealth[length=2mm]},thick,draw=BookInk}
+]
+\node[box] (a) {说明任务};
+\node[box,right=9mm of a] (b) {准备材料};
+\node[box,right=9mm of b] (c) {制作初稿};
+\node[box,below=14mm of c] (d) {核对与修改};
+\node[box,left=9mm of d] (e) {组图与图注};
+\node[box,left=9mm of e] (f) {检查与交付};
+\draw[link] (a)--(b);
+\draw[link] (b)--(c);
+\draw[link] (c)--(d);
+\draw[link] (d)--(e);
+\draw[link] (e)--(f);
+\end{tikzpicture}

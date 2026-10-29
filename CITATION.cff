@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite the working draft when using the book or its teaching materials."
+title: "Use AI to Make Better Scientific Figures: From Research Ideas to Paper Figures"
+type: book
+authors:
+  - name: "TopLocalAI contributors"
+version: 0.1.0
+date-released: 2026-10-29
+repository-code: "https://github.com/TopLocalAI/ai-scientific-figures-book"
+url: "https://github.com/TopLocalAI/ai-scientific-figures-book"
+license: CC-BY-4.0
+keywords:
+  - scientific figures
+  - artificial intelligence
+  - scientific visualization
+  - SciDraw AI
+  - LaTeX

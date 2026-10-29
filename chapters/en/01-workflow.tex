@@ -1,0 +1,143 @@
+\chapter{Build your AI scientific-figure workflow}
+
+Suppose you have a table containing two measurements for each of eight objects. You want to turn it into a figure for a paper. If you enter “Make a professional data plot,” the tool may return an apparently complete result. Yet that instruction does not tell it whether the columns belong to the same objects, or whether your question concerns average differences, individual changes, or agreement between measurements.
+
+A small omission can change the study design communicated by the figure. This chapter addresses that problem by organizing the work before operating the tool.
+
+\section{Give the figure a testable task}
+
+A scientific figure should answer a principal question. It might explain the order of a process, relationships among objects, or changes between two measurements of the same object. The question should be specific enough to influence the chart type, layout, or labels.
+
+“Show the experimental results” is too broad. “Show each object's change and make it possible to see whether the changes are consistent” is more useful. It requires individual correspondence, direct comparison between measurements, and space for an object that moves against the majority.
+
+Identifying the audience and the message before designing a figure is a basic practice in scientific visualization. Rougier and colleagues present these as separate rules; this book places them at the start of every brief.\cite{rougier2014}
+
+Write your first sentence:
+
+\begin{BookNote}
+After viewing this figure, the reader should understand \rule{25mm}{0.3pt} and be able to locate \rule{25mm}{0.3pt} in the figure.
+\end{BookNote}
+
+The first blank states the purpose; the second identifies something the reader can check. For example: “understand the changes in eight objects and locate the two observations for each object.” This statement does not require the result to match an expectation. It requires the figure to accommodate different outcomes.
+
+\section{Identify the material you are handling}
+
+We use three operational categories. A paper, or even a single multi-panel figure, can contain all three.
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{YYYY}
+\toprule
+\textbf{Material} & \textbf{Main content} & \textbf{AI assistance} & \textbf{Author review} \\
+\midrule
+Numbers and tables & Quantities, distributions, changes & Plot proposals, chart creation, styling & Values, units, groups, pairing, statistics \\
+Text, sketches, confirmed relationships & Structure, methods, mechanisms & Layout candidates, illustrations, revisions & Objects, counts, direction, conditions, evidence \\
+Acquired experimental images & Observed form, signal, spatial information & Presentation planning, descriptions, checks & Originals, calibration, processing, comparability \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The category affects the tool you choose. Use the scientific-visualization data workflow when values and their correspondence must be preserved. Use the drawing workflow to explain a confirmed process. For experimental images, keep the original files and then work on presentation and panel assembly.
+
+A graphical abstract often combines categories. Icons may explain a method while a small data plot summarizes a result. Each part still needs the treatment appropriate to its source. A schematic that explains an apparatus and an image actually acquired by that apparatus play different evidential roles.
+
+\section{Organize the work into six stages}
+
+You do not need a complex project system. Begin with six stages: define the task, prepare materials, create a draft, review and revise, organize the explanation, and check and deliver.
+
+\workflowfigure{en}{The book's workflow. A task may omit stages such as panel assembly. When a check identifies a problem, return to the stage that can resolve it.}
+
+\textbf{Define the task.} State the use, audience, and main question. The useful output at this stage is an editable drawing brief.
+
+\textbf{Prepare materials.} Locate the data, original images, supporting relationships, and necessary methods. Confirm that they belong to compatible versions and list missing information. Similar filenames do not make two files interchangeable.
+
+\textbf{Create a draft.} Provide the brief and materials to the appropriate tool. Save the instruction actually submitted, so that later you can distinguish an unclear request from an incorrectly executed one.
+
+\textbf{Review and revise.} Check scientific content before presentation. Ask for a specific change, such as “increase the axis-label size while retaining every point and pairing.” After each revision, inspect the result again, including elements that were not meant to change.
+
+\textbf{Organize the explanation.} For several images, decide panel order and numbering. When writing a legend, add information that cannot be inferred from the image alone. Compare an AI-generated draft with the experimental record.
+
+\textbf{Check and deliver.} Inspect the figure at its final display size, verify the technical properties, and retain the legend and source materials. A colleague receiving the file should be able to identify the data or original-image version behind it.
+
+AI has a different role in each stage. A first draft makes a possible explanation visible. A revision carries out a defined change. A legend draft supplies text to inspect. Adoption depends on agreement with the brief and source materials.
+
+\section{Choose a route in SciDraw AI}
+
+Open the scientific-figure workflow guide and select the current task. Its four routes cover mechanisms and workflows, data visualization, assembly of existing images, and graphical abstracts. Each route provides steps, materials to bring, outputs to save, and checks before continuing.
+
+\begin{figure}[p]\centering
+\includegraphics[width=0.94\linewidth,height=0.78\textheight,keepaspectratio]{figures/workflow-ui-en.png}
+\caption{The English development interface of the SciDraw AI figure-workflow guide, captured on October 29, 2026. This local preview illustrates task navigation; it does not establish that the guide has been deployed publicly.}
+\label{fig:guide}
+\end{figure}
+
+Start at “Prepare your brief” when beginning a figure. If you already have an image and need a legend, enter at that stage. The guide supplies a route; the work itself takes place in the existing drawing, visualization, panel, legend, and checking tools.
+
+This version stores the brief and progress in the current browser. Copy the brief or download it as text. Browser storage does not replace a source-material folder: changing browsers, clearing site data, or using an environment that blocks storage may remove access to the record. Download anything you need to retain.
+
+“Next step” only changes the displayed step. Mark a step complete after checking the work. You can also undo that status. Progress should represent a decision you made, rather than a count of pages visited.
+
+When a tool opens from the guide, the task and step accompany the link. Relevant pages provide a return control, and a drawing conversation can be reopened through its reference. Images currently move between tools through downloading and uploading. Save the current figure, then select that file in the panel, legend, or checking tool. A version in the filename reduces the chance of uploading the wrong image.
+
+\section{Exercise: plan a plot for paired data}
+
+Download \texttt{paired-example.csv} and read its data dictionary. It contains eight fictional objects with measurements named \texttt{before} and \texttt{after}. Values use arbitrary units, abbreviated a.u. They were constructed for teaching and do not come from an experiment.
+
+Consider three rows:
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+\textbf{sample\_id} & \textbf{before} & \textbf{after} \\
+\midrule
+SIM01 & 12 & 16 \\
+SIM02 & 15 & 18 \\
+SIM04 & 18 & 17 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+SIM01 and SIM02 increase; SIM04 decreases. If the task is to show individual changes, that third row must remain visible. Summaries of the two measurements alone do not retain individual correspondence. Weissgerber and colleagues discuss information that can be obscured when paired data are reduced to summary plots, and emphasize communicating study design.\cite{weissgerber2015}
+
+\pairedfigure{en}{Two views of the same simulated dataset. The left panel retains only the two means. The right panel preserves all eight pairs, including SIM04, which decreases from 18 to 17. Codex wrote the plotting script; the script reads the CSV without generating or altering observations. No significance test is performed.}
+
+Select the data route in the guide and replace the default brief with the following:
+
+\begin{Prompt}
+Use: practice data presentation; report no research finding.
+Purpose: show the changes in eight fictional objects.
+Source: paired-example.csv; sample_id identifies each pair.
+Display: paired points and lines, before on the left, after on the right.
+Constraints: retain all eight objects, all sixteen values, and the original pairing.
+Y-axis: measurement in a.u.; do not change any value.
+Label: state "Simulated teaching data" in the title or legend.
+Analysis: no significance test, causal claim, or treatment-effect claim.
+Review: compare every endpoint with its row; SIM04 must decrease from 18 to 17.
+\end{Prompt}
+
+This is a workable starting point. A paired point-and-line plot is a candidate for this example, not a universal rule for paired data. Many objects, serious overlap, or a different question can justify another presentation.
+
+Complete three tasks now: save the brief, confirm the data dictionary, and list acceptance criteria. This edition also provides the deterministic Codex-authored plotting script and its output as a reference. Chapter 5 will add the actual SciDraw AI visualization session. Do not mark an unperformed generation step complete just to increase the progress count.
+
+\section{Keep a small archive for each figure}
+
+An ordinary folder can support handover. The following is a suggested structure, not a project automatically created by the platform:
+
+\begin{Prompt}
+paired-figure/
+  source/    Original CSV and data dictionary
+  brief/     Brief and instructions actually submitted
+  drafts/    Numbered candidates and revision notes
+  final/     Final figure, legend, and delivery notes
+\end{Prompt}
+
+You do not need to record every mouse movement. Prioritize changes that affect interpretation: a transformed axis, filtered data, a different panel order, or a hypothetical relationship made definite. A colleague comparing two versions should be able to discover why they differ.
+
+Record AI use concretely: the function used, any visible model or settings, the actual input, the selected output, and the review and revisions. Before submission, check the target journal's current requirements. A successful technical check does not establish scientific correctness or compliance with an editorial policy.
+
+\section{Exercise and acceptance criteria}
+
+Choose a figure you intend to make. Write its one-sentence purpose, identify the principal material category, and select a route in the guide. Complete and download the brief, then place it with the source materials.
+
+Ask a colleague who has not watched your work to read the brief. They should be able to say what the figure must communicate, where the input is, what must remain unchanged, and what counts as completion. If their answer is only “clear, professional, and attractive,” the task needs more detail.
+
+The next chapter turns this short description into an executable and reviewable drawing brief.

@@ -1,0 +1,11 @@
+{
+  "data_status": "simulated teaching data",
+  "objects": 8,
+  "measurements": 16,
+  "before_mean": 13.125,
+  "after_mean": 16.5,
+  "increases": 7,
+  "decreases": 1,
+  "decreasing_object": "SIM04",
+  "inferential_tests": "none"
+}

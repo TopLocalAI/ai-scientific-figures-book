@@ -1,0 +1,22 @@
+Copyright 2026 TopLocalAI contributors.
+
+This repository has two license scopes:
+
+1. Manuscript and original teaching materials
+   main.tex, main-en.tex, chapters/, figures/ (except workflow-*.tex),
+   data/, provenance/, shared/references.tex, PDF editions, and editorial documentation:
+   Creative Commons Attribution 4.0 International (CC BY 4.0).
+   Full text: LICENSES/CC-BY-4.0.txt
+   https://creativecommons.org/licenses/by/4.0/
+
+2. Software and reusable typesetting infrastructure
+   scripts/, shared/preamble.tex, figures/workflow-*.tex, Makefile,
+   requirements.txt, and .github/:
+   MIT License.
+   Full text: LICENSES/MIT.txt
+
+See ASSETS.md for the source and review status of each figure. Licenses apply
+only to rights held by the contributors. AI-generated assets are offered to
+the extent such rights exist and are held; no exclusive copyright status is
+asserted for model output. Product names, logos, and trademarks are not
+licensed as trademarks. Cited papers remain under their own terms.

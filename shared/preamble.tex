@@ -1,0 +1,58 @@
+% SPDX-License-Identifier: MIT
+\usepackage{fontspec}
+\setmainfont{texgyrepagella-regular.otf}[
+  BoldFont=texgyrepagella-bold.otf,
+  ItalicFont=texgyrepagella-italic.otf,
+  BoldItalicFont=texgyrepagella-bolditalic.otf]
+\setsansfont{texgyreheros-regular.otf}[
+  BoldFont=texgyreheros-bold.otf,
+  ItalicFont=texgyreheros-italic.otf,
+  BoldItalicFont=texgyreheros-bolditalic.otf]
+\setmonofont{lmmono10-regular.otf}[Scale=MatchLowercase]
+\usepackage[paperwidth=170mm,paperheight=240mm,inner=20mm,outer=18mm,top=20mm,bottom=22mm,headheight=15pt]{geometry}
+\usepackage{graphicx,booktabs,tabularx,longtable,array}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\definecolor{BookTeal}{HTML}{176C68}
+\definecolor{BookInk}{HTML}{23363E}
+\definecolor{BookRule}{HTML}{C8D6D6}
+\definecolor{BookPale}{HTML}{F1F6F5}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Prompt}{Verbatim}{fontsize=\small,breaklines=true,breakanywhere=true,frame=single,rulecolor=\color{BookRule},framesep=2mm}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf,labelsep=period}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\small\thepage}
+\fancyhead[LO,RE]{\small\nouppercase{\leftmark}}
+\renewcommand{\headrulewidth}{0.3pt}
+\usepackage{xurl}
+\usepackage[unicode,hypertexnames=false,colorlinks=true,linkcolor=BookTeal,urlcolor=BookTeal,citecolor=BookTeal,breaklinks=true]{hyperref}
+\usepackage{bookmark}
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{1}
+\let\cleardoublepage\clearpage
+\setlist{nosep,leftmargin=1.8em}
+\renewcommand{\arraystretch}{1.25}
+\setlength{\parskip}{0.3em}
+\setlength{\emergencystretch}{2em}
+\newcommand{\bookversion}{0.1.0}
+\newcommand{\bookdate}{2026-10-29}
+\newcommand{\scidraw}{SciDraw AI}
+\newcommand{\bookrepo}{https://github.com/TopLocalAI/ai-scientific-figures-book}
+\newenvironment{BookNote}{\begin{quote}\small\color{BookInk}}{\end{quote}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\workflowfigure}[2]{%
+  \begin{figure}[htbp]\centering
+  \input{figures/workflow-#1.tex}
+  \caption{#2}\label{fig:workflow}
+  \end{figure}}
+\newcommand{\pairedfigure}[2]{%
+  \begin{figure}[htbp]\centering
+  \includegraphics[width=\linewidth]{figures/paired-comparison-#1.pdf}
+  \caption{#2}\label{fig:paired}
+  \end{figure}}
