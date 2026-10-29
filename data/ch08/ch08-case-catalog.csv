@@ -1,0 +1,5 @@
+filename,source,site,channel,size,bit_depth,um_per_pixel,sha256,license,status
+IXMtest_A13_s1_w1B35C6D5D-DBF9-4779-990D-5E7AFB14D600.tif,BBBC022v1 plate 20585 well A13 mock,1,Hoechst 33342,696x520,16-bit container 12-bit effective,0.656,4be40f814481002aa878dcb34fc4fb45ddd84bd2c7380880408f0de1d1e21f2a,CC0 1.0,read-only original
+IXMtest_A13_s1_w5B257EE32-37B0-4698-891B-11B1B3D3D0C1.tif,BBBC022v1 plate 20585 well A13 mock,1,MitoTracker Deep Red,696x520,16-bit container 12-bit effective,0.656,c1c441e44e91481c56e73140ec5b919f67697f07f8f6db4c853c9b9736ec486a,CC0 1.0,read-only original
+IXMtest_A13_s2_w1951890F6-3FBD-488D-A559-E437F411FE17.tif,BBBC022v1 plate 20585 well A13 mock,2,Hoechst 33342,696x520,16-bit container 12-bit effective,0.656,800419706668d4de834865ff95f10e9d3aa3e2563ce101c7f29a389baa1f9174,CC0 1.0,read-only original
+IXMtest_A13_s2_w5E4FF8FF2-B6AC-4AC6-810D-535064B5C89C.tif,BBBC022v1 plate 20585 well A13 mock,2,MitoTracker Deep Red,696x520,16-bit container 12-bit effective,0.656,b3d11076696b2bf4e7c4fb9bd7dd72c96f64ec4c8a8e42920022ea722f5ff2c5,CC0 1.0,read-only original

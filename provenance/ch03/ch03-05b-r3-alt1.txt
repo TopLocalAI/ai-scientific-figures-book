@@ -1,0 +1,26 @@
+### provenance/ch03/ch03-05b-r3-alt1.png
+
+- 工具：Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）
+- 模型：不知道：工具未返回具体模型标识。
+- 日期：2026-10-29
+- 本阶段第几次：1
+- 参考图：provenance/ch03/ch03-05b-r2.png
+- 输出：1672×941，RGB PNG；SHA-256：`5d070c4471264ea5bc9e980075a5a31001b6492020268550c46803b64b0a3c75`
+- prompt 改动原因：未追加/改写规划英文 prompt；仅作规划要求的公共段拼接或 LAYOUT 占位替换。
+- 人工图像修改：无。
+
+画面内容 / 核验要点逐条检查：
+
+- 落选；通道对齐第 1 次。两框趋于等高、两条长 DNA 端点对齐。
+- 严重副作用：短供体消失，两条结果都同时带青绿和红紫标记，NHEJ/HDR 的区别被抹去。
+- 不接受；回到 r2 重试，没有沿此错误版本继续。
+- 共通核验：未见文字；像素宽度未达2400；约16:9；未真人复核。
+
+实际完整 prompt（保留换行）：
+
+```text
+Edit the selected image. Change only one thing: make the two repair lanes the
+same height, and draw the DNA in both lanes at the same horizontal position and
+the same length, so the two results line up vertically for comparison. Keep
+colors, objects and the top row unchanged. No text.
+```

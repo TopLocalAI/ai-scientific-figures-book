@@ -1,0 +1,30 @@
+% FIG ch09-08 legend drafting (Chinese)
+\begin{tikzpicture}[
+  x=1mm, y=1mm,
+  font=\sffamily\scriptsize,
+  text=BookInk,
+  col/.style={draw=BookInk!45, line width=0.4pt, rounded corners=1pt, inner sep=2mm, align=justify, text width=78mm},
+  hi/.style={fill=BookPale, draw=BookTeal, line width=0.8pt, rounded corners=1pt, inner sep=1.5mm},
+  tag/.style={font=\tiny\bfseries, text=BookTeal, anchor=east},
+]
+  \node[font=\small\bfseries, anchor=west] at (0, 118) {图注起草对照};
+  \node[col, anchor=north west] (draft) at (0, 112) {
+    \textbf{/figure-legend 草稿（实测原文）}\par\vspace{1mm}
+    \fbox{\parbox[t]{72mm}{\centering 待实测，见 \texttt{provenance/ch09/figure-legend-draft-zh.txt}}}
+  };
+  \node[col, anchor=north west] (final) at (88, 112) {
+    \textbf{作者补全版（节选）}\par\vspace{1mm}
+    \tikz{\node[hi, text width=72mm, anchor=west] (t1) at (0,0) {
+      \textbf{图 2 |} 界面钝化对钙钛矿太阳能电池初始性能与运行稳定性的影响（\textbf{模拟教学数据}）。
+    }; \node[tag] at (-1,0) {【数据性质】};}\par
+    \tikz{\node[hi, text width=72mm, anchor=west] (t2) at (0,0) {
+      \textbf{b}，截面形貌示意，由图像生成模型绘制，\textbf{非显微图像}……
+    }; \node[tag] at (-1,0) {【定义】};}\par
+    \tikz{\node[hi, text width=72mm, anchor=west] at (0,0) {
+      c、d 每组为一条模拟曲线，未做统计检验；脚本见 \texttt{sim\_perovskite.py}。
+    }; \node[tag] at (-1,0) {【来源】};}
+  };
+  \node[anchor=west, text=BookInk!70] at (0, 4) {
+    删改示例：\sout{截面图像} $\rightarrow$ 模型生成示意，非显微图像
+  };
+\end{tikzpicture}

@@ -1,0 +1,172 @@
+{
+  "date": "2026-10-29",
+  "task_limit": 3,
+  "plan_limit": 4,
+  "effective_limit": 3,
+  "limit_reason": "Explicit delegated task limits every figure to 3 attempts; this overrides the chapter plan's 4-attempt experiment.",
+  "reference": "figures/ch11/ch11-03-v2-brief.png",
+  "reference_sha256": "bf6c17a83f4394bb1a83d245984126caf6dfdfb54f35a74bc13198a73f0ecf49",
+  "reference_fully_accepted": false,
+  "selected_attempt": 1,
+  "observed_structural_collateral_changes": false,
+  "interpretation": "Three attempts completed the wireless-line edit without observed major structural collateral changes. Do not manufacture a failure or claim four attempts.",
+  "attempts": [
+    {
+      "file": "ch11-04-v3-collateral.png",
+      "version": "V3",
+      "attempt": 1,
+      "key": "v3",
+      "source": "codex-output/exec-75680f40-2989-4e5d-8c02-0c4079d0c81d.png",
+      "selected": true,
+      "reference": "ch11-03-v2-brief.png",
+      "checks": [
+        "输入：独立以 V2 第 2 次结果为参考，使用规划 V3 英文原文；不是在前一次 V3 上继续编辑。",
+        "目标修改：矩形短划线明显加粗，波纹也更醒目。 无线通信与细灰色实线拉索在颜色和线型上可区分。波纹主要位于节点旁，未实现每条链路中段都带波纹的更严格解读。",
+        "对象计数：两塔；拉索可辨走向 4+4+4+4=16；传感器 3+2+2+1+1+1+2=12；网关 1、云 1、服务器条 3、处理框 3、终端 1 组，均与所选 V2 一致。",
+        "连接/位置：原有塔梁关系、两塔顶图标、两端紫色位移计和各子系统位置目视保留；继承参考图中图标遮挡导致的拉索局部留空，没有新增入水/入地拉索。",
+        "L2–L4：橙色网关→云、灰色处理顺序、红色末框→终端保留；没有观察到新增云→传感器或传感器→终端。",
+        "连带变化：未观察到足以支持规划反例的结构变化（少索、少传感器、网关移位等）；不能声称图像逐像素不变，也不能人为删除对象来制造失败。",
+        "继承缺陷：云仍位于网关下方、温度计仍为红色，渐变与小图标问题仍在；这些是 V2 已有问题，不能计为本次编辑造成的连带变化。",
+        "文字与画幅：无可见文字、字母、数字或伪文字；1774×887、2:1，原生文件未经人工重绘。",
+        "核验结论：三次均未观察到明显结构连带变化，选择首次结果展示“目标修改完成、主要对象计数一致”；文件名依规划保留 collateral，但不能用作“真实结构失败”证据。"
+      ],
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 1588813,
+      "sha256": "b828774d08b8ce51f2307c2bb36c976970421c186c131cf55e1ecf9ce4e2aa12",
+      "prompt": "Using the reference image, change only the wireless lines from the sensors to\nthe gateway: make them thicker orange short-dashed lines with small wave marks,\nso they cannot be confused with the stay cables. Keep everything else\nunchanged. No text.",
+      "tool": "image_gen.imagegen (functions tools.image_gen__imagegen)",
+      "model": "不知道；工具未返回具体模型名称",
+      "reference_sha256": "bf6c17a83f4394bb1a83d245984126caf6dfdfb54f35a74bc13198a73f0ecf49",
+      "target_change_completed": true,
+      "observed_structural_collateral_changes": [],
+      "manual_image_alteration": false,
+      "counts": {
+        "pylons": 2,
+        "visible_stay_cable_trajectories": 16,
+        "sensors_by_type": [
+          3,
+          2,
+          2,
+          1,
+          1,
+          1,
+          2
+        ],
+        "sensors_total": 12,
+        "gateway": 1,
+        "cloud": 1,
+        "processing_boxes": 3,
+        "operator_terminal_groups": 1
+      },
+      "count_caveat": "Trajectory count is not proof of uninterrupted lines; baseline gaps near icons remain."
+    },
+    {
+      "file": "ch11-04-v3-collateral-alt1.png",
+      "version": "V3",
+      "attempt": 2,
+      "key": "v3",
+      "source": "codex-output/exec-acb831c1-61fa-4d27-8839-c99d016b1688.png",
+      "selected": false,
+      "reference": "ch11-03-v2-brief.png",
+      "checks": [
+        "输入：独立以 V2 第 2 次结果为参考，使用规划 V3 英文原文；不是在前一次 V3 上继续编辑。",
+        "目标修改：短划线加粗，波纹较第一次更大；线间距随生成略有差异。 无线通信与细灰色实线拉索在颜色和线型上可区分。波纹主要位于节点旁，未实现每条链路中段都带波纹的更严格解读。",
+        "对象计数：两塔；拉索可辨走向 4+4+4+4=16；传感器 3+2+2+1+1+1+2=12；网关 1、云 1、服务器条 3、处理框 3、终端 1 组，均与所选 V2 一致。",
+        "连接/位置：原有塔梁关系、两塔顶图标、两端紫色位移计和各子系统位置目视保留；继承参考图中图标遮挡导致的拉索局部留空，没有新增入水/入地拉索。",
+        "L2–L4：橙色网关→云、灰色处理顺序、红色末框→终端保留；没有观察到新增云→传感器或传感器→终端。",
+        "连带变化：未观察到足以支持规划反例的结构变化（少索、少传感器、网关移位等）；不能声称图像逐像素不变，也不能人为删除对象来制造失败。",
+        "继承缺陷：云仍位于网关下方、温度计仍为红色，渐变与小图标问题仍在；这些是 V2 已有问题，不能计为本次编辑造成的连带变化。",
+        "文字与画幅：无可见文字、字母、数字或伪文字；1774×887、2:1，原生文件未经人工重绘。",
+        "核验结论：未观察到明显结构连带变化，作为未选中的真实尝试保存；不是失败例或人工构造例。"
+      ],
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 1583277,
+      "sha256": "46f386871699b1d4705b991d3280f933123579af739bdfcc94195f1414c100c1",
+      "prompt": "Using the reference image, change only the wireless lines from the sensors to\nthe gateway: make them thicker orange short-dashed lines with small wave marks,\nso they cannot be confused with the stay cables. Keep everything else\nunchanged. No text.",
+      "tool": "image_gen.imagegen (functions tools.image_gen__imagegen)",
+      "model": "不知道；工具未返回具体模型名称",
+      "reference_sha256": "bf6c17a83f4394bb1a83d245984126caf6dfdfb54f35a74bc13198a73f0ecf49",
+      "target_change_completed": true,
+      "observed_structural_collateral_changes": [],
+      "manual_image_alteration": false,
+      "counts": {
+        "pylons": 2,
+        "visible_stay_cable_trajectories": 16,
+        "sensors_by_type": [
+          3,
+          2,
+          2,
+          1,
+          1,
+          1,
+          2
+        ],
+        "sensors_total": 12,
+        "gateway": 1,
+        "cloud": 1,
+        "processing_boxes": 3,
+        "operator_terminal_groups": 1
+      },
+      "count_caveat": "Trajectory count is not proof of uninterrupted lines; baseline gaps near icons remain."
+    },
+    {
+      "file": "ch11-04-v3-collateral-alt2.png",
+      "version": "V3",
+      "attempt": 3,
+      "key": "v3",
+      "source": "codex-output/exec-bb220918-77d8-4609-b9f6-62657cebb91e.png",
+      "selected": false,
+      "reference": "ch11-03-v2-brief.png",
+      "checks": [
+        "输入：独立以 V2 第 2 次结果为参考，使用规划 V3 英文原文；不是在前一次 V3 上继续编辑。",
+        "目标修改：橙色短划线更粗、端部圆润，波纹仍在节点旁。 无线通信与细灰色实线拉索在颜色和线型上可区分。波纹主要位于节点旁，未实现每条链路中段都带波纹的更严格解读。",
+        "对象计数：两塔；拉索可辨走向 4+4+4+4=16；传感器 3+2+2+1+1+1+2=12；网关 1、云 1、服务器条 3、处理框 3、终端 1 组，均与所选 V2 一致。",
+        "连接/位置：原有塔梁关系、两塔顶图标、两端紫色位移计和各子系统位置目视保留；继承参考图中图标遮挡导致的拉索局部留空，没有新增入水/入地拉索。",
+        "L2–L4：橙色网关→云、灰色处理顺序、红色末框→终端保留；没有观察到新增云→传感器或传感器→终端。",
+        "连带变化：未观察到足以支持规划反例的结构变化（少索、少传感器、网关移位等）；不能声称图像逐像素不变，也不能人为删除对象来制造失败。",
+        "继承缺陷：云仍位于网关下方、温度计仍为红色，渐变与小图标问题仍在；这些是 V2 已有问题，不能计为本次编辑造成的连带变化。",
+        "文字与画幅：无可见文字、字母、数字或伪文字；1774×887、2:1，原生文件未经人工重绘。",
+        "核验结论：未观察到明显结构连带变化，作为未选中的真实尝试保存；不是失败例或人工构造例。"
+      ],
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 1596165,
+      "sha256": "7523c7737483f08b02094f73dfabc61ce18d3b3aab21a3a16c86c088c1f41091",
+      "prompt": "Using the reference image, change only the wireless lines from the sensors to\nthe gateway: make them thicker orange short-dashed lines with small wave marks,\nso they cannot be confused with the stay cables. Keep everything else\nunchanged. No text.",
+      "tool": "image_gen.imagegen (functions tools.image_gen__imagegen)",
+      "model": "不知道；工具未返回具体模型名称",
+      "reference_sha256": "bf6c17a83f4394bb1a83d245984126caf6dfdfb54f35a74bc13198a73f0ecf49",
+      "target_change_completed": true,
+      "observed_structural_collateral_changes": [],
+      "manual_image_alteration": false,
+      "counts": {
+        "pylons": 2,
+        "visible_stay_cable_trajectories": 16,
+        "sensors_by_type": [
+          3,
+          2,
+          2,
+          1,
+          1,
+          1,
+          2
+        ],
+        "sensors_total": 12,
+        "gateway": 1,
+        "cloud": 1,
+        "processing_boxes": 3,
+        "operator_terminal_groups": 1
+      },
+      "count_caveat": "Trajectory count is not proof of uninterrupted lines; baseline gaps near icons remain."
+    }
+  ]
+}
+

@@ -1,0 +1,29 @@
+% FIG ch11-07 Chapter 7 collateral reuse (Chinese)
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}
+  \def\panelW{0.31\linewidth}
+  \definecolor{Ch11AnnotRed}{HTML}{C0392B}
+  \node[anchor=south west, inner sep=0] (imA) at (0,0) {%
+    \includegraphics[width=\panelW]{figures/ch11/ch11-07a-ch07-v2.png}};
+  \node[font=\small\sffamily, anchor=south] at ($(imA.north)+(0,2mm)$) {V2 基准};
+
+  \node[anchor=south west, inner sep=0] (imB) at (0.345\linewidth,0) {%
+    \includegraphics[width=\panelW]{figures/ch11/ch11-07b-ch07-v3-alt1.png}};
+  \node[font=\small\sffamily, anchor=south] at ($(imB.north)+(0,2mm)$) {V3 第 1 次（不采用）};
+  \begin{scope}[x={(imB.south east)},y={(imB.north west)}]
+    \draw[Ch11AnnotRed, line width=0.7pt] (0.11,0.28) circle (0.035);
+    \node[font=\scriptsize\sffamily, text=Ch11AnnotRed, anchor=west] at (0.15,0.28) {(a)};
+    \draw[Ch11AnnotRed, line width=0.7pt] (0.10,0.08) circle (0.04);
+    \node[font=\scriptsize\sffamily, text=Ch11AnnotRed, anchor=west] at (0.14,0.08) {(b)};
+    \draw[Ch11AnnotRed, line width=0.7pt] (0.48,0.38) circle (0.06);
+    \node[font=\scriptsize\sffamily, text=Ch11AnnotRed, anchor=west] at (0.54,0.38) {(c)};
+    \draw[Ch11AnnotRed, line width=0.7pt] (0.34,0.36) circle (0.045);
+    \node[font=\scriptsize\sffamily, text=Ch11AnnotRed, anchor=west] at (0.39,0.36) {(d)};
+    \draw[Ch11AnnotRed, line width=0.7pt] (0.76,0.70) circle (0.07);
+    \node[font=\scriptsize\sffamily, text=Ch11AnnotRed, anchor=west] at (0.82,0.70) {(e)};
+  \end{scope}
+
+  \node[anchor=south west, inner sep=0] (imC) at (0.69\linewidth,0) {%
+    \includegraphics[width=\panelW]{figures/ch11/ch11-07c-ch07-v3.png}};
+  \node[font=\small\sffamily, anchor=south] at ($(imC.north)+(0,2mm)$) {V3 第 2 次（采用）};
+\end{tikzpicture}

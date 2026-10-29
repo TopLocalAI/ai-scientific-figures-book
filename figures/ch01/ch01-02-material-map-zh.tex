@@ -1,0 +1,54 @@
+\providecommand{\route}[1]{{\scriptsize\color{BookTeal}#1}}
+\providecommand{\authcheck}[1]{{\scriptsize\color{BookInk!75}#1}}
+\begin{tikzpicture}[
+  card/.style={draw=BookTeal,fill=BookPale,rounded corners=2pt,text width=39mm,align=center,font=\small,minimum height=62mm},
+  cardunused/.style={card,dashed,draw=gray,text=BookInk!80},
+  icon/.style={font=\footnotesize},
+  route/.style={font=\scriptsize,text=BookTeal},
+  check/.style={font=\scriptsize,text=BookInk!75},
+  bracebox/.style={draw=BookInk,rounded corners=1pt,font=\small,inner sep=3pt}
+]
+\node[card] (d) at (0,0) {%
+  \begin{tikzpicture}[scale=0.55,baseline=(t.base)]
+    \foreach \x in {0,1,2} {
+      \foreach \y in {0,1,2} {
+        \draw[BookInk!60] (\x*0.35,\y*0.28) rectangle ++(0.32,0.24);
+      }
+    }
+    \coordinate (t) at (0.35,0.5);
+  \end{tikzpicture}\\[2mm]
+  数据\\[1mm]
+  USGS 日均值\\（硝酸盐、流量）\\[2mm]
+  {\route 确定性绘图 / 科学可视化 → 面板 b}\\[2mm]
+  {\authcheck 作者核对：原值、单位、缺测、质量码}};
+\node[card,right=7mm of d] (i) {%
+  \begin{tikzpicture}[scale=0.55,baseline=(c.base)]
+    \foreach \x/\n in {0/1,1/2,2/3} {
+      \fill[BookTeal!40] (\x*0.55,0.15) circle (0.07);
+      \node at (\x*0.55,0.15) {\tiny\n};
+    }
+    \draw[-{Stealth},BookInk] (0.07,0.15)--(0.43,0.15);
+    \draw[-{Stealth},BookInk] (0.62,0.15)--(0.98,0.15);
+    \coordinate (c) at (0.55,0.15);
+  \end{tikzpicture}\\[2mm]
+  解释性内容\\[1mm]
+  研究区与排水路径的文字描述\\[2mm]
+  {\route 生成绘图 → 面板 a}\\[2mm]
+  {\authcheck 作者核对：对象、方向、是否画出未支持的来源}};
+\node[cardunused,right=7mm of i] (p) {%
+  \begin{tikzpicture}[scale=0.55,baseline=(cam.base)]
+    \draw[BookInk!70,rounded corners=1pt] (0,0.05) rectangle (0.55,0.38);
+    \draw[BookInk!70] (0.55,0.28)--(0.72,0.38)--(0.72,0.05)--(0.55,0.05);
+    \fill[BookInk!50] (0.22,0.21) circle (0.09);
+    \coordinate (cam) at (0.28,0.21);
+  \end{tikzpicture}\\[2mm]
+  现场/仪器图像\\[1mm]
+  （如有）传感器或采样点照片\\[2mm]
+  {\route 原图呈现与组图 → 本案例未使用}\\[2mm]
+  {\authcheck 作者核对：原始文件、处理记录}};
+\node[font=\scriptsize,text=BookInk!70,anchor=north] at ($(p.south)+(0,-2mm)$) {本例未使用};
+\draw[BookInk!50,thick,decorate,decoration={brace,mirror,amplitude=4pt}] ($(d.south west)+(0,-6mm)$) -- ($(p.south east)+(0,-6mm)$);
+\node[bracebox,below=9mm of i] (fig) {Figure 2（a \textbar\ b）};
+\draw[BookInk!60] (i.south) -- ++(0,-5mm) -| (fig.north);
+\draw[BookInk!60] (d.south) -- ++(0,-5mm) -| (fig.north);
+\end{tikzpicture}

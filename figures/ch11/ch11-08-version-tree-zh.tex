@@ -1,0 +1,49 @@
+% FIG ch11-08 version tree (Chinese)
+\usetikzlibrary{arrows.meta,positioning,fit,calc}
+\definecolor{Ch11BadRed}{HTML}{C0392B}
+\definecolor{Ch11GoodGreen}{HTML}{2E8B57}
+\providecommand{\ChElevenThumb}[2]{%
+  \IfFileExists{#1}{%
+    \includegraphics[width=24mm]{#1}%
+  }{%
+    \fbox{\parbox[c][16mm][c]{24mm}{\centering\scriptsize\sffamily #2\\{\tiny （底图待出）}}}}%
+}
+\begin{tikzpicture}[
+  x=1mm, y=1mm,
+  font=\sffamily\footnotesize,
+  edge/.style={draw=BookInk!60, -{Stealth[length=2mm]}, line width=0.55pt},
+  badedge/.style={draw=Ch11BadRed!70, dashed, -{Stealth[length=2mm]}},
+  nlabel/.style={align=center, text width=26mm, font=\scriptsize},
+]
+  \node (V1) at (0,0) {\ChElevenThumb{figures/ch11/ch11-02-v1-vague.png}{V1}};
+  \node[nlabel, below=1mm of V1] {模糊提示词};
+
+  \node (V2) [below=14mm of V1] {\ChElevenThumb{figures/ch11/ch11-03-v2-brief.png}{V2\\基准}};
+  \node[nlabel, below=1mm of V2] {\textbf{结构基准}};
+
+  \node (V3) [below=14mm of V2] {\ChElevenThumb{figures/ch11/ch11-04-v3-collateral.png}{V3}};
+  \node[nlabel, below=1mm of V3, text=Ch11BadRed] {连带变化\\{\tiny（不采用）}};
+
+  \node (V4) at (42,-28) {\ChElevenThumb{figures/ch11/ch11-06-v4-recovered.png}{V4}};
+  \node[nlabel, below=1mm of V4, text=Ch11GoodGreen] {回到 V2\\只改无线线};
+
+  \node (Final) at (84,-28) {\ChElevenThumb{figures/ch11/ch11-06-v4-recovered.png}{终稿}};
+  \node[nlabel, below=1mm of Final] {TikZ 标签与图例};
+
+  \draw[edge] (V1) -- node[left, font=\tiny, align=right] {重写\\输入} (V2);
+  \draw[edge] (V2) -- node[right=1.5mm, font=\tiny, align=left] {只改\\无线线} (V3);
+  \draw[edge] (V2.east) -- node[above, font=\tiny] {只改无线线\\+ 保留清单} (V4.west);
+  \draw[edge] (V4.east) -- node[above, font=\tiny] {叠加标签\\与图例} (Final.west);
+
+  \node[draw=Ch11BadRed, dashed, rounded corners=2pt, inner sep=4pt, fit=(V3)] {};
+  \node[font=\scriptsize, text=Ch11BadRed, right=1mm of V3] {×};
+
+  \node (Vp1) at (42,-66) {\fbox{\parbox[c][16mm][c]{24mm}{\centering\scriptsize V3$'$\\示意}}};
+  \node[font=\tiny, below=1mm of Vp1, text width=28mm, align=center] {把消失的天线加回来};
+  \node (Vp2) [right=12mm of Vp1] {\fbox{\parbox[c][16mm][c]{24mm}{\centering\scriptsize V3$''$\\示意}}};
+  \node[font=\tiny, below=1mm of Vp2, text width=28mm, align=center] {又一处变化};
+  \draw[badedge] (Vp1) -- (Vp2);
+  \node[draw=BookInk!40, dashed, rounded corners=2pt, inner sep=6pt,
+    fit=(Vp1)(Vp2), label={[font=\scriptsize, yshift=2mm]above:错误做法：在错误版本上叠加}] {};
+  \draw[badedge] (V3.east) -- ++(6,0) |- (Vp1.west);
+\end{tikzpicture}

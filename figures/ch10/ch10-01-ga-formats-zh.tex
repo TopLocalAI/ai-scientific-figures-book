@@ -1,0 +1,45 @@
+% FIG ch10-01 ga-formats (Chinese)
+\usetikzlibrary{positioning}
+\begin{tikzpicture}[x=0.06mm,y=0.06mm, font=\sffamily\small, text=BookInk]
+  \tikzset{
+    frame/.style={draw=BookInk, line width=0.35mm, fill=white},
+    guide/.style={draw=BookInk!30, line width=0.25mm},
+    figcap/.style={font=\sffamily\small, text=BookInk, align=center},
+  }
+  % Bottom-align three canvases (Cell is tallest: 1200 px).
+  \def\baseY{1200}
+  % Elsevier 1328 x 531
+  \draw[frame] (0,\baseY-531) rectangle (1328,\baseY);
+  \node[figcap, anchor=south] at (664,\baseY-531-18) {Elsevier 通用指南};
+  \node[figcap, font=\scriptsize, text=BookInk!85] at (664,\baseY-531-38)
+    {$\geq 1328 \times 531$ px（5:2）};
+  \draw[guide, -{Stealth[length=2mm]}] (120, \baseY-265) -- (1208, \baseY-265);
+  % TOC thumbnail 500 x 200 (5:2 at 200 px high)
+  \draw[frame] (40, \baseY-531-280) rectangle (540, \baseY-531-80);
+  \node[figcap, font=\scriptsize] at (290, \baseY-531-300) {目录中的显示尺寸（约 200 px 高）};
+  \draw[guide, thin] (664, \baseY-531) -- (290, \baseY-531-80);
+  % Cell Press 1200 square
+  \draw[frame] (1450, 0) rectangle (2650, 1200);
+  \node[figcap, anchor=south] at (2050, -18) {Cell Press};
+  \node[figcap, font=\scriptsize, text=BookInk!85] at (2050, -38)
+    {$1200 \times 1200$ px，300 dpi};
+  \draw[guide] (2050, 600) -- (1750, 900);
+  \draw[guide] (2050, 600) -- (2350, 900);
+  \draw[guide] (2050, 600) -- (2350, 300);
+  \draw[guide] (2050, 600) -- (1750, 300);
+  \draw[guide, -{Stealth[length=1.8mm]}] (1750, 900) -- (2350, 300);
+  % ACS 975 x 526 (300 dpi from cm)
+  \draw[frame] (2780, \baseY-526) rectangle (3755, \baseY);
+  \coordinate (acs-cap) at (3267.5, \baseY-526);
+  \node[figcap, anchor=north, text width=50mm, align=center] (acs-t) at ([yshift=-1.5mm]acs-cap)
+    {ACS（以 \textit{J. Org. Chem.} 为例）};
+  \node[figcap, font=\scriptsize, text=BookInk!85, anchor=north, text width=50mm, align=center,
+    below=2.5mm of acs-t] (acs-m)
+    {$\leq 8.25 \times 4.45\ \mathrm{cm}$};
+  \node[figcap, font=\scriptsize, text=BookInk!85, anchor=north, text width=50mm, align=center,
+    below=1.5mm of acs-m]
+    {像素按 300 dpi 换算：$975 \times 526$ px};
+  \draw[guide, -{Stealth[length=2mm]}] (2880, \baseY-263) -- (3655, \baseY-263);
+  \node[figcap, font=\scriptsize, text=BookInk!70, anchor=north west] at (0, -75)
+    {以目标期刊当前页面为准（2026 年 10 月访问）};
+\end{tikzpicture}

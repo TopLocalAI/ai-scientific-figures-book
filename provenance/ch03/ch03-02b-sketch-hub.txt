@@ -1,0 +1,40 @@
+### figures/ch03/ch03-02b-sketch-hub.png
+
+- 工具：Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）
+- 模型：不知道：工具未返回具体模型标识。
+- 日期：2026-10-29
+- 本阶段第几次：2
+- 参考图：无；从文字生成
+- 输出：1672×941，RGB PNG；SHA-256：`9779f77a6fb4d39671222fee26c103b34de3fe8671471eb8e5c2bbed235e702e`
+- prompt 改动原因：未追加/改写规划英文 prompt；仅作规划要求的公共段拼接或 LAYOUT 占位替换。
+- 人工图像修改：无。
+
+画面内容 / 核验要点逐条检查：
+
+- 保留；第 2 次，恢复规划原 prompt。中心双叶蛋白压在 DNA 上，四角对象齐全。
+- 四支单头箭头：左上→中心、左下→中心、中心→右上、中心→右下；两进两出，没有唯一入口。
+- 左下折线已附着于 DNA，右下插入段与短供体可见；底部留白。
+- 暖白纸、灰铅笔与 A/C 同类，但中央排线更浓；不宣称笔触或纸张像素级一致。
+- 共通核验：未见文字；像素宽度未达2400；约16:9；未真人复核。
+
+实际完整 prompt（保留换行）：
+
+```text
+A rough pencil planning sketch on slightly off-white sketchbook paper,
+photographed flat from directly above, evenly lit, no hands, no pencil, no other
+objects. Landscape 16:9. Single graphite pencil, loose confident lines, a few
+construction lines and faint erasure marks. Simple shapes only: rounded blobs,
+pairs of parallel lines with short rungs (double-stranded DNA), a wavy line
+(RNA), arrows. Strictly no writing of any kind: no letters, no words, no
+numbers, no labels, no title, no annotations. Pencil gray only, no color.
+Bottom tenth of the page left blank.
+
+Layout: radial. In the exact center, a large rounded two-lobed blob sitting on a
+short ladder-like double line. Around it, at the four corners of the page,
+four smaller shapes: top-left a short wavy line, top-right a small shaded
+rectangle on a short double line, bottom-left a short double line with a tiny
+zigzag mark, bottom-right a short double line with a short thick inserted
+segment and a separate short double line above it. Arrows connect the center
+to each corner: two arrows point inward, two point outward. No clear starting
+point.
+```

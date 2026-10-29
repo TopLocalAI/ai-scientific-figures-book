@@ -1,0 +1,54 @@
+% FIG ch02-01 brief versus prompt (Chinese)
+% Coordinate unit = \linewidth/110. At the book measure (\linewidth=132mm) the unit is 1.2mm.
+% Brief occupies x=0..55, y=0..80. Prompt boxes sit to the right. The return path
+% drops from Prompt C, runs left under the brief, then up to the brief's bottom edge.
+\begin{tikzpicture}[x=\linewidth/110,y=\linewidth/110]
+\begin{scope}[
+  font=\sffamily\footnotesize,
+  field/.style={anchor=west, text=BookInk, inner sep=1.2pt},
+  promptbox/.style={
+    draw=BookRule, line width=0.6pt, rounded corners=2pt,
+    fill=white, align=left, inner sep=2.5pt, text width=48mm,
+  },
+  conn/.style={draw=BookInk!55, thin},
+]
+  \def\briefW{52}
+  \def\briefH{78}
+  \coordinate (Bsw) at (0,0);
+  \coordinate (Bne) at (\briefW,\briefH);
+  \coordinate (aim) at (26,0);
+  \draw[BookRule, line width=0.8pt, rounded corners=3pt, fill=BookPale!35]
+    (Bsw) rectangle (Bne);
+  \node[font=\sffamily\bfseries\footnotesize, text=BookTeal, anchor=north]
+    at (0.5*\briefW,\briefH-2) {任务书 v2};
+
+  \foreach \j/\label in {
+    1/用途与读者,2/目标,3/材料,4/对象,5/关系,6/布局,7/视觉,8/限制,9/图例,10/验收} {
+    \pgfmathsetmacro{\ytop}{\briefH - 8 - (\j-1)*6.6}
+    \draw[BookPale, line width=0.4pt] (2,\ytop-5.4) rectangle (\briefW-2,\ytop);
+    \node[field] at (3,\ytop-2.7) {\label};
+  }
+
+  \node[promptbox, anchor=west] (PA) at (61,60) {%
+    \textbf{提示词 A：初次生成}\\[1pt]
+    \scriptsize 对象、关系、布局、视觉、限制};
+  \node[promptbox, anchor=west] (PB) at (61,36) {%
+    \textbf{提示词 B：只改配色}\\[1pt]
+    \scriptsize 视觉\\
+    \scriptsize 保持不变：对象、关系、布局};
+  \node[promptbox, anchor=west] (PC) at (61,14) {%
+    \textbf{提示词 C：起草图注}\\[1pt]
+    \scriptsize 材料、关系（证据状态）、图例};
+
+  \draw[conn, -{Stealth[length=1.8mm]}] (\briefW,56) -- (PA.west);
+  \draw[conn, dashed, -{Stealth[length=1.8mm]}] (\briefW,40) -- (PB.west);
+  \draw[conn, densely dotted, -{Stealth[length=1.8mm]}] (\briefW,20) -- (PC.west);
+
+  % Orthogonal return: down from Prompt C, left under the brief, up to its bottom edge.
+  \coordinate (retLow) at (0,-9);
+  \draw[BookInk!70, line width=0.7pt, -{Stealth[length=2.2mm]}]
+    (PC.south) -- (PC.south |- retLow) -- (aim |- retLow) -- (aim);
+  \node[font=\sffamily\scriptsize, text=BookInk!80, align=center, anchor=north, text width=52mm]
+    at (46,-11.2) {发现科学内容要改\\先改任务书，再写新提示词};
+\end{scope}
+\end{tikzpicture}

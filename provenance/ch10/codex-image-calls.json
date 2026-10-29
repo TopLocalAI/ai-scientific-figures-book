@@ -1,0 +1,255 @@
+[
+  {
+    "id": "ch10-03",
+    "attempt": 1,
+    "selected": true,
+    "file": "figures/ch10/ch10-03-composition-a-narrative.png",
+    "prompt": "Graphical abstract base art, wide banner, aspect ratio 5:2 (2000 x 800 px),\npure white background, flat 2D vector illustration, flat fills, thin dark gray\noutlines, no gradients, no shadows, no 3D, no photographic texture.\n\nABSOLUTELY NO TEXT: no letters, no words, no numbers, no symbols, no labels,\nno title, no legend. Text will be added later.\n\nKeep the top 15% and the bottom 12% of the image completely empty.\n\nFour equal-width stages from left to right, vertically centered:\n1. Input (x 0.04-0.25): two square map tiles side by side, both top-down flat\n   schematic maps of the same landscape patch. Left tile: muted green vegetation\n   patches with a thin pale-blue river line. Right tile: the same patch, same\n   river, but a large irregular warm brown-orange area in the middle (burned\n   land). Above them, smaller, a third square tile partly covered by a flat\n   light-gray cloud shape.\n2. Model (x 0.30-0.46): a single blue-gray hourglass shape made of stacked\n   rounded rectangles that narrow to a waist and widen again (an\n   encoder-decoder), no neurons, no circuit patterns.\n3. Output (x 0.52-0.72): one square map tile of the same patch in very pale\n   gray, with the burned area drawn as a crisp warm brown-orange polygon.\n4. Comparison (x 0.77-0.96): a small square inset of the same patch outline\n   showing three boundary lines around the burned area: a dark gray solid line\n   (reference), a blue solid line closely following it, and a light gray dashed\n   line that clearly deviates from it.\nThree identical dark gray arrows with filled heads connect stage 1 to 2 and\n2 to 3. No arrow between stage 3 and 4.\n\nPalette only: muted green, warm brown-orange, blue-gray, blue, grays.\nDo not draw: flames, smoke plumes, fire fronts, globes, satellites, clocks,\nalarms, people, buildings, charts, axes, numbers, photographs.",
+    "source": "codex-output/exec-302a97ae-ea4c-4010-a771-a313e209d688.png",
+    "tool": "image_gen.imagegen (functions tools.image_gen__imagegen)",
+    "model": "不知道（工具未返回具体模型标识）",
+    "transparent_background": false,
+    "reference_image": null,
+    "native_size": [
+      1983,
+      793
+    ],
+    "native_sha256": "d703c8f6309e3947bf2e077721885a7b5a9a46b65c18043b80ac665a372a4c09",
+    "final_size": [
+      2000,
+      800
+    ],
+    "final_sha256": "489d293570f0292b39fe966c3535628d3cf5e2cd1ee31fadf093fca855781d7e",
+    "normalization": "sips --resampleHeightWidth 800 2000; no content changes, no cropping or labels; native output retained at source path"
+  },
+  {
+    "id": "ch10-03",
+    "attempt": 2,
+    "selected": false,
+    "file": "figures/ch10/ch10-03-composition-a-narrative-alt1.png",
+    "prompt": "Graphical abstract base art, wide banner, aspect ratio 5:2 (2000 x 800 px),\npure white background, flat 2D vector illustration, flat fills, thin dark gray\noutlines, no gradients, no shadows, no 3D, no photographic texture.\n\nABSOLUTELY NO TEXT: no letters, no words, no numbers, no symbols, no labels,\nno title, no legend. Text will be added later.\n\nKeep the top 15% and the bottom 12% of the image completely empty.\n\nFour equal-width stages from left to right, vertically centered:\n1. Input (x 0.04-0.25): two square map tiles side by side, both top-down flat\n   schematic maps of the same landscape patch. Left tile: muted green vegetation\n   patches with a thin pale-blue river line. Right tile: the same patch, same\n   river, but a large irregular warm brown-orange area in the middle (burned\n   land). Above them, smaller, a third square tile partly covered by a flat\n   light-gray cloud shape.\n2. Model (x 0.30-0.46): a single blue-gray hourglass shape made of stacked\n   rounded rectangles that narrow to a waist and widen again (an\n   encoder-decoder), no neurons, no circuit patterns.\n3. Output (x 0.52-0.72): one square map tile of the same patch in very pale\n   gray, with the burned area drawn as a crisp warm brown-orange polygon.\n4. Comparison (x 0.77-0.96): a small square inset of the same patch outline\n   showing three boundary lines around the burned area: a dark gray solid line\n   (reference), a blue solid line closely following it, and a light gray dashed\n   line that clearly deviates from it.\nTwo identical dark gray arrows with filled heads connect stage 1 to 2 and\n2 to 3. No arrow between stage 3 and 4.\n\nPalette only: muted green, warm brown-orange, blue-gray, blue, grays.\nDo not draw: flames, smoke plumes, fire fronts, globes, satellites, clocks,\nalarms, people, buildings, charts, axes, numbers, photographs.\n\nSecond-attempt clarification: the network is ONE centered vertical stack, every row one continuous rounded rectangle, narrowing to a waist and widening again. All map tiles reuse exactly the same landscape, river geometry and burned-area outline at different scales. The small cloud tile should be smaller than either input tile and sit above the pair entirely below y=0.15. Keep both reserved white bands completely empty. Render as a clean SVG export: completely uniform solid fills, #FFFFFF background, muted green #A8C3A0, brown-orange #C8743C, blue-gray #8FA3B8, reference #3A3A3A, model #2F6DB5, light-gray dashed threshold #A0A0A0. No gradients, highlights, shadows, paper texture, typographic marks or extra objects.",
+    "source": "codex-output/exec-3abc4e4a-bfd0-402a-99dc-d231fcbdf955.png",
+    "tool": "image_gen.imagegen (functions tools.image_gen__imagegen)",
+    "model": "不知道（工具未返回具体模型标识）",
+    "transparent_background": false,
+    "reference_image": null,
+    "native_size": [
+      1983,
+      793
+    ],
+    "native_sha256": "dfff90c7b3b1794487db6ca6b6d90d8750ac9c7435da911b10aca388eec3cb1a",
+    "final_size": [
+      2000,
+      800
+    ],
+    "final_sha256": "3d7d192df814974e4572da2318dd33b084000dacceee5e8b803cca8cae6dc650",
+    "normalization": "sips --resampleHeightWidth 800 2000; no content changes, no cropping or labels; native output retained at source path"
+  },
+  {
+    "id": "ch10-04",
+    "attempt": 1,
+    "selected": false,
+    "file": "figures/ch10/ch10-04-composition-b-central-alt1.png",
+    "prompt": "Graphical abstract base art, wide banner, aspect ratio 5:2 (2000 x 800 px),\npure white background, flat 2D vector illustration, flat fills, thin dark gray\noutlines, no gradients, no shadows, no 3D, no photographic texture.\n\nABSOLUTELY NO TEXT: no letters, words, numbers, symbols, labels or title.\n\nCentral composition. In the exact center, one large square top-down schematic\nmap tile (about 70% of the image height) of a landscape patch in very pale gray\nwith a crisp warm brown-orange irregular burned-area polygon and a thin\npale-blue river line.\nAround it, four small elements, each about one quarter the size of the center\ntile:\n- upper left: a small tile of the same patch in muted green vegetation (before);\n- lower left: a small tile of the same patch with a warm brown-orange area\n  (after), and next to it an even smaller tile partly covered by a flat light\n  gray cloud;\n- upper right: a small blue-gray hourglass shape of stacked rounded rectangles\n  (encoder-decoder network);\n- lower right: a small square inset with three boundary lines around a burned\n  area: dark gray solid, blue solid closely following it, light gray dashed\n  clearly deviating.\nThin plain gray connector lines without arrowheads run from each small element\ntoward the central tile.\n\nPalette only: muted green, warm brown-orange, blue-gray, blue, grays.\nDo not draw: flames, smoke, globes, satellites, clocks, alarms, people,\ncharts, axes, numbers, photographs.",
+    "source": "codex-output/exec-becd1470-7980-4036-88a2-006602b52d62.png",
+    "tool": "image_gen.imagegen (functions tools.image_gen__imagegen)",
+    "model": "不知道（工具未返回具体模型标识）",
+    "transparent_background": false,
+    "reference_image": null,
+    "native_size": [
+      1983,
+      793
+    ],
+    "native_sha256": "3981842b4ff7fb05c2211b241648a3e22058a085c4e2c7e4523e4b5f57187605",
+    "final_size": [
+      2000,
+      800
+    ],
+    "final_sha256": "53dec33b6479481ae34b9efcbbf345105c1203d7e12a85cbe241dbadd71aa1ab",
+    "normalization": "sips --resampleHeightWidth 800 2000; no content changes, no cropping or labels; native output retained at source path"
+  },
+  {
+    "id": "ch10-04",
+    "attempt": 2,
+    "selected": false,
+    "file": "figures/ch10/ch10-04-composition-b-central-alt2.png",
+    "prompt": "Graphical abstract base art, wide banner, aspect ratio 5:2 (2000 x 800 px),\npure white background, flat 2D vector illustration, flat fills, thin dark gray\noutlines, no gradients, no shadows, no 3D, no photographic texture.\n\nABSOLUTELY NO TEXT: no letters, words, numbers, symbols, labels or title.\n\nCentral composition. In the exact center, one large square top-down schematic\nmap tile (about 70% of the image height) of a landscape patch in very pale gray\nwith a crisp warm brown-orange irregular burned-area polygon and a thin\npale-blue river line.\nAround it, four small elements, each about one quarter the size of the center\ntile:\n- upper left: a small tile of the same patch in muted green vegetation (before);\n- lower left: a small tile of the same patch with a warm brown-orange area\n  (after), and next to it an even smaller tile partly covered by a flat light\n  gray cloud;\n- upper right: a small blue-gray hourglass shape of stacked rounded rectangles\n  (encoder-decoder network);\n- lower right: a small square inset with three boundary lines around a burned\n  area: dark gray solid, blue solid closely following it, light gray dashed\n  clearly deviating.\nThin plain gray connector lines without arrowheads run from each small element\ntoward the central tile.\n\nPalette only: muted green, warm brown-orange, blue-gray, blue, grays.\nDo not draw: flames, smoke, globes, satellites, clocks, alarms, people,\ncharts, axes, numbers, photographs.\n\nCorrection for the second attempt: use exactly ONE vertically stacked hourglass network, each level a single horizontally centered solid rounded rectangle, with widths decreasing down to one narrow waist then increasing; no paired columns, no split bars, no horizontal bow-tie. The central map must be pale gray rather than green. Its side length is 70% of canvas height. Each of the four surrounding elements is about one quarter of its area; keep the comparison small. Four plain connectors, one from each main surrounding element to the central map; the tiny cloud tile is adjacent to the lower-left input and has no separate connector. Use the same landscape template and burned outline in every map. Render like a clean SVG: truly uniform solid fills, pure #FFFFFF canvas, no shading, no paper texture, no lighting effects. Muted green #A8C3A0, burned area #C8743C, network #8FA3B8, reference #3A3A3A, model #2F6DB5, threshold #A0A0A0. No typographic marks anywhere.",
+    "source": "codex-output/exec-8b380d56-c883-49dc-9b84-1b0878a9c1b3.png",
+    "tool": "image_gen.imagegen (functions tools.image_gen__imagegen)",
+    "model": "不知道（工具未返回具体模型标识）",
+    "transparent_background": false,
+    "reference_image": null,
+    "native_size": [
+      1983,
+      793
+    ],
+    "native_sha256": "c4cd9e98b0ed1a14f577a359ef1b35bc11090012790e362823db1191a1e43b84",
+    "final_size": [
+      2000,
+      800
+    ],
+    "final_sha256": "ac7b54622229e32233a6f20c5cc432d38440b9a7746d1bf6aa788beed7bb929c",
+    "normalization": "sips --resampleHeightWidth 800 2000; no content changes, no cropping or labels; native output retained at source path"
+  },
+  {
+    "id": "ch10-04",
+    "attempt": 3,
+    "selected": true,
+    "file": "figures/ch10/ch10-04-composition-b-central.png",
+    "prompt": "Graphical abstract base art, wide banner, aspect ratio 5:2 (2000 x 800 px),\npure white background, flat 2D vector illustration, flat fills, thin dark gray\noutlines, no gradients, no shadows, no 3D, no photographic texture.\n\nABSOLUTELY NO TEXT: no letters, words, numbers, symbols, labels or title.\n\nCentral composition. In the exact center, one large square top-down schematic\nmap tile (about 70% of the image height) of a landscape patch in very pale gray\nwith a crisp warm brown-orange irregular burned-area polygon and a thin\npale-blue river line.\nAround it, four small elements, each about one quarter the size of the center\ntile:\n- upper left: a small tile of the same patch in muted green vegetation (before);\n- lower left: a small tile of the same patch with a warm brown-orange area\n  (after), and next to it an even smaller tile partly covered by a flat light\n  gray cloud;\n- upper right: a small blue-gray hourglass shape of stacked rounded rectangles\n  (encoder-decoder network);\n- lower right: a small square inset with three boundary lines around a burned\n  area: dark gray solid, blue solid closely following it, light gray dashed\n  clearly deviating.\nThin plain gray connector lines without arrowheads run from each small element\ntoward the central tile.\n\nPalette only: muted green, warm brown-orange, blue-gray, blue, grays.\nDo not draw: flames, smoke, globes, satellites, clocks, alarms, people,\ncharts, axes, numbers, photographs.\n\nThird-attempt layout correction: four connector lines attach to the CENTER of the right edge of the before tile, the CENTER of the right edge of the after tile, the LEFT side of the network, and the LEFT edge of the comparison, respectively. All terminate at the central map. The tiny cloud tile is detached below-left of the AFTER tile, never crossed by any connector. Draw one vertical hourglass from continuous centered rounded rectangles, not split columns. The central map is a pale-gray square of side 560 px centered at (1000,400) on a 2000 by 800 px canvas. Surrounding main map tiles and network each fit within about 280 by 280 px, cloud tile smaller. Match the same river and burned shape throughout. Uniform #FFFFFF background and uniform flat fills, #A8C3A0 vegetation, #C8743C burned land, #8FA3B8 network, #3A3A3A reference and thin object outlines, #2F6DB5 model, #A0A0A0 dashed threshold. No texture, shading, highlights or typographic marks.",
+    "source": "codex-output/exec-a1d57ac6-b360-4973-9776-ffa8cd56955f.png",
+    "tool": "image_gen.imagegen (functions tools.image_gen__imagegen)",
+    "model": "不知道（工具未返回具体模型标识）",
+    "transparent_background": false,
+    "reference_image": null,
+    "native_size": [
+      1983,
+      793
+    ],
+    "native_sha256": "1c64985a12ac0f99b4ea75a3a2fe90fe489da34d5f9a209bf91078a10536b44b",
+    "final_size": [
+      2000,
+      800
+    ],
+    "final_sha256": "6374ec3101638537235e6ac298156655392b0c3b98db672c68ffa0b59f832aef",
+    "normalization": "sips --resampleHeightWidth 800 2000; no content changes, no cropping or labels; native output retained at source path"
+  },
+  {
+    "id": "ch10-05",
+    "attempt": 1,
+    "selected": false,
+    "file": "figures/ch10/ch10-05-overclaim-alt1.png",
+    "prompt": "Deliberately over-dramatic graphical abstract base art for a teaching\ncounter-example, wide banner, aspect ratio 5:2 (2000 x 800 px).\nDark blue gradient background with glowing accents.\nLeft: a photorealistic satellite-style top-down view of a forest with a bright\nred-orange active fire front and thick gray smoke plumes.\nCenter: a glowing glossy 3D \"AI brain\" made of circuit lines, with light rays.\nRight: a 3D Earth globe covered by a bright grid, with several red flame icons\non it, a red triangular alarm icon, and an alarm clock.\nGlossy, cinematic, high contrast, lens flare.\nNO TEXT: no letters, no words, no numbers, no symbols, no labels.\nLeave a dark empty band across the top 18% for a headline.",
+    "source": "codex-output/exec-ef66dd7a-611f-4030-810f-08366ab6b2ca.png",
+    "tool": "image_gen.imagegen (functions tools.image_gen__imagegen)",
+    "model": "不知道（工具未返回具体模型标识）",
+    "transparent_background": false,
+    "reference_image": null,
+    "native_size": [
+      1983,
+      793
+    ],
+    "native_sha256": "be64380ea343ee02e59eebc4f2523242d2bd8fa8ef276452eceb5bb895bf734a",
+    "final_size": [
+      2000,
+      800
+    ],
+    "final_sha256": "1675217b6405e1a95a6583a965e812d9b1dfe1b65af553cad67a95df4b4d4b6e",
+    "normalization": "sips --resampleHeightWidth 800 2000; no content changes, no cropping or labels; native output retained at source path"
+  },
+  {
+    "id": "ch10-05",
+    "attempt": 2,
+    "selected": false,
+    "file": "figures/ch10/ch10-05-overclaim-alt2.png",
+    "prompt": "Deliberately over-dramatic graphical abstract base art for a teaching\ncounter-example, wide banner, aspect ratio 5:2 (2000 x 800 px).\nDark blue gradient background with glowing accents.\nLeft: a photorealistic satellite-style top-down view of a forest with a bright\nred-orange active fire front and thick gray smoke plumes.\nCenter: a glowing glossy 3D \"AI brain\" made of circuit lines, with light rays.\nRight: a 3D Earth globe covered by a bright grid, with several red flame icons\non it, a red triangular alarm icon, and an alarm clock.\nGlossy, cinematic, high contrast, lens flare.\nNO TEXT: no letters, no words, no numbers, no symbols, no labels.\nLeave a dark empty band across the top 18% for a headline.\n\nCorrection for the second attempt: the alarm clock face must be completely unmarked: no digits, Roman numerals, tick marks, letters, or glyphs, only two plain hands on a blank dial. The red warning triangle must have an empty interior, with no exclamation mark or any other glyph. Preserve all the requested counter-example objects and the empty top band. Do not add any written or typographic marks anywhere.",
+    "source": "codex-output/exec-f9d0c911-0040-44c8-8534-64bdf711fbc3.png",
+    "tool": "image_gen.imagegen (functions tools.image_gen__imagegen)",
+    "model": "不知道（工具未返回具体模型标识）",
+    "transparent_background": false,
+    "reference_image": null,
+    "native_size": [
+      1983,
+      793
+    ],
+    "native_sha256": "8f8e3cacac3692b56166e9efd3021de78595574fb2b1fa3231200177a3c75e49",
+    "final_size": [
+      2000,
+      800
+    ],
+    "final_sha256": "556e50b2942814a1284d44d96ff29b5aa0c79f2144ac858522e992ae15559b6d",
+    "normalization": "sips --resampleHeightWidth 800 2000; no content changes, no cropping or labels; native output retained at source path"
+  },
+  {
+    "id": "ch10-05",
+    "attempt": 3,
+    "selected": true,
+    "file": "figures/ch10/ch10-05-overclaim.png",
+    "prompt": "Deliberately over-dramatic graphical abstract base art for a teaching\ncounter-example, wide banner, aspect ratio 5:2 (2000 x 800 px).\nDark blue gradient background with glowing accents.\nLeft: a photorealistic satellite-style top-down view of a forest with a bright\nred-orange active fire front and thick gray smoke plumes.\nCenter: a glowing glossy 3D \"AI brain\" made of circuit lines, with light rays.\nRight: a 3D Earth globe covered by a bright grid, with several red flame icons\non it, a red triangular alarm icon, and an alarm clock.\nGlossy, cinematic, high contrast, lens flare.\nNO TEXT: no letters, no words, no numbers, no symbols, no labels.\nLeave a dark empty band across the top 18% for a headline.\n\nThird-attempt correction: the alarm clock has a pristine blank circular dial with ONLY two plain clock hands and a central pivot. Absolutely no indices, ticks, numerals, digits, Roman numerals or marks anywhere around the dial: especially leave the twelve-o'clock location completely blank. Its casing is also unmarked. The triangular warning sign is an empty glowing triangular outline with no exclamation mark. Put the clock near the lower-right corner. Keep every object and bright glow entirely below y=0.20, leaving the top 18% a quiet dark blue band without foreground objects. The forest scene is an overhead satellite-style view. Preserve the active fire front, thick smoke, circuit brain, gridded globe, red flames and cinematic exaggeration; no text or glyphs anywhere.",
+    "source": "codex-output/exec-366e8ca0-4be8-4292-8c2c-fc3c86305851.png",
+    "tool": "image_gen.imagegen (functions tools.image_gen__imagegen)",
+    "model": "不知道（工具未返回具体模型标识）",
+    "transparent_background": false,
+    "reference_image": null,
+    "native_size": [
+      1983,
+      793
+    ],
+    "native_sha256": "d554177133ddee2c14fc5c6a0a9c37d593ee37597e33cabca1fe261ddf7640b0",
+    "final_size": [
+      2000,
+      800
+    ],
+    "final_sha256": "a56e5af8b274afff803171dae63ac46d851808bdeb8c79a5f4f2ebddfc98f894",
+    "normalization": "sips --resampleHeightWidth 800 2000; no content changes, no cropping or labels; native output retained at source path"
+  },
+  {
+    "id": "ch10-06",
+    "attempt": 1,
+    "selected": false,
+    "file": "figures/ch10/ch10-06-final-base-alt1.png",
+    "prompt": "Final graphical abstract base art, wide banner, aspect ratio 5:2,\n2000 x 800 px, pure white background, flat 2D vector illustration, flat fills,\nuniform thin dark gray (#3A3A3A) outlines, no gradients, no shadows, no 3D, no\nphotographic texture, crisp edges.\n\nTHIS IMAGE MUST CONTAIN NO TEXT AT ALL: no letters, words, numbers, symbols,\nlabels, legend, title or watermark.\n\nEMPTY BANDS: keep y 0.00-0.15 (top), y 0.76-0.84 (caption strip under the four\nstages) and y 0.88-1.00 (bottom) completely white.\n\nFour stages, all objects vertically within y 0.18-0.72:\n1. x 0.04-0.25: two square schematic map tiles of the same landscape patch side\n   by side (left: muted green #A8C3A0 vegetation patches; right: same patch with\n   a warm brown-orange #C8743C burned area), same pale-blue river line in both.\n   A smaller tile partly covered by a flat light gray (#D5D5D5) cloud sits at\n   the upper left corner of the stage.\n2. x 0.30-0.45: one blue-gray (#8FA3B8) hourglass of stacked rounded\n   rectangles (encoder-decoder), nothing else.\n3. x 0.50-0.73: one larger square map tile of the same patch in very pale gray\n   with a crisp #C8743C burned-area polygon (about 1.2 times the input tiles).\n4. x 0.77-0.96: a square inset of the same patch outline with three thick\n   boundary lines around the burned area: #3A3A3A solid (reference), #2F6DB5\n   solid closely following it, #A0A0A0 dashed clearly deviating from it.\nTwo identical #3A3A3A arrows with filled heads: stage 1 -> 2, stage 2 -> 3.\nNo arrow between stages 3 and 4.\n\nDo not draw: flames, smoke, globes, satellites, clocks, alarms, people, charts,\naxes, numbers, photographs, decorative backgrounds.",
+    "source": "codex-output/exec-5b438c6f-d276-4aa3-81ad-e19cee09d476.png",
+    "tool": "image_gen.imagegen (functions tools.image_gen__imagegen)",
+    "model": "不知道（工具未返回具体模型标识）",
+    "transparent_background": false,
+    "reference_image": null,
+    "native_size": [
+      1983,
+      793
+    ],
+    "native_sha256": "1151e72481c6c31c16e010216101194f5748fb6458b40f068cc577822128da53",
+    "final_size": [
+      2000,
+      800
+    ],
+    "final_sha256": "08b27235a5ced74b2f0f81cab2d8b181cadbff367b8fecc5dc795c9997bc1e98",
+    "normalization": "sips --resampleHeightWidth 800 2000; no content changes, no cropping or labels; native output retained at source path"
+  },
+  {
+    "id": "ch10-06",
+    "attempt": 2,
+    "selected": false,
+    "file": "figures/ch10/ch10-06-final-base-alt2.png",
+    "prompt": "Final graphical abstract base art, wide banner, aspect ratio 5:2,\n2000 x 800 px, pure white background, flat 2D vector illustration, flat fills,\nuniform thin dark gray (#3A3A3A) outlines, no gradients, no shadows, no 3D, no\nphotographic texture, crisp edges.\n\nTHIS IMAGE MUST CONTAIN NO TEXT AT ALL: no letters, words, numbers, symbols,\nlabels, legend, title or watermark.\n\nEMPTY BANDS: keep y 0.00-0.15 (top), y 0.76-0.84 (caption strip under the four\nstages) and y 0.88-1.00 (bottom) completely white.\n\nFour stages, all objects vertically within y 0.18-0.72:\n1. x 0.04-0.25: two square schematic map tiles of the same landscape patch side\n   by side (left: muted green #A8C3A0 vegetation patches; right: same patch with\n   a warm brown-orange #C8743C burned area), same pale-blue river line in both.\n   A smaller tile partly covered by a flat light gray (#D5D5D5) cloud sits at\n   the upper left corner of the stage.\n2. x 0.30-0.45: one blue-gray (#8FA3B8) hourglass of stacked rounded\n   rectangles (encoder-decoder), nothing else.\n3. x 0.50-0.73: one larger square map tile of the same patch in very pale gray\n   with a crisp #C8743C burned-area polygon (about 1.2 times the input tiles).\n4. x 0.77-0.96: a square inset of the same patch outline with three thick\n   boundary lines around the burned area: #3A3A3A solid (reference), #2F6DB5\n   solid closely following it, #A0A0A0 dashed clearly deviating from it.\nTwo identical #3A3A3A arrows with filled heads: stage 1 -> 2, stage 2 -> 3.\nNo arrow between stages 3 and 4.\n\nDo not draw: flames, smoke, globes, satellites, clocks, alarms, people, charts,\naxes, numbers, photographs, decorative backgrounds.\n\nCorrection for the second attempt: the network is exactly ONE vertical stack, every level ONE horizontally centered rounded rectangle. Bar widths decrease down to a single waist and increase again, making a solid hourglass silhouette; never split each level into left and right bars. Match the same river and same burned polygon across all tiles. Put the entire output and comparison squares inside y 0.22-0.69 so every required text band stays empty. Output square side length is approximately 1.2 times each of the two input squares. Give the comparison exactly three closed contours: dark gray reference and blue model nearly coincide, but the lighter gray dashed threshold must deviate conspicuously by at least 15% of inset width at several edges. Use thick lines so this difference remains visible when small. All fills and background must be truly uniform flat RGB colors like an SVG export: no lighting, no texture, no gradients, no cast shadows. Keep exactly two identical right-pointing arrows and no extra marks.",
+    "source": "codex-output/exec-d846001b-38b1-4dbf-89e0-c20e3e84e875.png",
+    "tool": "image_gen.imagegen (functions tools.image_gen__imagegen)",
+    "model": "不知道（工具未返回具体模型标识）",
+    "transparent_background": false,
+    "reference_image": null,
+    "native_size": [
+      1983,
+      793
+    ],
+    "native_sha256": "6aa0c7ca83c70d827d88d6eb82413a8b02833abcc68ec5fc4d8af5ce8fe3f435",
+    "final_size": [
+      2000,
+      800
+    ],
+    "final_sha256": "90ad7ad0926f35bf2e6b33cb0f28779a77265b816ac3a7917622255c8a6933c2",
+    "normalization": "sips --resampleHeightWidth 800 2000; no content changes, no cropping or labels; native output retained at source path"
+  },
+  {
+    "id": "ch10-06",
+    "attempt": 3,
+    "selected": true,
+    "file": "figures/ch10/ch10-06-final-base.png",
+    "prompt": "Final graphical abstract base art, wide banner, aspect ratio 5:2,\n2000 x 800 px, pure white background, flat 2D vector illustration, flat fills,\nuniform thin dark gray (#3A3A3A) outlines, no gradients, no shadows, no 3D, no\nphotographic texture, crisp edges.\n\nTHIS IMAGE MUST CONTAIN NO TEXT AT ALL: no letters, words, numbers, symbols,\nlabels, legend, title or watermark.\n\nEMPTY BANDS: keep y 0.00-0.15 (top), y 0.76-0.84 (caption strip under the four\nstages) and y 0.88-1.00 (bottom) completely white.\n\nFour stages, all objects vertically within y 0.18-0.72:\n1. x 0.04-0.25: two square schematic map tiles of the same landscape patch side\n   by side (left: muted green #A8C3A0 vegetation patches; right: same patch with\n   a warm brown-orange #C8743C burned area), same pale-blue river line in both.\n   A smaller tile partly covered by a flat light gray (#D5D5D5) cloud sits at\n   the upper left corner of the stage.\n2. x 0.30-0.45: one blue-gray (#8FA3B8) hourglass of stacked rounded\n   rectangles (encoder-decoder), nothing else.\n3. x 0.50-0.73: one larger square map tile of the same patch in very pale gray\n   with a crisp #C8743C burned-area polygon (about 1.2 times the input tiles).\n4. x 0.77-0.96: a square inset of the same patch outline with three thick\n   boundary lines around the burned area: #3A3A3A solid (reference), #2F6DB5\n   solid closely following it, #A0A0A0 dashed clearly deviating from it.\nTwo identical #3A3A3A arrows with filled heads: stage 1 -> 2, stage 2 -> 3.\nNo arrow between stages 3 and 4.\n\nDo not draw: flames, smoke, globes, satellites, clocks, alarms, people, charts,\naxes, numbers, photographs, decorative backgrounds.\n\nThird attempt, using the supplied composition-A image only as a visual reference. Preserve its single centered vertical stack of continuous rounded rectangles, its two flow arrows, the same landscape and river in the input pair, and the comparison with no connecting arrow. Correct the geometry to the final specification: each input square is about 200 by 200 px, and the output square about 240 by 240 px (1.2 times the input side), with the comparison square about 300 by 300 px. Center the four stages around x=280,760,1240,1720 on a 2000 by 800 canvas; center main objects around y=400. Keep all objects, including the cloud tile, within y=144 to 576. Make the three comparison lines visibly thicker than the reference image, dark gray and blue nearly coincident and dashed light gray clearly deviating. The top, caption and bottom bands must be entirely white. Preserve the exact same burned shape across the post-fire, output and comparison maps. Uniform flat fills with thin gray outlines; no shading, texture, cast shadows or typographic marks.",
+    "source": "codex-output/exec-6d309432-8fda-4234-afad-1bca642c5e9c.png",
+    "tool": "image_gen.imagegen (functions tools.image_gen__imagegen)",
+    "model": "不知道（工具未返回具体模型标识）",
+    "transparent_background": false,
+    "reference_image": "codex-output/exec-302a97ae-ea4c-4010-a771-a313e209d688.png",
+    "native_size": [
+      1983,
+      793
+    ],
+    "native_sha256": "592e78d5e034fbee911a85a514c1a081292aa1c64da0ab236ea3e8b67911ab22",
+    "final_size": [
+      2000,
+      800
+    ],
+    "final_sha256": "f405cbde737e779762a5d96a9c2dcb9459d0d856b354692fc36de354bc553eca",
+    "normalization": "sips --resampleHeightWidth 800 2000; no content changes, no cropping or labels; native output retained at source path"
+  }
+]

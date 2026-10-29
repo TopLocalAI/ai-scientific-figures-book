@@ -1,0 +1,89 @@
+% FIG ch03-01 reading order (English)
+\begin{tikzpicture}[
+  x=1mm, y=1mm,
+  font=\sffamily\footnotesize,
+  panel/.style={draw=BookInk!40, line width=0.3pt, rounded corners=1pt},
+  block/.style={
+    rounded corners=2pt, draw=black!60, fill=black!5,
+    minimum size=7mm, inner sep=0pt, font=\sffamily\footnotesize,
+  },
+  eye/.style={line width=4pt, draw=blue!50, opacity=0.35, rounded corners=2pt},
+  paneltitle/.style={font=\sffamily\scriptsize, text=BookInk, align=center},
+]
+  \def\pw{50}\def\ph{35}
+  \begin{scope}[shift={(0,42)}]
+    \draw[panel] (0,0) rectangle (\pw,\ph);
+    \node[paneltitle, anchor=north] at (0.5*\pw,\ph+2.5) {(a) Linear};
+  \end{scope}
+  \begin{scope}[shift={(54,42)}]
+    \draw[panel] (0,0) rectangle (\pw,\ph);
+    \node[paneltitle, anchor=north] at (0.5*\pw,\ph+2.5) {(b) Hub};
+  \end{scope}
+  \begin{scope}[shift={(108,42)}]
+    \draw[panel] (0,0) rectangle (\pw,\ph);
+    \node[paneltitle, anchor=north] at (0.5*\pw,\ph+2.5) {(c) Two-branch};
+  \end{scope}
+  \begin{scope}[shift={(0,42)}]
+    \foreach \i/\x in {1/8,2/18,3/28,4/38,5/42} {
+      \node[block] at (\x,17.5) {\i};
+    }
+    \draw[eye] (6,22) .. controls (15,26) and (35,26) .. (44,22);
+    \foreach \i/\xa/\xb in {1/11/15,2/21/25,3/31/35,4/41/45} {
+      \draw[-{Stealth[length=1.2mm]}, draw=BookInk!35, thin] (\xa,17.5) -- (\xb,17.5);
+    }
+  \end{scope}
+  \begin{scope}[shift={(54,42)}]
+    \node[block] at (25,17.5) {3};
+    \node[block, minimum size=5.5mm] at (8,28) {1};
+    \node[block, minimum size=5.5mm] at (42,28) {2};
+    \node[block, minimum size=5.5mm] at (8,7) {4};
+    \node[block, minimum size=5.5mm] at (42,7) {5};
+    \draw[eye, blue!50] (25,20) .. controls (32,26) .. (42,28);
+    \draw[eye, orange!70!black, opacity=0.35] (25,20) .. controls (18,26) .. (8,28);
+    \draw[eye, blue!50] (25,15) .. controls (32,8) .. (42,7);
+    \node[font=\Large, text=BookInk!60] at (32,17) {?};
+  \end{scope}
+  \begin{scope}[shift={(108,42)}]
+    \foreach \i/\x in {1/10,2/25,3/40} {
+      \node[block, minimum size=6mm] at (\x,28) {\i};
+    }
+    \node[block, minimum size=6mm] at (25,12) {4};
+    \node[block, minimum size=6mm] at (25,5) {5};
+    \draw[-{Stealth[length=1mm]}, draw=BookInk!35, thin] (13,28) -- (22,28);
+    \draw[-{Stealth[length=1mm]}, draw=BookInk!35, thin] (28,28) -- (37,28);
+    \draw[-{Stealth[length=1mm]}, draw=BookInk!35, thin] (40,26) -- (40,20) -- (25,20) -- (25,15);
+    \draw[-{Stealth[length=1mm]}, draw=BookInk!35, thin] (25,20) -- (25,8);
+    \draw[eye] (8,30) .. controls (18,32) .. (38,30) .. controls (42,22) .. (25,14);
+    \draw[eye] (25,14) -- (25,6);
+  \end{scope}
+  \def\bw{38}\def\bh{22}
+  \foreach \i/\x/\title in {
+    1/0/Proximity, 2/42/Alignment, 3/84/Enclosure, 4/126/Hierarchy} {
+    \begin{scope}[shift={(\x,0)}]
+      \draw[panel] (0,0) rectangle (\bw,\bh);
+      \node[paneltitle, anchor=north] at (0.5*\bw,-2.5) {\title};
+    \end{scope}
+  }
+  \begin{scope}[shift={(0,0)}]
+    \foreach \x in {6,10,14} {\fill[BookInk] (\x,14) circle (0.9mm);}
+    \foreach \x in {26,30,34} {\fill[BookInk] (\x,14) circle (0.9mm);}
+  \end{scope}
+  \begin{scope}[shift={(42,0)}]
+    \draw[fill=BookInk!15, draw=BookInk!50] (4,6) rectangle (16,18);
+    \draw[fill=BookInk!15, draw=BookInk!50] (4,6) rectangle (14,18);
+    \node[font=\scriptsize, anchor=west] at (18,12) {Aligned};
+    \node[font=\scriptsize, anchor=west, text=BookInk!55] at (18,7) {Misaligned};
+  \end{scope}
+  \begin{scope}[shift={(84,0)}]
+    \draw[fill=BookRule!40, rounded corners=2pt] (3,5) rectangle (35,19);
+    \foreach \x in {10,19,28} {
+      \draw[fill=BookPale, draw=BookInk!40, rounded corners=1pt] (\x-3,9) rectangle (\x+3,15);
+    }
+  \end{scope}
+  \begin{scope}[shift={(126,0)}]
+    \draw[fill=BookInk!25, draw=BookInk!60, rounded corners=2pt] (14,6) rectangle (26,18);
+    \foreach \x/\y in {6/16,6/10,32/16,32/10} {
+      \draw[fill=BookInk!8, draw=BookInk!45, rounded corners=1pt] (\x-2.5,\y-2) rectangle (\x+2.5,\y+2);
+    }
+  \end{scope}
+\end{tikzpicture}

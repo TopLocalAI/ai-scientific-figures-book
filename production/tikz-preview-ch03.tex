@@ -1,0 +1,35 @@
+% Compile from repo root: xelatex -interaction=nonstopmode production/tikz-preview-ch03.tex
+\documentclass[UTF8,fontset=fandol,10pt]{ctexart}
+\usepackage[margin=16mm]{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{
+  arrows.meta,calc,fit,positioning,matrix,shapes.geometric,
+  decorations.pathreplacing,
+}
+\definecolor{BookTeal}{HTML}{176C68}
+\definecolor{BookInk}{HTML}{23363E}
+\definecolor{BookRule}{HTML}{C8D6D6}
+\definecolor{BookPale}{HTML}{F1F6F5}
+\graphicspath{{./}}
+\setlength{\parindent}{0pt}
+\begin{document}
+\section*{FIG ch03-01 reading order (zh)}
+\input{figures/ch03/ch03-01-reading-order-zh.tex}
+\newpage
+\section*{FIG ch03-01 reading order (en)}
+\input{figures/ch03/ch03-01-reading-order-en.tex}
+\newpage
+\section*{FIG ch03-04 layout comparison (zh)}
+\input{figures/ch03/ch03-04-layout-comparison-zh.tex}
+\newpage
+\section*{FIG ch03-04 layout comparison (en)}
+\input{figures/ch03/ch03-04-layout-comparison-en.tex}
+\newpage
+\section*{FIG ch03-07 PAM inset (zh)}
+\input{figures/ch03/ch03-07-pam-inset-zh.tex}
+\newpage
+\section*{FIG ch03-07 PAM inset (en)}
+\input{figures/ch03/ch03-07-pam-inset-en.tex}
+% PNG-dependent composites omitted until codex bases exist (ch03-02, 03, 05a, 06).
+\end{document}

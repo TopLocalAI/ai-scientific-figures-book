@@ -1,0 +1,30 @@
+% Preview chapter 4 TikZ overlays (compile from repo root with xelatex)
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=18mm]{geometry}
+\usepackage{ctex}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,fit,positioning}
+\definecolor{BookTeal}{HTML}{176C68}
+\definecolor{BookInk}{HTML}{23363E}
+\definecolor{BookRule}{HTML}{C8D6D6}
+\definecolor{BookPale}{HTML}{F1F6F5}
+\graphicspath{{./}}
+\usepackage{graphicx}
+\title{Chapter 4 TikZ preview}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{ch04-04b schematic overlay (zh)}
+If \texttt{ch04-04b-schematic-base.png} is missing, add the codex-image base first.\\
+\IfFileExists{figures/ch04/ch04-04b-schematic-base.png}{%
+  \input{figures/ch04/ch04-04b-schematic-zh.tex}}{%
+  \textit{Base PNG not found; skipping include.}}
+\newpage
+
+\section*{ch04-04b schematic overlay (en)}
+\IfFileExists{figures/ch04/ch04-04b-schematic-base.png}{%
+  \input{figures/ch04/ch04-04b-schematic-en.tex}}{%
+  \textit{Base PNG not found; skipping include.}}
+
+\end{document}

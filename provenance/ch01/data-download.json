@@ -1,0 +1,33 @@
+{
+  "source_url": "https://waterservices.usgs.gov/nwis/dv/?format=rdb&sites=05484500&parameterCd=99133,00060&startDT=2016-01-01&endDT=2016-12-31&statCd=00003",
+  "download_date": "2026-10-29",
+  "license": "U.S. Federal Government work / public domain (USGS data policy)",
+  "citation": "U.S. Geological Survey, USGS water data for the Nation, site 05484500, https://doi.org/10.5066/F7P55KJN",
+  "rdb_sha256": "eecd74dfa8d14f1445d7d1aa8c5228f9c6764bc608ba74156ff299ea7fafcf2c",
+  "csv_sha256": "50b26e260b5ad15dbb33fc625091574a30c09eff71d3d6512f503d247d9e5e24",
+  "csv_path": "data/ch01/ch01-raccoon-2016.csv",
+  "checks": {
+    "rows_2016": 366,
+    "nitrate_valid_days": 363,
+    "nitrate_missing_dates": [
+      "2016-09-18",
+      "2016-09-19",
+      "2016-12-14"
+    ],
+    "nitrate_max_mgL_as_N": 13.9,
+    "nitrate_max_date": "2016-05-13",
+    "nitrate_min_mgL_as_N": 3.19,
+    "nitrate_min_date": "2016-09-16",
+    "nitrate_days_above_10_mgL": 162,
+    "monthly_mean_may": 12.84,
+    "monthly_mean_september": 5.36,
+    "discharge_max_cfs": 16300.0,
+    "discharge_max_date": "2016-05-01",
+    "discharge_max_m3s": 461.6,
+    "discharge_min_cfs": 411.0,
+    "discharge_min_date": "2016-09-06",
+    "discharge_min_m3s": 11.6,
+    "discharge_ae_days": 58
+  },
+  "parsed_at": "2026-10-29T08:05:26.220942+00:00"
+}

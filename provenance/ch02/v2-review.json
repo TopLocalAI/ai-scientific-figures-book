@@ -1,0 +1,80 @@
+{
+  "figure": "ch02-05",
+  "file": "figures/ch02/ch02-05-nmc-brief-v2.png",
+  "generation_attempt": 1,
+  "tool": "Codex 内置图像生成：image_gen__imagegen，经 functions.exec 调用；具体底层模型不知道（工具未返回模型标识）",
+  "review_method": "查看实际生成图，橙点数量辅以 Pillow 色阈值连通域检测；未进行外部科学文献复核。",
+  "score_key": {
+    "2": "图像层面通过",
+    "1": "部分通过，具体偏差见 observed",
+    "0": "不通过",
+    "null": "本次无字底图范围外"
+  },
+  "relations_R1_R8": [
+    {
+      "id": "R1",
+      "status": "partial",
+      "score": 1,
+      "observed": "4 个主颗粒、1 个空心左→右箭头，无额外箭头；两正极外形接近，但循环后石墨含壳外轮廓明显更大，不能声称严格同尺寸。"
+    },
+    {
+      "id": "R2",
+      "status": "pass_visual",
+      "score": 2,
+      "observed": "循环后可见约 8 个向外裂纹分支，沿多边形晶界延伸，未见明确切穿晶粒内部的裂纹；新鲜正极无浅蓝裂纹。分支构成连通网络，非 8 条彼此独立曲线。"
+    },
+    {
+      "id": "R3",
+      "status": "pass_visual",
+      "score": 2,
+      "observed": "循环后晶界裂隙填浅蓝；新鲜正极内部没有同类浅蓝填充。蓝灰色晶粒本身不计为电解液。"
+    },
+    {
+      "id": "R4",
+      "status": "pass_visual",
+      "score": 2,
+      "observed": "右侧只有一处分离晶粒群，目视约 5 个晶粒，与主体间有浅蓝窄隙；没有多处飞散或爆裂。"
+    },
+    {
+      "id": "R5",
+      "status": "pass_visual",
+      "score": 2,
+      "observed": "深灰蓝重构薄缘仅出现在循环后正极外表面，新鲜正极只有细轮廓而无同类深色厚缘。"
+    },
+    {
+      "id": "R6",
+      "status": "not_in_base_scope",
+      "score": null,
+      "observed": "底图提供可指向的表面重构层；“阻抗升高”实线框属叠加工作，未生成，不能据底图判整条通过。"
+    },
+    {
+      "id": "R7",
+      "status": "pass_visual",
+      "score": 2,
+      "observed": "橄榄色壳只包围两个石墨颗粒；新鲜薄且基本均匀，循环后明显更厚且略不均匀。"
+    },
+    {
+      "id": "R8",
+      "status": "partial",
+      "score": 1,
+      "observed": "橙点检测并逐点看图：新鲜层间 22；循环后层间 7、SEI 内 8。层间减少且 SEI 含点，趋势通过；未完全对应提示词约 20 / 8 / 6，尤其壳内 8 而非约 6，保留为修订依据。"
+    }
+  ],
+  "text_present": false,
+  "orange_dot_counts": {
+    "pristine_between_layers": 22,
+    "cycled_between_layers": 7,
+    "cycled_inside_SEI": 8
+  },
+  "other_observed_deviations": [
+    "石墨层有白色高光/明暗纹理，不满足平涂、无高光要求。",
+    "晶粒数目视多于 40，正极粒径约占图高 45%，左右晶粒图样不同。",
+    "背景近白而非严格纯白，含轻微纹理。"
+  ],
+  "v3_corrections_from_plan": [
+    "Both cathode particles have the same diameter; both graphite particles have the same size.",
+    "Pristine graphite: about 20 orange dots between layers. Cycled graphite: about 8 orange dots between layers and about 6 inside the olive shell."
+  ],
+  "full_acceptance": false,
+  "remaining_scope": "叠加标签、R6/R9 表达与字号、专业审校另行验收。"
+}

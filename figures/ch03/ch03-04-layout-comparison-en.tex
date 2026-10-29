@@ -1,0 +1,52 @@
+% FIG ch03-04 layout comparison (English)
+\begin{tikzpicture}[
+  x=1mm, y=1mm,
+  font=\sffamily\footnotesize,
+  text=BookInk,
+  wf/.style={draw=black!50, fill=black!4, line width=0.4pt},
+  main/.style={fill=teal!25, draw=none},
+]
+  \def\fw{52}\def\fh{33}
+  \begin{scope}[shift={(0,58)}]
+    \draw[wf] (0,0) rectangle (\fw,\fh);
+    \fill[main] (0.68*\fw,0.05*\fh) rectangle (0.96*\fw,0.43*\fh);
+    \node[anchor=north, font=\bfseries] at (0.5*\fw,\fh+2) {A};
+    \node[font=\scriptsize, anchor=south] at (0.5*\fw,-1.5) {$\approx$11\%};
+  \end{scope}
+  \begin{scope}[shift={(56,58)}]
+    \draw[wf] (0,0) rectangle (\fw,\fh);
+    \fill[main] (0.15*\fw,0.12*\fh) rectangle (0.85*\fw,0.47*\fh);
+    \node[anchor=north, font=\bfseries] at (0.5*\fw,\fh+2) {B};
+    \node[font=\scriptsize, anchor=south] at (0.5*\fw,-1.5) {$\approx$25\%};
+  \end{scope}
+  \begin{scope}[shift={(112,58)}]
+    \draw[wf] (0,0) rectangle (\fw,\fh);
+    \fill[main] (0,0) rectangle (\fw,0.50*\fh);
+    \node[anchor=north, font=\bfseries] at (0.5*\fw,\fh+2) {C};
+    \node[font=\scriptsize, anchor=south] at (0.5*\fw,-1.5) {$\approx$50\%};
+  \end{scope}
+  \node[font=\scriptsize, text=BookInk!70, anchor=north west] at (0,54)
+    {Teal: area for the two repair outcomes (wireframe proxy; update after PNG measurement).};
+
+  \matrix (m) [
+    matrix of nodes,
+    anchor=north west,
+    row sep=1.8mm,
+    column sep=3mm,
+    nodes={font=\scriptsize, inner sep=2pt},
+    column 1/.style={nodes={anchor=west}, text width=42mm},
+    column 2/.style={nodes={anchor=center}, text width=12mm},
+    column 3/.style={nodes={anchor=center}, text width=12mm},
+    column 4/.style={nodes={anchor=center}, text width=12mm},
+  ] at (0,48) {
+    & {A} & {B} & {C} \\
+    Single entry point & {$\bullet$} & {$\circ$} & {$\bullet$} \\
+    Order matches events & {$\bullet$} & {\tikz[baseline=-0.6ex]{\fill[BookTeal] (0,0) arc (90:270:0.35); \draw[BookTeal] (0,0) circle (0.35);}} & {$\bullet$} \\
+    Outcomes directly comparable & {$\circ$} & {$\circ$} & {$\bullet$} \\
+    Area for main message & {$\circ$} & {\tikz[baseline=-0.6ex]{\fill[BookTeal] (0,0) arc (90:270:0.35); \draw[BookTeal] (0,0) circle (0.35);}} & {$\bullet$} \\
+    Label space at 174\,mm & {\tikz[baseline=-0.6ex]{\fill[BookTeal] (0,0) arc (90:270:0.35); \draw[BookTeal] (0,0) circle (0.35);}} & {\tikz[baseline=-0.6ex]{\fill[BookTeal] (0,0) arc (90:270:0.35); \draw[BookTeal] (0,0) circle (0.35);}} & {$\bullet$} \\
+    Best suited for & {Slides} & {Concept map} & {Paper overview} \\
+  };
+  \draw[BookTeal, line width=0.8pt, rounded corners=1pt]
+    ([xshift=-2mm,yshift=2mm]m-1-4.north west) rectangle ([xshift=2mm,yshift=-2mm]m-7-4.south east);
+\end{tikzpicture}

@@ -1,0 +1,60 @@
+### figures/ch03/ch03-03b-cand-hub-alt2.png
+
+- 工具：Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）
+- 模型：不知道：工具未返回具体模型标识。
+- 日期：2026-10-29
+- 本阶段第几次：2
+- 参考图：figures/ch03/ch03-02b-sketch-hub.png
+- 输出：1672×941，RGB PNG；SHA-256：`e98086b1cc0622089cb132d6aed072ae2d59eee2c8f9e843db7efa4c2f2823a9`
+- prompt 改动原因：未追加/改写规划英文 prompt；仅作规划要求的公共段拼接或 LAYOUT 占位替换。
+- 人工图像修改：无。
+
+画面内容 / 核验要点逐条检查：
+
+- 落选；第 2 次，原 prompt 重试。颜色和四角对象与第 1 次近似。
+- 失败：左下连线带两个箭头头部，成为双向箭头；不符合草图四支单头箭头。
+- 中央仍未体现断裂，右上变成独立断裂步骤；供体只在右下。
+- 共通核验：未见文字；像素宽度未达2400；约16:9；未真人复核。
+
+实际完整 prompt（保留换行）：
+
+```text
+Flat 2D scientific overview schematic for a journal figure, landscape 16:9,
+pure white background. Clean vector illustration style: flat fills, thin dark
+gray outlines, no gradients, no shadows, no highlights, no 3D, no glow, no
+texture. ABSOLUTELY NO TEXT: no letters, no words, no numbers, no symbols, no
+labels, no legend, no title.
+
+Follow the layout of the attached pencil sketch closely: same regions, same
+relative positions, same arrow directions.
+
+OBJECTS (use these exact visual identities in every step where they appear):
+- Cas9: a rounded two-lobed protein shape, muted blue-gray (#7C93A8).
+- sgRNA: a single orange (#E69F00) strand with a short straight segment (the
+  spacer) and a small hairpin loop scaffold, partly inside Cas9.
+- Genomic DNA: two parallel dark gray (#4D4D4D) lines with short light gray
+  rungs between them.
+- PAM: a short bright yellow (#F0E442) segment on the upper DNA line.
+- Double-strand break: a clean gap through both DNA lines, right next to the PAM.
+- Donor template: a short separate double-stranded DNA; its two ends dark gray
+  (homology arms), its middle segment teal (#009E73).
+- NHEJ result: a continuous DNA with one small reddish-purple (#CC79A7) mark at
+  the former break site.
+- HDR result: a continuous DNA with a teal (#009E73) segment at the former
+  break site, the same length as the donor's middle segment.
+
+STEPS: (1) Cas9 bound to sgRNA. (2) Cas9-sgRNA sitting on the DNA at the PAM, the
+orange spacer lying alongside the lower DNA line, the upper line slightly
+pushed away. (3) The DNA with the break next to the PAM, Cas9 lifted away.
+(4) Repair by end joining, giving the NHEJ result, with no donor. (5) Repair
+using the donor template, giving the HDR result; the donor appears only here.
+Steps are connected by solid dark gray arrows with filled heads; after step 3
+the arrow splits into two equal arrows.
+
+DO NOT DRAW: cells, nucleus, chromosomes, scissors, lightning, sparkles,
+double-helix twisting, realistic protein structure, any charts or data.
+Bottom 10% of the image empty.
+
+LAYOUT: radial; the DNA-bound Cas9 complex (step 2-3 merged) in the
+center, steps 1, 4, 5 and the PAM detail around it.
+```

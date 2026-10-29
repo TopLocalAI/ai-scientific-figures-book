@@ -1,0 +1,1073 @@
+[
+  {
+    "file": "ch04-04a-schematic-bad.png",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 2645803,
+    "sha256": "8fcfb95647a8d5553a0d27b012f36b59f88b8aaad0a5c3f4aed6f7d08f073630"
+  },
+  {
+    "file": "ch04-04b-schematic-base-alt1.png",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 1148937,
+    "sha256": "75d89d2f728747e350dab44a479db58e263cd5cc5bdf42d76e494065db98cef1",
+    "row_boundaries_at_x150": [
+      {
+        "rows": [
+          306,
+          311
+        ],
+        "pct": 32.78
+      },
+      {
+        "rows": [
+          478,
+          482
+        ],
+        "pct": 51.01
+      },
+      {
+        "rows": [
+          782,
+          784
+        ],
+        "pct": 83.21
+      }
+    ],
+    "background_samples": {
+      "atmosphere": {
+        "ROI": [
+          1300,
+          80,
+          1500,
+          200
+        ],
+        "median_RGB": [
+          254,
+          254,
+          254
+        ],
+        "mode_RGB": [
+          254,
+          254,
+          254
+        ],
+        "mode_fraction": 0.6284,
+        "min_RGB": [
+          253,
+          253,
+          253
+        ],
+        "max_RGB": [
+          255,
+          255,
+          255
+        ]
+      },
+      "mixed": {
+        "ROI": [
+          100,
+          330,
+          200,
+          420
+        ],
+        "median_RGB": [
+          209,
+          231,
+          245
+        ],
+        "mode_RGB": [
+          209,
+          231,
+          245
+        ],
+        "mode_fraction": 0.467,
+        "min_RGB": [
+          208,
+          230,
+          244
+        ],
+        "max_RGB": [
+          210,
+          232,
+          246
+        ]
+      },
+      "interior": {
+        "ROI": [
+          100,
+          540,
+          300,
+          700
+        ],
+        "median_RGB": [
+          190,
+          220,
+          241
+        ],
+        "mode_RGB": [
+          190,
+          220,
+          241
+        ],
+        "mode_fraction": 0.2604,
+        "min_RGB": [
+          188,
+          219,
+          240
+        ],
+        "max_RGB": [
+          192,
+          222,
+          242
+        ]
+      },
+      "white_bottom": {
+        "ROI": [
+          300,
+          850,
+          600,
+          900
+        ],
+        "median_RGB": [
+          254,
+          254,
+          254
+        ],
+        "mode_RGB": [
+          254,
+          254,
+          254
+        ],
+        "mode_fraction": 0.5989,
+        "min_RGB": [
+          253,
+          253,
+          253
+        ],
+        "max_RGB": [
+          255,
+          255,
+          255
+        ]
+      }
+    },
+    "object_colours": {
+      "orange_dots": {
+        "ROI": [
+          100,
+          30,
+          960,
+          280
+        ],
+        "matching_pixels": 5526,
+        "median_RGB": [
+          239,
+          150,
+          8
+        ],
+        "mode_RGB": [
+          239,
+          152,
+          4
+        ]
+      },
+      "blue_dots": {
+        "ROI": [
+          250,
+          330,
+          650,
+          460
+        ],
+        "matching_pixels": 3191,
+        "median_RGB": [
+          10,
+          118,
+          195
+        ],
+        "mode_RGB": [
+          9,
+          119,
+          196
+        ]
+      },
+      "heat": {
+        "ROI": [
+          650,
+          80,
+          950,
+          570
+        ],
+        "matching_pixels": 6492,
+        "median_RGB": [
+          239,
+          89,
+          10
+        ],
+        "mode_RGB": [
+          242,
+          83,
+          0
+        ]
+      },
+      "carbon_arrows": {
+        "ROI": [
+          350,
+          220,
+          500,
+          365
+        ],
+        "matching_pixels": 1686,
+        "median_RGB": [
+          64,
+          64,
+          64
+        ],
+        "mode_RGB": [
+          64,
+          64,
+          64
+        ]
+      },
+      "transport_band": {
+        "ROI": [
+          700,
+          640,
+          900,
+          700
+        ],
+        "matching_pixels": 10345,
+        "median_RGB": [
+          130,
+          196,
+          241
+        ],
+        "mode_RGB": [
+          130,
+          196,
+          241
+        ]
+      }
+    },
+    "exact_colour_pixel_counts": {
+      "atmosphere": {
+        "expected": "#FFFFFF",
+        "pixels": 97270
+      },
+      "mixed": {
+        "expected": "#DCEBF5",
+        "pixels": 2
+      },
+      "interior": {
+        "expected": "#C9DEEE",
+        "pixels": 0
+      },
+      "orange_dots": {
+        "expected": "#E69F00",
+        "pixels": 0
+      },
+      "blue_dots": {
+        "expected": "#0072B2",
+        "pixels": 0
+      },
+      "heat": {
+        "expected": "#D55E00",
+        "pixels": 0
+      },
+      "carbon_arrows": {
+        "expected": "#3C3C3C",
+        "pixels": 22
+      },
+      "transport_band": {
+        "expected": "#56B4E9",
+        "pixels": 0
+      }
+    },
+    "colour_simulation_numeric_only": [
+      {
+        "simulation": "normal",
+        "severity": 0,
+        "object_vs_background_luminance_contrast": {
+          "heat": {
+            "atmosphere": 3.41,
+            "mixed": 2.7,
+            "interior": 2.41
+          },
+          "carbon_arrows": {
+            "atmosphere": 10.28,
+            "mixed": 8.13,
+            "interior": 7.26
+          }
+        }
+      },
+      {
+        "simulation": "deuteranomaly",
+        "severity": 100,
+        "object_vs_background_luminance_contrast": {
+          "heat": {
+            "atmosphere": 2.92,
+            "mixed": 2.27,
+            "interior": 2.02
+          },
+          "carbon_arrows": {
+            "atmosphere": 10.28,
+            "mixed": 8.0,
+            "interior": 7.1
+          }
+        }
+      },
+      {
+        "simulation": "protanomaly",
+        "severity": 100,
+        "object_vs_background_luminance_contrast": {
+          "heat": {
+            "atmosphere": 4.58,
+            "mixed": 3.71,
+            "interior": 3.34
+          },
+          "carbon_arrows": {
+            "atmosphere": 10.28,
+            "mixed": 8.32,
+            "interior": 7.5
+          }
+        }
+      },
+      {
+        "simulation": "tritanomaly",
+        "severity": 100,
+        "object_vs_background_luminance_contrast": {
+          "heat": {
+            "atmosphere": 3.64,
+            "mixed": 2.88,
+            "interior": 2.58
+          },
+          "carbon_arrows": {
+            "atmosphere": 10.28,
+            "mixed": 8.15,
+            "interior": 7.29
+          }
+        }
+      }
+    ]
+  },
+  {
+    "file": "ch04-04b-schematic-base-alt2.png",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 1135610,
+    "sha256": "f62aa3ddd9e49539e7bcde60301d1cce735d184654742c2fabcfb72b67e8eef0",
+    "row_boundaries_at_x150": [
+      {
+        "rows": [
+          119,
+          122
+        ],
+        "pct": 12.81
+      },
+      {
+        "rows": [
+          135,
+          137
+        ],
+        "pct": 14.45
+      },
+      {
+        "rows": [
+          287,
+          292
+        ],
+        "pct": 30.77
+      },
+      {
+        "rows": [
+          455,
+          458
+        ],
+        "pct": 48.51
+      },
+      {
+        "rows": [
+          764,
+          766
+        ],
+        "pct": 81.3
+      }
+    ],
+    "background_samples": {
+      "atmosphere": {
+        "ROI": [
+          1300,
+          80,
+          1500,
+          200
+        ],
+        "median_RGB": [
+          254,
+          254,
+          254
+        ],
+        "mode_RGB": [
+          254,
+          254,
+          254
+        ],
+        "mode_fraction": 0.6458,
+        "min_RGB": [
+          253,
+          253,
+          253
+        ],
+        "max_RGB": [
+          255,
+          255,
+          255
+        ]
+      },
+      "mixed": {
+        "ROI": [
+          100,
+          330,
+          200,
+          420
+        ],
+        "median_RGB": [
+          209,
+          232,
+          246
+        ],
+        "mode_RGB": [
+          209,
+          232,
+          246
+        ],
+        "mode_fraction": 0.2506,
+        "min_RGB": [
+          208,
+          230,
+          245
+        ],
+        "max_RGB": [
+          211,
+          233,
+          247
+        ]
+      },
+      "interior": {
+        "ROI": [
+          100,
+          540,
+          300,
+          700
+        ],
+        "median_RGB": [
+          189,
+          219,
+          240
+        ],
+        "mode_RGB": [
+          189,
+          219,
+          240
+        ],
+        "mode_fraction": 0.2433,
+        "min_RGB": [
+          187,
+          217,
+          238
+        ],
+        "max_RGB": [
+          190,
+          220,
+          241
+        ]
+      },
+      "white_bottom": {
+        "ROI": [
+          300,
+          850,
+          600,
+          900
+        ],
+        "median_RGB": [
+          254,
+          254,
+          254
+        ],
+        "mode_RGB": [
+          254,
+          254,
+          254
+        ],
+        "mode_fraction": 0.6485,
+        "min_RGB": [
+          253,
+          253,
+          253
+        ],
+        "max_RGB": [
+          255,
+          255,
+          255
+        ]
+      }
+    },
+    "object_colours": {
+      "orange_dots": {
+        "ROI": [
+          100,
+          30,
+          960,
+          280
+        ],
+        "matching_pixels": 3899,
+        "median_RGB": [
+          233,
+          146,
+          5
+        ],
+        "mode_RGB": [
+          233,
+          146,
+          2
+        ]
+      },
+      "blue_dots": {
+        "ROI": [
+          250,
+          330,
+          650,
+          460
+        ],
+        "matching_pixels": 2310,
+        "median_RGB": [
+          5,
+          103,
+          182
+        ],
+        "mode_RGB": [
+          2,
+          102,
+          180
+        ]
+      },
+      "heat": {
+        "ROI": [
+          650,
+          80,
+          950,
+          570
+        ],
+        "matching_pixels": 4392,
+        "median_RGB": [
+          231,
+          82,
+          12
+        ],
+        "mode_RGB": [
+          226,
+          65,
+          0
+        ]
+      },
+      "carbon_arrows": {
+        "ROI": [
+          350,
+          220,
+          500,
+          365
+        ],
+        "matching_pixels": 1977,
+        "median_RGB": [
+          64,
+          68,
+          71
+        ],
+        "mode_RGB": [
+          65,
+          69,
+          72
+        ]
+      },
+      "transport_band": {
+        "ROI": [
+          700,
+          640,
+          900,
+          700
+        ],
+        "matching_pixels": 8600,
+        "median_RGB": [
+          138,
+          202,
+          241
+        ],
+        "mode_RGB": [
+          138,
+          202,
+          241
+        ]
+      }
+    },
+    "exact_colour_pixel_counts": {
+      "atmosphere": {
+        "expected": "#FFFFFF",
+        "pixels": 102405
+      },
+      "mixed": {
+        "expected": "#DCEBF5",
+        "pixels": 7
+      },
+      "interior": {
+        "expected": "#C9DEEE",
+        "pixels": 1
+      },
+      "orange_dots": {
+        "expected": "#E69F00",
+        "pixels": 0
+      },
+      "blue_dots": {
+        "expected": "#0072B2",
+        "pixels": 0
+      },
+      "heat": {
+        "expected": "#D55E00",
+        "pixels": 0
+      },
+      "carbon_arrows": {
+        "expected": "#3C3C3C",
+        "pixels": 1
+      },
+      "transport_band": {
+        "expected": "#56B4E9",
+        "pixels": 0
+      }
+    },
+    "colour_simulation_numeric_only": [
+      {
+        "simulation": "normal",
+        "severity": 0,
+        "object_vs_background_luminance_contrast": {
+          "heat": {
+            "atmosphere": 3.71,
+            "mixed": 2.96,
+            "interior": 2.59
+          },
+          "carbon_arrows": {
+            "atmosphere": 9.75,
+            "mixed": 7.76,
+            "interior": 6.81
+          }
+        }
+      },
+      {
+        "simulation": "deuteranomaly",
+        "severity": 100,
+        "object_vs_background_luminance_contrast": {
+          "heat": {
+            "atmosphere": 3.17,
+            "mixed": 2.49,
+            "interior": 2.17
+          },
+          "carbon_arrows": {
+            "atmosphere": 9.8,
+            "mixed": 7.68,
+            "interior": 6.7
+          }
+        }
+      },
+      {
+        "simulation": "protanomaly",
+        "severity": 100,
+        "object_vs_background_luminance_contrast": {
+          "heat": {
+            "atmosphere": 5.01,
+            "mixed": 4.09,
+            "interior": 3.62
+          },
+          "carbon_arrows": {
+            "atmosphere": 9.68,
+            "mixed": 7.9,
+            "interior": 6.99
+          }
+        }
+      },
+      {
+        "simulation": "tritanomaly",
+        "severity": 100,
+        "object_vs_background_luminance_contrast": {
+          "heat": {
+            "atmosphere": 3.74,
+            "mixed": 2.99,
+            "interior": 2.63
+          },
+          "carbon_arrows": {
+            "atmosphere": 9.74,
+            "mixed": 7.78,
+            "interior": 6.84
+          }
+        }
+      }
+    ]
+  },
+  {
+    "file": "ch04-04b-schematic-base.png",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 1164556,
+    "sha256": "cfd1ac4ea8bb1e2c3c55d8c84db03ac0bb90b4b6d8021ea5e4ece0e58eae5048",
+    "row_boundaries_at_x150": [
+      {
+        "rows": [
+          177,
+          187
+        ],
+        "pct": 19.34
+      },
+      {
+        "rows": [
+          297,
+          306
+        ],
+        "pct": 32.04
+      },
+      {
+        "rows": [
+          450,
+          455
+        ],
+        "pct": 48.09
+      },
+      {
+        "rows": [
+          750,
+          752
+        ],
+        "pct": 79.81
+      }
+    ],
+    "background_samples": {
+      "atmosphere": {
+        "ROI": [
+          1300,
+          80,
+          1500,
+          200
+        ],
+        "median_RGB": [
+          254,
+          254,
+          254
+        ],
+        "mode_RGB": [
+          254,
+          254,
+          254
+        ],
+        "mode_fraction": 0.5477,
+        "min_RGB": [
+          253,
+          253,
+          253
+        ],
+        "max_RGB": [
+          255,
+          255,
+          255
+        ]
+      },
+      "mixed": {
+        "ROI": [
+          100,
+          330,
+          200,
+          420
+        ],
+        "median_RGB": [
+          211,
+          231,
+          245
+        ],
+        "mode_RGB": [
+          211,
+          231,
+          245
+        ],
+        "mode_fraction": 0.2188,
+        "min_RGB": [
+          210,
+          230,
+          243
+        ],
+        "max_RGB": [
+          213,
+          233,
+          246
+        ]
+      },
+      "interior": {
+        "ROI": [
+          100,
+          540,
+          300,
+          700
+        ],
+        "median_RGB": [
+          190,
+          219,
+          239
+        ],
+        "mode_RGB": [
+          190,
+          219,
+          239
+        ],
+        "mode_fraction": 0.2576,
+        "min_RGB": [
+          188,
+          217,
+          238
+        ],
+        "max_RGB": [
+          192,
+          220,
+          240
+        ]
+      },
+      "white_bottom": {
+        "ROI": [
+          300,
+          850,
+          600,
+          900
+        ],
+        "median_RGB": [
+          254,
+          254,
+          254
+        ],
+        "mode_RGB": [
+          254,
+          254,
+          254
+        ],
+        "mode_fraction": 0.5645,
+        "min_RGB": [
+          253,
+          253,
+          253
+        ],
+        "max_RGB": [
+          255,
+          255,
+          255
+        ]
+      }
+    },
+    "object_colours": {
+      "orange_dots": {
+        "ROI": [
+          100,
+          30,
+          960,
+          280
+        ],
+        "matching_pixels": 2857,
+        "median_RGB": [
+          237,
+          145,
+          6
+        ],
+        "mode_RGB": [
+          244,
+          152,
+          2
+        ]
+      },
+      "blue_dots": {
+        "ROI": [
+          250,
+          330,
+          650,
+          460
+        ],
+        "matching_pixels": 2368,
+        "median_RGB": [
+          5,
+          113,
+          186
+        ],
+        "mode_RGB": [
+          2,
+          115,
+          190
+        ]
+      },
+      "heat": {
+        "ROI": [
+          650,
+          80,
+          950,
+          570
+        ],
+        "matching_pixels": 4628,
+        "median_RGB": [
+          221,
+          78,
+          10
+        ],
+        "mode_RGB": [
+          223,
+          78,
+          6
+        ]
+      },
+      "carbon_arrows": {
+        "ROI": [
+          350,
+          220,
+          500,
+          365
+        ],
+        "matching_pixels": 1738,
+        "median_RGB": [
+          63,
+          63,
+          64
+        ],
+        "mode_RGB": [
+          69,
+          69,
+          70
+        ]
+      },
+      "transport_band": {
+        "ROI": [
+          700,
+          640,
+          900,
+          700
+        ],
+        "matching_pixels": 6990,
+        "median_RGB": [
+          132,
+          197,
+          241
+        ],
+        "mode_RGB": [
+          132,
+          197,
+          241
+        ]
+      }
+    },
+    "exact_colour_pixel_counts": {
+      "atmosphere": {
+        "expected": "#FFFFFF",
+        "pixels": 99090
+      },
+      "mixed": {
+        "expected": "#DCEBF5",
+        "pixels": 21
+      },
+      "interior": {
+        "expected": "#C9DEEE",
+        "pixels": 0
+      },
+      "orange_dots": {
+        "expected": "#E69F00",
+        "pixels": 0
+      },
+      "blue_dots": {
+        "expected": "#0072B2",
+        "pixels": 0
+      },
+      "heat": {
+        "expected": "#D55E00",
+        "pixels": 0
+      },
+      "carbon_arrows": {
+        "expected": "#3C3C3C",
+        "pixels": 48
+      },
+      "transport_band": {
+        "expected": "#56B4E9",
+        "pixels": 0
+      }
+    },
+    "colour_simulation_numeric_only": [
+      {
+        "simulation": "normal",
+        "severity": 0,
+        "object_vs_background_luminance_contrast": {
+          "heat": {
+            "atmosphere": 4.03,
+            "mixed": 3.2,
+            "interior": 2.82
+          },
+          "carbon_arrows": {
+            "atmosphere": 10.43,
+            "mixed": 8.27,
+            "interior": 7.3
+          }
+        }
+      },
+      {
+        "simulation": "deuteranomaly",
+        "severity": 100,
+        "object_vs_background_luminance_contrast": {
+          "heat": {
+            "atmosphere": 3.45,
+            "mixed": 2.7,
+            "interior": 2.36
+          },
+          "carbon_arrows": {
+            "atmosphere": 10.43,
+            "mixed": 8.16,
+            "interior": 7.15
+          }
+        }
+      },
+      {
+        "simulation": "protanomaly",
+        "severity": 100,
+        "object_vs_background_luminance_contrast": {
+          "heat": {
+            "atmosphere": 5.41,
+            "mixed": 4.38,
+            "interior": 3.91
+          },
+          "carbon_arrows": {
+            "atmosphere": 10.42,
+            "mixed": 8.45,
+            "interior": 7.53
+          }
+        }
+      },
+      {
+        "simulation": "tritanomaly",
+        "severity": 100,
+        "object_vs_background_luminance_contrast": {
+          "heat": {
+            "atmosphere": 4.06,
+            "mixed": 3.23,
+            "interior": 2.85
+          },
+          "carbon_arrows": {
+            "atmosphere": 10.43,
+            "mixed": 8.29,
+            "interior": 7.32
+          }
+        }
+      }
+    ]
+  }
+]

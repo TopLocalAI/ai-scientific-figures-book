@@ -1,0 +1,48 @@
+$ ls -l figures/ch06
+total 18144
+-rw-r--r--@  1 zeroone  staff  1994126 Oct 29 16:12 ch06-01-v1-vague-alt1.png
+-rw-r--r--@  1 zeroone  staff  1905795 Oct 29 16:09 ch06-01-v1-vague.png
+-rw-r--r--@  1 zeroone  staff     2931 Oct 29 16:11 ch06-02-flow-grammar-en.tex
+-rw-r--r--@  1 zeroone  staff     2819 Oct 29 16:11 ch06-02-flow-grammar-zh.tex
+-rw-r--r--@  1 zeroone  staff      246 Oct 29 16:09 ch06-03-skeleton-en.tex
+-rw-r--r--@  1 zeroone  staff    52467 Oct 29 16:12 ch06-03-skeleton-notext.png
+-rw-r--r--@  1 zeroone  staff      246 Oct 29 16:09 ch06-03-skeleton-zh.tex
+-rw-r--r--@  1 zeroone  staff     3443 Oct 29 16:11 ch06-04-structure-errors-en.tex
+-rw-r--r--@  1 zeroone  staff     3323 Oct 29 16:11 ch06-04-structure-errors-zh.tex
+-rw-r--r--@  1 zeroone  staff  1356880 Oct 29 16:10 ch06-05-v2-brief-alt1.png
+-rw-r--r--@  1 zeroone  staff  1335942 Oct 29 16:13 ch06-05-v2-brief.png
+-rw-r--r--@  1 zeroone  staff      265 Oct 29 16:09 ch06-06-final-en.tex
+-rw-r--r--@  1 zeroone  staff      304 Oct 29 16:09 ch06-06-final-zh.tex
+-rw-r--r--@  1 zeroone  staff      907 Oct 29 16:09 ch06-coords.tex
+-rw-r--r--@  1 zeroone  staff  1166421 Oct 29 16:15 ch06-icon-08-corrected-source.png
+-rw-r--r--@  1 zeroone  staff  1343766 Oct 29 16:11 ch06-icons-sheet.png
+-rw-r--r--@  1 zeroone  staff     2097 Oct 29 16:09 ch06-labels-en.tex
+-rw-r--r--@  1 zeroone  staff     2060 Oct 29 16:09 ch06-labels-zh.tex
+-rw-r--r--@  1 zeroone  staff       32 Oct 29 16:12 ch06-skeleton-notext-standalone.aux
+-rw-r--r--@  1 zeroone  staff    43411 Oct 29 16:12 ch06-skeleton-notext-standalone.log
+-rw-r--r--@  1 zeroone  staff     7630 Oct 29 16:12 ch06-skeleton-notext-standalone.pdf
+-rw-r--r--@  1 zeroone  staff      358 Oct 29 16:12 ch06-skeleton-notext-standalone.tex
+-rw-r--r--@  1 zeroone  staff     2619 Oct 29 16:11 ch06-styles.tex
+-rw-r--r--@  1 zeroone  staff     5260 Oct 29 16:11 ch06-workflow-draw.tex
+drwxr-xr-x@ 15 zeroone  staff      480 Oct 29 16:16 icons
+
+$ PNG pixel dimensions (Pillow Image.size; Image.verify passed)
+figures/ch06/ch06-01-v1-vague-alt1.png: 1672 x 941 px; RGB; 1994126 bytes
+figures/ch06/ch06-01-v1-vague.png: 1672 x 941 px; RGB; 1905795 bytes
+figures/ch06/ch06-05-v2-brief-alt1.png: 1983 x 793 px; RGB; 1356880 bytes
+figures/ch06/ch06-05-v2-brief.png: 1672 x 941 px; RGB; 1335942 bytes
+figures/ch06/ch06-icon-08-corrected-source.png: 1254 x 1254 px; RGB; 1166421 bytes
+figures/ch06/ch06-icons-sheet.png: 1448 x 1086 px; RGB; 1343766 bytes
+figures/ch06/icons/ch06-icon-01.png: 315 x 176 px; RGBA; 64417 bytes
+figures/ch06/icons/ch06-icon-02.png: 133 x 347 px; RGBA; 44533 bytes
+figures/ch06/icons/ch06-icon-03.png: 245 x 294 px; RGBA; 79047 bytes
+figures/ch06/icons/ch06-icon-04.png: 301 x 284 px; RGBA; 88354 bytes
+figures/ch06/icons/ch06-icon-05.png: 351 x 199 px; RGBA; 74638 bytes
+figures/ch06/icons/ch06-icon-06.png: 154 x 253 px; RGBA; 38425 bytes
+figures/ch06/icons/ch06-icon-07.png: 262 x 265 px; RGBA; 74063 bytes
+figures/ch06/icons/ch06-icon-08-corrected.png: 1264 x 1042 px; RGBA; 767470 bytes
+figures/ch06/icons/ch06-icon-08.png: 349 x 289 px; RGBA; 102478 bytes
+figures/ch06/icons/ch06-icon-09.png: 346 x 288 px; RGBA; 68718 bytes
+figures/ch06/icons/ch06-icon-10.png: 289 x 279 px; RGBA; 74210 bytes
+figures/ch06/icons/ch06-icon-11.png: 309 x 279 px; RGBA; 90455 bytes
+figures/ch06/icons/ch06-icon-12.png: 342 x 298 px; RGBA; 119702 bytes

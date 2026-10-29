@@ -1,0 +1,33 @@
+Flat 2D scientific schematic for a journal figure panel, portrait 4:5, pure white
+background. Clean vector illustration style: flat fills, thin dark-gray outlines,
+no gradients, no shadows, no highlights, no 3D, no glow, no texture.
+
+ABSOLUTELY NO TEXT: no letters, no words, no numbers, no symbols, no labels,
+no legend, no title, no compass letters. Labels will be added later by the author.
+
+SCENE: a simplified oblique (about 30-degree) view of a small agricultural
+landscape with a cut-away soil block in the lower-left quarter.
+- Upper half: gently rolling cropland made of 5-6 rectangular fields in two muted
+  tones (pale sage green and pale wheat yellow), with faint parallel crop rows.
+  No farm buildings, no animals, no machinery, no people, no aircraft.
+- A single meandering river (soft medium blue) enters at the upper-left, flows
+  diagonally across the panel, and exits at the lower-right edge. One small
+  tributary ditch joins the river from the fields on the left.
+- Lower-left: a cut-away cross-section of the soil under one field, light warm
+  brown, showing a row of 3 small round subsurface drain pipes (gray circles)
+  about one third down from the field surface, and one pipe outlet discharging a
+  thin stream of water into the tributary ditch.
+- Lower-right, on the river bank just before the river exits: a small, simple
+  monitoring station - a pale-gray box on short legs with a thin cable running
+  into the water to a small cylindrical sensor submerged in the river.
+- Two or three small hollow chevrons drawn on the river surface pointing
+  downstream (lower-right) to indicate flow direction.
+- Leave clear white space beside the fields, the cut-away, the station and the
+  river so labels can be placed later.
+
+STRICTLY EXCLUDE: factories, chimneys, smoke, sewage or discharge pipes from
+buildings, towns, roads, bridges, dead fish, algae, foam, colored or murky water,
+warning signs, droplets, chemical symbols, arrows other than the flow chevrons,
+maps, scale bars, north arrows, clouds, sun, trees in rows, decorative border.
+Maximum three hues (sage green, wheat yellow, river blue) plus warm brown soil
+and grays.

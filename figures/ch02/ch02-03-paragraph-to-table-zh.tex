@@ -1,0 +1,45 @@
+% FIG ch02-03 paragraph to relation table (Chinese)
+% Tabular only; input inside a table environment. No row colour:
+% shared/preamble.tex loads xcolor without [table].
+\begingroup
+\setlength{\tabcolsep}{1.6pt}
+\renewcommand{\arraystretch}{1}
+\newcommand{\cellfont}{\fontsize{8}{9.3}\selectfont}
+\newcommand{\gr}{\leavevmode\color{gray}}
+\begin{tabularx}{\linewidth}{@{}
+  >{\cellfont}l
+  >{\cellfont}Y
+  >{\cellfont\raggedright\arraybackslash}p{26mm}
+  >{\cellfont\raggedright\arraybackslash}p{21mm}
+  >{\cellfont\raggedright\arraybackslash}p{15.5mm}
+@{}}
+\toprule
+\textbf{句} & \textbf{原句} & \textbf{图形表达} & \textbf{证据状态} & \textbf{是否画} \\
+\midrule
+S1 & 层状 NMC 正极（LiNi$_x$Mn$_y$Co$_z$O$_2$）的二次颗粒由大量初级晶粒团聚而成。
+   & 颗粒剖面由多边形晶粒拼成
+   & 确立（结构背景） & 画 \\
+S2 & 在反复充放电中，初级晶粒随锂的脱出与嵌入发生各向异性的晶格膨胀与收缩，应力在晶界处积累，使二次颗粒内部沿晶界产生微裂纹（Ryu et al., 2018）。
+   & 循环后颗粒内裂纹沿晶界分布
+   & 确立（文献） & 画 \\
+S3 & 裂纹让电解液渗入颗粒内部、暴露新的表面，并可能使部分碎块与导电网络失去接触，造成活性材料损失。
+   & 裂纹内填浅蓝色电解液；颗粒边缘 1 块晶粒群轻微分离，叠加标签“活性材料损失”
+   & 确立 & 画 \\
+S4 & 在高荷电状态下，颗粒表面会由层状结构向类岩盐相重构并伴随晶格氧释放，形成的表面层使界面阻抗升高（Jung et al., 2017）。
+   & 颗粒外表面一圈深色薄层；叠加标签“表面重构层 → 阻抗升高”
+   & 确立（文献） & 画 \\
+S5 & 与此同时，石墨负极表面的固体电解质界面膜（SEI）在循环中持续增厚，消耗可循环的锂，这通常是容量衰减的主要来源之一（Vetter et al., 2005; Birkl et al., 2017）。
+   & 石墨颗粒外 SEI 由薄变厚；层间锂点变少，部分锂点嵌在 SEI 中
+   & 确立（文献） & 画 \\
+S6 & 我们推测，在本研究的电池中，裂纹新暴露表面上的电解液副反应也参与了阻抗的上升。
+   & 叠加层中用虚线框和“推测”标签，从裂纹指向“阻抗升高”
+   & 推测（虚线框） & 画，但区分 \\
+\gr S7 & \gr 过渡金属溶出并在负极沉积，同样可能加速 SEI 生长，但不在本文讨论范围内。
+   & \gr 图注写“未画：过渡金属溶出与沉积”
+   & \gr 确立，但本文范围外 & \gr 不画 \\
+\gr S8 & \gr 循环容量曲线见图 4。
+   & \gr 示意图中不出现任何曲线、坐标轴、数值
+   & \gr 数据，属于图 4 & \gr 不画 \\
+\bottomrule
+\end{tabularx}
+\endgroup

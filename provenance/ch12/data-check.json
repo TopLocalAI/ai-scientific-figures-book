@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-29",
+  "data_status": "simulated teaching data (scripts/sim_perovskite.py)",
+  "control_PCE_percent": 19.2096,
+  "modified_PCE_percent": 20.9785,
+  "control_T80_h": "210",
+  "control_retention_1000h": 0.472344,
+  "modified_retention_1000h": 0.859046,
+  "visual_angle_checks": {
+    "pt_1.5m": 33.75,
+    "pt_D_over_H_6": 25.416
+  },
+  "external_downloads": [],
+  "reuse_figures": {
+    "date": "2026-10-29",
+    "reuse": [
+      {
+        "source": "figures/ch09/ch09-07-assembly-final-zh.pdf",
+        "target": "figures/ch12/ch12-03-paper-figure-2-zh.pdf",
+        "sha256": "bb16737fe93b62e8e95f280c3e967b65ef985080334e52ef6ae18ca762a78adb"
+      },
+      {
+        "source": "figures/ch09/ch09-07-assembly-final-zh.png",
+        "target": "figures/ch12/ch12-03-paper-figure-2-zh.png",
+        "sha256": "a71142bc0dea7bea9661fad5aa76b93df79d9d35f1461a11d89ab1ed3afe33a6"
+      },
+      {
+        "source": "figures/ch09/ch09-07-assembly-final-en.pdf",
+        "target": "figures/ch12/ch12-03-paper-figure-2-en.pdf",
+        "sha256": "218e16afe782771570b99bc9e6b08b9b285fc336c09ba0f44b594a47b6aa71d8"
+      },
+      {
+        "source": "figures/ch09/ch09-07-assembly-final-en.png",
+        "target": "figures/ch12/ch12-03-paper-figure-2-en.png",
+        "sha256": "4f9a053bcfea970ef14f928ca698a4862eba8f3b26f06a1a7baedeff98fd32f5"
+      }
+    ],
+    "missing": []
+  },
+  "figure_status": {
+    "ch12-01-three-viewing-conditions": "tikz (compile via tikz-preview-ch12.tex)",
+    "ch12-02-visual-angle-text-size": "complete",
+    "ch12-03-paper-figure-2": "reuse from ch09-07-assembly-final",
+    "ch12-04-slide-sequence": "complete",
+    "ch12-05a-pasted": "complete",
+    "ch12-05b-rebuilt": "complete",
+    "ch12-06-a0-poster-layout": "complete",
+    "ch12-07-poster-hall-distances": "codex-image (not in scope; base PNG present)",
+    "ch12-08a-dense-squint": "complete",
+    "ch12-08b-focused-squint": "complete"
+  }
+}

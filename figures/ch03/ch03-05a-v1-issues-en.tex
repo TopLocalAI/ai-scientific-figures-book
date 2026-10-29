@@ -1,0 +1,20 @@
+% FIG ch03-05a issue annotations on candidate C (English)
+\begin{tikzpicture}[font=\sffamily\footnotesize, text=BookInk]
+  \node[inner sep=0, anchor=south west] (img) at (0,0) {%
+    \includegraphics[width=\linewidth]{figures/ch03/ch03-03c-cand-branch.png}};
+  \begin{scope}[x={(img.south east)},y={(img.north west)}]
+    \tikzset{
+      mark/.style={
+        circle, draw=red!75!black, line width=0.5pt, inner sep=0.5pt,
+        minimum size=4.5mm, font=\bfseries\scriptsize,
+      },
+    }
+    \node[mark] at (0.62,0.78) {1};
+    \node[mark] at (0.48,0.42) {2};
+    \node[mark] at (0.72,0.28) {3};
+    \node[mark] at (0.88,0.65) {4};
+    \node[anchor=west, align=left, font=\scriptsize] at (0.02,0.08) {%
+      ① PAM position\quad ② Donor placement\\
+      ③ Lanes misaligned\quad ④ Extra object};
+  \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,70 @@
+% FIG ch07-01 mechanism grammar (English labels)
+\begin{tikzpicture}[
+  font=\sffamily\small,
+  paneltitle/.style={font=\sffamily\bfseries\footnotesize, text=BookInk, anchor=west},
+  foot/.style={font=\sffamily\scriptsize, text=BookInk!80},
+  infobox/.style={
+    draw=BookRule, line width=0.6pt, rounded corners=2pt, fill=BookPale,
+    font=\sffamily\scriptsize, align=center,
+    text width=48mm, minimum height=9mm, inner sep=2.6pt
+  },
+  band/.style={
+    draw=BookRule, line width=0.5pt,
+    font=\sffamily\scriptsize, align=left,
+    text width=48mm, minimum height=6.4mm, inner sep=2.4pt
+  },
+  evbox/.style={
+    draw=BookRule, line width=0.5pt, fill=BookPale,
+    font=\sffamily\scriptsize, align=left,
+    text width=48mm, minimum height=13mm, inner sep=2.6pt
+  },
+]
+\definecolor{ch07act}{HTML}{3A3A3A}
+\definecolor{ch07conv}{HTML}{7A7A7A}
+\definecolor{ch07trans}{HTML}{E39B5B}
+\definecolor{ch07flux}{HTML}{C46A2A}
+\definecolor{ch07phos}{HTML}{E3B23C}
+\definecolor{ch07hyp}{HTML}{9A9A9A}
+
+\node[paneltitle] (tObj) at (0,0) {Objects};
+\node[infobox, anchor=north west] (bObj) at ([yshift=-1.2mm]tObj.south west) {What they are\\how often};
+
+\node[paneltitle, anchor=north west] (tComp) at ([yshift=-3.2mm]bObj.south west) {Compartments};
+\node[band, fill=BookPale!50, anchor=north west] (bExt) at ([yshift=-1.2mm]tComp.south west) {Extracellular};
+\node[band, fill=white, anchor=north west] (bMem) at ([yshift=-1.1mm]bExt.south west) {Membrane};
+\node[band, fill=BookPale!30, anchor=north west] (bCyt) at ([yshift=-1.1mm]bMem.south west) {Cytoplasm};
+
+\node[paneltitle, anchor=north west] (tInt) at ([yshift=-3.2mm]bCyt.south west) {Interactions};
+\node[band, fill=BookPale, minimum height=7.2mm, align=center, anchor=north west]
+  (bInt) at ([yshift=-1.2mm]tInt.south west)
+  {\tikz[baseline=-0.55ex]{\draw[-{Stealth[length=2mm]}, ch07act, line width=0.8pt] (0,0) -- (32mm,0);}};
+
+\node[paneltitle, anchor=north west] (tEv) at ([yshift=-3.2mm]bInt.south west) {Evidence};
+\node[evbox, anchor=north west] (bEv) at ([yshift=-1.2mm]tEv.south west) {%
+  \begin{tabular}{@{}l@{\hspace{1.8mm}}l@{}}
+    \tikz[baseline=-0.55ex]{\draw[ch07act, line width=0.8pt] (0,0) -- (16mm,0);} & Established \\[1.4mm]
+    \tikz[baseline=-0.55ex]{\draw[ch07hyp, line width=0.8pt, dashed] (0,0) -- (16mm,0);} & Hypothesis
+  \end{tabular}};
+
+\node[paneltitle] (rt) at (60mm,0) {Line conventions (this chapter)};
+\draw[-{Stealth[length=2mm]}, ch07act, line width=0.8pt] (60mm,-8mm) -- (78mm,-8mm);
+\node[anchor=west, font=\sffamily\small] at (82mm,-8mm) {Activation};
+\draw[-{Bar[width=6pt]}, ch07act, line width=0.8pt] (60mm,-15.5mm) -- (78mm,-15.5mm);
+\node[anchor=west, font=\sffamily\small] at (82mm,-15.5mm) {Inhibition};
+\draw[ch07conv, line width=0.5pt] (60mm,-23mm) .. controls (66mm,-21.2mm) and (72mm,-24.8mm) .. (76mm,-23mm);
+\draw[-{Straight Barb[open]}, ch07conv, line width=0.5pt] (76mm,-23mm) -- (78mm,-23mm);
+\node[anchor=west, font=\sffamily\small] at (82mm,-23mm) {Enzymatic conversion};
+\draw[ch07trans, line width=1.5pt, dashed, -{Stealth[length=2.5mm, open]}] (60mm,-30.5mm) -- (78mm,-30.5mm);
+\node[anchor=west, font=\sffamily\small] at (82mm,-30.5mm) {Vesicle translocation};
+\draw[ch07flux, line width=0.8pt, dotted, -{Stealth[length=2mm]}] (60mm,-38mm) -- (78mm,-38mm);
+\node[anchor=west, font=\sffamily\small] at (82mm,-38mm) {Glucose flux};
+\draw[ch07hyp, line width=0.8pt, dashed, -{Stealth[length=2mm]}] (60mm,-45.5mm) -- (78mm,-45.5mm);
+\node[anchor=west, font=\sffamily\small] at (82mm,-45.5mm) {Hypothesised link};
+\fill[ch07phos] (62mm,-53mm) circle (2pt);
+\node[anchor=west, font=\sffamily\small] at (82mm,-53mm) {Phosphorylation (amber dot)};
+\node[anchor=north west, font=\sffamily\scriptsize, text=BookInk!70, align=left, text width=68mm]
+  at (60mm,-58mm) {Figure~1 example has no hypothesised links};
+
+\node[foot, anchor=north west] at ([yshift=-3mm]current bounding box.south west)
+  {Legend defines line meaning; field conventions (e.g.\ SBGN) inform the choices.};
+\end{tikzpicture}

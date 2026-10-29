@@ -1,0 +1,138 @@
+% Workflow structure (FIG ch06-03 skeleton / ch06-06 final).%
+% Requires ch06-styles and a label file. Nodes are placed from the node%
+% above them so wrapped English labels cannot land on the next row.%
+\coordinate (origin) at (0,0);%
+% Final figures carry icons above the nodes; keep feedback arcs above them.%
+\ifdefined\ChSixShowIcons
+  \def\ChSixLift{6.6mm}%
+  \def\ChSixArc{12.2mm}%
+\else
+  \def\ChSixLift{0mm}%
+  \def\ChSixArc{8.4mm}%
+\fi
+
+% ----- Wet lab, row 1: collection through droplet capture -----%
+\ChSixCard{anchor=north west}{nW1}{(origin)}{\ChSixMaybeLabel{\ChSixTxtWone}}%
+\ChSixCard{anchor=west}{nW2}{([xshift=3.2mm]nW1.east)}{\ChSixMaybeLabel{\ChSixTxtWtwo}}%
+\ChSixCard{anchor=west}{nW3}{([xshift=3.2mm]nW2.east)}{\ChSixMaybeLabel{\ChSixTxtWthree}}%
+\node[gate, anchor=west] (nQ1) at ([xshift=3.6mm]nW3.east) {\ChSixMaybeLabel{\ChSixTxtQone}};%
+\ChSixCard{anchor=west}{nW4}{([xshift=6.4mm]nQ1.east)}{\ChSixMaybeLabel{\ChSixTxtWfour}}%
+
+\draw[link] (nW1) -- (nW2);%
+\draw[link] (nW2) -- (nW3);%
+\draw[link] (nW3) -- (nQ1);%
+\draw[link] (nQ1) -- (nW4);%
+
+\coordinate (arcQ1) at ($(nW2.north)!0.5!(nQ1.north)+(0,\ChSixArc)$);%
+\draw[back] ([yshift=\ChSixLift]nQ1.north) -- ([yshift=\ChSixLift]nQ1.north |- arcQ1) -- ([yshift=\ChSixLift]nW2.north |- arcQ1) -- ([yshift=\ChSixLift]nW2.north);%
+\node[taglab, anchor=south] (q1fail) at (arcQ1) {\ChSixMaybeLabel{\ChSixQoneFail}};%
+\node[passlabel] (passQ1) at ($(nQ1.east)!0.5!(nW4.west)+(0,1.3mm)$) {\ChSixMaybeLabel{\ChSixPass}};%
+
+\node[lanetitle, anchor=south west] (laneWet) at ([yshift=1.2mm]q1fail.north -| origin) {\ChSixMaybeLabel{\ChSixLaneWet}};%
+
+% Optional lysis / dead-cell removal under filtering, product to their right.%
+\node[opt, anchor=north] (nW3a) at ([yshift=-2.2mm]nW3.south) {\ChSixMaybeLabel{\ChSixTxtWthreeA}};%
+\node[opt, anchor=north] (nW3b) at ([yshift=-1.8mm]nW3a.south) {\ChSixMaybeLabel{\ChSixTxtWthreeB}};%
+\draw[linkthin] (nW3.south) -- (nW3a.north);%
+\draw[linkthin] (nW3a.south) -- (nW3b.north);%
+\node[artifact, anchor=north west] (aSusp) at ([xshift=3.2mm, yshift=-2.2mm]nW3.south east) {\ChSixMaybeLabel{\ChSixArtSusp}};%
+
+% ----- Wet lab, row 2 (left-aligned; FASTQ is the hand-off into connector A) -----%
+\ChSixCard{anchor=north west}{nW5}{([yshift=-10mm]nW3b.south -| nW1.west)}{\ChSixMaybeLabel{\ChSixTxtWfive}}%
+\ChSixCard{anchor=west}{nW6}{([xshift=2.4mm]nW5.east)}{\ChSixMaybeLabel{\ChSixTxtWsix}}%
+\node[gate, anchor=west] (nQ2) at ([xshift=2.4mm]nW6.east) {\ChSixMaybeLabel{\ChSixTxtQtwo}};%
+\node[flowstepseq, anchor=west] (nS1) at ([xshift=6.2mm]nQ2.east) {\ChSixMaybeLabel{\ChSixTxtSone}};%
+\node[artifact, anchor=west] (aFastq) at ([xshift=2.2mm]nS1.east) {\ChSixMaybeLabel{\ChSixArtFastq}};%
+\node[conn, anchor=west] (nA) at ([xshift=2mm]aFastq.east) {A};%
+
+\draw[link] (nW5) -- (nW6);%
+\draw[link] (nW6) -- (nQ2);%
+\draw[link] (nQ2) -- (nS1);%
+\draw[link] (nS1) -- (aFastq);%
+\draw[link] (aFastq) -- (nA);%
+\node[passlabel] (passQ2) at ($(nQ2.east)!0.5!(nS1.west)+(0,1.3mm)$) {\ChSixMaybeLabel{\ChSixPass}};%
+
+\coordinate (arcQ2) at ($(nW6.north)!0.5!(nQ2.north)+(0,\ChSixArc)$);%
+\draw[back] ([yshift=\ChSixLift]nQ2.north) -- ([yshift=\ChSixLift]nQ2.north |- arcQ2) -- ([yshift=\ChSixLift]nW6.north |- arcQ2) -- ([yshift=\ChSixLift]nW6.north);%
+\node[taglab, anchor=south] (q2fail) at (arcQ2) {\ChSixMaybeLabel{\ChSixQtwoFail}};%
+
+\node[artifact, anchor=north] (aCdna) at ([yshift=-2mm]$(nW5.south)!0.5!(nW6.south)$) {\ChSixMaybeLabel{\ChSixArtCdna}};%
+\node[artifact, anchor=north] (aLib) at ([yshift=-2mm]$(nW6.south)!0.5!(nQ2.south)$) {\ChSixMaybeLabel{\ChSixArtLib}};%
+
+% ----- Computational lane -----%
+\node[conn, anchor=north west] (nA2) at ([yshift=-7mm]aCdna.south -| origin) {A};%
+\node[flowstepdry, anchor=west] (nC1) at ([xshift=3.2mm]nA2.east) {\ChSixMaybeLabel{\ChSixTxtCone}};%
+\node[flowstepdry, anchor=west] (nC2) at ([xshift=3.6mm]nC1.east) {\ChSixMaybeLabel{\ChSixTxtCtwo}};%
+\node[gate, anchor=west] (nQ3) at ([xshift=4.2mm]nC2.east) {\ChSixMaybeLabel{\ChSixTxtQthree}};%
+\node[flowstepdry, anchor=west] (nC4) at ([xshift=4.2mm]nQ3.east) {\ChSixMaybeLabel{\ChSixTxtCfour}};%
+\node[flowstepdry, anchor=west] (nC5) at ([xshift=3.6mm]nC4.east) {\ChSixMaybeLabel{\ChSixTxtCfive}};%
+
+\draw[link] (nA2) -- (nC1);%
+\draw[link] (nC1) -- (nC2);%
+\draw[link] (nC2) -- (nQ3);%
+\draw[link] (nQ3) -- (nC4);%
+\draw[link] (nC4) -- (nC5);%
+
+\node[mergelabel, anchor=south] (mergeNote) at ([yshift=1mm]nC4.north) {\ChSixMaybeLabel{\ChSixMergeNote}};%
+
+\coordinate (arcDry) at ($(nC1.north)!0.5!(nQ3.north)+(0,\ChSixArc)$);%
+\node[taglab, anchor=south, text width=28mm] (c11fail) at (arcDry) {\ChSixMaybeLabel{\ChSixCelevenFail}};%
+\node[lanetitle, anchor=south west] (laneDry) at ([yshift=1.2mm]c11fail.north -| origin) {\ChSixMaybeLabel{\ChSixLaneDry}};%
+
+% Optional doublet / ambient RNA under the cell-QC gate.%
+\node[optdry, anchor=north east] (nC3a) at ([yshift=-2mm, xshift=-1mm]nQ3.south) {\ChSixMaybeLabel{\ChSixTxtCthreeA}};%
+\node[optdry, anchor=north west] (nC3b) at ([yshift=-2mm, xshift=1mm]nQ3.south) {\ChSixMaybeLabel{\ChSixTxtCthreeB}};%
+\draw[linkthin] (nQ3.south) -- (nC3a.north);%
+\draw[linkthin] (nQ3.south) -- (nC3b.north);%
+\draw[linkthin] (nC3a.south) -- ++(0,-2.4mm) -| (nC3b.south);%
+
+\node[artifact, anchor=north] (aRaw) at ([yshift=-2mm]$(nC1.south)!0.5!(nC2.south)$) {\ChSixMaybeLabel{\ChSixArtRaw}};%
+\node[artifact, anchor=north] (aFilt) at ([yshift=-2mm]nC4.south) {\ChSixMaybeLabel{\ChSixArtFilt}};%
+
+% Fork: k-NN graph splits to clustering (continues) and UMAP (display only).%
+\node[flowstepdry, anchor=north west] (nC6) at ([yshift=-4mm]aRaw.south -| nC1.west) {\ChSixMaybeLabel{\ChSixTxtCsix}};%
+\node[flowstepdry, anchor=west] (nC7) at ([xshift=4mm]nC6.east) {\ChSixMaybeLabel{\ChSixTxtCseven}};%
+\node[flowstepdry, anchor=west] (nC8) at ([xshift=5mm]nC7.east) {\ChSixMaybeLabel{\ChSixTxtCeight}};%
+\node[flowstepdry, anchor=west] (nC10) at ([xshift=3.6mm]nC8.east) {\ChSixMaybeLabel{\ChSixTxtCten}};%
+\node[flowstepdry, anchor=west] (nC11) at ([xshift=3.6mm]nC10.east) {\ChSixMaybeLabel{\ChSixTxtCeleven}};%
+\node[optdry, anchor=north] (nC6a) at ([yshift=-2mm]nC6.south) {\ChSixMaybeLabel{\ChSixTxtCsixA}};%
+\node[flowstepdry, anchor=north] (nC9) at ([yshift=-3.2mm]nC7.south) {\ChSixMaybeLabel{\ChSixTxtCnine}};%
+\node[artifact, anchor=north, text width=22mm] (aUmap) at ([yshift=-1.8mm]nC9.south) {\ChSixMaybeLabel{\ChSixArtUmap}};%
+\node[artifact, anchor=north] (aAtlas) at ([yshift=-2mm]$(nC10.south)!0.5!(nC11.south)$) {\ChSixMaybeLabel{\ChSixArtAtlas}};%
+
+\draw[link] (nC5.south) -- ++(0,-2.5mm) -| (nC6.north);%
+\draw[linkthin] (nC6.south) -- (nC6a.north);%
+\draw[link] (nC6) -- (nC7);%
+\draw[link] (nC7) -- (nC8);%
+\draw[link] (nC8) -- (nC10);%
+\draw[link] (nC10) -- (nC11);%
+\draw[link] (nC7.south) -- (nC9.north);%
+
+% Return from annotation to clustering, and the long return to cell QC.%
+\coordinate (bus) at ([yshift=-4.5mm]aUmap.south);%
+\draw[back] (nC11.south) -- (nC11.south |- bus) -- (nC8.south |- bus) -- (nC8.south);%
+\draw[back] (nC11.east) -- ++(3.2mm,0) |- (c11fail.east);%
+\draw[back] (c11fail.west) -| ([yshift=\ChSixLift]nQ3.north);%
+
+% Connector A joins the lanes in the gutter between them.%
+\draw[link] (nA.south) -- ++(0,-2.2mm) -| (nA2.north);%
+
+\ChSixIcon{figures/ch06/icons/ch06-icon-01.png}{nW1}%
+\ChSixIcon{figures/ch06/icons/ch06-icon-02.png}{nW2}%
+\ChSixIcon{figures/ch06/icons/ch06-icon-03.png}{nW3}%
+\ChSixIcon{figures/ch06/icons/ch06-icon-04.png}{nQ1}%
+\ChSixIcon{figures/ch06/icons/ch06-icon-05.png}{nW4}%
+\ChSixIcon{figures/ch06/icons/ch06-icon-06.png}{nW5}%
+\ChSixIcon{figures/ch06/icons/ch06-icon-07.png}{nW6}%
+\ChSixIcon{figures/ch06/icons/ch06-icon-08.png}{nS1}%
+\ChSixIcon{figures/ch06/icons/ch06-icon-09.png}{nC1}%
+\ChSixIcon{figures/ch06/icons/ch06-icon-10.png}{nC2}%
+\ChSixIcon{figures/ch06/icons/ch06-icon-11.png}{nC7}%
+\ChSixIcon{figures/ch06/icons/ch06-icon-12.png}{nC11}%
+
+\begin{pgfonlayer}{chsixlane}%
+  \node[rectangle, fit=(laneWet)(nW1)(nW4)(nW3b)(aSusp)(nA)(aCdna)(aLib)(q1fail),%
+        fill=WetPale, draw=none, inner sep=1.1mm] {};%
+  \node[rectangle, fit=(laneDry)(nA2)(nC5)(nC11)(nC6a)(aUmap)(aAtlas)(c11fail)(nC3a)(nC3b),%
+        fill=DryPale, draw=none, inner sep=1.1mm] {};%
+\end{pgfonlayer}%

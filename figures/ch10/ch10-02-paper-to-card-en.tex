@@ -1,0 +1,44 @@
+% FIG ch10-02 paper-to-card (English)
+\usetikzlibrary{arrows.meta,calc,fit,positioning}
+\begin{tikzpicture}[
+  font=\sffamily\footnotesize,
+  node distance=4mm and 6mm,
+  box/.style={
+    draw=BookRule, line width=0.4pt, rounded corners=2pt,
+    align=center, inner sep=5pt, text=BookInk, text width=24mm,
+  },
+  autobox/.style={box, dashed, fill=BookPale!40},
+  authorbox/.style={box, fill=white},
+  limitbox/.style={authorbox, draw=BookTeal, line width=0.9pt},
+  flow/.style={-{Stealth[length=2mm]}, draw=BookInk!55, thin},
+  note/.style={font=\scriptsize, text=BookInk!75, align=left},
+]
+  \node[authorbox, minimum width=24mm, minimum height=28mm] (pdf) {%
+    \textbf{Paper PDF}\\[2pt]
+    \tikz{\draw[fill=BookPale!50, draw=BookInk!30] (0,0) rectangle (1.4,1.8);
+      \draw[fill=BookTeal!25, draw=BookTeal!60] (0,0.9) rectangle (1.4,1.8);
+      \node[font=\tiny, anchor=west] at (1.55,1.35) {first 5 pp.};
+      \node[font=\tiny, anchor=west] at (1.55,0.45) {rest};}};
+  \node[autobox, right=of pdf] (auto) {PDF to\\visual prompt};
+  \node[autobox, right=of auto, text width=28mm] (prompt) {60--110 word\\visual prompt};
+  \node[authorbox, below=10mm of pdf, text width=26mm] (full) {Read the\\full paper};
+  \node[authorbox, right=of full, text width=30mm] (card) {%
+    Four-line card\\[1pt]
+    \begin{tabular}{@{}c@{}}
+      Question\\Method\\Finding\\\textbf{Limits}
+    \end{tabular}};
+  \node[limitbox, fit=(card), inner sep=1pt] {};
+  \node[authorbox, right=12mm of prompt, text width=34mm] (merge) {Line-by-line check:\\restore limits,\\drop over-claims};
+  \node[authorbox, right=of merge, text width=28mm] (final) {Author-approved\\generation prompt};
+  \draw[flow] (pdf) -- (auto);
+  \draw[flow] (auto) -- (prompt);
+  \draw[flow] (full) -- (card);
+  \draw[flow] (prompt.east) -| (merge.west);
+  \draw[flow] (card.east) -| (merge.south);
+  \draw[flow] (merge) -- (final);
+  \node[note, anchor=north west] at (pdf.south west) {$\approx$6{,}000 character cap};
+  \node[note, anchor=north] at ($(auto)!0.5!(prompt)+(0,-8mm)$) {Automatic route (dashed)};
+  \node[note, anchor=north] at ($(full)!0.5!(card)+(0,-8mm)$) {Author route (solid)};
+  \node[note, anchor=north east, text width=32mm] at (final.south east)
+    {Workflow tools do not verify scientific content};
+\end{tikzpicture}

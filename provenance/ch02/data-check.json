@@ -1,0 +1,63 @@
+{
+  "chapter": "02",
+  "generated_on": "2026-10-29",
+  "python_figures": [],
+  "paired_data_assertions": {
+    "data_status": "simulated teaching data (reused from data/paired-example.csv)",
+    "rows": 8,
+    "columns": [
+      "sample_id",
+      "before",
+      "after"
+    ],
+    "sim04_before": 18,
+    "sim04_after": 17,
+    "inferential_tests": "none",
+    "python_kind_figures_in_ch02": 0
+  },
+  "reuse_copies": [
+    {
+      "label": "FIG ch02-02 abstract-mechanism",
+      "source": "figures/mechanism-codex.png",
+      "target": "figures/ch02/ch02-02-abstract-mechanism.png",
+      "sha256": "4b51475ed23a8bb71e9b547c811f13615a88f991954640b3304bac04b1c3f0ca",
+      "bytes": 1065006
+    },
+    {
+      "label": "FIG ch02-07 paired-comparison (zh PDF)",
+      "source": "figures/paired-comparison-zh.pdf",
+      "target": "figures/ch02/ch02-07-paired-comparison-zh.pdf",
+      "sha256": "3a206b9acd6e53534faa6c1cfc9b7cd9f92626cfc4fd72aedcb8ef5fc20c3d01",
+      "bytes": 19660
+    },
+    {
+      "label": "FIG ch02-07 paired-comparison (en PDF)",
+      "source": "figures/paired-comparison-en.pdf",
+      "target": "figures/ch02/ch02-07-paired-comparison-en.pdf",
+      "sha256": "eeb067e7d3d06b55ab59c8c6d99c9cdca5b313eb78405a6b3287f52a9dd34503",
+      "bytes": 15484
+    },
+    {
+      "label": "FIG ch02-07 paired-comparison (zh PNG)",
+      "source": "figures/paired-comparison-zh.png",
+      "target": "figures/ch02/ch02-07-paired-comparison-zh.png",
+      "sha256": "390e948e296415cc3386131e733b0711750320a8c8cbb1cf694b3e47a54e5aac",
+      "bytes": 82291
+    },
+    {
+      "label": "FIG ch02-07 paired-comparison (en PNG)",
+      "source": "figures/paired-comparison-en.png",
+      "target": "figures/ch02/ch02-07-paired-comparison-en.png",
+      "sha256": "aace3331ea17550d452aa2cd84d7933cb1fdd4f0e00cd1d7ab0246490edf7a96",
+      "bytes": 76489
+    },
+    {
+      "label": "paired data archive for ch02-07 (simulated teaching data)",
+      "source": "data/paired-example.csv",
+      "target": "data/ch02/paired-example.csv",
+      "sha256": "99b7d80e85ef966c73e70da0c3061c5201560935cb7d8be47f247c04b9650271",
+      "bytes": 118
+    }
+  ],
+  "missing_sources": []
+}

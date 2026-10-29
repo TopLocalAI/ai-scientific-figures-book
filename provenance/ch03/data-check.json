@@ -1,0 +1,24 @@
+{
+  "chapter": 3,
+  "kind_python_figures": 0,
+  "external_datasets": 0,
+  "candidate_pngs_present": 0,
+  "layout_area_measurement": {
+    "measured_on": "2026-10-29",
+    "layouts": {
+      "A": {
+        "path": "figures/ch03/ch03-03a-cand-linear.png",
+        "exists": false
+      },
+      "B": {
+        "path": "figures/ch03/ch03-03b-cand-hub.png",
+        "exists": false
+      },
+      "C": {
+        "path": "figures/ch03/ch03-03c-cand-branch.png",
+        "exists": false
+      }
+    }
+  },
+  "note": "Chapter 3 has no kind:python figures; this file records PNG area checks for FIG ch03-04."
+}

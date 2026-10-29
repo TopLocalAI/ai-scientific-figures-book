@@ -1,0 +1,61 @@
+{
+  "ls_command": "ls -l figures/ch01/",
+  "ls_stdout": "total 31664\n-rw-r--r--@ 1 zeroone  staff     1225 Oct 29 16:03 ch01-01-workflow-en.tex\n-rw-r--r--@ 1 zeroone  staff     1196 Oct 29 16:03 ch01-01-workflow-zh.tex\n-rw-r--r--@ 1 zeroone  staff     2441 Oct 29 16:04 ch01-02-material-map-en.tex\n-rw-r--r--@ 1 zeroone  staff     2486 Oct 29 16:04 ch01-02-material-map-zh.tex\n-rw-r--r--@ 1 zeroone  staff    26515 Oct 29 16:05 ch01-03-nitrate-draft-vague-en.pdf\n-rw-r--r--@ 1 zeroone  staff   264072 Oct 29 16:05 ch01-03-nitrate-draft-vague-en.png\n-rw-r--r--@ 1 zeroone  staff    20111 Oct 29 16:05 ch01-03-nitrate-draft-vague-zh.pdf\n-rw-r--r--@ 1 zeroone  staff   275268 Oct 29 16:05 ch01-03-nitrate-draft-vague-zh.png\n-rw-r--r--@ 1 zeroone  staff    25409 Oct 29 16:05 ch01-04-nitrate-panel-brief-en-panel.pdf\n-rw-r--r--@ 1 zeroone  staff   150344 Oct 29 16:05 ch01-04-nitrate-panel-brief-en-panel.png\n-rw-r--r--@ 1 zeroone  staff    25624 Oct 29 16:05 ch01-04-nitrate-panel-brief-en.pdf\n-rw-r--r--@ 1 zeroone  staff   188219 Oct 29 16:05 ch01-04-nitrate-panel-brief-en.png\n-rw-r--r--@ 1 zeroone  staff    29315 Oct 29 16:05 ch01-04-nitrate-panel-brief-zh-panel.pdf\n-rw-r--r--@ 1 zeroone  staff   151447 Oct 29 16:05 ch01-04-nitrate-panel-brief-zh-panel.png\n-rw-r--r--@ 1 zeroone  staff    29468 Oct 29 16:05 ch01-04-nitrate-panel-brief-zh.pdf\n-rw-r--r--@ 1 zeroone  staff   189412 Oct 29 16:05 ch01-04-nitrate-panel-brief-zh.png\n-rw-r--r--@ 1 zeroone  staff  3430225 Oct 29 16:04 ch01-05-site-schematic-vague-alt1.png\n-rw-r--r--@ 1 zeroone  staff  3076186 Oct 29 16:04 ch01-05-site-schematic-vague-alt2.png\n-rw-r--r--@ 1 zeroone  staff  3243521 Oct 29 16:05 ch01-05-site-schematic-vague.png\n-rw-r--r--@ 1 zeroone  staff  1579393 Oct 29 16:06 ch01-06-site-schematic-brief-alt1.png\n-rw-r--r--@ 1 zeroone  staff  1492417 Oct 29 16:08 ch01-06-site-schematic-brief-alt2.png\n-rw-r--r--@ 1 zeroone  staff  1471479 Oct 29 16:07 ch01-06-site-schematic-brief.png\n-rw-r--r--@ 1 zeroone  staff    34240 Oct 29 16:05 ch01-07-figure2-final-en.pdf\n-rw-r--r--@ 1 zeroone  staff     1522 Oct 29 16:04 ch01-07-figure2-final-en.tex\n-rw-r--r--@ 1 zeroone  staff    56122 Oct 29 16:05 ch01-07-figure2-final-zh.pdf\n-rw-r--r--@ 1 zeroone  staff     1531 Oct 29 16:04 ch01-07-figure2-final-zh.tex\n-rw-r--r--@ 1 zeroone  staff   192492 Oct 29 16:04 ch01-08-guide-ui-en.png\n-rw-r--r--@ 1 zeroone  staff   192433 Oct 29 16:04 ch01-08-guide-ui-zh.png\n",
+  "pixel_stdout": "ch01-05-site-schematic-vague.png: 1448 x 1086 px; PNG; RGB; 3243521 bytes; PNG verify PASS\nch01-05-site-schematic-vague-alt1.png: 1448 x 1086 px; PNG; RGB; 3430225 bytes; PNG verify PASS\nch01-05-site-schematic-vague-alt2.png: 1448 x 1086 px; PNG; RGB; 3076186 bytes; PNG verify PASS\nch01-06-site-schematic-brief.png: 1122 x 1402 px; PNG; RGB; 1471479 bytes; PNG verify PASS\nch01-06-site-schematic-brief-alt1.png: 1122 x 1402 px; PNG; RGB; 1579393 bytes; PNG verify PASS\nch01-06-site-schematic-brief-alt2.png: 1122 x 1402 px; PNG; RGB; 1492417 bytes; PNG verify PASS\n",
+  "images": [
+    {
+      "file": "ch01-05-site-schematic-vague.png",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGB",
+      "format": "PNG",
+      "bytes": 3243521,
+      "sha256": "d49f2bdce4d408699d0440a16f4f162c109dc93c04effc42c9df513b6e293464"
+    },
+    {
+      "file": "ch01-05-site-schematic-vague-alt1.png",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGB",
+      "format": "PNG",
+      "bytes": 3430225,
+      "sha256": "2f9e11fafc01374517c44521dae51617d180936234afdccbdb449f83ca8a2d87"
+    },
+    {
+      "file": "ch01-05-site-schematic-vague-alt2.png",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGB",
+      "format": "PNG",
+      "bytes": 3076186,
+      "sha256": "2eeef94a0d88fd9e199d9b491ed03c75d7fe80ee04ffe0312fc66f89bd0d6a02"
+    },
+    {
+      "file": "ch01-06-site-schematic-brief.png",
+      "width": 1122,
+      "height": 1402,
+      "mode": "RGB",
+      "format": "PNG",
+      "bytes": 1471479,
+      "sha256": "8d43c4de4f5bba44e721566bd00f16dca8f7aa9f86d457437247dcb9b0cacdda"
+    },
+    {
+      "file": "ch01-06-site-schematic-brief-alt1.png",
+      "width": 1122,
+      "height": 1402,
+      "mode": "RGB",
+      "format": "PNG",
+      "bytes": 1579393,
+      "sha256": "876b08cabeaec87600c70656b3b0d2309ebf31b65426c560aa9647d8f99ec988"
+    },
+    {
+      "file": "ch01-06-site-schematic-brief-alt2.png",
+      "width": 1122,
+      "height": 1402,
+      "mode": "RGB",
+      "format": "PNG",
+      "bytes": 1492417,
+      "sha256": "34622619331702a68f4b1e1ddfdf46a116817ace4dd467e2c80add375fdc74ae"
+    }
+  ]
+}

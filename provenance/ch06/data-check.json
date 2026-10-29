@@ -1,0 +1,36 @@
+{
+  "chapter": 6,
+  "kind_python_figures": 0,
+  "kind_reuse_figures": 0,
+  "external_datasets": 0,
+  "workflow_nodes_main": 21,
+  "workflow_nodes_optional": 5,
+  "icons": {
+    "mode": "cropped_from_sheet",
+    "source": "figures/ch06/ch06-icons-sheet.png",
+    "icons": [
+      "ch06-icon-01.png",
+      "ch06-icon-02.png",
+      "ch06-icon-03.png",
+      "ch06-icon-04.png",
+      "ch06-icon-05.png",
+      "ch06-icon-06.png",
+      "ch06-icon-07.png",
+      "ch06-icon-08.png",
+      "ch06-icon-09.png",
+      "ch06-icon-10.png",
+      "ch06-icon-11.png",
+      "ch06-icon-12.png"
+    ]
+  },
+  "skeleton_notext": {
+    "standalone": "figures/ch06/ch06-skeleton-notext-standalone.tex",
+    "compiled": true,
+    "xelatex_exit": 0,
+    "png": "figures/ch06/ch06-03-skeleton-notext.png",
+    "sha256": "09f267e1f5e48cda6a48e08ee926dcdb7722f7d118226ea0ee233341da5af0c6"
+  },
+  "sourced_assets": [],
+  "note": "Chapter 6 has no kind:python or reuse figures in production/plans/ch06.md.",
+  "checked_on": "2026-10-29"
+}

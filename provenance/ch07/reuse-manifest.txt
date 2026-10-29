@@ -1,0 +1,27 @@
+# Chapter 7 reuse copies (source → target). SHA-256 recorded 2026-10-29.
+cases/ch07-insulin-glut4/images/v0-sketch.png → figures/ch07/ch07-02-v0-sketch.png
+  sha256=67c463fda097480a00e59fc5adaf2ca1e7fb7c69823386c649385b9e25526258
+
+cases/ch07-insulin-glut4/images/v1-vague.png → figures/ch07/ch07-03a-v1-vague.png
+  sha256=ab39c44c4037c5cf0eac8465853702525d30a9515cfe2194f320f110b8c08c56
+
+cases/ch07-insulin-glut4/images/v2-brief.png → figures/ch07/ch07-03b-v2-brief.png
+  sha256=e015f1063cc3a71de4449550943637b12de3d9e240cb263eadc365e4a11192f0
+
+cases/ch07-insulin-glut4/images/cmp-a1-mixed-arrows.png → figures/ch07/ch07-04a-mixed-arrows.png
+  sha256=8568953ae8f5d49d08039134ab90b84a67481d3f6f8c2cd782c2d1f382e2fa4c
+
+cases/ch07-insulin-glut4/images/cmp-a2-unified-arrows.png → figures/ch07/ch07-04b-unified-arrows.png
+  sha256=bcf7f8d819d1bbb57a9fde1b7a2c1c6a45befea881032c241936ab4dcca697e8
+
+cases/ch07-insulin-glut4/images/cmp-b1-too-many-colors.png → figures/ch07/ch07-05a-many-colours.png
+  sha256=d30ababd86e65bf7980411b4f5aa9832e04c0b3255af2edcd98e804a08a9aa6e
+
+cases/ch07-insulin-glut4/images/v3-revised.png → figures/ch07/ch07-05b-v3-revised.png
+  sha256=3708ab7446cbf30599e3c761f399388b527a89fffaa2e07a06746041633db346
+
+cases/ch07-insulin-glut4/images/v4-base.png → figures/ch07/ch07-06-v4-base.png
+  sha256=088030f98a9a151537fe18b880dfe425b52e177fc409b9679779c7c1d45b382e
+
+cases/ch07-insulin-glut4/images/prompts.json → provenance/ch07/glut4-prompts.json (copy on install)
+cases/ch07-insulin-glut4/images/generation-records.json → provenance/ch07/glut4-generation-records.json

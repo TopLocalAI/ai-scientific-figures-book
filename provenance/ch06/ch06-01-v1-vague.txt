@@ -1,0 +1,38 @@
+Date: 2026-10-29
+Detailed visual checks and selection reasons: codex-images.md
+No manual retouching; source PNGs copied unchanged. Concrete model name unknown.
+
+{
+  "date": "2026-10-29",
+  "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+  "model": "不知道；工具返回未提供具体模型名称",
+  "manual_retouch": false,
+  "file": "figures/ch06/ch06-01-v1-vague.png",
+  "attempt": 1,
+  "selected": true,
+  "prompt": "Create a professional, colorful flowchart of a single-cell RNA sequencing experiment and\ndata analysis workflow, from tissue to cell type annotation. Landscape 16:9.",
+  "prompt_change": "无，逐字使用规划 §3.6 V1。",
+  "source": "exec-22adb2e7-1fe9-4d59-a08a-3c173ca28a97.png",
+  "dimensions": [
+    1672,
+    941
+  ]
+}
+
+{
+  "date": "2026-10-29",
+  "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+  "model": "不知道；工具返回未提供具体模型名称",
+  "manual_retouch": false,
+  "file": "figures/ch06/ch06-01-v1-vague-alt1.png",
+  "attempt": 2,
+  "selected": false,
+  "prompt": "Create a professional, colorful flowchart of a single-cell RNA sequencing experiment and\ndata analysis workflow, from tissue to cell type annotation. Landscape 16:9.\n\nTechnical output requirement: render a native 2560 × 1440 pixel PNG canvas, exact 16:9 landscape aspect ratio, at least 2400 pixels wide. Keep the entire illustration within this canvas. This is a pixel-dimension requirement, not text to draw.",
+  "prompt_change": "保留原提示词全文，仅追加原生 2560×1440/至少2400宽要求；首轮尺寸不达标。第二轮仍不达标。",
+  "source": "exec-f1b04b60-2adc-4a17-91dc-fc2cbdf904a9.png",
+  "dimensions": [
+    1672,
+    941
+  ]
+}
+

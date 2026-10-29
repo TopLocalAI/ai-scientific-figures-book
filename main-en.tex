@@ -4,6 +4,7 @@
 \input{shared/preamble}
 \hypersetup{pdftitle={Use AI to Make Better Scientific Figures: From Research Ideas to Paper Figures},pdfauthor={TopLocalAI contributors},pdflang={en}}
 \begin{document}
+\includepdf[pages=1,fitpaper=false,noautoscale=false]{cover/cover-en.pdf}
 \begin{titlepage}
 \color{BookInk}
 \vspace*{18mm}
@@ -15,21 +16,36 @@
 \vspace{14mm}
 {\large Practical workflows with SciDraw AI\par}
 \vfill
-{\large English edition · Working draft v\bookversion\par}
+{\large English edition · v\bookversion\par}
 \vspace{3mm}
 {\normalsize \bookdate\par}
 \vspace{8mm}
-{\small Preface and Chapters 1--2; later chapters remain on the writing roadmap.\par}
 \end{titlepage}
 \frontmatter
 \chapter*{Version and use}
-This open book is maintained by TopLocalAI in LaTeX, with Chinese and English editions. The current draft contains the preface, Chapters 1 and 2, a complete chapter plan, exercises, and asset provenance.
+This open book is maintained by TopLocalAI in LaTeX, with Chinese and English editions. It has thirteen chapters, a preface, and appendices.
 
-SciDraw AI provides the practical workflow used throughout the book. In this edition, Codex assists with the example figures: the data plot is rendered from a published simulated CSV by a reproducible script, and the mechanism illustration is an actual output of Codex's built-in image generation. Neither is presented as a SciDraw AI generation result. Interface screenshots show a local development version; public availability of the guide must be checked separately.
+\scidraw{} (\href{https://sci-draw.com}{sci-draw.com}) provides the practical workflow used throughout the book. The tools referred to in the text are listed below; in the PDF every tool name is a clickable link.
+
+\begin{center}\small
+\begin{tabular}{@{}ll@{}}
+Prompt drawing, sketches, reference-image edits & \href{https://sci-draw.com/ai-drawing}{sci-draw.com/ai-drawing}\\
+Mechanism figures & \href{https://sci-draw.com/mechanism-figure-generator}{sci-draw.com/mechanism-figure-generator}\\
+Workflow diagrams & \href{https://sci-draw.com/workflow-diagram-generator}{sci-draw.com/workflow-diagram-generator}\\
+Data visualization & \href{https://sci-draw.com/sci-vis}{sci-draw.com/sci-vis}\\
+Multi-panel figures & \href{https://sci-draw.com/multi-panel-figure-maker}{sci-draw.com/multi-panel-figure-maker}\\
+Graphical abstracts & \href{https://sci-draw.com/graphical-abstract-maker}{sci-draw.com/graphical-abstract-maker}\\
+Figure legends & \href{https://sci-draw.com/figure-legend}{sci-draw.com/figure-legend}\\
+Figure checks & \href{https://sci-draw.com/figure-checker}{sci-draw.com/figure-checker}\\
+Figure workflow guide (links the tools above) & \href{https://sci-draw.com/figure-workflow}{sci-draw.com/figure-workflow}\\
+\end{tabular}
+\end{center}
+
+Example illustrations were made with an image-generation model; data figures come from public datasets or clearly labelled simulated data, rendered by scripts that ship with the book. The actual tool, prompt, and revision history of every figure are recorded in the book repository.
 
 The manuscript, original teaching data, and figures are offered under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}. Build scripts, plotting code, and shared typesetting code use the MIT license. See LICENSE, ASSETS.md, and the provenance directory for scope and source details. Product names and trademarks are not transferred by these licenses.
 
-Suggested citation: TopLocalAI contributors. \emph{Use AI to Make Better Scientific Figures: From Research Ideas to Paper Figures}. Working draft v\bookversion, \bookdate.
+Suggested citation: TopLocalAI contributors. \emph{Use AI to Make Better Scientific Figures: From Research Ideas to Paper Figures}. v\bookversion, \bookdate.
 
 \url{https://github.com/TopLocalAI/ai-scientific-figures-book}
 \begingroup\small\linespread{1.0}\selectfont
@@ -40,6 +56,17 @@ Suggested citation: TopLocalAI contributors. \emph{Use AI to Make Better Scienti
 \mainmatter
 \input{chapters/en/01-workflow}
 \input{chapters/en/02-brief}
+\input{chapters/en/03-composition}
+\input{chapters/en/04-visual-language}
+\input{chapters/en/05-data-visualization}
+\input{chapters/en/06-methods-flowcharts}
+\input{chapters/en/07-mechanism}
+\input{chapters/en/08-experimental-images}
+\input{chapters/en/09-multi-panel}
+\input{chapters/en/10-graphical-abstract}
+\input{chapters/en/11-revision}
+\input{chapters/en/12-slides-posters}
+\input{chapters/en/13-delivery}
 \appendix
 \input{chapters/en/appendices}
 \backmatter

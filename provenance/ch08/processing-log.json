@@ -1,0 +1,23 @@
+{
+  "final": true,
+  "inset_box": [
+    280,
+    328,
+    344,
+    392
+  ],
+  "hoechst_range": [
+    132,
+    1236
+  ],
+  "mito_range": [
+    218,
+    1140
+  ],
+  "scale_ac_um": 50,
+  "scale_ac_px": 76.21951219512195,
+  "scale_d_um": 10,
+  "scale_d_px": 45.73170731707317,
+  "saturated_mito_pixels": 12,
+  "linear_no_gamma": true
+}

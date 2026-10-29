@@ -1,0 +1,38 @@
+% FIG ch09-02 layout wireframes (Chinese)
+\begin{tikzpicture}[
+  x=1mm, y=1mm,
+  font=\sffamily\footnotesize,
+  text=BookInk,
+  frame/.style={draw=BookInk!70, line width=0.5pt},
+  cell/.style={draw=BookRule, fill=BookPale!50, line width=0.3pt},
+  bad/.style={pattern=north east lines, pattern color=BookInk!25},
+]
+  \node[anchor=west, font=\bfseries] at (0, 125) {方案 A（2$\times$2 等分）};
+  \draw[frame] (0, 68) rectangle (174, 122);
+  \node[anchor=south] at (87, 122) {174 mm};
+  \foreach \x/\y/\w/\h in {0/68/84/53, 90/68/84/53, 0/10/84/53, 90/10/84/53} {
+    \draw[cell] (\x,\y) rectangle (\x+\w,\y+\h);
+  }
+  \draw[bad] (90,68) rectangle (174,121);
+  \node[anchor=west, text=BookTeal] at (92, 95) {需拉伸 \ding{55}};
+  \node[anchor=west, align=left, text width=84mm] at (0, 4) {
+    优点：网格简单。问题：b 填满格子需改变宽高比。
+  };
+
+  \node[anchor=west, font=\bfseries] at (0, 248) {方案 B（采用）};
+  \draw[frame] (0, 186) rectangle (174, 240);
+  \draw[cell] (0,214) rectangle (84,264);
+  \draw[cell] (90,214) rectangle (174,264);
+  \draw[cell] (0,154) rectangle (84,210);
+  \draw[cell] (90,154) rectangle (174,210);
+  \draw[BookTeal, dashed, line width=0.4pt] (12,154) -- (12,210);
+  \draw[BookTeal, dashed, line width=0.4pt] (102,154) -- (102,210);
+  \node[text=BookTeal, font=\scriptsize] at (57,152) {对齐};
+  \node[text=BookTeal, font=\scriptsize] at (147,152) {对齐};
+  \node[anchor=west, align=left, text width=90mm] at (0, 178) {
+    上排 84$\times$50 mm；下排 84$\times$56 mm；列距 6 mm，行距 8 mm。
+  };
+  \node[anchor=west, align=left, text width=84mm] at (0, 168) {
+    优点：保留 b 比例；c、d 轴框对齐。问题：需预先算好格子尺寸。
+  };
+\end{tikzpicture}

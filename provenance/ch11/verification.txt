@@ -1,0 +1,42 @@
+Verification date: 2026-10-29
+Tool: image_gen.imagegen; model identifier unknown
+Generated images only: 8; selected: 4; alternatives: 4
+PASS ch11-02-v1-vague.png: 1774 x 887 px; 2:1; 2390328 bytes; PNG decode OK; source copy SHA-256 identical; attempt 1; prompt recorded
+PASS ch11-03-v2-brief-alt1.png: 1774 x 887 px; 2:1; 1245145 bytes; PNG decode OK; source copy SHA-256 identical; attempt 1; prompt recorded
+PASS ch11-03-v2-brief.png: 1774 x 887 px; 2:1; 1245807 bytes; PNG decode OK; source copy SHA-256 identical; attempt 2; prompt recorded
+PASS ch11-03-v2-brief-alt2.png: 1774 x 887 px; 2:1; 1236063 bytes; PNG decode OK; source copy SHA-256 identical; attempt 3; prompt recorded
+PASS ch11-04-v3-collateral.png: 1774 x 887 px; 2:1; 1588813 bytes; PNG decode OK; source copy SHA-256 identical; attempt 1; prompt recorded
+PASS ch11-04-v3-collateral-alt1.png: 1774 x 887 px; 2:1; 1583277 bytes; PNG decode OK; source copy SHA-256 identical; attempt 2; prompt recorded
+PASS ch11-04-v3-collateral-alt2.png: 1774 x 887 px; 2:1; 1596165 bytes; PNG decode OK; source copy SHA-256 identical; attempt 3; prompt recorded
+PASS ch11-06-v4-recovered.png: 1774 x 887 px; 2:1; 1593124 bytes; PNG decode OK; source copy SHA-256 identical; attempt 1; prompt recorded
+PASS V1/V2/V3 prompts match chapter English blocks verbatim.
+PASS V4 is explicitly recorded as the requested Chinese-to-English translation.
+PASS attempt limits: V1=1, V2=3, V3=3, V4=1.
+PASS all V3/V4 reference hashes match selected V2 attempt 2.
+PASS no artificial deletions or repainting of generated outputs.
+Acceptance: V2 and V4 do NOT pass all chapter requirements; see codex-images.md.
+V3 result: no major structural collateral change observed in 3 attempts.
+
+$ ls -l figures/ch11/
+total 37848
+-rw-r--r--@ 1 zeroone  staff     2239 Oct 29 16:09 ch11-01-three-levels-en.tex
+-rw-r--r--@ 1 zeroone  staff     2173 Oct 29 16:09 ch11-01-three-levels-zh.tex
+-rw-r--r--@ 1 zeroone  staff  2390328 Oct 29 16:06 ch11-02-v1-vague.png
+-rw-r--r--@ 1 zeroone  staff  1245145 Oct 29 16:07 ch11-03-v2-brief-alt1.png
+-rw-r--r--@ 1 zeroone  staff  1236063 Oct 29 16:08 ch11-03-v2-brief-alt2.png
+-rw-r--r--@ 1 zeroone  staff  1245807 Oct 29 16:08 ch11-03-v2-brief.png
+-rw-r--r--@ 1 zeroone  staff  1583277 Oct 29 16:10 ch11-04-v3-collateral-alt1.png
+-rw-r--r--@ 1 zeroone  staff  1596165 Oct 29 16:11 ch11-04-v3-collateral-alt2.png
+-rw-r--r--@ 1 zeroone  staff  1588813 Oct 29 16:09 ch11-04-v3-collateral.png
+-rw-r--r--@ 1 zeroone  staff   540533 Oct 29 16:10 ch11-05-diff-and-count-en.pdf
+-rw-r--r--@ 1 zeroone  staff   814262 Oct 29 16:10 ch11-05-diff-and-count-en.png
+-rw-r--r--@ 1 zeroone  staff   655976 Oct 29 16:09 ch11-05-diff-and-count-zh.pdf
+-rw-r--r--@ 1 zeroone  staff   832334 Oct 29 16:09 ch11-05-diff-and-count-zh.png
+-rw-r--r--@ 1 zeroone  staff  1593124 Oct 29 16:11 ch11-06-v4-recovered.png
+-rw-r--r--@ 1 zeroone  staff     1782 Oct 29 16:08 ch11-07-ch07-collateral-en.tex
+-rw-r--r--@ 1 zeroone  staff     1783 Oct 29 16:08 ch11-07-ch07-collateral-zh.tex
+-rw-r--r--@ 1 zeroone  staff  1291215 Oct 29 16:06 ch11-07a-ch07-v2.png
+-rw-r--r--@ 1 zeroone  staff  1300319 Oct 29 16:06 ch11-07b-ch07-v3-alt1.png
+-rw-r--r--@ 1 zeroone  staff  1294239 Oct 29 16:06 ch11-07c-ch07-v3.png
+-rw-r--r--@ 1 zeroone  staff     2615 Oct 29 16:09 ch11-08-version-tree-en.tex
+-rw-r--r--@ 1 zeroone  staff     2624 Oct 29 16:09 ch11-08-version-tree-zh.tex

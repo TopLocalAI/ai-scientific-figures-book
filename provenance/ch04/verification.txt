@@ -1,0 +1,51 @@
+核验时间：2026-10-29T16:13:36.892556+08:00
+$ ls -l figures/ch04
+total 37720
+-rw-r--r--@ 1 zeroone  staff  1085793 Oct 29 16:13 ch04-01-inconsistent-set-en.pdf
+-rw-r--r--@ 1 zeroone  staff  1269783 Oct 29 16:13 ch04-01-inconsistent-set-en.png
+-rw-r--r--@ 1 zeroone  staff  1055302 Oct 29 16:12 ch04-01-inconsistent-set-zh.pdf
+-rw-r--r--@ 1 zeroone  staff  1254288 Oct 29 16:12 ch04-01-inconsistent-set-zh.png
+-rw-r--r--@ 1 zeroone  staff    21056 Oct 29 16:12 ch04-02-spec-page-en.pdf
+-rw-r--r--@ 1 zeroone  staff   147631 Oct 29 16:12 ch04-02-spec-page-en.png
+-rw-r--r--@ 1 zeroone  staff    35674 Oct 29 16:12 ch04-02-spec-page-zh.pdf
+-rw-r--r--@ 1 zeroone  staff   164030 Oct 29 16:12 ch04-02-spec-page-zh.png
+-rw-r--r--@ 1 zeroone  staff   281298 Oct 29 16:13 ch04-03-cvd-check-en.pdf
+-rw-r--r--@ 1 zeroone  staff   267771 Oct 29 16:13 ch04-03-cvd-check-en.png
+-rw-r--r--@ 1 zeroone  staff   269557 Oct 29 16:12 ch04-03-cvd-check-zh.pdf
+-rw-r--r--@ 1 zeroone  staff   259796 Oct 29 16:12 ch04-03-cvd-check-zh.png
+-rw-r--r--@ 1 zeroone  staff  2645803 Oct 29 16:08 ch04-04a-schematic-bad.png
+-rw-r--r--@ 1 zeroone  staff  1148937 Oct 29 16:09 ch04-04b-schematic-base-alt1.png
+-rw-r--r--@ 1 zeroone  staff  1135610 Oct 29 16:10 ch04-04b-schematic-base-alt2.png
+-rw-r--r--@ 1 zeroone  staff  1164556 Oct 29 16:10 ch04-04b-schematic-base.png
+-rw-r--r--@ 1 zeroone  staff     1020 Oct 29 16:10 ch04-04b-schematic-en.tex
+-rw-r--r--@ 1 zeroone  staff      963 Oct 29 16:10 ch04-04b-schematic-zh.tex
+-rw-r--r--@ 1 zeroone  staff    72970 Oct 29 16:12 ch04-05-fig2-carbonate-bad-en.png
+-rw-r--r--@ 1 zeroone  staff    62745 Oct 29 16:12 ch04-05-fig2-carbonate-bad-zh.png
+-rw-r--r--@ 1 zeroone  staff    31743 Oct 29 16:12 ch04-05-fig2-carbonate-en.pdf
+-rw-r--r--@ 1 zeroone  staff   139291 Oct 29 16:12 ch04-05-fig2-carbonate-en.png
+-rw-r--r--@ 1 zeroone  staff    33258 Oct 29 16:12 ch04-05-fig2-carbonate-zh.pdf
+-rw-r--r--@ 1 zeroone  staff   141391 Oct 29 16:12 ch04-05-fig2-carbonate-zh.png
+-rw-r--r--@ 1 zeroone  staff    25093 Oct 29 16:12 ch04-06-fig3-ohc-bad-en.png
+-rw-r--r--@ 1 zeroone  staff    25093 Oct 29 16:12 ch04-06-fig3-ohc-bad-zh.png
+-rw-r--r--@ 1 zeroone  staff    15217 Oct 29 16:12 ch04-06-fig3-ohc-en.pdf
+-rw-r--r--@ 1 zeroone  staff    64103 Oct 29 16:12 ch04-06-fig3-ohc-en.png
+-rw-r--r--@ 1 zeroone  staff    14093 Oct 29 16:12 ch04-06-fig3-ohc-zh.pdf
+-rw-r--r--@ 1 zeroone  staff    62441 Oct 29 16:12 ch04-06-fig3-ohc-zh.png
+-rw-r--r--@ 1 zeroone  staff    50211 Oct 29 16:12 ch04-07-fig4-budget-bad-en.png
+-rw-r--r--@ 1 zeroone  staff    50211 Oct 29 16:12 ch04-07-fig4-budget-bad-zh.png
+-rw-r--r--@ 1 zeroone  staff    21947 Oct 29 16:12 ch04-07-fig4-budget-en.pdf
+-rw-r--r--@ 1 zeroone  staff   194819 Oct 29 16:12 ch04-07-fig4-budget-en.png
+-rw-r--r--@ 1 zeroone  staff    22317 Oct 29 16:12 ch04-07-fig4-budget-zh.pdf
+-rw-r--r--@ 1 zeroone  staff   190528 Oct 29 16:12 ch04-07-fig4-budget-zh.png
+-rw-r--r--@ 1 zeroone  staff   587448 Oct 29 16:13 ch04-08-consistent-set-en.pdf
+-rw-r--r--@ 1 zeroone  staff   663450 Oct 29 16:13 ch04-08-consistent-set-en.png
+-rw-r--r--@ 1 zeroone  staff   555361 Oct 29 16:13 ch04-08-consistent-set-zh.pdf
+-rw-r--r--@ 1 zeroone  staff   661084 Oct 29 16:13 ch04-08-consistent-set-zh.png
+
+$ Pillow Image.open(...).size（仅本任务四张 PNG）
+ch04-04a-schematic-bad.png: 1672 x 941 px; 2645803 bytes; source SHA-256 MATCH; PNG verify OK
+ch04-04b-schematic-base-alt1.png: 1672 x 941 px; 1148937 bytes; source SHA-256 MATCH; PNG verify OK
+ch04-04b-schematic-base.png: 1672 x 941 px; 1164556 bytes; source SHA-256 MATCH; PNG verify OK
+ch04-04b-schematic-base-alt2.png: 1672 x 941 px; 1135610 bytes; source SHA-256 MATCH; PNG verify OK
+
+4a: 1 generation; 4b: 3 generations; total: 4. No image was edited, resized, cropped, recoloured or relabelled after generation.

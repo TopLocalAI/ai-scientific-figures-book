@@ -1,0 +1,40 @@
+% FIG ch13-04 what's inside the file (Chinese)
+\usetikzlibrary{arrows.meta,positioning,fit}
+\begin{tikzpicture}[
+  font=\sffamily\footnotesize, text=BookInk,
+  card/.style={draw=BookRule, line width=0.6pt, rounded corners=3pt,
+    fill=BookPale!30, minimum width=42mm, minimum height=38mm, align=center, inner sep=5pt},
+  icon/.style={font=\scriptsize, align=center},
+]
+  \node[card] (C1) at (0,0) {%
+    \textbf{栅格文件}\\PNG、TIFF、JPEG\\[4pt]
+    \tikz{\foreach \x in {0,1,2,3} \foreach \y in {0,1,2,3}
+      \fill[BookTeal!35] (\x*0.35,\y*0.35) rectangle ++(0.32,0.32);}\\[3pt]
+    \scriptsize 放大后出现像素格；\\适合照片与显微图像};
+  \node[card, right=6mm of C1] (C2) {%
+    \textbf{矢量内容}\\PDF、SVG、EPS 内的路径与文字\\[4pt]
+    \tikz{\draw[BookTeal, line width=0.8pt] (0,0.6) .. controls (0.5,1.2) and (1.2,0.2) .. (1.6,0.8);
+      \node[font=\sffamily] at (0.8,0.2) {Aa};}\\[3pt]
+    \scriptsize 放大后边缘仍锐利；\\文字可选中、字体已嵌入};
+  \node[card, right=6mm of C2] (C3) {%
+    \textbf{容器}\\扩展名像矢量，内容是位图\\[4pt]
+    \tikz{\draw[BookRule, fill=white] (-0.1,-0.1) rectangle (1.7,1.3);
+      \foreach \x in {0,1,2} \foreach \y in {0,1,2}
+        \fill[BookInk!25] (0.2+\x*0.35,0.2+\y*0.28) rectangle ++(0.3,0.24);}\\[3pt]
+    \scriptsize PDF/SVG/EPS/PPTX\\可能只包着一张位图};
+
+  \node[draw=BookTeal, fill=white, rounded corners=2pt, inner sep=5pt,
+    text width=132mm, align=left, font=\scriptsize, below=8mm of C2] (how) {%
+    \textbf{怎么查：}\ 
+    \texttt{pdffonts}（有无嵌入字体）·
+    \texttt{pdfimages -list}（几张位图、多少 ppi）·
+    800\,\% 放大 · SVG 搜 \texttt{<image} · PPTX 解压查看 \texttt{ppt/media/}};
+
+  \node[draw=BookRule, fill=BookPale!15, rounded corners=2pt, inner sep=4pt,
+    text width=132mm, align=left, font=\scriptsize, below=3mm of how] {%
+    \textbf{SciDraw AI 中需注意的导出：}
+    数据图声明式路径的 PDF/EPS 为栅格包装；
+    图像转 SVG 文字层模式含位图背景；
+    图像转 PPTX = 背景图 + OCR 文本框；
+    组图 PPTX 面板为位图、编号为文字。};
+\end{tikzpicture}

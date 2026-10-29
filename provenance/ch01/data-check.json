@@ -1,0 +1,19 @@
+{
+  "rows": 366,
+  "nitrate_valid": 363,
+  "nitrate_missing_dates": [
+    "2016-09-18",
+    "2016-09-19",
+    "2016-12-14"
+  ],
+  "nitrate_max": 13.9,
+  "nitrate_min": 3.19,
+  "days_above_10_mgL": 162,
+  "may_mean": 12.84,
+  "september_mean": 5.36,
+  "discharge_max_cfs": 16300,
+  "discharge_min_cfs": 411,
+  "discharge_ae_days": 58,
+  "interpolate_only_in_vague_plot": true,
+  "data_file": "data/ch01/ch01-raccoon-2016.csv"
+}

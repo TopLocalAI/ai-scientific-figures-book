@@ -1,0 +1,50 @@
+% FIG ch12-01 three viewing conditions (Chinese)
+\begin{tikzpicture}[
+  x=1mm, y=1mm,
+  font=\sffamily\small,
+  text=BookInk,
+  coltitle/.style={font=\sffamily\bfseries, text=BookTeal, align=center},
+  cell/.style={draw=BookRule, fill=white, align=left, text width=42mm, inner sep=2mm, minimum height=9mm},
+  emphcell/.style={cell, fill=BookPale, draw=BookTeal, font=\sffamily\bfseries\small},
+  icon/.style={draw=BookInk!40, fill=BookPale, line width=0.5pt},
+]
+  % Column headers with scale icons (1 m bar shared)
+  \def\colX{22, 72, 122}
+  \foreach \x/\name/\w/\h in {22/论文/42/59, 72/汇报/64/36, 122/海报/42/59} {
+    \begin{scope}[shift={(\x, 108)}]
+      \node[coltitle] at (21, 14) {\name};
+      \draw[icon, fill=white] (6, 0) rectangle ++(\w, \h);
+      \ifnum\x=72
+        \draw[BookInk!60, line width=0.8pt] (10, 4) -- (54, 4);
+        \draw[BookInk!60, line width=0.8pt] (10, 32) -- (54, 32);
+      \fi
+    \end{scope}
+  }
+  \draw[BookTeal, line width=1pt] (10, 100) -- ++(20, 0);
+  \node[font=\scriptsize, anchor=west] at (32, 100) {1 m（比例尺）};
+
+  \node[cell, anchor=north west] at (0, 98) {观看距离};
+  \node[cell] at (22, 89) {30--50 cm};
+  \node[cell] at (72, 89) {2--15 m};
+  \node[cell] at (122, 89) {先 2--5 m\\再 0.5--1.5 m};
+
+  \node[cell, anchor=north west] at (0, 78) {可用时间};
+  \node[cell] at (22, 69) {读者自定};
+  \node[cell] at (72, 69) {每页约 1--2 分钟};
+  \node[cell] at (122, 69) {几秒决定是否停留\\停留后数分钟};
+
+  \node[cell, anchor=north west] at (0, 58) {节奏控制};
+  \node[cell] at (22, 49) {读者};
+  \node[cell] at (72, 49) {讲者};
+  \node[cell] at (122, 49) {观众};
+
+  \node[cell, anchor=north west] at (0, 38) {谁来解释};
+  \node[cell] at (22, 29) {图注};
+  \node[cell] at (72, 29) {讲者};
+  \node[cell] at (122, 29) {海报自身};
+
+  \node[emphcell, anchor=north west] at (0, 18) {内容策略};
+  \node[emphcell, text=BookTeal] at (22, 9) {密而自足};
+  \node[emphcell, text=BookTeal] at (72, 9) {少而顺序化};
+  \node[emphcell, text=BookTeal] at (122, 9) {分层};
+\end{tikzpicture}

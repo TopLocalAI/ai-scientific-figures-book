@@ -1,0 +1,43 @@
+% Preview chapter 2 figures ch02-01 and ch02-03.
+% Compile from repo root:
+%   xelatex -interaction=nonstopmode production/tikz-preview-ch02.tex
+% Text width is the book measure, 132mm.
+\documentclass[UTF8,fontset=fandol,11pt]{ctexart}
+\usepackage[paperwidth=170mm,paperheight=240mm,inner=20mm,outer=18mm,top=20mm,bottom=22mm]{geometry}
+\usepackage{booktabs,tabularx,array}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning}
+\definecolor{BookTeal}{HTML}{176C68}
+\definecolor{BookInk}{HTML}{23363E}
+\definecolor{BookRule}{HTML}{C8D6D6}
+\definecolor{BookPale}{HTML}{F1F6F5}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.15}
+\graphicspath{{./}}
+\usepackage{graphicx}
+\begin{document}
+
+\section*{ch02-01 brief-vs-prompt (zh)}
+\input{figures/ch02/ch02-01-brief-vs-prompt-zh.tex}
+\newpage
+
+\section*{ch02-01 brief-vs-prompt (en)}
+\input{figures/ch02/ch02-01-brief-vs-prompt-en.tex}
+\newpage
+
+\section*{ch02-03 paragraph-to-table (zh)}
+\begin{table}[htbp]
+\centering
+\input{figures/ch02/ch02-03-paragraph-to-table-zh.tex}
+\end{table}
+\newpage
+
+\section*{ch02-03 paragraph-to-table (en)}
+\begin{table}[htbp]
+\centering
+\input{figures/ch02/ch02-03-paragraph-to-table-en.tex}
+\end{table}
+
+\end{document}

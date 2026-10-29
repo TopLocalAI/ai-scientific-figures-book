@@ -1,50 +1,600 @@
-\chapter{Book roadmap and companion materials}
+\chapter{Figure Brief Templates}
+\label{app:brief-templates}
 
-This edition contains drafts of the preface and Chapters 1 and 2. Later chapters follow research communication tasks. Each will cover AI assistance, a SciDraw AI workflow, author review, a revision example, and deliverables.
+Writing down your research intent as a structured figure brief before opening a drawing canvas or typing a prompt into \scidraw{} is the central working habit of this book. A figure brief is not bureaucratic paperwork for software; it is an explicit contract among you, your co-authors, peer reviewers, and AI tools. It defines the question the figure must answer, the empirical evidence that is off-limits to alteration, the visual degrees of freedom open to exploration, and the objective criteria by which the finished figure will be judged. This appendix brings together the general ten-field template introduced in Chapter 2, four specialized variants tailored to distinct figure genres, and a fully populated brief for an A0 conference poster.
 
-\begin{longtable}{p{0.08\linewidth}p{0.38\linewidth}p{0.43\linewidth}}
-\toprule
-\textbf{Ch.} & \textbf{Topic} & \textbf{Main deliverable} \\
-\midrule
-\endhead
-1 & AI figure workflows & Brief, route, source archive; drafted \\
-2 & Research to drawing brief & Relationship table and acceptance criteria; drafted \\
-3 & Composition and sketches & Two candidates and a selection rationale \\
-4 & Visual language & Color, type, labels, and arrow conventions \\
-5 & Data visualization & Data, figure, revisions, and checks \\
-6 & Methods and workflows & Step table, diagram, and conditions \\
-7 & Mechanisms and structures & Relationship table, corrections, and legend \\
-8 & Experimental images & Originals, panel plan, processing record \\
-9 & Panels and legends & Assembled figure and reviewed legend \\
-10 & Graphical abstracts & Brief, layout candidates, final figure \\
-11 & Effective revisions & Issue list and reviewed iterations \\
-12 & Presentations and posters & Versions for different viewing situations \\
-13 & Checks and delivery & Figures, legends, sources, AI-use record \\
-\bottomrule
-\end{longtable}
+\section{General Ten-Field Template}
 
-\section{A reusable brief}
+The ten fields below are ordered so that research goals and evidentiary boundaries are locked in before visual styling and delivery specifications are chosen. Whenever you start a new scientific figure, copy the block below and fill in every field; mark any item that has not yet been finalized as ``To be confirmed'' rather than deleting the line.
+
 \begin{Prompt}
-[Audience and use]
-[One-sentence purpose]
-[Materials and sources]
-[Required content]
-[Relationships and order]
-[Evidence: observation, interpretation, hypothesis, unknown]
-[Visual plan]
-[Constraints: what must not change]
-[Delivery requirements and date checked]
-[Acceptance criteria]
+[Use and audience] Where the figure will appear (journal main text / supplementary information / lab-meeting slide / conference poster / graphical abstract), who the target readers are, and what domain background they already share.
+[One-sentence goal] After viewing this figure, the reader should understand ____, and be able to point directly to ____ in the figure.
+[Materials and sources] Identifiers, version numbers, sheet names, or page numbers of the underlying data tables, raw images, or literature sources; open license or permission status; date collected or accessed.
+[Required content] Every study object, panel, data series, experimental group, or structural layer that must appear in the figure, with explicit counts for each.
+[Relationships and reading order] Logical, physical, or temporal relationships among objects (source -> target -> meaning -> visual encoding -> experimental or literature basis), together with the intended eye-movement path across the figure.
+[Evidence status] Item-by-item classification into measured observation, mechanistic interpretation, working hypothesis, or unverified inference, plus the exact wording used to label simulated data or model-generated illustrations inside the figure and in the legend.
+[Visual plan] Chart or diagram genre, spatial grid layout, semantic colour roles, label language, and target physical dimensions (final printed width in mm, minimum font size in pt, line width in pt).
+[Immutable constraints] Numerical values, physical units, pairing structures, axis limits, colour-role assignments, and verified scientific relationships that neither software tools nor layout edits are permitted to alter.
+[Delivery requirements and date checked] Official figure guidelines of the target journal, conference, or institution (guideline title and date checked), required delivery formats, and file-naming convention.
+[Acceptance criteria] Quantifiable, auditable pass/fail checks, stating who performs each check and at what physical scale or viewing mode.
 \end{Prompt}
 
-\section{Simulated-data dictionary}
-\texttt{data/paired-example.csv} contains manually constructed teaching data. Eight fictional objects each have two measurements in arbitrary units. There are no missing values or predefined exclusion criteria. Seven objects increase; SIM04 decreases from 18 to 17. The before mean is 13.125 and the after mean is 16.5. These descriptions support no real research, causal, or treatment-effect claim.
+\begin{BookNote}
+Completion tip: Field 2 (``One-sentence goal'') must name a concrete piece of visual evidence that a reader can physically point to in the figure (for example, ``locate the inflection time of the control group''), rather than a vague intention such as ``show experimental results.'' Field 8 (``Immutable constraints'') serves directly as the ``Keep unchanged'' block in every subsequent multi-round revision instruction.
+\end{BookNote}
 
-\texttt{scripts/plot\_paired.py} reads the original CSV, checks these properties, and renders the plots. It produces PDF and PNG figures with Chinese or English labels. It does not invent, remove, or alter observations.
+\section{Four Specialized Variants}
 
-\section{Figure provenance and AI-use records}
-The mechanism image comes from Codex's built-in image generation. The executed prompt is in \texttt{provenance/mechanism-prompt.txt}; the review is in \texttt{mechanism-review.json} in the same directory. The tool did not expose a specific model name, so the book does not infer one. The original output is preserved without visual postprocessing.
+Different genres of scientific figures rest on different forms of evidence. When working on the four figure types below, expand or adapt the general ten-field template with the following specialized entries:
 
-The executed prompt moves explanations of relationships to the caption instead of placing words inside the image. This preserves their meaning and lets both editions share the figure. Review covers object counts, directions, line styles, and unsupported additions. Slight tonal variation within nodes is recorded as a style deviation. The fictional relationships have no status as biological evidence.
+\begin{enumerate}
+  \item \textbf{Data-plot variant (corresponding to Chapter 5):} Add three fields to the general template:
+  \begin{itemize}
+    \item {[Unit of observation and pairing/grouping]} State what a single data point represents (for example, one daily watershed sample, one individual animal, or one independent fabrication batch) and whether measurements come from independent groups or paired before-and-after observations.
+    \item {[Data processing]} Specify filtering criteria, coordinate transformations (such as logarithmic axes), normalization baselines, and rules for handling missing values; never drop outliers without explicit documentation.
+    \item {[Statistical representation]} Define the exact summary statistic and error-bar convention (standard deviation SD, standard error of the mean SEM, or 95\% confidence interval CI); sample size $n$ and hypothesis-test outputs must be supplied by the author from verified analysis logs and must never be estimated or invented by AI.
+  \end{itemize}
+  \item \textbf{Mechanism and workflow variant (corresponding to Chapters 6 and 7):} Strengthen and add three fields:
+  \begin{itemize}
+    \item {[Relationships and reading order]} Expand this field into a structured ``Object and Relationship Table'' listing ``Source object --- Relationship verb --- Target object --- Evidence status --- Line and arrowhead style'' row by row; every decision node in a workflow diagram must include both ``Pass'' and ``Fail'' exit branches.
+    \item {[Line-style semantics]} Assign a single, unambiguous meaning to solid lines, dashed lines, dotted lines, filled arrowheads, flat T-bar inhibition caps, and transmembrane translocation arrows, and include a matching key in the figure or legend.
+    \item {[Omissions and simplifications]} Record collateral pathways, cofactors, or secondary steps deliberately omitted to control visual density, and carry those notes into the figure legend.
+  \end{itemize}
+  \item \textbf{Experimental-image panel variant (corresponding to Chapter 8):} Add three fields to the general template:
+  \begin{itemize}
+    \item {[Raw-image inventory and checksums]} List the read-only original image identifiers, acquisition channels, bit depth, pixel dimensions, and file hash checksums so that primary data are never overwritten during layout.
+    \item {[Calibration and scale-bar basis]} Record the objective magnification, physical pixel size (for example, micrometres per pixel), and the arithmetic converting physical length into scale-bar pixel width, never relying on AI to guess a scale bar.
+    \item {[Permitted and prohibited processing]} State permitted full-frame operations (such as bounded cropping, linear full-frame brightness and contrast mapping, and colour-vision-accessible pseudocolour channel assignment applied with identical intensity windows across all compared groups) alongside strictly prohibited operations (local cloning or erasure, generative inpainting or redrawing, and AI super-resolution upscaling).
+  \end{itemize}
+  \item \textbf{Oral-presentation and academic-poster variant (corresponding to Chapter 12):} Add five fields to the general template:
+  \begin{itemize}
+    \item {[Viewing distance and dwell time]} Record the distance from the back row to the projection screen together with screen height (for talks), or the corridor walk-by distance and close-up reading distance (for posters), along with the audience's expected dwell time per slide or poster.
+    \item {[Pacing control]} Distinguish speaker-paced delivery (where progressive builds guide attention step by step) from reader-paced browsing (where the poster must stand on its own when the presenter steps away).
+    \item {[One assertion headline per slide or block]} Decompose the multiple sub-questions of a manuscript composite figure so that each slide or poster conclusion block carries a single data-backed assertion sentence as its heading.
+    \item {[Minimum font size and line width]} Use the visual-angle scaling formula to set hard lower bounds on body text, axis tick labels, and curve stroke widths for the venue geometry.
+    \item {[Items locked to the manuscript figure]} Lock every numerical value, physical quantity, unit, axis range, semantic colour assignment, and evidence-status label (``Simulated data'', ``Model-generated illustration'') to match the manuscript version exactly.
+  \end{itemize}
+\end{enumerate}
 
-The workflow is a Codex-authored TikZ diagram, and interface images are real development screenshots. ASSETS.md lists sources and uses. Future real-research cases must add source material, any necessary permission, actual tool operations, and revision records.
+\section{Completed Example: A0 Portrait Poster Brief for Perovskite Solar Cells}
+
+Below is the complete figure brief used in Chapter 12 to adapt the planar perovskite solar cell interfacial passivation case study into an A0 portrait conference poster, followed by three verification annotations.
+
+\begin{Prompt}
+[Use and audience] Materials and energy conference poster session, ISO A0 portrait (841 mm x 1189 mm); passers-by at 2 to 5 m decide within a few seconds whether to stop, while engaged visitors read at 0.5 to 1.5 m for 3 to 5 minutes; the author may not be present at every moment to explain the board.
+[One-sentence goal] From 3 m away, visitors can read the research question and main conclusion directly (interfacial passivation simultaneously improves simulated initial efficiency and operational stability); stepping to 1 to 1.5 m, they can inspect three core evidence blocks in sequence---"where the device was modified," "how much efficiency increased," and "how much stability improved"---together with essential methodological context.
+[Materials and sources] Built from the four companion assets of Manuscript Figure 2 in Chapter 9: M1 device-stack schematic base illustration, M2 scanning-electron-microscopy-style cross-sectional placeholder (model-generated illustration), M3 single-diode simulated current density-voltage data table and summary performance metrics table, and M4 simulated 1000 h normalized efficiency decay table (original teaching materials of this book, released under CC BY 4.0 / MIT).
+[Required content] Top title banner (research question and headline conclusion); middle conclusion tier with three blocks (Block 1: seven-layer planar n-i-p stack and passivation-layer position; Block 2: control vs. modified simulated current density-voltage curves with open-circuit voltage, short-circuit current density, fill factor, and power conversion efficiency comparison; Block 3: 1000 h normalized efficiency trajectories and time to 80% of initial efficiency T80); bottom detail tier (key simulation equations and test conditions, small cross-sectional schematic, references, and open-material notice).
+[Relationships and reading order] Two-column vertical layout grid with 30 mm outer margins and a 20 mm inter-column gutter; reading order proceeds from the full-width top banner -> upper-left block (device modification) -> lower-left block (initial efficiency gain) -> upper-right block (long-term operational stability) -> lower-right block (simulation parameters, cross-sectional schematic, and references), avoiding back-and-forth Z-pattern eye jumps.
+[Evidence status] All performance curves and metrics come from deterministic single-diode and double-exponential decay equations and must carry an explicit in-plot "Simulated data" label; the cross-sectional morphology graphic is a generative placeholder and must carry an in-panel "Model-generated illustration, not a micrograph" label in the lower-left corner; the device stack carries "Schematic, not to scale."
+[Visual plan] Main banner title >= 90 pt, subtitle >= 44 pt; each conclusion block pairs an assertion heading (>= 44 pt) with a dedicated chart replotted for a 1.5 m viewing distance (axis tick labels >= 28 pt, axis titles >= 32 pt, curve stroke width >= 3.0 pt, direct end-of-curve labels replacing detached legend boxes); detail-tier body text >= 28 pt and references >= 24 pt; semantic colours match the manuscript figure (control in dark grey #6E6E6E dashed line, modified in deep teal #1B7F86 solid line).
+[Immutable constraints] Simulated metrics are locked to the verified summary table (Control: Jsc = 22.46 mA cm^-2, Voc = 1.100 V, FF = 0.777, PCE = 19.21%, T80 = 210 h, 1000 h retention 47%; Modified: Jsc = 22.78 mA cm^-2, Voc = 1.140 V, FF = 0.808, PCE = 20.98%, T80 > 1000 h, 1000 h retention 86%); axis quantities, units, and limits (voltage 0 to 1.2 V, current density 0 to 25 mA cm^-2, time 0 to 1000 h) and all evidence-status labels must remain intact.
+[Delivery requirements and date checked] Export a full-size A0 portrait vector PDF with all fonts embedded, accompanied by a 12 cm tall thumbnail image for density auditing; record production date (2026-10-29).
+[Acceptance criteria] (1) Thumbnail and squint test: when scaled to 12 cm height and lightly Gaussian-blurred, the top banner and three conclusion blocks remain visually distinct; (2) 1:1 physical tile printout test: printing any single chart block at 100% scale on an A4 sheet and taping it to a wall allows effortless reading of tick labels and direct annotations from 1.5 m; (3) Three-version consistency audit: the author verifies every number, unit, colour, and evidence-status label against the manuscript figure and slide deck.
+\end{Prompt}
+
+\begin{itemize}
+  \item \textbf{Annotation 1 (making the one-sentence goal testable):} The goal field separates far-field reading (grasping the headline conclusion from $3\text{ m}$) from near-field reading (locating three evidence blocks from $1\text{--}1.5\text{ m}$). During review, you simply ask a colleague standing at those distances, ``Which layer of the device was modified, and how much did efficiency increase?'' If they can answer without prompting, the layout passes.
+  \item \textbf{Annotation 2 (preventing numerical drift via immutable constraints):} Field 8 writes out all six summary metrics for both groups along with the exact axis ranges. When replotting poster-scale charts in the scientific data visualization module of \scidraw{}, this block is pasted directly as a leading constraint so that any drift in curve knee points or text callouts is caught immediately.
+  \item \textbf{Annotation 3 (replacing subjective screen checks with thumbnail and print tests):} Rather than zooming in on a laptop monitor and guessing that the text ``looks big enough,'' combining a $12\text{ cm}$ thumbnail density check with a $1{:}1$ A4 tile printout viewed from $1.5\text{ m}$ catches overcrowded panels and undersized type before you pay for large-format printing.
+\end{itemize}
+
+\chapter{Prompt and Revision-Instruction Rewrite Table}
+\label{app:prompt-rewrites}
+
+During figure preparation and co-author review, the most common feedback consists of subjective impressions: ``it doesn't look professional,'' ``it's too cluttered,'' ``the colours feel off,'' or ``fix the top-left corner.'' Such vague requests fail whether you hand them to an AI tool or a junior colleague, because neither knows which elements are locked constraints and what quantitative change constitutes success. This appendix summarizes the fixed three-part revision structure established in Chapter 11, compiles a master rewrite table covering 26 typical vague critiques across Chapters 1--13, and lists five core rules for writing English base-illustration prompts.
+
+\section{Fixed Structure for Revision Instructions and Issue Prioritization}
+
+Whenever you evaluate a draft figure, classify every flaw using the three-tier priority hierarchy from Chapter 11 before issuing instructions: \textbf{Priority 1 covers scientific errors and academic integrity risks} (distorted values, reversed causal arrows, missing ``Simulated data'' or ``Model-generated illustration'' labels, or fabricated scale bars); \textbf{Priority 2 covers reading barriers} (broken eye-movement order, text that falls below legibility thresholds at final print width, or groups that merge in grayscale or under colour-vision deficiency); \textbf{Priority 3 covers visual consistency and aesthetic polish} (margin alignment, uniform stroke weights, and removal of decorative clutter). Once issues are prioritized, format every revision instruction sent to a tool or logged in your version history using three mandatory blocks:
+
+\begin{Prompt}
+Keep unchanged: Explicitly list the object names, counts, numerical values, axis ranges, topological connections, semantic colour assignments, and in-figure evidence-status labels that must not be altered in this round.
+Modify only: Focus on one to three concrete edits per round, naming the exact spatial location (for example, "lower-left panel" or "right end of the curve"), target object, and quantitative parameters (font size in pt, stroke width in pt, hex colour code).
+Verify after completion: List the pass/fail checks the author will perform on the new output, including a side-by-side comparison against the previous version to confirm that no unintended drift occurred elsewhere.
+\end{Prompt}
+
+\section{Master Rewrite Table for Vague Feedback}
+
+Table~\ref{tab:app-b-rewrites} collects 26 recurring vague requests from Chapters 1 through 13, diagnoses why each fails in practice, and provides an actionable rewrite ready to copy and adapt.
+
+\begingroup\small
+\begin{longtable}{@{}p{26mm}p{28mm}p{56mm}p{10mm}@{}}
+\caption{Master rewrite table translating vague feedback into executable revision instructions}\label{tab:app-b-rewrites}\\
+\toprule
+Vague request & Why it fails & Executable rewrite & Ch. \\
+\midrule
+\endfirsthead
+\caption[]{Master rewrite table translating vague feedback into executable revision instructions (continued)}\\
+\toprule
+Vague request & Why it fails & Executable rewrite & Ch. \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+``Make a professional data plot.'' & Omits study design, unit of observation, and data structure; tools default to bar charts that hide individual trajectories. & Plot a paired dot-and-line slope graph for the 8 subjects measured before and after treatment; retain all 16 observations and connecting lines; put condition on the horizontal axis and measurement (a.u.) on the vertical axis; highlight the counter-trend subject SIM04. & 1, 2, 5 \\
+``Draw an agricultural watershed hydrology and water-quality figure.'' & Mixes temporal series and spatial drainage pathways on a single unaligned canvas. & Split into two vertically aligned time-series panels sharing an identical date axis: upper panel for daily mean discharge (m$^3$ s$^{-1}$), lower panel for nitrate-plus-nitrite concentration (mg L$^{-1}$ as N); shade the spring snowmelt and early-summer rain pulse windows. & 1 \\
+``Draw a pathway diagram showing upstream activation and downstream effects.'' & Leaves object count, interaction types, and evidence status undefined, inviting the model to invent molecules and arrows. & Draw exactly the 4 objects in the attached relationship table: connect R to K with a solid arrow for established activation, K to P with a dashed arrow for a working hypothesis, and I to K with a flat T-bar cap for inhibition; add no extra nodes. & 2 \\
+``Illustrate the causes of battery capacity fade.'' & Blends literature-established mechanisms and the authors' untested hypothesis under a single solid-arrow style. & Encode by evidence status: use solid boxes and solid arrows for lithium plating and loss of active lithium; place the accelerated interfacial side-reaction hypothesis in a dashed box with a question-mark badge; distinguish ``Established'' from ``Hypothesized'' in the key. & 2 \\
+``Make the whole diagram look cleaner and simpler.'' & Gives no boundary on what may be deleted; tools often strip essential scientific steps or qualifying conditions. & Remove 3D background gradients, non-semantic outer glow effects, and redundant border boxes; keep all 6 core process nodes and their topological connections intact; increase outer whitespace margins to at least 3 mm. & 3, 11 \\
+``Give me several layout options to compare.'' & Without changing spatial topology, generative tools merely swap colour schemes or icon styles across near-identical layouts. & Holding the CRISPR--Cas9 cleavage step and two repair branches constant, generate three monochrome structural wireframe sketches arranged as (1) left-to-right linear flow, (2) central hub-and-spoke, and (3) top-down bifurcating tree. & 3 \\
+``Just tweak the top-left corner and leave everything else untouched.'' & Image models regenerate the entire canvas and introduce global drift; verbal requests alone cannot lock pixels. & Replace only the upper-left receptor icon with a transmembrane double-helix glyph; run a pixel-difference audit against the previous draft and verify that the remaining 12 molecule positions, arrow directions, and colours have not shifted. & 3, 11 \\
+``Make the colours look nicer and more high-end.'' & Detaches colour from scientific meaning and risks assigning the same hue to different variables across panels. & Apply a paper-wide semantic palette: lock the control group to dark grey \texttt{\#6E6E6E}, the modified/treated group to deep teal \texttt{\#1B7F86}, and warning/outlier highlights to warm ochre \texttt{\#B9652B}; enforce identical mappings across all four figures. & 4, 13 \\
+``Make sure readers with colour-vision deficiency can read it.'' & Relying on naked-eye impressions skips quantitative lightness and colour-vision simulation checks. & Verify luminance separation $\Delta L^*$ between groups and add redundant double encoding: pair the control group with dashed lines and open circles, pair the treated group with solid lines and filled squares, and place direct group labels at the right end of each curve. & 4, 13 \\
+``Show the distribution comparison across the three penguin species clearly.'' & Mean-only bar charts conceal bimodal distributions, sample-size differences, and individual outliers. & Use boxplots overlaid with semi-transparent jittered raw data points (or raincloud plots); print the valid sample size $n$ directly beneath each species name on the horizontal axis; state in the legend that boxes span the interquartile range and whiskers extend to $1.5\times$ IQR. & 5 \\
+``Add error bars and significance stars to the chart.'' & AI tools do not know your replicate structure; asking for stars invites fabricated $p$-values. & Remove unverified significance stars; plot mean $\pm$ SD (or 95\% CI) error bars from the verified calculation log; insert the exact statistical test name, test statistic, and calculated $p$-value into the legend from your analysis script. & 5, 9 \\
+``Draw a flowchart for our single-cell sequencing experiment.'' & Blends wet-lab bench steps with dry-lab bioinformatics and omits quality-control rejection exits. & Use a deterministic two-lane skeleton: place tissue dissociation, droplet capture, and library construction in Lane 1, and sequencing QC, alignment, and clustering in Lane 2; add an explicit abort/exclusion branch at the cell-viability threshold node. & 6 \\
+``Put all experimental conditions and parameters inside the flowchart boxes.'' & Hard-coding batch-dependent numbers inside raster boxes makes late-stage updates error-prone. & Keep flowchart node labels restricted to action verbs and core input/output nouns; move centrifugation speeds, incubation times, and filtering thresholds into the companion parameter table and legend, or place them on an editable vector layer. & 6 \\
+``Make the arrow relationships in the signalling pathway clearer.'' & Uses a single generic arrowhead for catalytic phosphorylation, transcriptional regulation, vesicle translocation, and inhibition. & Define four distinct stroke styles in the legend key: solid line with filled arrowhead for activation/phosphorylation, solid line with flat T-bar for inhibition, long-dashed arrow for transmembrane vesicle translocation, and dotted line with ``?'' for unverified links. & 7 \\
+``Generate a mechanism diagram with complete molecule names inside.'' & Image generation models frequently produce garbled pseudo-Latin strings that cannot be edited as text. & Prompt the image model for a strictly text-free visual base (no letters, words, or numbers); overlay crisp 7 pt sans-serif standard gene and protein symbols at final print width in a vector typesetting layer (TikZ or vector editor). & 7 \\
+``Make the double-inhibition logic leading to downstream activation obvious.'' & Two consecutive T-bars are easily misread by readers as net downstream inhibition. & Place explicit state badges (\texttt{inactive} vs.\ \texttt{active}) beside both AS160 and Rab nodes along the $\text{Akt} \dashv \text{AS160} \dashv \text{Rab}$ cascade, and state in the legend that Akt phosphorylates and inhibits AS160, thereby relieving inhibition of Rab. & 7 \\
+``Make this fluorescence micrograph look sharper and cleaner.'' & Generative denoising or AI super-resolution alters pixel intensity distributions and fabricates sub-resolution structures. & Prohibit generative beautification or AI upscaling on raw micrographs; apply only full-frame linear brightness/contrast mapping, record the exact minimum and maximum display intensity values, and apply the identical display window to both control and treated fields. & 8 \\
+``Add a scale bar and a zoomed-in inset to the microscopy panel.'' & Eyeballed scale bars violate physical pixel calibration, and non-integer interpolation blurs pixel boundaries. & Compute the exact pixel length for a 10 $\mu$m scale bar from the metadata calibration factor (for example, $0.108\ \mu\text{m px}^{-1}$); draw a bounding box on the full field to mark the inset origin and enlarge the region using integer-multiple nearest-neighbour scaling. & 8 \\
+``Combine these four plots into one big paper figure.'' & Mechanical tiling lacks logical panel roles and a unified typographic and spatial grid. & Build a $2\times 2$ grid locked to a 180 mm double-column width: assign upper-left to device stack, upper-right to morphology placeholder, lower-left to $J$--$V$ curves, and lower-right to stability trace; align axis frames and set panel labels in 8 pt bold lowercase. & 9 \\
+``Write a complete figure legend for this multi-panel figure.'' & Vision models see only pixels, not sample sizes, scan rates, or statistical tests, and readily hallucinate experimental details. & Instruct the legend assistant to output a structured ``overview sentence + panel-by-panel descriptions + symbol/error definitions'' skeleton while inserting explicit \texttt{[TO BE SUPPLIED BY AUTHOR]} placeholders for $n$, scan conditions, and test statistics. & 9 \\
+``Make the graphical abstract more eye-catching and impactful.'' & Chasing visual drama often exaggerates a model-specific or simulated result into an unqualified universal breakthrough. & Draft a four-line contribution card first (context, core method, quantitative finding, scope boundary); use a three-column Input $\rightarrow$ Method $\rightarrow$ Outcome layout and retain explicit ``Simulated data'' or species/domain qualifiers on the canvas. & 10 \\
+``Check whether the graphical abstract is still readable when shrunk.'' & Designs created on a large monitor often pack tiny text that collapses into an illegible blur in a journal table of contents. & Scale the finalized graphical abstract to a 50 mm width (or roughly 200 px height) for a TOC thumbnail test; strip secondary metrics and full sentences that fail legibility, keeping at most 3 primary visual anchors. & 10 \\
+``Drop the paper's multi-panel figure straight onto a group-meeting slide.'' & A double-column figure sized for 40 cm reading shrinks below an effective 6 pt equivalent for listeners in the back row. & Split the four-panel figure across 3 widescreen (16:9) slides, each headed by a single assertion sentence; replot data charts with tick labels $\ge 20\text{ pt}$, axis titles $\ge 24\text{ pt}$, and curve strokes $\ge 2.5\text{ pt}$; use a two-step progressive reveal on Slide 2. & 12 \\
+``Turn this manuscript figure into a conference poster.'' & Pasting manuscript paragraphs and enlarging paper figures destroys visual hierarchy and turns the board into a wall of grey text. & Rebuild on an A0 portrait three-tier hierarchy: top banner $\ge 90\text{ pt}$ readable at 3--5 m; three middle conclusion blocks with $\ge 44\text{ pt}$ assertion headings and charts replotted for 1.5 m viewing; detail text $\ge 24\text{ pt}$; verify with a 12 cm blurred thumbnail test. & 12 \\
+``Make the font bigger so reviewers don't complain it's too small.'' & Enlarging text on an arbitrary canvas without locking final print width still fails after page-layout scaling. & Lock the canvas width to the journal's exact single-column (85 mm) or double-column (190 mm) target first, set axis ticks and labels directly to 7 pt and panel letters to 8 pt bold at 1:1 scale, and verify on a 100\% A4 printout with a physical ruler. & 13 \\
+``Export a high-resolution vector figure for journal submission.'' & ``High-resolution vector'' is a contradiction in terms, and a PDF or SVG extension can merely wrap a low-resolution bitmap. & Separate by panel content: export line art and data plots as true vector PDFs verified via \texttt{pdffonts} and \texttt{pdfimages -list}; for raster panels, verify effective resolution at target print width ($\ge 300\text{ ppi}$ for photographs, $\ge 500\text{ ppi}$ for combo art, $\ge 1000\text{ ppi}$ for bitmap line art). & 13 \\
+\end{longtable}
+\endgroup
+
+\section{Key Principles for Writing English Base-Illustration Prompts}
+
+When using prompt drawing, sketch mode, or mechanism figure generation in \scidraw{} (which call underlying image-generation models) to create structural or mechanistic base illustrations, English prompts frequently provide tighter compositional control. Follow five rules whenever you draft an English prompt for a visual base layer:
+
+\begin{enumerate}
+  \item \textbf{Explicitly prohibit all text and symbols (No-text rule):} Image generation models lack a deterministic typesetting engine; allowing them to render labels almost always produces misspelled pseudo-words or garbled characters. End every base-image prompt with: \texttt{Strictly no text of any kind: no letters, no words, no numbers, no labels, no scale bar, no watermark.} Add all scientific labels afterward in a vector layer.
+  \item \textbf{State aspect ratio and background upfront (Aspect ratio and background):} Open the prompt by declaring the exact canvas proportion and clean background, for example: \texttt{Clean flat vector-style scientific schematic, landscape 16:9, pure white background, generous margin on the right for labels.}
+  \item \textbf{Describe structure using relative spatial coordinates (Relative spatial layout):} Walk through the scene in an explicit geometric order---such as \texttt{From bottom to top}, \texttt{From left to right}, or \texttt{From extracellular space across the plasma membrane into the cytoplasm}---specifying the shape, relative thickness, and colour of each component while reserving open whitespace for leader lines and text callouts.
+  \item \textbf{Request a single view per prompt (Single view per prompt):} Never ask an image model to render ``a regional watershed map, a magnified cross-section, and a right-hand line plot'' inside a single prompt. Generate or plot each view independently according to its evidence rules, then assemble them in a multi-panel layout tool.
+  \item \textbf{Exclude fabricated metrological chrome (No fake metrology):} When generating a conceptual morphology placeholder, explicitly instruct the model: \texttt{no instrument data bar, no magnification readout, no fake scale bar}, and stamp ``Model-generated illustration, not a micrograph'' onto the panel immediately upon export.
+\end{enumerate}
+
+\chapter{Figure Legend Checklist}
+\label{app:legend-checklist}
+
+A figure legend is the evidentiary manual that makes a scientific figure interpretable. No matter how crisp a figure looks on the page, omitting sample sizes, error-bar definitions, scale-bar lengths, or evidence-status disclosures leaves reviewers and readers unable to evaluate the claim. This appendix provides a twelve-point itemized checklist for figure legends together with a side-by-side comparison of an unverified AI legend draft and an author-verified final legend.
+
+\section{Twelve-Point Itemized Legend Checklist}
+
+Before finalizing any manuscript figure, supplementary figure, or poster block, verify its legend item by item against the twelve checks below (parentheses indicate the primary chapters where each rule is demonstrated):
+
+\begin{itemize}
+  \item[$\square$] \textbf{1. Opening overview sentence defines the scope (Chapter 9):} The first sentence states the study system or overall phenomenon shown in the composite figure in a concise declarative clause, neither parroting a generic section heading nor overclaiming causal generality beyond the data.
+  \item[$\square$] \textbf{2. Every panel letter is accounted for in order (Chapter 9):} Each panel (\textbf{a}, \textbf{b}, \textbf{c}, \textbf{d}, \dots) in a multi-panel composite has a dedicated entry in matching sequence, with letter case and boldface formatting identical between the canvas and the legend text.
+  \item[$\square$] \textbf{3. Every visual encoding is defined (Chapters 4 and 5):} All colours, marker shapes, line styles (solid, dashed, dotted), shaded bands, and reference lines appearing in the figure are explained explicitly and match the paper-wide visual specification sheet.
+  \item[$\square$] \textbf{4. Statistics and sample sizes come from verified author records (Chapters 5 and 9):} The legend states the exact sample size $n$ for every group, the nature of replication (biological vs.\ technical replicates), the central-tendency measure, the error-bar definition (SD, SEM, or 95\% CI), and the statistical test name with one- or two-sided specification; \textbf{no unverified number drafted by an AI tool is ever retained.}
+  \item[$\square$] \textbf{5. Physical quantities, units, and axis transformations are complete (Chapter 5):} Every axis quantity, standard SI unit, logarithmic base, or normalization baseline (for example, ``normalized to initial efficiency at $t = 0$'') is stated explicitly.
+  \item[$\square$] \textbf{6. Experimental-image acquisition and processing parameters are disclosed (Chapter 8):} Legends for microscopy or experimental images state the physical length represented by every scale bar together with its calibration basis, staining or fluorescence channel names, imaging modality, and full-frame linear display adjustments, confirming that compared groups share identical intensity windows.
+  \item[$\square$] \textbf{7. Evidence status is explicitly declared (Chapters 7, 12, and 13):} Any simulated data, single-diode theoretical curves, model-generated illustrations (explicitly noted as non-micrographs), not-to-scale structural schematics, or working hypotheses are clearly identified in the legend (and inside the panel where required).
+  \item[$\square$] \textbf{8. Mechanistic omissions and simplifications are noted (Chapter 7):} Collateral signalling branches, intermediate metabolites, or secondary quality-control steps omitted from a mechanism or workflow diagram to preserve visual clarity are briefly noted at the end of the legend.
+  \item[$\square$] \textbf{9. Abbreviations are expanded at first mention (Chapter 9):} Every domain abbreviation appearing inside the figure (such as PCE, FF, NHEJ, HDR, or SHM) is spelled out in full or clearly defined the first time it occurs in the legend.
+  \item[$\square$] \textbf{10. External datasets and open-licensed images carry proper attribution (Chapters 1 and 8):} Any panel built from public monitoring networks (such as USGS or NOAA), public bioimage repositories (such as BBBC022), or open-licensed assets includes the required source citation, station or dataset identifier, author credit, and license name.
+  \item[$\square$] \textbf{11. Cross-language legends preserve identical factual content (Throughout):} When preparing bilingual materials or adapting figures across languages, both versions contain the exact same experimental conditions, numerical values, scope qualifiers, and evidence-status disclosures, phrased idiomatically in each language.
+  \item[$\square$] \textbf{12. AI-drafted legends undergo closed-loop human verification (Chapter 9):} When using the figure legend assistant in \scidraw{}, remember that the tool sees only image pixels and language settings, not your laboratory notebook; every clause touching experimental conditions, sample sizes, or statistical significance must be replaced with verified records or deleted outright.
+\end{itemize}
+
+\section{Worked Comparison: Unverified AI Legend Draft vs.\ Author-Verified Final Legend}
+
+Taking the four-panel perovskite solar cell composite figure from Chapters 9 and 13 (Figure 2) as an example, uploading the assembled image to a legend generator without supplying background constraints frequently produces fluent academic prose filled with fabricated experimental details (counterexample). The disciplined workflow asks the tool to build a panel-by-panel structural skeleton with explicit placeholders, which the author then populates from verified simulation logs and evidence-status rules (positive example).
+
+\begin{Prompt}
+[Counterexample: Unconstrained, unverified AI legend draft (contains multiple fabrications and missing disclosures)]
+Figure 2 | Interfacial passivation significantly enhances the photovoltaic performance and long-term stability of perovskite solar cells. (a) Schematic illustration of the planar perovskite solar cell architecture and energy-level alignment. (b) High-resolution cross-sectional scanning electron microscopy (SEM) image of the modified perovskite film (scale bar, 500 nm), showing monolithic grains spanning the absorber layer with markedly reduced interfacial defects. (c) Current density-voltage (J-V) characteristic curves of control and passivated devices (n = 15 independent devices per group, **p < 0.01, two-tailed Student's t-test). (d) Normalized efficiency decay of unencapsulated devices under continuous maximum-power-point illumination for 1000 h, where shaded error bands indicate standard deviation (n = 5).
+
+[Diagnostic breakdown]
+1. Presents simulated teaching data as empirical laboratory measurements and completely omits the mandatory "Simulated data" disclosure;
+2. Misrepresents the model-generated placeholder in panel (b) as an experimental "high-resolution cross-sectional SEM image" and invents a "500 nm scale bar" and "reduced interfacial defects";
+3. Hallucinates "energy-level alignment" for panel (a), which depicts only the geometric seven-layer stack;
+4. Fabricates "n = 15", "**p < 0.01, two-tailed Student's t-test", and "shaded error bands indicate standard deviation (n = 5)" for panels (c) and (d), which actually show single deterministic theoretical curves.
+\end{Prompt}
+
+\begin{Prompt}
+[Positive example: Author-verified and completed final legend (matching the Chapter 13 final figure)]
+Figure 2 | Effect of interfacial passivation on simulated perovskite solar cell performance and operational stability (simulated teaching data). (a) Schematic diagram of the seven-layer planar n-i-p device stack (from bottom to top: glass substrate, FTO, tin dioxide electron transport layer, perovskite absorber, interfacial passivation layer, spiro-OMeTAD hole transport layer, and gold back contact); layer thicknesses are not drawn to scale. (b) Cross-sectional thin-film stack motif; this panel is a model-generated visual illustration and not an experimental micrograph. (c) Simulated reverse-scan current density-voltage (J-V) curves computed from the standard single-diode model (AM1.5G spectrum, 100 mW cm^-2, 25 deg C); the control group (dark grey dashed curve) yields a power conversion efficiency (PCE) of 19.21% (Jsc = 22.46 mA cm^-2, Voc = 1.100 V, FF = 0.777), and the modified group (deep teal solid curve) yields a PCE of 20.98% (Jsc = 22.78 mA cm^-2, Voc = 1.140 V, FF = 0.808); each curve represents a single deterministic theoretical solution without device-to-device statistical dispersion. (d) Simulated normalized PCE trajectories over 1000 h of continuous operation (deterministic double-exponential decay model without measurement noise); the horizontal dotted line marks 80% of initial efficiency (control T80 = 210 h; modified group retains 86% of initial efficiency at 1000 h).
+\end{Prompt}
+
+\chapter{Pre-Submission Delivery Checklist}
+\label{app:delivery-checklist}
+
+Between finishing the visual design of a scientific figure and submitting a manuscript---or handing the project folder to a labmate---lies a mandatory stage of quantitative technical verification and archival packaging. Many manuscripts are bounced at journal preflight checks, or stall six months later during peer-review revisions because the authors themselves can no longer locate the raw data tables and plotting parameters. This appendix compiles the single-figure pre-submission technical checklist from Chapter 13, the six-tier delivery package directory specification, the AI-use log template, and the colleague handoff blind-test protocol.
+
+\section{Single-Figure Technical Checklist Before Submission}
+
+Run every figure slated for submission or presentation (main figures, supplementary figures, graphical abstracts, talk slides, and posters) through the seven technical checks below:
+
+\begin{itemize}
+  \item[$\square$] \textbf{1. Pixel width, physical print width, and effective-resolution calculation:} For every panel containing raster imagery, record the pixel width and evaluate effective resolution at the target journal column width:
+  \[
+    \text{Effective resolution (ppi)} = \frac{\text{Pixel width (px)}}{\text{Target physical width (mm)} \div 25.4}
+  \]
+  Confirm that photographic panels reach at least $300\text{ ppi}$, combination panels (photographs with overlaid line art or text) reach at least $500\text{--}600\text{ ppi}$, and pure line art submitted as a bitmap reaches at least $900\text{--}1200\text{ ppi}$ (or the journal's stated threshold); confirm that no raw experimental image was padded via interpolation or AI super-resolution upscaling.
+  \item[$\square$] \textbf{2. 100\% physical printout measurement of font sizes and stroke widths:} Calculate the layout scaling factor ($\text{Final font size} = \text{Canvas font size} \times \text{Final width} \div \text{Canvas width}$) and verify that scaled body labels fall within $7\text{--}9\text{ pt}$ (with subscripts no smaller than the journal's absolute floor of $5\text{ pt}$ or $6\text{ pt}$) and panel letters are $8\text{ pt}$ bold; print the figure at $100\%$ actual size on an A4 sheet, verify column width with a physical ruler, and confirm that the smallest text and thinnest lines ($\ge 0.25\text{--}0.5\text{ pt}$) remain crisp.
+  \item[$\square$] \textbf{3. Internal inspection of vector and container files:} Remember that ``PDF, SVG, EPS, and PPTX are container extensions, not guarantees of true vector paths.'' Run a font-inspection utility (such as \texttt{pdffonts}) to confirm that all fonts are embedded without missing glyphs, and run an embedded-image check (such as \texttt{pdfimages -list}) or an $800\%$ zoom inspection to verify that data curves, axes, and text labels are sharp vector geometry rather than rasterized bitmaps.
+  \item[$\square$] \textbf{4. Colour space and master-file preservation:} Archive an RGB master file with an embedded standard sRGB profile (the preferred submission colour space for almost all modern journals); convert a separate copy to CMYK only when explicitly required by the publisher, and inspect saturated cyan, green, and blue regions for gamut-clipping dullness.
+  \item[$\square$] \textbf{5. Perceptual grayscale lightness separation and colour-vision deficiency simulation:} Convert the figure to perceptual luminance grayscale (CIE $L^*$) and run protanopia, deuteranopia, and tritanopia simulations (such as the Machado et al.\ 2009 physiological matrices) to confirm that every group remains distinguishable via lightness contrast $\Delta L^*$, line style (solid/dashed/dotted), marker shape, or direct end-of-curve labels.
+  \item[$\square$] \textbf{6. Automated figure-checker report paired with manual verification:} Upload the exported file to the figure checker module of \scidraw{} at the target journal's exact custom column width (rather than relying solely on the default $85\text{ mm}$ or $180\text{ mm}$ presets) to obtain a technical report on effective resolution, colour space, transparency, grayscale hierarchy, and colour-vision risks; then manually verify every item that automated pixel checks \textbf{cannot evaluate} (actual printed point size, true vector paths inside PDF containers, scientific accuracy of arrows and statistics, and completeness of evidence-status labels).
+  \item[$\square$] \textbf{7. Archival copy of official journal guidelines and date checked:} Consult the target journal's current author artwork guidelines and AI-disclosure policy, verify column widths, file formats, font rules, file-size ceilings, and mandatory declaration statements, and save the official URL and access date (YYYY-MM-DD) inside your delivery package.
+\end{itemize}
+
+\section{Handoff Delivery Package Structure and Naming Conventions}
+
+So that a co-author handling peer-review revisions three months later---or the next graduate student inheriting the project---can reproduce and update every panel without guesswork, organize each major figure (or the complete figure set of a manuscript) into a self-contained six-tier directory tree named with the project slug and archive date (for example, \texttt{Perovskite\_Fig2\_Delivery\_Package\_2026-10-29}):
+
+\begin{Prompt}
+[Delivery Package Root] Perovskite_Fig2_Delivery_Package_2026-10-29
+  |-- README (plain text or Markdown overview answering three core questions)
+  |-- 00_Briefs_and_Guidelines (manuscript, slide, poster, and delivery figure briefs; excerpted journal artwork guidelines with access date)
+  |-- 01_Raw_Materials (read-only archival copies; never overwrite)
+  |     |-- Raw_Data_Tables (original observational or simulated data tables, summary metrics table, and data dictionary)
+  |     |-- Raw_Images (uncropped, unlabelled primary experimental images or model-generated base illustrations with file checksums and generation parameters)
+  |-- 02_Analysis_and_Plotting_Scripts (deterministic scripts for data cleaning, physical simulation, and vector plotting, plus environment and dependency version notes)
+  |-- 03_Iteration_Drafts (chronological drafts v01, v02, v03, v04 paired with exact revision instructions and version-difference audit notes)
+  |-- 04_Final_Figures (organized by deployment medium, matched one-to-one with the iteration log)
+  |     |-- Manuscript_Submission (final vector PDF, high-resolution TIFF, and verified final figure legends)
+  |     |-- Oral_Presentation (16:9 slide sequence images or presentation deck plus speaker notes)
+  |     |-- Conference_Poster (full-size A0 portrait vector PDF and 12 cm thumbnail test image)
+  |-- 05_Verification_Logs
+        |-- AI_Use_Log (complete record of every tool invocation, input asset, prompt, output version, adoption decision, and human verification step)
+        |-- Data_and_Image_Processing_Log (filtering rules, normalization equations, display intensity windows, scaling ratios, and palette adjustments)
+        |-- Technical_Check_Reports (figure-checker module report screenshots, font and embedded-object inspection outputs, grayscale and colour-vision simulation grids)
+        |-- Multi_Panel_Export_Backup (unmodified archive downloaded from the multi-panel figure assembly module)
+\end{Prompt}
+
+\paragraph{File naming rules.}
+Name every file inside the delivery package using the fixed pattern \texttt{project\_figure-or-medium\_content-slug\_vNN\_lang} (for example, \texttt{perovskite\_fig2c\_jv\_v05\_en}). Use only lowercase ASCII letters, digits, hyphens, and underscores; never include spaces or ambiguous labels such as ``final'', ``newest'', or \texttt{final\_v2\_new}. Version numbers increment monotonically and are never overwritten; the root \texttt{README} identifies which version number corresponds to the currently submitted manuscript.
+
+\paragraph{Three questions every README must answer.}
+The root \texttt{README} need not be longer than one page, but it must answer three concrete questions clearly: (1) \textbf{What is in this package:} the manuscript title, figure number, file locations of the current submission-ready finals, and active version number; (2) \textbf{How to reproduce the figure:} which script in \texttt{02\_Analysis\_and\_Plotting\_Scripts} reads which table in \texttt{01\_Raw\_Materials}, and how panels are assembled into the final composite; and (3) \textbf{Where AI tools were used and how the author verified them:} a pointer to the AI-use log in \texttt{05\_Verification\_Logs}, summarizing which base illustrations or text drafts involved AI assistance and which data curves and labels were produced deterministically and verified by hand.
+
+\begin{BookNote}
+Important reminder regarding export and storage boundaries in \scidraw{}: (1) The archive downloaded from the multi-panel figure maker contains exported TIFF, PNG, PDF, and PPTX files together with a processing log, but \textbf{does not bundle} your uploaded raw single-panel master files or a reloadable web project file; layout state lives in your current browser's local storage and cannot be recovered if you switch computers or clear browser cache, so you must archive \texttt{01\_Raw\_Materials} yourself. (2) Step progress and figure briefs inside the figure workflow guide are likewise stored locally in the active browser; export and save a local copy at the end of each stage. (3) In the scientific data visualization module, PDF and EPS exports produced via the declarative chart path wrap high-resolution raster images inside container files; whenever a journal requires true vector paths and editable text for data plots, run your companion deterministic Python script directly on the verified data table to output native vector PDF line art.
+\end{BookNote}
+
+\section{AI-Use Log and Processing-Record Template}
+
+The template below follows the compliance standard introduced in Chapter 13. Initialize this file on day one of figure preparation and append one row after each round of tool use:
+
+\begin{Prompt}
+# AI-Use Log
+Project Title: ____________________  Figure / Medium: ____________________  Maintainer: __________
+
+| Date | Tool and Module (including visible model or mode settings) | Input Materials (brief version, table identifier, row count / checksum) | Submitted Prompt or Revision Instruction (full text or draft ID) | Output Version | Adoption Status | Human Verification and Manual Edits (who checked what, and what was modified by hand) |
+|---|---|---|---|---|---|---|
+| 2026-10-29 | SciDraw AI Prompt Drawing Module (16:9 landscape, no-text constraint) | Manuscript Fig 2a Brief v1 | Draft v01 full prompt (seven-layer perovskite stack, strictly text-free base) | Panel 2a Base v01 | Base adopted | Author verified seven-layer sequence and illumination direction; overlaid 7 pt layer names and "Schematic, not to scale" badge in vector layer |
+| 2026-10-29 | SciDraw AI Scientific Visualization Module (session history revision v04) | Perovskite Summary Metrics Table v1 (2 representative summary rows) | Draft v04 revision instruction (resize for 16:9 slide legibility with direct labels) | Slide 2 Draft v04 | Partially adopted | Verified PCE and Voc values against summary table; replotted final v05 via deterministic script to obtain true vector paths and exact typography |
+| 2026-10-29 | SciDraw AI Figure Legend Assistant (English output) | Manuscript Fig 2 assembled preview v04 | Requested four-panel legend skeleton with explicit placeholders for unshown parameters | Legend Draft v01 | Skeleton only | Author deleted unverified statistical phrases and manually inserted single-diode parameters, AM1.5G conditions, and "Simulated data" / "Model-generated illustration" disclosures |
+
+## Steps Explicitly Performed Without AI
+1. Primary experimental measurements and simulated numerical datasets (computed entirely by deterministic scripts with checksum verification; never generated by language or image models);
+2. Pixel-level processing of raw experimental micrographs (restricted to full-frame linear intensity mapping and calibrated physical scale-bar calculation; zero generative beautification or AI super-resolution upscaling);
+3. Statistical hypothesis testing, sample sizes (n), and significance conclusions (supplied exclusively by the author from verified statistical analysis logs).
+
+## Evidence Status of Generative Image Panels
+- Panel 2a (device architecture): model-generated text-free base illustration paired with author-applied vector labels; classified as "Schematic, not to scale";
+- Panel 2b (cross-sectional motif): generative visual placeholder; classified as "Model-generated illustration, not a micrograph" and doubly labelled inside the panel and in the legend across the manuscript figure, backup slide, and poster detail block.
+
+## Target Journal AI Policy Check
+- Journal name and official policy page consulted: ____________________________________
+- Date checked: 2026-10-29
+- Disclosure required in Methods, Figure Legends, or Declarations section: ______
+- Exact disclosure statement drafted for the manuscript: ____________________________________________
+\end{Prompt}
+
+\section{Colleague Handoff Blind-Test Protocol}
+
+Once your delivery package is assembled, do not rely solely on self-inspection---because you already hold the project context in your head, you will naturally gloss over missing links in your own documentation. Hand the folder to a labmate who did not participate in making the figure, allow them to read only the root \texttt{README}, and run a 10- to 15-minute blind test:
+
+\begin{enumerate}
+  \item Ask them, without asking you any clarifying questions, to locate the raw data table, the plotting script, and the exact revision instruction submitted to \scidraw{} for a specified panel (for example, Manuscript Figure 2c);
+  \item Ask them to identify which file is the current submission-ready final version and to state which elements of the figure represent simulated data or model-generated illustrations;
+  \item Note every wrong subfolder they open and every sentence in the \texttt{README} where they hesitate, revise the \texttt{README} once to eliminate those ambiguities, and confirm that an uninvolved colleague can complete the trace within 10 minutes.
+\end{enumerate}
+
+\chapter{Glossary of Core Terms}
+\label{app:glossary}
+
+This glossary defines the core concepts used repeatedly across the book's workflows for research decomposition, composition and visual language, data visualization, methods and mechanism diagrams, experimental image presentation, talk and poster adaptation, and pre-submission technical checks. To keep terminology precise and consistent across every chapter, the book follows three standing conventions: first, we use ``colour-vision deficiency'' (CVD) rather than ``colour blindness'' as the accurate umbrella term for altered cone photopigment responses; second, we use ``effective resolution'' (in ppi at final physical print width) rather than ambiguous phrases such as ``actual DPI''; third, the practical demonstration platform is always written as ``\scidraw{}''. Table~\ref{tab:app-e-glossary} lists all 86 core terms in alphabetical order alongside their workflow domain, a one-sentence operational definition, and the primary chapter(s) where each concept is introduced.
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.52\linewidth}>{\raggedright\arraybackslash}p{0.06\linewidth}@{}}
+\caption{Glossary of core scientific-figure terms and concise definitions}\label{tab:app-e-glossary}\\
+\toprule
+Term & Domain & Concise definition & Ch. \\
+\midrule
+\endfirsthead
+\caption[]{Glossary of core scientific-figure terms and concise definitions (continued)}\\
+\toprule
+Term & Domain & Concise definition & Ch. \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+A0 portrait & Posters & The international standard vertical poster format measuring $841\text{ mm} \times 1189\text{ mm}$ with an area of $1\text{ m}^2$. & 12 \\
+Acceptance criteria & Workflow / Brief & Quantifiable pass/fail conditions listed at the end of a figure brief that can be verified by ruler measurement, counting, recalculation, or thumbnail testing. & 2, 13 \\
+Activation and inhibition & Mechanisms & The two primary regulatory interactions in mechanism diagrams, encoded orthogonally with filled pointed arrowheads and flat T-bar caps, respectively. & 2, 7 \\
+AI-use log & Delivery & A compliance table recording the input assets, prompts, output versions, adoption decisions, and human verification steps for every AI tool invocation. & 1, 13 \\
+Assertion headline & Talks / Posters & A complete declarative sentence placed at the top of a slide or poster block stating ``what factor produced what quantitative outcome,'' replacing generic noun labels. & 12 \\
+Biological replicate & Data plots & Independent measurements taken from distinct biological individuals, independent culture batches, or separate field sites that capture true biological or environmental variation. & 5, 9 \\
+CIE $L^*$ lightness & Visual style & A perceptually nonlinear luminance scale running from 0 (black) to 100 (white), used to audit whether colour palettes remain distinguishable in grayscale. & 4, 13 \\
+Colour role & Visual style & A fixed semantic function assigned to a colour across an entire paper (such as control group, modified group, warning highlight, or background context) to prevent arbitrary recolouring. & 4 \\
+Colour-vision deficiency (CVD) & Visual style & Reduced discrimination among specific hue pairs (most commonly red--green or blue--yellow) caused by shifted or absent cone photopigments. & 4, 13 \\
+Container format & Delivery & Wrapper file formats such as PDF, SVG, EPS, or PPTX whose file extension alone does not guarantee internal vector paths and must be inspected for embedded object types. & 13 \\
+Content density & Talks / Posters & The number of words, data points, and visual nodes packed into a unit of layout area, which must decrease as viewing distance increases and dwell time shortens. & 12 \\
+CVD simulation & Visual style & Computational transformation of a standard RGB image using physiological colour-appearance matrices (such as Machado et al., 2009) to preview how readers with CVD perceive the figure. & 4, 13 \\
+Data dictionary & Data plots & A structured companion table defining the column name, physical meaning, measurement unit, valid range, and missing-value code for every variable in a dataset. & 1, 5 \\
+Delivery package & Delivery & A self-contained archival folder bundling the README, figure briefs, raw data and images, plotting scripts, iteration drafts, final exports, and AI-use logs. & 1, 13 \\
+Deuteranomaly / deuteranopia & Visual style & Red--green colour-vision deficiency caused by shifted or missing medium-wavelength (M-cone) photopigment, the most prevalent form of CVD in human populations. & 4, 13 \\
+Diverging colour map & Visual style & A colour scale that transitions outward from a neutral midpoint toward two distinct hues, suited for continuous variables with positive and negative deviations around a meaningful zero or baseline. & 4 \\
+dpi / ppi & Delivery & Dots per inch (printer ink droplet density) and pixels per inch (image pixel density at print size), the standard metrics of layout resolution. & 13 \\
+Effective resolution & Delivery & The true pixel density (in ppi) obtained by dividing an image's pixel width by its final printed physical width in inches, which governs print sharpness. & 8, 13 \\
+Embedded font vs.\ outlined text & Delivery & Embedding packages complete glyph tables inside a PDF so text remains selectable and editable, whereas outlining converts glyphs into closed geometric paths; many journals require embedded fonts. & 13 \\
+Encapsulated PostScript (EPS) & Delivery & A legacy page-description container format capable of holding vector paths or merely wrapping raster bitmaps. & 13 \\
+Error bar & Data plots & A line segment indicating dispersion or estimation uncertainty on a chart, which must always be defined in the legend as SD, SEM, or a specified confidence interval. & 5 \\
+Figure brief & Workflow / Brief & A ten-field structured document written before drawing begins that specifies research goals, source materials, required objects, evidence status, and immutable constraints. & 1, 2 \\
+Figure workflow guide & Workflow & The interactive six-step entry module in \scidraw{} that walks users through brief decomposition, route selection, generation, revision, and pre-submission checks. & 1 \\
+Generative editing & Expt.\ images & Using generative models to redraw, inpaint, denoise, or super-resolve image pixels---strictly prohibited on primary experimental evidence images. & 8, 13 \\
+Graphical abstract & Graph.\ abst. & A single concise visual summary communicating a paper's ``research context, core method, primary finding, and validity boundary'' for rapid browsing in online tables of contents. & 10 \\
+Grayscale conversion & Visual style & Transforming a colour figure into a luminance-only image via weighted linear RGB channels to test legibility on black-and-white printouts. & 4, 13 \\
+Grouped data & Data plots & Observations collected from mutually independent sample units across categories, with no one-to-one pairing between measurements in different groups. & 5 \\
+Hypothesized relationship & Mechanisms & A proposed mechanistic link not yet directly demonstrated by the present experiments, which must be visually separated from established facts using dashed strokes or question-mark badges. & 2, 7 \\
+Inset / zoom-in & Expt.\ images & A sub-panel that enlarges a bounded region of interest from a full-field image by an integer factor while preserving context on the parent view. & 8 \\
+Interpolation upscaling & Expt.\ images & Increasing file pixel dimensions by mathematically estimating intermediate pixel values without adding real physical resolution or optical information. & 8, 13 \\
+Issue prioritization & Revisions & Ordering revision tasks across three tiers---scientific errors first, reading barriers second, and visual consistency third---before editing a draft figure. & 11 \\
+Layout grid & Multi-panel & A spatial skeleton of fixed column widths, gutters, and alignment guides used to organize multi-panel paper composites or conference posters. & 9, 12 \\
+Legend vs.\ direct labelling & Visual style & A detached legend lists symbol keys in a corner box, whereas direct labelling places group names immediately adjacent to curves or structures to eliminate back-and-forth eye jumps. & 4, 12 \\
+Linear intensity adjustment & Expt.\ images & Uniformly mapping the minimum and maximum display brightness across an entire experimental image without altering relative pixel-to-pixel intensity ratios. & 8 \\
+Line-style semantics & Visual style & Assigning fixed logical meanings to solid, dashed, and dotted strokes alongside distinct arrowhead shapes so relationships remain unambiguous without colour. & 4, 7 \\
+Logarithmic axis & Data plots & A coordinate axis spaced by equal multiplicative orders of magnitude (such as base 10), suited for skewed variables spanning several orders of magnitude. & 5, 12 \\
+Mechanism figure & Mechanisms & An explanatory diagram that uses spatial compartments, molecular or component icons, and directed arrows to depict internal causal interactions. & 7 \\
+Model-generated illustration & Expt.\ images & A structural or morphological placeholder produced by an image-generation model rather than a physical microscope, requiring explicit disclosure inside the panel and in the legend. & 8, 9 \\
+Multi-panel figure & Multi-panel & A composite paper figure assembling several complementary evidence panels (such as structure, morphology, performance, and stability) around a single central research question. & 9 \\
+Normalization & Data plots & Dividing raw measurements by a defined reference value (such as initial efficiency at $t=0$) to express changes on a dimensionless relative scale. & 5, 12 \\
+Not to scale & Mechanisms & Deliberately exaggerating or compressing geometric proportions so ultrathin interfacial layers or multi-scale structures remain visible, always accompanied by an explicit label. & 7, 12 \\
+One-sentence goal & Workflow / Brief & Field 2 of the figure brief, stating what conclusion the reader should grasp and what concrete visual evidence they should be able to point to in the figure. & 1, 2 \\
+Paired data & Data plots & Measurements recorded on the same individual, sampling site, or device across two conditions or time points, plotted with connecting lines to preserve individual trajectories. & 1, 2 \\
+Paired dot-line plot / slope graph & Data plots & A chart connecting two measurements of each observational unit with a straight line, simultaneously displaying individual direction of change and overall group shift. & 1, 5 \\
+Panel and panel label & Multi-panel & An individual sub-figure fulfilling one evidentiary role within a composite figure, marked at its upper-left corner by a consistent letter (such as bold lowercase \textbf{a}, \textbf{b}, \textbf{c}). & 9 \\
+Perceptually uniform & Visual style & A colour-map property in which equal numerical steps produce equal perceived changes in lightness and colour difference across the entire scale without false visual boundaries. & 4 \\
+Physical size & Delivery & The actual geometric width and height (in mm, cm, or in) at which a figure is printed on paper, mounted on a poster board, or projected on a screen. & 12, 13 \\
+Pixel and pixel size & Expt.\ images & The smallest discrete grid cell of a raster image and the real-world physical length (for example, in $\mu\text{m}$ or m) represented by a single pixel in calibrated imaging. & 8, 13 \\
+Portable Document Format (PDF) & Delivery & A cross-platform document container capable of holding vector paths, embedded fonts, and raster bitmaps, serving as the primary vector submission format for journals. & 1, 13 \\
+Portable Network Graphics (PNG) & Delivery & A lossless raster bitmap format supporting alpha transparency, suited for screen previews and web display. & 1, 13 \\
+Process vs.\ causal arrow & Flowcharts & Arrows that encode temporal sequence of experimental operations in a workflow diagram versus physical activation, inhibition, or transport in a mechanism diagram. & 6, 7 \\
+Processing log & Delivery & A technical ledger documenting data filtering, coordinate transformations, image cropping, display intensity windows, and palette adjustments. & 8, 13 \\
+Progressive reveal / build & Talks & Splitting a complex chart across sequential slide frames (for example, showing axes and control curve first, then revealing the modified curve on click) to pace audience attention. & 12 \\
+Protanomaly / protanopia & Visual style & Red--green colour-vision deficiency caused by shifted or absent long-wavelength (L-cone) photopigment. & 4, 13 \\
+Qualitative palette & Visual style & A discrete set of hues with distinct chromaticity and balanced perceptual weight (such as the Okabe--Ito palette) used to encode unordered categorical groups. & 4 \\
+Raster / bitmap image & Delivery & An image represented as a rectangular grid of pixels (such as micrographs, PNGs, or TIFFs) that exhibits pixelation when enlarged beyond its native resolution. & 8, 13 \\
+Raw image & Expt.\ images & The unmodified, read-only master image file exported directly from a microscope, camera, or sensor prior to any cropping, contrast stretching, or annotation. & 8, 13 \\
+Reading order & Composition & The natural path along which a reader's gaze travels across panels or nodes, designed to match the logical progression of the research argument. & 3, 9 \\
+Reverse-reading check & Workflow / Brief & A verification test in which a colleague views only the figure and legend without verbal explanation and reconstructs the core message, exposing potential misreadings. & 2, 11 \\
+Revision instruction & Revisions & A quantitative, executable edit specification structured into three mandatory blocks: ``Keep unchanged,'' ``Modify only,'' and ``Verify after completion.'' & 3, 11 \\
+RGB / CMYK & Delivery & Additive red--green--blue screen colour space versus subtractive cyan--magenta--yellow--black printing ink space; most journals recommend submitting RGB master files. & 4, 13 \\
+Sample size ($n$) & Data plots & The exact count of independent observational units in each statistical group, which must be reported inside the plot or figure legend. & 5, 9 \\
+Saturation and lightness & Visual style & The chromatic purity and perceived brightness dimensions of a colour; effective figures pair muted background tones with high lightness contrast for primary data series. & 4 \\
+Scale bar & Expt.\ images & A line segment of known physical length drawn on an experimental image from calibrated pixel dimensions so spatial scale survives layout resizing. & 8 \\
+Scalable Vector Graphics (SVG) & Delivery & An XML-based two-dimensional vector container format convenient for web rendering and post-processing in vector illustration software. & 6, 13 \\
+Schematic & Mechanisms & An explanatory diagram that strips away irrelevant surface appearance and uses simplified geometry and symbols to communicate system architecture or operating principles. & 6, 7 \\
+Sequential colour map & Visual style & A colour scale whose lightness changes monotonically from dark to light (or light to dark, such as Viridis), suited for ordered continuous quantities. & 4 \\
+Simulated data & Data plots & Teaching or theoretical datasets generated from explicit mathematical equations or probability distributions rather than physical measurements, requiring explicit labelling. & 1, 12 \\
+Single-diode model & Multi-panel & The classic equivalent-circuit equation describing solar-cell current density--voltage characteristics via photocurrent, diode junction, series resistance, and shunt resistance. & 9, 12 \\
+Squint test & Composition & Scaling a poster or composite figure down to a small thumbnail and applying slight Gaussian blur to check whether primary structural blocks remain distinct without text detail. & 3, 12 \\
+sRGB colour space & Delivery & The standard international RGB colour space; embedding an sRGB profile in raster master files preserves consistent appearance across monitors and publishing workflows. & 4, 13 \\
+Tagged Image File Format (TIFF) & Delivery & A standard raster format supporting lossless compression (such as LZW) and high bit depth, widely required by journals for photographic and combination panels. & 8, 13 \\
+Targeted local revision & Revisions & An edit that modifies only one to three specified elements while locking all remaining objects, numerical values, and layout geometry against drift. & 3, 11 \\
+Technical check & Delivery & Pre-submission quantitative verification of effective resolution, printed font size, vector container contents, colour space, and colour-vision accessibility. & 13 \\
+Technical replicate & Data plots & Repeated measurements performed on the same biological or material sample to assess instrument or assay precision rather than sample-to-sample variation. & 5, 9 \\
+Traceability record & Delivery & The complete chain of documentation linking a finished figure back through manual edits, prompts, and figure briefs to its read-only raw data and images. & 1, 13 \\
+Translocation & Mechanisms & The physical movement of a biomolecule or vesicle across a compartment boundary (such as from an intracellular storage pool to the plasma membrane). & 7 \\
+Tritanomaly / tritanopia & Visual style & Blue--yellow colour-vision deficiency caused by altered or absent short-wavelength (S-cone) photopigment function. & 4, 13 \\
+Unit of observation & Data plots & The entity corresponding to a single independent row or measurement in a dataset (such as one daily water sample, one penguin, or one solar cell), governing degrees of freedom. & 1, 5 \\
+Unintended change & Revisions & Unrequested drift in text, object counts, colours, or topology introduced outside the target region when a generative model re-renders a draft. & 3, 11 \\
+Vector graphic & Delivery & A graphic stored as mathematical coordinates, geometric paths, fills, and font glyphs that retains razor-sharp edges at any magnification. & 6, 13 \\
+Viewing distance & Talks / Posters & The physical distance from the observer's eye to the display surface (roughly $40\text{ cm}$ for a paper, $1\text{--}5\text{ m}$ for a poster, and $2\text{--}15\text{ m}$ in a lecture hall). & 12 \\
+Visual angle & Talks / Posters & The angle subtended by an object's height at the observer's eye ($\theta \approx h/d$ under the small-angle approximation), which governs legibility across viewing distances. & 12 \\
+Visual hierarchy & Composition & The deliberate ordering of font size, weight, colour contrast, stroke width, and spatial placement so readers distinguish primary claims from secondary context at a glance. & 3, 4 \\
+White space & Composition & Unoccupied margin and gutter area deliberately preserved around panels and labels to establish visual grouping, reduce cognitive load, and guide eye movement. & 3, 9 \\
+Workflow / methods diagram & Flowcharts & A structured diagram presenting experimental preparation, sampling, computational processing, and quality-control branching steps in temporal or logical sequence. & 6 \\
+\end{longtable}
+\endgroup
+
+\chapter{Case Studies and Asset Sources}
+\label{app:case-sources}
+
+Across its thirteen chapters, this book uses more than a dozen cross-disciplinary research cases and companion datasets to demonstrate scientific figure workflows. To ensure that the data origin, evidentiary status, and open-licensing boundaries of every figure are transparent and auditable, this appendix compiles a master table of case studies, documents the exact mathematical specifications of the two core simulated datasets, summarizes our rules for image generation and deterministic plotting, and states the open-source licensing terms.
+
+\section{Master Table of Case Studies and Asset Sources}
+
+Table~\ref{tab:app-f-cases} lists the discipline, research scenario, material type, source and license, and evidence status for every chapter case study and foundational method example in the book. All companion data tables, plotting scripts, and chapter-by-chapter traceability records are organized in the corresponding chapter directories of the open-source repository.
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.07\linewidth}>{\raggedright\arraybackslash}p{0.06\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.14\linewidth}>{\raggedright\arraybackslash}p{0.20\linewidth}>{\raggedright\arraybackslash}p{0.19\linewidth}@{}}
+\caption{Master table of case studies and asset sources across the book}\label{tab:app-f-cases}\\
+\toprule
+ID & Ch. & Discipline & Research scenario & Material type & Source \& license & Evidence status \\
+\midrule
+\endfirsthead
+\caption[]{Master table of case studies and asset sources across the book (continued)}\\
+\toprule
+ID & Ch. & Discipline & Research scenario & Material type & Source \& license & Evidence status \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Method A & 1, 2, 5, 13 & General methods & Paired before/after measurements across 8 fictional subjects & Simulated table + deterministic plotting script & Original to this book; CC BY 4.0 (data) and MIT (script) & Teaching simulated data supporting no empirical scientific claim; subject SIM04 decreases against the group trend \\
+Method B & 2 & General methods & Four-node abstract regulatory network (R, K, P, I) & Pedagogical specification + model-generated schematic & Original to this book; CC BY 4.0 & Assumed teaching relationships illustrating activation, inhibition, and an unverified dashed link \\
+Case 01 & 1 & Earth \& environmental sciences & Full-year daily river nitrate and discharge monitoring in the agricultural Raccoon River watershed, Iowa, USA & Public observational record + watershed cross-section base illustration & US Geological Survey (USGS) Gage 05484500 approved public data (US Government Public Domain); base illustration and script original (CC BY 4.0 / MIT) & Hydrological and water-quality time series are real observations; basin cross-section is a not-to-scale schematic \\
+Case 02 & 2 & Materials science \& electrochemistry & Capacity-fade mechanism decomposition in layered NMC cathode / graphite anode lithium-ion full cells & Textbook/literature consensus relations + author hypothesis + model base & Compiled from established electrochemical literature (CC BY 4.0) & Explicitly separates established degradation pathways (solid strokes) from an untested interfacial hypothesis (dashed box with ``?'') \\
+Case 03 & 3 & Biomedicine & Compositional exploration of SpCas9 targeted double-strand DNA cleavage followed by NHEJ and HDR repair pathways & Textbook molecular biology mechanism + hand wireframes and model sketches & Compiled from standard molecular biology consensus (CC BY 4.0) & Macro-level schematic of established mechanisms; molecular dimensions and helix turns are not to scale \\
+Case 04 & 4 & Earth \& climate sciences & Four-figure synthesis series on global ocean uptake of excess heat and anthropogenic $\mathrm{CO_2}$ (atmospheric $\mathrm{CO_2}$, seawater carbonate chemistry, ocean heat content, global carbon budget) & Public observational datasets + deterministic replotting scripts & Mauna Loa (NOAA GML), Station ALOHA (HOT), NOAA NCEI Ocean Heat Content, and Global Carbon Project public records; scripts MIT & Real long-term observational records and peer-reviewed global synthesis compilations \\
+Case 05 & 5 & Ecology & Adult breeding morphometrics (bill dimensions, flipper length, body mass) across three penguin species (Ad\'elie, Chinstrap, Gentoo) in the Palmer Archipelago, Antarctica & Public ecological dataset + statistical plotting scripts & Gorman et al.\ (2014) and \texttt{palmerpenguins} open data package (CC0 Public Domain); scripts MIT & Real field observations used to demonstrate grouped distributions, error-bar definitions, and sample-size reporting \\
+Case 06 & 6 & Biomedicine \& genomics & End-to-end droplet single-cell RNA-sequencing (scRNA-seq) workflow for murine lung tissue from wet-lab dissociation to dry-lab clustering & Standard protocol step table + deterministic vector flowchart + spot icons & Compiled from standard scRNA-seq experimental protocols (CC BY 4.0) & Procedural and quality-control workflow schematic; temperatures, centrifugation speeds, and thresholds serve as template variables \\
+Case 07A & 7, 11 & Biomedicine & Insulin-stimulated GLUT4 storage vesicle translocation signalling pathway in skeletal muscle or adipocytes (13 core interactions) & Textbook/review mechanism table + text-free model base + TikZ vector labels & Compiled from Saltiel \& Kahn (2001) and Leto \& Saltiel (2012); figure plates CC BY 4.0 & 13 established regulatory interactions (including the $\text{Akt}\dashv\text{AS160}\dashv\text{Rab}$ double-inhibition motif); omitted collateral branches noted in legend \\
+Case 07B & 7 & Materials \& electrochemistry & Seven-layer unit cross-section of a lithium-ion pouch cell showing $\mathrm{Li^+}$ and electron transport directions during charge and discharge & Textbook device architecture + text-free base + vector callouts & Original to this book (CC BY 4.0) & Architectural and directional schematic; individual layer thicknesses are not drawn to geometric scale \\
+Case 08 & 8 & Biomedical \& botanical imaging & Two-channel fluorescence microscopy of U2OS cells, endothelial fluorescence fields, and tobacco leaf-epidermis scanning electron micrographs & Real open-licensed experimental images + full-frame linear processing scripts & Broad Bioimage Benchmark Collection (BBBC022, Gustafsdottir et al.\ 2013, Public Domain / open access) and open science image repositories (CC0 / CC BY); scripts MIT & Primary experimental micrographs (raw masters preserved read-only; processed strictly via full-frame linear mapping, accessible pseudocolour, and calibrated scale bars) \\
+Case PSC & 9, 12, 13 & Materials \& energy & Interfacial passivation in planar n-i-p perovskite solar cells (carried across manuscript composite, talk slides, A0 poster, and delivery package) & Single-diode simulated data + stack schematic base + model-generated SEM-style placeholder & Original teaching specification; data and plates CC BY 4.0, simulation and plotting scripts MIT & Performance curves and metrics are deterministic equation outputs; cross-sectional morphology is a model-generated illustration, not an experimental micrograph \\
+Case 10 & 10 & Remote sensing \& computer vision & Graphical abstract for burned-area segmentation from pre- and post-fire multispectral satellite imagery & Pedagogical study specification + 4-line contribution card + model graphical abstract and thumbnail test & Original teaching case (CC BY 4.0) & Conceptual and methodological graphical abstract; illustrative metrics demonstrate non-exaggerated framing and TOC thumbnail legibility \\
+Case 11 & 11 & Civil \& structural engineering & Iterative revision of a wireless structural health monitoring (SHM) sensor network and cloud early-warning schematic for a twin-tower cable-stayed bridge & Engineering system specification + multi-round version tree + pixel-diff audit script & Original to this book (CC BY 4.0 / MIT) & Engineering system schematic; sensor counts and placement audited against fixed figure-brief constraints \\
+Interface UI & 1, 13, etc. & Software walkthroughs & Operational workflows and technical check reports across \scidraw{} modules & Local test-build interface screenshots & Author screenshots recorded 2026-10-29, free of personal account data or commercial pricing & Reflects the dated test build at the time of writing; live interface evolves with product updates \\
+\end{longtable}
+\endgroup
+
+\section{Technical Specifications of the Simulated Datasets}
+
+To teach foundational data visualization, multi-panel assembly, cross-medium adaptation, and pre-submission technical auditing, the book relies on two original simulated datasets generated entirely by deterministic code. Their purpose is to let every reader reproduce every number, curve, and verification check in the book with $100\%$ precision without mistaking a pedagogical exercise for an empirical scientific discovery.
+
+\paragraph{1. Eight-subject paired-measurement simulated dataset (Method A).}
+This dataset contains paired measurements for eight fictional study units (\texttt{SIM01} through \texttt{SIM08}) evaluated at two conditions (\texttt{before} and \texttt{after}), expressed in arbitrary units (a.u.) across 8 rows and 16 integer observations with zero missing values. The eight pairs are: \texttt{SIM01} ($12 \rightarrow 16$), \texttt{SIM02} ($15 \rightarrow 18$), \texttt{SIM03} ($9 \rightarrow 13$), \texttt{SIM04} ($18 \rightarrow 17$), \texttt{SIM05} ($11 \rightarrow 15$), \texttt{SIM06} ($14 \rightarrow 19$), \texttt{SIM07} ($16 \rightarrow 20$), and \texttt{SIM08} ($10 \rightarrow 14$). Its summary statistics are constructed deliberately: the pre-treatment mean is $13.125\text{ a.u.}$ and the post-treatment mean is $16.500\text{ a.u.}$; seven of the eight units increase after treatment (by $3\text{ to }5\text{ a.u.}$), whereas \texttt{SIM04} moves in the opposite direction, dropping from $18\text{ a.u.}$ to $17\text{ a.u.}$. This ``seven up, one down'' structure serves throughout the book as a diagnostic test of whether a chart preserves paired trajectories and individual counter-trends---a standalone mean bar chart conceals \texttt{SIM04}'s reversal completely. The companion plotting script reads the table directly without generating, smoothing, or altering any observation.
+
+\paragraph{2. Perovskite solar cell performance and stability simulated dataset (Case PSC).}
+Supporting Chapter 9 (multi-panel assembly and legends), Chapter 12 (talk slides and A0 poster adaptation), and Chapter 13 (resolution, vector containers, colour-vision simulation, and handoff archiving), this dataset comprises two deterministic tables comparing a \texttt{control} group and an interfacially passivated \texttt{modified} group for a planar n-i-p perovskite solar cell:
+
+\begin{itemize}
+  \item \textbf{Single-diode current density--voltage ($J$--$V$) characteristics:} Evaluated under standard AM1.5G illumination ($P_{\mathrm{in}} = 100\text{ mW cm}^{-2}$) at a cell temperature of $25\ ^\circ\text{C}$ (thermal voltage $V_{\mathrm{T}} = k_{\mathrm{B}}T/q = 0.025693\text{ V}$), the output current density $J$ at each bias voltage $V$ (spanning $0\text{ to }1.20\text{ V}$ in $0.5\text{ mV}$ steps) is obtained from the implicit single-diode equation:
+  \[
+    J = J_{\mathrm{L}} - J_0 \left[\exp\!\left(\frac{V + J R_{\mathrm{s}}}{n V_{\mathrm{T}}}\right) - 1\right] - \frac{V + J R_{\mathrm{s}}}{R_{\mathrm{sh}}}
+  \]
+  Here the reverse saturation current density $J_0$ is solved analytically from the target open-circuit voltage $V_{\mathrm{oc}}$ at $J=0$, and $J(V)$ is computed via deterministic bisection without external black-box optimizers. The input parameters and exact output metrics produced by the script are summarized in Table~\ref{tab:app-f-psc-params}. Note that this model computes a single representative theoretical reverse-scan curve per group; it does not simulate forward/reverse scan hysteresis (for hysteresis mechanisms and reporting standards, see Snaith et al., 2014) or multi-device batch dispersion.
+
+\begin{table}[htbp]
+\centering
+\caption{Single-diode model parameters and exact simulated performance metrics for the perovskite solar cell case study}\label{tab:app-f-psc-params}
+\resizebox{\linewidth}{!}{%
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}lccccccccc@{}}
+\toprule
+Group & $J_{\mathrm{L}}$ & Target $V_{\mathrm{oc}}$ & $n$ & $R_{\mathrm{s}}$ & $R_{\mathrm{sh}}$ & Output $J_{\mathrm{sc}}$ & Output $V_{\mathrm{oc}}$ & Fill factor & Efficiency PCE \\
+ & (mA cm$^{-2}$) & (V) &  & ($\Omega$ cm$^2$) & ($\Omega$ cm$^2$) & (mA cm$^{-2}$) & (V) & FF & (\%) \\
+\midrule
+Control & 22.5 & 1.10 & 1.6 & 2.5 & 1500 & 22.4626 & 1.1000 & 0.7774 & 19.2096 \\
+Modified & 22.8 & 1.14 & 1.5 & 2.0 & 3000 & 22.7848 & 1.1400 & 0.8077 & 20.9785 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+  \item \textbf{Continuous 1000 h normalized efficiency decay trajectories:} Simulating operational stability under continuous 1-sun illumination, maximum-power-point tracking, and nitrogen atmosphere at roughly $25\ ^\circ\text{C}$ (time $t$ from $0\text{ to }1000\text{ h}$ sampled every $10\text{ h}$), a noise-free deterministic double-exponential function captures both early burn-in and long-term degradation of normalized efficiency $y(t)$:
+  \begin{align*}
+    y_{\text{control}}(t) &= \left[1 - 0.08\left(1 - \mathrm{e}^{-t/20}\right)\right]\mathrm{e}^{-t/1500}, \\
+    y_{\text{modified}}(t) &= \left[1 - 0.04\left(1 - \mathrm{e}^{-t/20}\right)\right]\mathrm{e}^{-t/9000}.
+  \end{align*}
+  Synthetic random noise is omitted deliberately so that readers and reviewers never mistake a smooth analytical curve for noisy empirical measurements. Under these equations, the control group crosses the $80\%$ retention threshold at $T_{80} = 210\text{ h}$ and retains $47\%$ of its initial efficiency at $1000\text{ h}$ (exact value $0.474$), whereas the modified group remains above the $80\%$ threshold throughout the $1000\text{ h}$ window ($T_{80} > 1000\text{ h}$) and retains $86\%$ of its initial efficiency at $1000\text{ h}$ (exact value $0.858$). Every performance number appearing in Chapters 9, 12, and 13 across manuscript text, slides, posters, and figure legends is locked to the summary table generated by this script.
+\end{itemize}
+
+\section{Notes on Image Generation, Scripted Plotting, and AI Use}
+
+The production of the figures in this book follows the exact transparency and traceability rules taught in Chapter 13:
+
+\begin{enumerate}
+  \item \textbf{Schematic and mechanism base illustrations:} Figures requiring illustrative scenes or three-dimensional layered cutaways (such as the watershed block diagram, CRISPR editing overview, insulin--GLUT4 signalling base, perovskite device stack, and poster-hall viewing geometry) use text-free base illustrations produced with an image-generation model; the full English prompts, generation rounds, and human selection notes are archived in the chapter production records of the companion repository. Where an underlying generation endpoint does not expose a specific internal sub-model version string, the record states that fact directly without speculation.
+  \item \textbf{Separation of raster base illustrations and vector labels:} Apart from negative teaching examples intentionally illustrating garbled pseudo-text produced by image generators (such as the unverified initial drafts in Chapters 2 and 7), every formal schematic base image in this book was generated under a strict no-text constraint, with all scientific labels, arrow keys, and panel letters overlaid precisely in LaTeX/TikZ or Python vector layers.
+  \item \textbf{Deterministic scripted generation of data plots:} Every data chart, error-bar comparison, visual-angle scaling curve, colour-vision simulation grid, and resolution zoom comparison in the book is rendered directly from public observational tables or the simulated datasets above by companion Python scripts (configured to embed TrueType Type 42 vector font glyphs), never by passing data tables through an image-generation model.
+  \item \textbf{Literature citations and open-licensed experimental images:} Published papers cited in the text support visual-communication principles (such as Rougier et al., 2014; Weissgerber et al., 2015; Crameri et al., 2020) or textbook mechanistic relationships, and no copyrighted journal figures are reproduced. The fluorescence and scanning electron micrographs in Chapter 8 come exclusively from open scientific repositories released under Public Domain (CC0) or Creative Commons Attribution (CC BY) terms, complete with original acquisition metadata and processing logs.
+\end{enumerate}
+
+\section{Open-Source Licenses and Trademark Notice}
+
+Except where third-party open-licensed datasets and experimental images are credited otherwise in Table~\ref{tab:app-f-cases} and the repository asset inventory, the original text, original simulated datasets, and original figure plates of this book are released by the contributors, to the extent of their respective rights, under the \textbf{Creative Commons Attribution 4.0 International License (CC BY 4.0)}. All companion data-processing, physical-simulation, plotting, and automated auditing scripts are released under the \textbf{MIT License}. Readers are free to copy, adapt, and reuse the templates and code in research workflows or laboratory training courses provided appropriate attribution is given. The name and logo of \scidraw{}, together with the names, logos, and interface designs of third-party software packages, journals, and institutions mentioned in the text, remain the property of their respective owners and are not covered by the CC BY 4.0 or MIT licenses.
+
+\chapter{Quick Reference for Dimensions and Font Sizes}
+\label{app:size-reference}
+
+During cross-medium figure adaptation (Chapter 12) and pre-submission technical checks (Chapter 13), the most frequent source of failure is judging sharpness and font legibility by eye on a laptop monitor. This appendix condenses pixel-to-physical-width effective-resolution conversions, canvas-scaling font-size formulas, viewing-distance visual-angle equivalents, and standard academic layout dimensions into a quick-reference lookup suite. All values below are computed directly from geometric formulas for rapid self-auditing; always verify the current year's official artwork guidelines of your target journal or conference before submission.
+
+\section{Pixels, Physical Width, and Effective Resolution}
+
+The printed sharpness of any bitmap panel is governed solely by its \textbf{effective resolution} at final layout width, regardless of the nominal dpi tag stored in the file header. Using $1\text{ in} = 25.4\text{ mm}$, the two governing conversions are:
+\begin{gather*}
+  \text{Effective resolution (ppi)} = \frac{\text{Pixel width (px)}}{\text{Final physical width (mm)} \div 25.4}\\[4pt]
+  \text{Required pixel width (px)} = \left\lceil \frac{\text{Final physical width (mm)}}{25.4} \times \text{Target resolution (dpi)} \right\rceil
+\end{gather*}
+
+\begin{table}[htbp]
+\centering
+\caption{Minimum pixel widths required across common journal column widths at standard target resolutions (plus effective resolution of fixed-pixel exports)}\label{tab:app-g-resolution}
+\resizebox{\linewidth}{!}{%
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}llcccccc@{}}
+\toprule
+Target print width & Typical journal use & \multicolumn{4}{c}{Minimum pixel width required (px)} & \multicolumn{2}{c}{Effective resolution (ppi)} \\
+\cmidrule(lr){3-6}\cmidrule(l){7-8}
+ &  & 300 dpi & 500 dpi & 600 dpi & 1000 dpi & 1024 px wide & 1920 px wide \\
+ &  & (Photos) & (Combo) & (Fine combo) & (Line bitmap) & at this width & at this width \\
+\midrule
+85 mm (3.35 in) & Standard single column & 1004 & 1674 & 2008 & 3347 & 306 ppi & 574 ppi \\
+89 mm (3.50 in) & Nature single column & 1052 & 1752 & 2103 & 3504 & 292 ppi & 548 ppi \\
+90 mm (3.54 in) & Elsevier single column & 1063 & 1772 & 2126 & 3544 & 289 ppi & 542 ppi \\
+140 mm (5.51 in) & Standard 1.5 column & 1654 & 2756 & 3308 & 5512 & 186 ppi & 348 ppi \\
+180 mm (7.09 in) & Common double-column preset & 2126 & 3544 & 4252 & 7087 & 144 ppi & 271 ppi \\
+183 mm (7.20 in) & Nature double column & 2162 & 3603 & 4323 & 7205 & 142 ppi & 266 ppi \\
+190 mm (7.48 in) & Elsevier double column & 2245 & 3741 & 4489 & 7481 & 137 ppi & 257 ppi \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\section{Scaled Font Sizes and Viewing-Angle Equivalent Font Sizes}
+
+\paragraph{1. Canvas-scaling font-size formula for manuscript figures.}
+When you draw a figure on a canvas of width $W_{\text{canvas}}$ using a nominal font size $S_{\text{canvas}}$ and subsequently scale the exported image proportionally to fit a journal column width $W_{\text{final}}$, the printed font size seen by the reader is:
+\[
+  S_{\text{final}} = S_{\text{canvas}} \times \frac{W_{\text{final}}}{W_{\text{canvas}}}
+\]
+\textbf{Worked trap example:} Drawing a plot in a default $7.3\text{ in}$ ($185.4\text{ mm}$) software window with $10\text{ pt}$ axis labels and scaling the image down to an $85\text{ mm}$ single column reduces the printed type to $10 \times 85 / 185.4 \approx 4.6\text{ pt}$---below the $5\text{--}7\text{ pt}$ minimum enforced by nearly all journals. The safest workflow is to \textbf{set your plotting canvas width directly to the target journal column width} (such as $85\text{ mm}$ or $180\text{ mm}$) and specify $7\text{ pt}$ axis labels and $8\text{ pt}$ bold panel letters at $1{:}1$ scale.
+
+\paragraph{2. Cross-medium viewing-angle equivalent font sizes and line widths.}
+Whether a viewer can read a label depends on the visual angle $\theta \approx h/d$ subtended by the character height $h$ at viewing distance $d$. Taking $9\text{ pt}$ body text read at $d_0 = 40\text{ cm}$ ($0.4\text{ m}$, visual angle $\approx 0.45^\circ$) as our comfortable reading baseline, the equivalent point size required at distance $d$ scales linearly as $S(d) = 9\text{ pt} \times (d / 0.4\text{ m})$. For a standard 16:9 widescreen slide of vertical height $7.5\text{ in}$ ($540\text{ pt}$), when the ratio of back-row viewing distance $D$ to projected screen height $H$ is $D/H$, maintaining a $0.45^\circ$ visual angle requires a minimum slide font size of $S_{\text{slide}} \approx 0.00785 \times (D/H) \times 540\text{ pt}$. Table~\ref{tab:app-g-fontsize} lists the resulting geometric lower bounds across common academic venues.
+
+\begin{table}[htbp]
+\centering\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\caption{Viewing-angle equivalent font sizes, heading sizes, and minimum curve stroke widths across academic media and viewing distances}\label{tab:app-g-fontsize}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.20\linewidth}*{4}{>{\centering\arraybackslash}X}@{}}
+\toprule
+Medium \& tier & Typical viewing distance or $D/H$ ratio & $9\text{ pt}@40\text{ cm}$ & Recommended & Recommended & Minimum \\
+ &  & geometric & body \& tick & block or slide & data-curve \\
+ &  & equivalent & lower bound & heading size & stroke width \\
+\midrule
+Journal paper (1- or 2-col) & Reading distance $d \approx 0.4\text{ m}$ (30--50 cm) & 9.0 pt & 7--9 pt (sub $\ge 6$ pt) & Panel letter 8 pt bold & 0.5--1.0 pt \\
+Poster: close-up detail tier & Close reading $d \approx 1.0\text{ m}$ & 22.5 pt & 24--28 pt & Subheading 32--36 pt & 2.0--2.5 pt \\
+Poster: conclusion \& chart tier & Normal reading $d \approx 1.5\text{ m}$ & 33.8 pt & 28--34 pt & Block assertion 44--48 pt & 3.0--3.5 pt \\
+Poster: approach browsing tier & Walk-up distance $d \approx 2.0\text{ m}$ & 45.0 pt & 40--48 pt & Subtitle 48--60 pt & 3.5--4.0 pt \\
+Poster: corridor banner tier & Walk-by distance $d \approx 4.0\text{--}5.0\text{ m}$ & 90--112.5 pt & --- (no body text) & Main title 90--110 pt & --- \\
+16:9 talk: small seminar room & Back-row distance / screen height $D/H = 4$ & 17.0 pt & 20--22 pt & Slide assertion 28--32 pt & 2.0--2.5 pt \\
+16:9 talk: standard lecture hall & Back-row distance / screen height $D/H = 6$ & 25.4 pt & 24--26 pt & Slide assertion 32--36 pt & 2.5--3.0 pt \\
+16:9 talk: deep auditorium & Back-row distance / screen height $D/H = 8\text{--}9$ & 33.9--38.2 pt & 32--38 pt (trim text) & Slide assertion 40--44 pt & 3.5--4.0 pt \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Common Layout and Figure Dimensions}
+
+Table~\ref{tab:app-g-layouts} summarizes the standard physical dimensions and aspect ratios of journal figures, graphical abstracts, presentation slides, and conference posters for quick lookup when initializing canvases or plotting scripts.
+
+\begin{table}[htbp]
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{Quick-reference table of physical dimensions and aspect ratios for journal figures, slides, and academic posters}\label{tab:app-g-layouts}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.18\linewidth}Y@{}}
+\toprule
+Layout type & Standard physical size & Inches / aspect ratio & Layout and export notes \\
+\midrule
+Journal single-column figure & Width 85--90 mm & Width 3.35--3.54 in & Suited for single comparisons or stacked two-panel plots; height typically capped at 220--240 mm \\
+Journal 1.5-column figure & Width 120--140 mm & Width 4.72--5.51 in & Suited for medium two-panel figures or mechanism schematics with a right-hand legend column \\
+Journal double-column figure & Width 174--190 mm & Width 6.85--7.48 in & Standard for 3- to 6-panel composite figures; always verify the target journal's exact column width before drawing \\
+Graphical abstract (landscape or square) & Typical width 50--180 mm & Typical ratios 16:9, 4:3, or 1:1 & Must pass the TOC thumbnail legibility test when scaled down to 50 mm width (or roughly 200 px height) \\
+Widescreen presentation slide (16:9) & $338.67 \times 190.5\text{ mm}$ & $13.333 \times 7.5\text{ in}$ (540 pt tall) & Limit each slide to one assertion headline and one core evidence view; export $1920 \times 1080$ px for raster screen previews \\
+Standard presentation slide (4:3) & $254.0 \times 190.5\text{ mm}$ & $10.0 \times 7.5\text{ in}$ (540 pt tall) & Use only when legacy projection hardware requires 4:3; never horizontally squash a 16:9 slide into 4:3 \\
+ISO A0 academic poster (portrait) & $841 \times 1189\text{ mm}$ & $33.11 \times 46.81\text{ in}$ ($1\text{ m}^2$ area) & Most common international vertical poster format; use a 2- or 3-column grid with outer margins $\ge 25\text{--}30\text{ mm}$ \\
+ISO A1 academic poster (portrait) & $594 \times 841\text{ mm}$ & $23.39 \times 33.11\text{ in}$ ($0.5\text{ m}^2$ area) & Half the area of A0 ($70.7\%$ linear scale); if scaling an A0 layout down to A1, re-verify all minimum font sizes \\
+North American landscape poster & $914 \times 1219\text{ mm}$ & $36 \times 48\text{ in}$ (3:4 or 4:3 ratio) & Common at North American society meetings; some wide boards ($36 \times 72\text{ in}$) use templates set at 50\% scale \\
+\bottomrule
+\end{tabularx}
+\end{table}

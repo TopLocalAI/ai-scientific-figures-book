@@ -1,0 +1,45 @@
+% FIG ch02-03 paragraph to relation table (English)
+% Tabular only; input inside a table environment. No row colour:
+% shared/preamble.tex loads xcolor without [table].
+\begingroup
+\setlength{\tabcolsep}{1.6pt}
+\renewcommand{\arraystretch}{1}
+\newcommand{\cellfont}{\fontsize{8}{9.3}\selectfont}
+\newcommand{\gr}{\leavevmode\color{gray}}
+\begin{tabularx}{\linewidth}{@{}
+  >{\cellfont}l
+  >{\cellfont}Y
+  >{\cellfont\raggedright\arraybackslash}p{26mm}
+  >{\cellfont\raggedright\arraybackslash}p{21mm}
+  >{\cellfont\raggedright\arraybackslash}p{15.5mm}
+@{}}
+\toprule
+\textbf{Sent.} & \textbf{Sentence} & \textbf{Graphic expression} & \textbf{Evidence} & \textbf{Draw?} \\
+\midrule
+S1 & Secondary particles of a layered NMC cathode (LiNi$_x$Mn$_y$Co$_z$O$_2$) are agglomerates of many primary grains.
+   & Polygonal grains in cross-section
+   & Established (structural background) & Yes \\
+S2 & During repeated cycling, the grains expand and contract anisotropically as lithium is extracted and reinserted; stress builds up at grain boundaries and opens intergranular microcracks inside the secondary particle (Ryu et al., 2018).
+   & After cycling, cracks run along grain boundaries
+   & Established (literature) & Yes \\
+S3 & The cracks let electrolyte penetrate the particle and expose fresh surface, and some fragments may lose contact with the conductive network, causing loss of active material.
+   & Pale-blue electrolyte in the cracks; one detached grain cluster; label ``loss of active material''
+   & Established & Yes \\
+S4 & At high states of charge, the particle surface reconstructs from the layered structure toward a rock-salt-like phase with release of lattice oxygen; the resulting surface layer raises interfacial impedance (Jung et al., 2017).
+   & Thin dark outer rim; label ``reconstructed surface layer $\rightarrow$ higher impedance''
+   & Established (literature) & Yes \\
+S5 & Meanwhile, the solid electrolyte interphase (SEI) on the graphite anode keeps thickening during cycling and consumes cyclable lithium, which is commonly one of the main contributors to capacity fade (Vetter et al., 2005; Birkl et al., 2017).
+   & SEI thickens; fewer lithium dots between layers, some embedded in the SEI
+   & Established (literature) & Yes \\
+S6 & We hypothesise that, in our cells, side reactions of the electrolyte on freshly exposed crack surfaces also contribute to the impedance rise.
+   & Dashed box and ``hypothesis'' label, from the cracks to ``higher impedance''
+   & Hypothesis (dashed box) & Yes, but distinct \\
+\gr S7 & \gr Transition-metal dissolution and deposition on the anode may also accelerate SEI growth, but is outside the scope of this paper.
+   & \gr Caption notes ``not shown: transition-metal dissolution and deposition''
+   & \gr Established, out of scope & \gr No \\
+\gr S8 & \gr The cycling capacity curves are shown in Figure 4.
+   & \gr The schematic shows no curves, axes or values
+   & \gr Data, Figure 4 & \gr No \\
+\bottomrule
+\end{tabularx}
+\endgroup

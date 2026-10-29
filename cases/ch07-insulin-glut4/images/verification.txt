@@ -1,0 +1,58 @@
+Verification snapshot UTC: 2026-10-29T08:00:22.935242+00:00
+
+$ ls -l cases/ch07-insulin-glut4/images
+total 49008
+-rw-r--r--@ 1 zeroone  staff  1245781 Oct 29 15:48 cmp-a1-mixed-arrows.png
+-rw-r--r--@ 1 zeroone  staff  1351793 Oct 29 15:48 cmp-a2-unified-arrows.png
+-rw-r--r--@ 1 zeroone  staff  1378668 Oct 29 15:52 cmp-b1-too-many-colors-alt1.png
+-rw-r--r--@ 1 zeroone  staff  1308957 Oct 29 15:52 cmp-b1-too-many-colors.png
+-rw-r--r--@ 1 zeroone  staff    89744 Oct 29 15:59 generation-log.md
+-rw-r--r--@ 1 zeroone  staff    51787 Oct 29 15:52 generation-records.json
+-rw-r--r--@ 1 zeroone  staff    33964 Oct 29 15:41 prompts.json
+-rw-r--r--@ 1 zeroone  staff    36742 Oct 29 15:59 review-checklists.json
+-rw-r--r--@ 1 zeroone  staff  2605113 Oct 29 15:41 v0-sketch-alt1.png
+-rw-r--r--@ 1 zeroone  staff  2776574 Oct 29 15:43 v0-sketch-alt2.png
+-rw-r--r--@ 1 zeroone  staff  2412444 Oct 29 15:52 v0-sketch.png
+-rw-r--r--@ 1 zeroone  staff  2658302 Oct 29 15:43 v1-vague.png
+-rw-r--r--@ 1 zeroone  staff  1308336 Oct 29 15:43 v2-brief-alt1.png
+-rw-r--r--@ 1 zeroone  staff  1291215 Oct 29 15:45 v2-brief.png
+-rw-r--r--@ 1 zeroone  staff  1300319 Oct 29 15:45 v3-revised-alt1.png
+-rw-r--r--@ 1 zeroone  staff  1294239 Oct 29 15:48 v3-revised.png
+-rw-r--r--@ 1 zeroone  staff  1339241 Oct 29 15:48 v4-base-alt1.png
+-rw-r--r--@ 1 zeroone  staff  1274903 Oct 29 15:52 v4-base-alt2.png
+-rw-r--r--@ 1 zeroone  staff  1294170 Oct 29 15:52 v4-base.png
+-rw-r--r--@ 1 zeroone  staff     4588 Oct 29 15:55 verification-metrics.json
+-rw-r--r--@ 1 zeroone  staff        0 Oct 29 16:00 verification.txt
+
+PNG dimensions and complete decode verification (Pillow Image.verify):
+cmp-a1-mixed-arrows.png	1448 x 1086	RGB	1245781 bytes
+cmp-a2-unified-arrows.png	1448 x 1086	RGB	1351793 bytes
+cmp-b1-too-many-colors-alt1.png	1672 x 941	RGB	1378668 bytes
+cmp-b1-too-many-colors.png	1672 x 941	RGB	1308957 bytes
+v0-sketch-alt1.png	1672 x 941	RGB	2605113 bytes
+v0-sketch-alt2.png	1672 x 941	RGB	2776574 bytes
+v0-sketch.png	1672 x 941	RGB	2412444 bytes
+v1-vague.png	1672 x 941	RGB	2658302 bytes
+v2-brief-alt1.png	1672 x 941	RGB	1308336 bytes
+v2-brief.png	1672 x 941	RGB	1291215 bytes
+v3-revised-alt1.png	1672 x 941	RGB	1300319 bytes
+v3-revised.png	1672 x 941	RGB	1294239 bytes
+v4-base-alt1.png	1672 x 941	RGB	1339241 bytes
+v4-base-alt2.png	1672 x 941	RGB	1274903 bytes
+v4-base.png	1672 x 941	RGB	1294170 bytes
+
+Measured checks:
+8 required selected files: PASS
+15 PNG files total (8 selected + 7 alternatives): PASS
+At most 3 generations per version: PASS
+All PNGs decode: PASS
+All copied PNG SHA-256 values equal generated sources: PASS
+All 15 complete prompts match generation-log.md verbatim: PASS
+All 15 prompts preserve complete source-script English verbatim: PASS
+V2/V3/V4 including alternatives have all R1-R13 reviews: PASS
+Source case-plan.md unchanged: PASS
+B2 reuses v3-revised.png, no additional generation/file: PASS
+Native 16:9 output width >= 2400: FAIL (1672)
+V4 all scientific/style/label-area requirements: NOT PASSED; see generation-log.md
+
+The ls listing was captured immediately before this verification file was populated; its listed size is the pre-write snapshot.

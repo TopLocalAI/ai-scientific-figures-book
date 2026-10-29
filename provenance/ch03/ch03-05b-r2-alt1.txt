@@ -1,0 +1,26 @@
+### provenance/ch03/ch03-05b-r2-alt1.png
+
+- 工具：Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）
+- 模型：不知道：工具未返回具体模型标识。
+- 日期：2026-10-29
+- 本阶段第几次：1
+- 参考图：provenance/ch03/ch03-05b-r1.png
+- 输出：1672×941，RGB PNG；SHA-256：`c1d47829a2d155e8d7fe6198e97fe974be05e3e9c1d753112b61772aa9666622`
+- prompt 改动原因：未追加/改写规划英文 prompt；仅作规划要求的公共段拼接或 LAYOUT 占位替换。
+- 人工图像修改：无。
+
+画面内容 / 核验要点逐条检查：
+
+- 落选；供体修改第 1 次。原指令把下通道唯一短供体直接删掉。
+- 科学内容受影响：HDR 的模板来源缺失。两条结果及 PAM 仍在。
+- 处理：不继续沿此失败版修改，回到 r1，再追加保留唯一可见供体的说明。
+- 共通核验：未见文字；像素宽度未达2400；约16:9；未真人复核。
+
+实际完整 prompt（保留换行）：
+
+```text
+Edit the selected image. Change only one thing: move the short teal donor DNA
+so that it lies inside the lower repair lane only, directly above the DNA gap
+in that lane, horizontally centered on the gap. Remove any copy of the donor
+outside the lower lane. Keep everything else unchanged. No text.
+```

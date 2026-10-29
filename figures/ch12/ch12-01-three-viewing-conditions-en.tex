@@ -1,0 +1,48 @@
+% FIG ch12-01 three viewing conditions (English)
+\begin{tikzpicture}[
+  x=1mm, y=1mm,
+  font=\sffamily\small,
+  text=BookInk,
+  coltitle/.style={font=\sffamily\bfseries, text=BookTeal, align=center},
+  cell/.style={draw=BookRule, fill=white, align=left, text width=42mm, inner sep=2mm, minimum height=9mm},
+  emphcell/.style={cell, fill=BookPale, draw=BookTeal, font=\sffamily\bfseries\small},
+  icon/.style={draw=BookInk!40, fill=BookPale, line width=0.5pt},
+]
+  \foreach \x/\name/\w/\h in {22/Paper/42/59, 72/Talk/64/36, 122/Poster/42/59} {
+    \begin{scope}[shift={(\x, 108)}]
+      \node[coltitle] at (21, 14) {\name};
+      \draw[icon, fill=white] (6, 0) rectangle ++(\w, \h);
+      \ifnum\x=72
+        \draw[BookInk!60, line width=0.8pt] (10, 4) -- (54, 4);
+        \draw[BookInk!60, line width=0.8pt] (10, 32) -- (54, 32);
+      \fi
+    \end{scope}
+  }
+  \draw[BookTeal, line width=1pt] (10, 100) -- ++(20, 0);
+  \node[font=\scriptsize, anchor=west] at (32, 100) {1 m (scale bar)};
+
+  \node[cell, anchor=north west] at (0, 98) {Viewing distance};
+  \node[cell] at (22, 89) {30--50 cm};
+  \node[cell] at (72, 89) {2--15 m};
+  \node[cell] at (122, 89) {First 2--5 m\\then 0.5--1.5 m};
+
+  \node[cell, anchor=north west] at (0, 78) {Time available};
+  \node[cell] at (22, 69) {Reader decides};
+  \node[cell] at (72, 69) {About 1--2 min per slide};
+  \node[cell] at (122, 69) {Seconds to stop\\minutes if staying};
+
+  \node[cell, anchor=north west] at (0, 58) {Pace controlled by};
+  \node[cell] at (22, 49) {Reader};
+  \node[cell] at (72, 49) {Speaker};
+  \node[cell] at (122, 49) {Viewer};
+
+  \node[cell, anchor=north west] at (0, 38) {Who explains};
+  \node[cell] at (22, 29) {Caption};
+  \node[cell] at (72, 29) {Speaker};
+  \node[cell] at (122, 29) {Poster itself};
+
+  \node[emphcell, anchor=north west] at (0, 18) {Content strategy};
+  \node[emphcell, text=BookTeal] at (22, 9) {Dense, self-contained};
+  \node[emphcell, text=BookTeal] at (72, 9) {Sparse, sequential};
+  \node[emphcell, text=BookTeal] at (122, 9) {Layered};
+\end{tikzpicture}

@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-29",
+  "reuse": [
+    {
+      "source": "figures/ch09/ch09-07-assembly-final-zh.pdf",
+      "target": "figures/ch12/ch12-03-paper-figure-2-zh.pdf",
+      "sha256": "5c918d54ed6a81fa045e19e83c3f0a7a97d38ee4c1d895b0da7baad123fe35e6"
+    },
+    {
+      "source": "figures/ch09/ch09-07-assembly-final-zh.png",
+      "target": "figures/ch12/ch12-03-paper-figure-2-zh.png",
+      "sha256": "84c32321b856841bf0748ef0b41b17beb6f272ef56fc91b9d95ae3d0d54dccf4"
+    },
+    {
+      "source": "figures/ch09/ch09-07-assembly-final-en.pdf",
+      "target": "figures/ch12/ch12-03-paper-figure-2-en.pdf",
+      "sha256": "c001074967701275597978c32e55141ea9f2496db85bc2fd2651ea00f51241c7"
+    },
+    {
+      "source": "figures/ch09/ch09-07-assembly-final-en.png",
+      "target": "figures/ch12/ch12-03-paper-figure-2-en.png",
+      "sha256": "ba6c0915e11e911e6c140863b000c8dd55753023fce580078515c1e696488557"
+    }
+  ],
+  "missing": []
+}

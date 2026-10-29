@@ -1,0 +1,11 @@
+case,object_label_zh,object_label_en,v2_count,v3_count,author,recorded_date,notes
+ch11,斜拉索,stay cables,16,16,DavieChen,2026-10-29,待 Codex 出 V3 底图后按实测更新 v3_count
+ch11,传感器,sensors,12,12,DavieChen,2026-10-29,待 Codex 出 V3 底图后按实测更新
+ch11,现场网关,gateway,1,1,DavieChen,2026-10-29,
+ch11,云端,cloud,1,1,DavieChen,2026-10-29,
+ch11,处理框,processing boxes,3,3,DavieChen,2026-10-29,
+ch11,管理终端,operator terminal,1,1,DavieChen,2026-10-29,
+ch07,磷酸化圆点,phosphorylation marks,6,0,DavieChen,2026-10-29,受体2+IRS-1 1+Akt 2+AS160 1；V3 第1次全部丢失
+ch07,胰岛素珠,insulin beads,3,2,DavieChen,2026-10-29,V3 alt1 且不接触受体
+ch07,激活箭头,activation arrows,4,5,DavieChen,2026-10-29,多出 PI3K→PDK1 未授权箭头
+ch07,每囊泡 GLUT4（最大）,max GLUT4 per vesicle,1,3,DavieChen,2026-10-29,三囊泡各出现多个转运体

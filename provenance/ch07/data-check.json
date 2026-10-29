@@ -1,0 +1,24 @@
+{
+  "script": "scripts/ch07_grayscale.py",
+  "figures": [
+    {
+      "source": "figures/ch07/ch07-05a-many-colours.png",
+      "target": "figures/ch07/ch07-05a-many-colours-gray.png",
+      "width_px": 1672,
+      "height_px": 941,
+      "source_sha256": "d30ababd86e65bf7980411b4f5aa9832e04c0b3255af2edcd98e804a08a9aa6e",
+      "output_sha256": "cc8f63568ce4ed5e6b0beed35ade07d1340edcac4e4ef4da0b4df78f62bb9fa2",
+      "transform": "PIL.ImageOps.grayscale only"
+    },
+    {
+      "source": "figures/ch07/ch07-05b-v3-revised.png",
+      "target": "figures/ch07/ch07-05b-v3-revised-gray.png",
+      "width_px": 1672,
+      "height_px": 941,
+      "source_sha256": "3708ab7446cbf30599e3c761f399388b527a89fffaa2e07a06746041633db346",
+      "output_sha256": "e36f3c51697d022824015bf4af7ba3925df82438ad545c71750b27c82893145c",
+      "transform": "PIL.ImageOps.grayscale only"
+    }
+  ],
+  "note": "No external data; greyscale derivatives for teaching comparison."
+}

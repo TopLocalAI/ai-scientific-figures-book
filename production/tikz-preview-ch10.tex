@@ -1,0 +1,34 @@
+% Preview all chapter 10 TikZ figures (compile from repo root with xelatex)
+\documentclass[11pt,a4paper,landscape]{article}
+\usepackage[margin=12mm]{geometry}
+\usepackage{ctex}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,fit,positioning}
+\definecolor{BookTeal}{HTML}{176C68}
+\definecolor{BookInk}{HTML}{23363E}
+\definecolor{BookRule}{HTML}{C8D6D6}
+\definecolor{BookPale}{HTML}{F1F6F5}
+\graphicspath{{./}}
+\usepackage{graphicx}
+\title{Chapter 10 TikZ preview}
+\date{}
+\begin{document}
+\pagenumbering{gobble}
+\maketitle
+
+\section*{ch10-01 ga-formats (zh)}
+\resizebox{\linewidth}{!}{\input{figures/ch10/ch10-01-ga-formats-zh.tex}}
+\newpage
+
+\section*{ch10-01 ga-formats (en)}
+\resizebox{\linewidth}{!}{\input{figures/ch10/ch10-01-ga-formats-en.tex}}
+\newpage
+
+\section*{ch10-02 paper-to-card (zh)}
+\resizebox{\linewidth}{!}{\input{figures/ch10/ch10-02-paper-to-card-zh.tex}}
+\newpage
+
+\section*{ch10-02 paper-to-card (en)}
+\resizebox{\linewidth}{!}{\input{figures/ch10/ch10-02-paper-to-card-en.tex}}
+
+\end{document}

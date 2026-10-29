@@ -1,0 +1,39 @@
+Date: 2026-10-29
+Detailed visual checks and selection reasons: codex-images.md
+No manual retouching; source PNGs copied unchanged. Concrete model name unknown.
+
+{
+  "date": "2026-10-29",
+  "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+  "model": "不知道；工具返回未提供具体模型名称",
+  "manual_retouch": false,
+  "file": "figures/ch06/ch06-icons-sheet.png",
+  "attempt": 1,
+  "selected": true,
+  "prompt": "A sheet of twelve flat vector scientific icons arranged in an even grid of four columns\nand three rows on a pure white background. Each icon sits centred in its own invisible\nsquare cell with wide white margins and does not touch any other icon. All icons share\nthe same style: simple geometric shapes, uniform dark slate outline of medium weight,\nflat fills, no gradients, no shadows, no 3D.\nRow 1 (warm muted orange-brown accent #B5653A with pale beige fills):\n 1. a small piece of pink soft tissue on a shallow petri dish;\n 2. a conical centrifuge tube with three tiny droplets falling into it;\n 3. a round cell strainer mesh sitting on top of a tube;\n 4. a square counting grid with five round cells, one cell drawn darker.\nRow 2 (same warm accent, except icon 8 in deep amber #8A6D1F):\n 5. a small rectangular microfluidic chip with one channel pinching off round droplets,\n    each droplet containing one small cell and one small bead;\n 6. a single small PCR tube with a closed cap;\n 7. three short double-stranded DNA fragments, each with small coloured end caps;\n 8. a benchtop sequencing instrument: a box with a small slot holding a flow cell.\nRow 3 (muted teal-blue accent #2F6F8F with pale blue-grey fills):\n 9. a computer monitor showing several short horizontal bars aligned under one long bar;\n10. a square grid matrix of small cells with varied light-to-dark shading;\n11. a network of dots connected by thin edges;\n12. four clusters of dots, each cluster in a different muted colour, with one blank\n    rounded tag shape next to it.\nNo text, no letters, no numbers, no labels, no arrows between icons, no logos,\nno microscope, no DNA double helix, no people. Aspect ratio 4:3.",
+  "prompt_change": "无，逐字使用规划 §3.6 V3。",
+  "source": "exec-04a26c26-5a4c-43cf-b781-b00c665cb456.png",
+  "dimensions": [
+    1448,
+    1086
+  ]
+}
+
+{
+  "date": "2026-10-29",
+  "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+  "model": "不知道；工具返回未提供具体模型名称",
+  "manual_retouch": false,
+  "file": "figures/ch06/ch06-icon-08-corrected-source.png",
+  "attempt": 2,
+  "selected": true,
+  "prompt": "Edit only this one sequencing-instrument icon. Preserve its simple scientific icon style, dark slate outline, white background, and approximately square framing. Replace the printer-like front paper tray and paper-output slot with a small closed optical flow-cell cartridge bay: a glass rectangular microfluidic flow cell in a shallow enclosed cartridge, with tiny parallel fluidic channels visible through a small window. The instrument should read as a compact benchtop DNA sequencing instrument, not a printer. Use flat pale beige fills with a restrained deep amber #8A6D1F accent on the cartridge and dark slate outlines. No gradients, no shadows, no 3D rendering. No sheets of paper, no paper trays, no keyboards. No text, no letters, no numbers, no labels, no symbols, no logos. One isolated icon only, with generous white margin. Aspect ratio 1:1.",
+  "prompt_change": "按规划允许的单图标修改流程，仅修改 icon 08 的打印机式纸托/出纸口为光学流动池卡匣；此为局部修正提示词，不是原 V3 提示词。",
+  "referenced_image": "figures/ch06/icons/ch06-icon-08.png",
+  "source": "exec-7deb29ee-8513-4fa0-b92d-6a75025fce11.png",
+  "dimensions": [
+    1254,
+    1254
+  ]
+}
+

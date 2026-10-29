@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-29",
+  "data_status": "simulated teaching data (scripts/sim_perovskite.py)",
+  "jv_rows_control": 2201,
+  "jv_rows_modified": 2281,
+  "control_PCE_percent": 19.2096,
+  "modified_PCE_percent": 20.9785,
+  "control_T80_h": "210",
+  "modified_T80_h": ">1000",
+  "external_downloads": [],
+  "figures_python": [
+    "ch09-05-data-panels",
+    "work/panel-c",
+    "work/panel-d"
+  ],
+  "figures_assembly": {
+    "ch09-06-v1-zh": "complete",
+    "ch09-06-v1-en": "complete",
+    "ch09-07-v2-zh": "complete",
+    "ch09-07-v2-en": "complete"
+  },
+  "figures_tikz": [
+    "ch09-01-panel-argument-map",
+    "ch09-02-layout-wireframes",
+    "ch09-08-legend-drafting"
+  ],
+  "codex_pending": [
+    "ch09-03-device-structure",
+    "ch09-04-sem-like-illustration"
+  ]
+}

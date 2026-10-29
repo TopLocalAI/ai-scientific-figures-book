@@ -1,0 +1,46 @@
+{
+  "chapter": "04",
+  "generated_at": "2026-10-29T08:12:45.982832+00:00",
+  "sources": [
+    {
+      "file": "data/ch04/raw/co2_mm_mlo.csv",
+      "url": "https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.csv",
+      "downloaded_on": "2026-10-29",
+      "sha256": "d895fb5b4a59fb5e4cd98e69b7667fe5bef595c6581f630852b12cb41c07f675",
+      "bytes": 38776,
+      "licence_note": "NOAA GML Mauna Loa CO2 monthly; US government, freely available with attribution"
+    },
+    {
+      "file": "data/ch04/raw/HOT_surface_CO2.txt",
+      "url": "https://hahana.soest.hawaii.edu/hot/hotco2/HOT_surface_CO2.txt",
+      "downloaded_on": "2026-10-29",
+      "sha256": "4356aa4650188b99f623ac2423e4d5a2af4b189077fd1efd1e2cfd8167161665",
+      "bytes": 46975,
+      "licence_note": "HOT surface CO2; cite Dore et al. 2009 (no explicit open licence in file header)"
+    },
+    {
+      "file": "data/ch04/raw/pent_h22-w0-700m.dat",
+      "url": "https://www.ncei.noaa.gov/data/oceans/woa/DATA_ANALYSIS/3M_HEAT_CONTENT/DATA/basin/pentad/pent_h22-w0-700m.dat",
+      "downloaded_on": "2026-10-29",
+      "sha256": "3991a1e82d53c8dff38b27cd3ad0d89d7caa6525bf6caa98aeb565e92c45bdcc",
+      "bytes": 3876,
+      "licence_note": "NOAA NCEI pentadal OHC 0-700 m; US government work"
+    },
+    {
+      "file": "data/ch04/raw/pent_h22-w0-2000m.dat",
+      "url": "https://www.ncei.noaa.gov/data/oceans/woa/DATA_ANALYSIS/3M_HEAT_CONTENT/DATA/basin/pentad/pent_h22-w0-2000m.dat",
+      "downloaded_on": "2026-10-29",
+      "sha256": "2160656a7afed5d87e95b079374efb83e3ade2f9d1a58e0649290ce0eddf73b4",
+      "bytes": 3876,
+      "licence_note": "NOAA NCEI pentadal OHC 0-2000 m; US government work"
+    },
+    {
+      "file": "data/ch04/raw/GlobalCarbonBudget_v2025.xlsx",
+      "url": "https://globalcarbonbudget.org/download/2341/",
+      "downloaded_on": "2026-10-29",
+      "sha256": "ef7a68cb8f7d140abfe44a2d7aad2dba5eaadbaf6b128494e2111addf10a5358",
+      "bytes": 433031,
+      "licence_note": "Global Carbon Budget v2025 xlsx; Fair Use Statement on globalcarbonbudget.org"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+### figures/ch03/ch03-02c-sketch-branch.png
+
+- 工具：Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）
+- 模型：不知道：工具未返回具体模型标识。
+- 日期：2026-10-29
+- 本阶段第几次：3
+- 参考图：无；从文字生成
+- 输出：1672×941，RGB PNG；SHA-256：`6bfa80f7c121743f3b1c0b81dc750c019649a29f9ef24b9da87ec0f66a58e035`
+- prompt 改动原因：保留规划全文，追加明确路由及连续 indel 要求；前两次都把两个分支箭头画到同一通道。
+- 人工图像修改：无。
+
+画面内容 / 核验要点逐条检查：
+
+- 保留；第 3 次。追加分支路由说明后，一支沿右侧进入上通道，另一支继续向下进入下通道。
+- 上排三步齐全，长 DNA 两端基本对齐；上通道为小折线、下通道为短供体与插入段，底部留白。
+- 未完全通过：两条通道高度仍不同；RNA 波线被画成近似双描线，纸张/笔触与 A/B 只是同类风格。
+- 这是模型模拟草图；不是作者真实手绘。达到三次上限后选结构最接近的一张。
+- 共通核验：未见文字；像素宽度未达2400；约16:9；未真人复核。
+
+实际完整 prompt（保留换行）：
+
+```text
+A rough pencil planning sketch on slightly off-white sketchbook paper,
+photographed flat from directly above, evenly lit, no hands, no pencil, no other
+objects. Landscape 16:9. Single graphite pencil, loose confident lines, a few
+construction lines and faint erasure marks. Simple shapes only: rounded blobs,
+pairs of parallel lines with short rungs (double-stranded DNA), a wavy line
+(RNA), arrows. Strictly no writing of any kind: no letters, no words, no
+numbers, no labels, no title, no annotations. Pencil gray only, no color.
+Bottom tenth of the page left blank.
+
+Layout: two tiers. Upper third of the page: a compact row of three small steps
+from left to right connected by arrows (a two-lobed blob with a wavy line
+inside; the blob sitting on a ladder-like double line with a small shaded
+rectangle; the double line with a gap through both lines, the shaded rectangle
+right next to the gap). From the third step, one arrow goes down and splits
+into two arrows. Lower part of the page: two wide horizontal lanes of equal
+height, stacked one above the other, each framed by a light pencil rectangle.
+Upper lane: a long double line with a tiny zigzag mark at the middle. Lower
+lane: a short separate double line floating above the middle of a long double
+line, and the long double line has a short thick inserted segment at the
+middle. The long double lines in both lanes start and end at the same x
+positions.
+
+Routing clarification: the two outgoing branch arrows MUST end at two DIFFERENT lanes. Route the branch down along the far right OUTSIDE both rectangles. One left-pointing arrow enters the upper rectangle through its right edge; the other continues downward outside the upper rectangle and enters the LOWER rectangle through its right edge. Never point both arrowheads at the upper rectangle. The upper lane DNA is continuous through its tiny zigzag indel mark, not a large open break.
+```

@@ -1,0 +1,40 @@
+% FIG ch09-01 panel argument map (Chinese)
+\begin{tikzpicture}[
+  x=1mm, y=1mm,
+  font=\sffamily\small,
+  text=BookInk,
+  mainbox/.style={
+    draw=BookTeal, line width=0.6pt, rounded corners=2pt,
+    fill=BookPale, align=center, text width=150mm, inner sep=3mm,
+  },
+  explain/.style={
+    draw=BookRule, fill=BookRule!35, rounded corners=2pt,
+    align=left, text width=38mm, inner sep=2.5mm, minimum height=18mm,
+  },
+  data/.style={
+    draw=BookInk!50, fill=white, rounded corners=2pt,
+    align=left, text width=38mm, inner sep=2.5mm, minimum height=18mm,
+  },
+  moved/.style={
+    draw=BookInk!40, dashed, rounded corners=2pt,
+    align=left, text width=155mm, inner sep=2.5mm,
+  },
+]
+  \node[mainbox] (q) at (87, 58)
+    {主问题：界面钝化改性是否同时提高了初始效率和运行稳定性？};
+  \foreach \i/\x/\t in {
+    a/20/示意, b/62/形貌, c/104/性能, d/146/稳定性} {
+    \node[explain] (\i) at (\x, 32) {
+      \textbf{\i}\par
+      回答：改了什么 / 层序是否连续 / 初始效率 / 运行稳定性\par
+      \scriptsize 证据类型：\t
+    };
+  }
+  \draw[-{Stealth[length=2mm]}, BookInk!60, thick] (q.south) -- (a.north);
+  \draw[-{Stealth[length=2mm]}, BookInk!60] (a.east) -- (b.west);
+  \draw[-{Stealth[length=2mm]}, BookInk!60] (b.east) -- (c.west);
+  \draw[-{Stealth[length=2mm]}, BookInk!60] (c.east) -- (d.west);
+  \node[moved] at (87, 8) {
+    候选但移出（\textbf{示例}）：XRD 图谱 $\rightarrow$ 补充材料（不直接回答主问题）
+  };
+\end{tikzpicture}

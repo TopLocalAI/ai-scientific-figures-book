@@ -1,0 +1,49 @@
+% FIG ch11-01 three levels (Chinese)
+\usetikzlibrary{arrows.meta,positioning,calc}
+\begin{tikzpicture}[x=\linewidth/100,y=\linewidth/100]
+\begin{scope}[
+  font=\sffamily\small,
+  level/.style={
+    draw=BookRule, line width=0.5pt, rounded corners=2pt,
+    minimum width=52mm, minimum height=11mm, align=left, inner sep=4pt,
+    text width=50mm, anchor=west,
+  },
+  qbox/.style={
+    draw=BookRule, fill=BookPale!40, rounded corners=2pt,
+    align=center, inner sep=3pt, text width=22mm, font=\scriptsize,
+  },
+]
+  \node[
+    draw=BookTeal, line width=0.7pt, fill=white, rounded corners=3pt,
+    align=center, inner sep=5pt, text width=24mm, font=\small,
+  ] (bubble) at (8,42) {再好看一点};
+  \draw[BookInk!55, dashed, -{Stealth[length=2mm]}] (bubble.east) -- (22,42);
+
+  \node[qbox] (q1) at (32,58) {视线\\停在哪？};
+  \node[qbox, below=3mm of q1] (q2) {读者会\\误解哪里？};
+  \node[qbox, below=3mm of q2] (q3) {哪些本应\\一样却不一样？};
+
+  \foreach \q in {q1,q2,q3} {
+    \draw[BookInk!45, -{Stealth[length=1.6mm]}] (\q.east) -- ++(6,0);
+  }
+
+  \node[level, fill=BookInk, text=white] (L1) at (54,66) {%
+    \textbf{第 1 层　科学错误}\\[-1pt]
+    {\scriptsize 例：画成了悬索桥；数据箭头方向反了}\\
+    {\scriptsize\textcolor{BookPale!90}{处理：回到任务书，必要时重新生成}}};
+  \node[level, fill=BookInk!60, text=BookInk, below=2.5mm of L1] (L2) {%
+    \textbf{第 2 层　阅读障碍}\\[-1pt]
+    {\scriptsize 例：无线链路像拉索；160\,mm 下图标太小}\\
+    {\scriptsize 处理：一次只改一类问题}};
+  \node[level, fill=BookInk!30, text=BookInk, below=2.5mm of L2] (L3) {%
+    \textbf{第 3 层　视觉一致性}\\[-1pt]
+    {\scriptsize 例：同类传感器颜色不同；线宽不一}\\
+    {\scriptsize 处理：优先在排版层统一}};
+
+  \coordinate (ordA) at ($(L1.west)+(-3,0)$);
+  \coordinate (ordB) at ($(L3.west)+(-3,0)$);
+  \draw[BookInk!70, line width=0.8pt, -{Stealth[length=2.4mm]}] (ordA) -- (ordB);
+  \node[font=\scriptsize, align=center, text width=46mm, anchor=north]
+    at ($(L3.south)+(0,-2.5mm)$) {按此顺序处理；每改一次，整图复核三层};
+\end{scope}
+\end{tikzpicture}

@@ -1,0 +1,53 @@
+% FIG ch06-02 flow grammar (Chinese)%
+\input{figures/ch06/ch06-styles.tex}%
+\begin{tikzpicture}[x=1mm, y=1mm, font=\sffamily\scriptsize, text=BookInk]%
+  \node[anchor=north west, font=\sffamily\bfseries\small] (titleL) at (0,0) {节点与箭头语法};%
+  \draw[BookRule, line width=0.4pt] (0,-7) rectangle (128,-126);%
+
+  \node[flowstep] (g1) at (16,-14) {操作步骤};%
+  \node[gramcap] at (36,-14) {圆角矩形——做什么};%
+
+  \node[artifact] (g2) at (16,-25) {产物};%
+  \node[gramcap] at (36,-25) {平行四边形——得到什么、交给下一步什么};%
+
+  \node[gate] (g3) at (16,-38) {质控};%
+  \node[passlabel, anchor=west] at ([xshift=1.5mm]g3.east) {通过};%
+  \node[taglab, anchor=north west] at ([xshift=1.5mm, yshift=-0.6mm]g3.south east) {不通过};%
+  \node[gramcap] at (36,-38) {菱形——须有两个出口（通过 / 不通过）};%
+
+  \node[opt] (g4) at (16,-50) {可选步骤};%
+  \node[gramcap] at (36,-50) {虚线圆角矩形};%
+
+  \node[stack] (gs1) at (13,-61) {};%
+  \ChSixCardBack{gs1}%
+  \node[stack] (gs2) at (16.2,-61) {每样本};%
+  \node[gramcap] at (36,-61) {错位叠放——每个样本分别进行};%
+
+  \draw[link] (6,-72) -- ++(16,0);%
+  \node[gramcap] at (36,-72) {实线箭头——顺序与交接};%
+
+  \draw[back] (6,-83) to[out=20, in=160] (24,-83);%
+  \node[gramcap] at (36,-83) {虚线弧——反馈或返回};%
+
+  \fill (16,-94) circle (0.7pt);%
+  \node[gramcap] at (36,-94) {实心圆点——分叉 / 合并点};%
+
+  \node[conn] (gc) at (16,-105) {A};%
+  \node[gramcap] at (36,-105) {圆形连接符——跨行续接};%
+
+  \fill[WetPale, draw=Wet, line width=0.3pt] (6,-116) rectangle (16,-122);%
+  \fill[DryPale, draw=Dry, line width=0.3pt] (18,-116) rectangle (28,-122);%
+  \node[gramcap] at (36,-119) {泳道底色——湿实验 / 计算};%
+
+  \node[anchor=north west, font=\sffamily\bfseries\small] (titleR) at (0,-130) {流程箭头 ≠ 因果};%
+  \node[flowstep] (d1) at (18,-144) {组织解离};%
+  \node[artifact] (d2) at (46,-144) {单细胞悬液};%
+  \draw[link] (d1) -- (d2);%
+  \node[gramcap] at (68,-144) {流程：先后与交接};%
+
+  \node[flowstep] (e1) at (18,-160) {组织解离};%
+  \node[gramcap] at (40,-160) {$\Rightarrow$ 应激相关基因表达升高};%
+  \draw[BookInk!45, densely dotted] (e1.east) -- ++(6,0);%
+  \node[gramcap, anchor=north west, text width=120mm] at (0,-170)%
+    {机制或因果信息写成注释或图注，不画成流程箭头（van den Brink 等 2017）。};%
+\end{tikzpicture}%

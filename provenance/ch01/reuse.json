@@ -1,0 +1,19 @@
+{
+  "copies": [
+    {
+      "figure": "ch01-08",
+      "source": "figures/workflow-ui-zh.png",
+      "target": "figures/ch01/ch01-08-guide-ui-zh.png",
+      "sha256": "c094c919dfd8e66488e24e4368ea16d0b7dae940db35d43eb254ac0af1e12f64"
+    },
+    {
+      "figure": "ch01-08",
+      "source": "figures/workflow-ui-en.png",
+      "target": "figures/ch01/ch01-08-guide-ui-en.png",
+      "sha256": "10574db7aca62b1a048e85c9aea436d5554ce1376ef81e77e24c992ddcfe7fbe"
+    }
+  ],
+  "notes": {
+    "ch01-01": "Workflow TikZ adapted from figures/workflow-{zh,en}.tex with updated labels and feedback loops; not a byte-identical copy."
+  }
+}

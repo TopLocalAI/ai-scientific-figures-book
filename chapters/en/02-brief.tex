@@ -1,163 +1,453 @@
-\chapter{Turn research content into a drawing brief}
+\chapter{Turning Research Content into a Figure Brief}
 
-\begin{BookNote}
-R, K, P, and I are abstract teaching symbols. They do not represent real molecules or a published mechanism. The included illustration is an actual Codex image-generation output, reviewed against these fictional requirements.
-\end{BookNote}
+Dr.\ Zhou, a postdoctoral researcher in materials science, is revising a paper on the cycling ageing of lithium-ion batteries. In her Discussion section she has drafted an eight-sentence paragraph summarising the main capacity-fade mechanisms in full cells that pair a layered lithium nickel manganese cobalt oxide cathode (LiNi$_x$Mn$_y$Co$_z$O$_2$, where $x+y+z=1$, hereafter NMC) with a graphite anode during long-term cycling, and proposing one hypothesis specific to the cells tested in her study. To help materials-science reviewers outside electrochemistry see at a glance what changes occur in both electrodes and what consequences follow, she plans to add a two-column schematic diagram (Figure 5) to the Discussion.
 
-Researchers can often explain a project to a colleague in a few minutes yet struggle to tell a drawing tool what to show. A conversation allows us to supply missing assumptions and rely on shared background. A drawing instruction must make those assumptions explicit.
+She opens an image generator and types what sounds like a complete request: ``Make a beautiful, professional scientific illustration of lithium-ion battery cathode degradation for a top journal.'' Seconds later, the tool returns a striking landscape graphic (shown later as Figure~\ref{fig:ch02-04}): against a dark blue-purple and orange-red gradient backdrop, a three-dimensional cut-away cathode sphere exposes a ball-and-stick crystal lattice, flanked by four glowing circular callouts and a long gradient arrow at the bottom running from ``Fresh'' to ``Degraded.''
 
-“Draw a pathway showing upstream activation, downstream effects, and an inhibitor” sounds like a task. But what is upstream? Which object is activated? Is the downstream effect observed or proposed? Where does the inhibitor act? Without answers, the generator must fill in structure.
+At first glance the rendering looks like a review-article cover. Yet when Dr.\ Zhou checks it sentence by sentence against her eight-sentence paragraph, it fails on four fronts: the canvas shows only the cathode particle, omitting the graphite anode and any before-and-after comparison of solid electrolyte interphase (SEI) thickening; the centre callout highlights transition-metal dissolution, a mechanism her text explicitly places outside the paper's scope; electrolyte oxidation and impedance rise are listed without distinguishing her hypothesis (that side reactions on freshly exposed crack surfaces contribute to the impedance rise) from mechanisms established in the literature; and the degraded particle on the right is drawn as a craggy, rock-like sphere where intergranular microcracks along primary grain boundaries cannot be verified.
 
-A drawing brief turns the author's knowledge into instructions that can be executed and checked.
+Researchers can often explain a project to a colleague in a few minutes yet struggle to tell a drawing tool what to show in a sentence or two. Conversation allows shared premises to be filled in on the fly; an image tool can act only on constraints stated in writing. A \textbf{figure brief} turns the author's knowledge of the research into an executable, checkable specification before drawing begins.
 
-\section{Give the brief and the prompt different jobs}
+\section{Brief versus prompt}
 
-The brief records what you intend to communicate and the basis for it. A prompt selects relevant parts of that brief for a particular operation. They may be nearly identical, or differ substantially across stages.
+Many first-time users of AI illustration tools try to write a single ``all-in-one prompt,'' packing scientific background, aspect ratio, palette, caption text, and layout rules into one input box. When the first result misses the mark, they edit that long prompt directly. After four or five rounds, the prompt has grown unwieldy and it is hard to tell which scientific relations were meant to be preserved.
 
-Initial generation needs objects, relationships, and layout. A color revision may need only a new color assignment and the elements that must remain unchanged. A legend requires the image and an explanation of its context. The brief keeps these local operations aligned with the same purpose.
+The remedy is to separate the \textbf{figure brief} from the \textbf{prompt}. The brief records what you want to communicate and on what evidence; it serves as the master specification across the entire lifecycle of the figure. A prompt is a slice taken from that brief for one specific operation. The two may look similar during initial generation, but their roles diverge across subsequent stages.
 
-There is no need to force every requirement into one universal prompt. Write the brief first, then select information for the current operation. If a revision changes the scientific content, update the brief as well, so that an old specification does not continue to drive a new image.
+\begin{figure}[htbp]\centering
+\input{figures/ch02/ch02-01-brief-vs-prompt-en.tex}
+\caption{Brief versus prompt. The brief records what the figure must say and on what evidence; each operation takes only the fields it needs. A colour-only change should also list what must stay the same. When the science changes, update the brief first.}\label{fig:ch02-01}
+\end{figure}
 
-\section{Build the brief around seven questions}
+Figure~\ref{fig:ch02-01} shows how one ten-field brief feeds three separate operations. To generate the initial base image (Prompt A), the tool needs to know which objects appear on the canvas, how they relate, what grid they follow, what visual style applies, and which distractors are forbidden; Prompt A therefore extracts \texttt{Objects}, \texttt{Relations}, \texttt{Layout}, \texttt{Visual style}, and \texttt{Constraints}, without feeding literature citations or caption drafts into an image model. To adjust the palette later (Prompt B), only the updated \texttt{Visual style} field is needed, paired with an explicit ``Keep unchanged: objects, relations, layout'' list so the generator does not alter particle counts or arrow directions while repainting colours. To draft the figure caption (Prompt C), the relevant slice shifts to \texttt{Sources}, \texttt{Relations (evidence status)}, and \texttt{Legend}, ensuring that the text states which claims come from literature, which one is the authors' hypothesis, and what simplifications were made.
 
-The companion template contains ten fields. These seven questions organize the thinking behind them.
+A standalone brief also guards against drift. During multi-round iteration, it is easy to be distracted by an appealing accidental detail and stray from the argument the figure was meant to support. Checking the \texttt{Goal} and \texttt{Acceptance} fields before each run keeps local edits aligned with the main message.
 
-\textbf{Who will read it, and where?} A specialist, an interdisciplinary reviewer, and a student may need different figures from the same study. Use also determines viewing size. “For colleagues familiar with the basic method, in the results section of a paper” is more informative than “journal style.”
+Equally important is the return loop at the bottom of Figure~\ref{fig:ch02-01}: whenever a revision changes the scientific content---for example, if a co-author points out that a mechanism lacks direct evidence and should be downgraded to a hypothesis, or if a secondary object is dropped---update the \texttt{Relations} and \texttt{Acceptance} fields in the brief first, then slice a new prompt from the revised brief.
 
-\textbf{What is the main question?} State the figure's central task in one sentence. If the sentence accumulates several separate aims, consider panels with distinct jobs.
+\section{Seven questions that make a brief}
 
-\textbf{Which materials support it?} Identify filenames, worksheets, records, or locations in references. The aim is to support important statements, not to maximize the volume of uploaded material. Avoid mixing incompatible result versions.
+The brief template used in this book contains ten fields: \texttt{Use \& readers}, \texttt{Goal}, \texttt{Sources}, \texttt{Objects}, \texttt{Relations}, \texttt{Layout}, \texttt{Visual style}, \texttt{Constraints}, \texttt{Legend}, and \texttt{Acceptance}. Rather than filling out boxes mechanically, you can organise them around seven questions. After each question below, we show how Dr.\ Zhou answers it for her NMC/graphite degradation schematic.
 
-\textbf{Which objects and relationships are required?} A list of objects is insufficient without correspondence, direction, grouping, or spatial placement. Two measurements from the same object constitute a relationship, just as an arrow does in a mechanism diagram.
+\textbf{First, who will read it, and where will it be used?} The same study may need different figures for narrow specialists, interdisciplinary referees, or classroom slides, and the venue sets both print dimensions and information density. ``Discussion section of a paper, for materials-science referees familiar with microstructural characterisation but outside battery electrochemistry'' is far more actionable than ``top-journal style.'' In the NMC case, this field reads: ``Discussion section Figure 5; two-column width 174 mm, height about 100 mm; readers include materials-science reviewers outside electrochemistry.'' That immediately settles two points: there is no need to draw a battery casing because materials scientists recognise electrode particle cross-sections, but ``loss of active material'' and ``loss of cyclable lithium'' must be spelled out in full rather than abbreviated as LAM and LLI. This fills the \texttt{Use \& readers} field.
 
-\textbf{What is observation, and what is interpretation?} Keep observations, inferences, and hypotheses distinct. State uncertainty in the brief, express it with labels or an agreed line style, and explain the convention in the legend. A tool should not decide an unsupported relationship.
+\textbf{Second, what central question does the figure answer?} State the figure's core task in one sentence. Following the rule to define the audience and central message before touching software (Rougier et al., 2014), this sentence should be specific enough to govern the figure type and comparison structure. If it chains together several aims with repeated ``and also'' clauses, split the figure into panels with distinct sub-questions. In the NMC case, the central task is: ``After viewing this figure, the reader should understand the three kinds of change in an NMC/graphite cell after cycling---cathode intergranular cracking, cathode surface reconstruction, and anode SEI thickening---and be able to locate their consequences (loss of active material, higher impedance, loss of cyclable lithium) as well as which pathway is the authors' hypothesis.'' This fills the \texttt{Goal} field.
 
-\textbf{How should it be presented?} Now choose chart type, reading direction, panels, color roles, and label language. Give constraints that help explain the content. Adjectives alone cannot specify a layout.
+\textbf{Third, what sources support it?} Record data filenames, worksheets, manuscript paragraph numbers, notebook pages, or literature references. Every substantive claim in the figure needs a traceable source, and incompatible batches must not be mixed. Because the NMC schematic contains no experimental data, its \texttt{Sources} field states: ``Based solely on sentences S1--S8 of the authors' Discussion paragraph and the four cited papers (Ryu et al., 2018; Jung et al., 2017; Vetter et al., 2005; Birkl et al., 2017).''
 
-\textbf{How will completion be recognized?} Write criteria such as correct object counts, one-to-one correspondence with the relationship table, preservation of every value, and readable text at final size. Connect review criteria to the source materials.
+\textbf{Fourth, which objects and relations must appear?} Listing nouns is not enough; specify correspondence, direction, grouping, and spatial placement. Two measurements on the same specimen in a data plot form a relation just as an arrow does in a mechanism schematic. In the NMC brief, \texttt{Objects} specifies a $2\times 2$ grid of four particle cross-sections (top row: pristine and cycled NMC secondary particles; bottom row: pristine and cycled graphite particles) and one ``Cycling'' process arrow between the columns; \texttt{Relations} itemises intergranular microcracks, electrolyte ingress, a detached fragment, the reconstructed surface rim, SEI thickening, and interlayer lithium depletion.
 
-Mark unresolved information as “to be confirmed.” It becomes a task for the author rather than an invitation for a polished draft to settle the matter.
+\textbf{Fifth, what is established fact, and what is interpretation?} Observations, literature consensus, and author hypotheses must keep their distinct identities. Record uncertainty in the brief, express it visually with labels or line styles, and explain the convention in the legend instead of letting the tool turn an unproven link into a solid arrow. In the NMC case, intergranular cracking, surface reconstruction, and anode SEI thickening are established in the literature (solid callout boxes), whereas ``side reactions on freshly exposed crack surfaces contribute to the impedance rise'' is the authors' hypothesis (marked in the overlay with a dashed box and a ``hypothesis'' tag).
 
-\section{Replace a noun list with a relationship table}
+\textbf{Sixth, how should it be presented, and what must be left out?} Once content and evidence status are fixed, specify aspect ratio, reading direction, whitespace, colour roles, and exclusions instead of vague adjectives. In \texttt{Layout}, the NMC brief sets a 16:9 landscape grid with pristine on the left, cycled on the right, the bottom $12\%$ empty for the legend, and margin around each particle for labels. In \texttt{Visual style}, it specifies flat 2D cross-sections on a white background with low-saturation blue-gray cathode grains, pale-blue electrolyte, a dark slate-blue reconstructed rim, medium-gray graphite layers, a pale-olive SEI shell, and small orange lithium dots. In \texttt{Constraints}, it forbids any text in the base bitmap and excludes cell casings, separators, lightning bolts, and out-of-scope transition-metal dissolution.
 
-Consider a deliberately fictional model with four symbols: R, K, P, and I. For this exercise, R activates K; K has a hypothetical influence on P; and I inhibits K. These are teaching assumptions, not biological claims.
+\textbf{Seventh, how will you know the figure is finished?} List checkable acceptance criteria such as object counts, arrow directions, preservation of raw values, and readable font sizes at final dimensions. In the NMC brief, \texttt{Acceptance} requires: four particles and one process arrow; pristine cathode free of cracks and dark rim; cycled cathode showing cracks only along grain boundaries and exactly one detached grain cluster; olive SEI only on graphite; and noticeably fewer interlayer lithium dots in cycled graphite. Mark any unresolved detail as ``to be confirmed'' (TBC) so that a polished draft does not silently make scientific decisions for you.
 
-“R, K, P, I; mechanism diagram; blue-green; simple” does not determine the connections. A relationship table does.
+Mapping these seven questions onto fixed headings produces the blank ten-field brief template:
+
+\begin{Prompt}
+[Use & readers] Target section or presentation venue; print width and height; reader background.
+[Goal] After viewing this figure, the reader should understand ________, and be able to locate ________ in the figure.
+[Sources] Data files and worksheets, manuscript paragraph numbers, lab records, or literature citations; whether experimental data are included.
+[Objects] Every object, state, or data group that must appear, together with its exact count.
+[Relations] Directional, comparative, or paired relations between objects, with the evidence status of each (established / hypothesis / to be confirmed).
+[Layout] Aspect ratio, row-and-column grid, reading direction, and whitespace reserved for labels and legend.
+[Visual style] 2D or 3D treatment, background colour, line weights, and assigned colour roles for each object class.
+[Constraints] Whether text is forbidden in the base image; objects, statistical summaries, or decorative effects that must NOT appear.
+[Legend] How solid vs. dashed lines, colours, or symbols are explained; simplifications and omissions to state in the caption.
+[Acceptance] 3 to 6 checkable verification criteria: object counts, control states, arrow directions, data point counts, and minimum font size.
+\end{Prompt}
+
+\section{From a list of nouns to a relation table: a minimal example}
+
+Before dissecting a real paper paragraph, let us look at a minimal abstract model with four objects and three relations to see how a noun list becomes a relation table. Let \texttt{R}, \texttt{K}, \texttt{P}, and \texttt{I} be four symbols. For this exercise, we stipulate that \texttt{R} activates \texttt{K}; \texttt{K} has a hypothesised influence on \texttt{P}; and \texttt{I} inhibits \texttt{K}. They do not represent real biological or chemical species.
+
+Typing ``R, K, P, I, mechanism diagram, blue-green, clean'' leaves the wiring and arrowheads entirely to chance. Rewriting the input as a five-column relation table makes the requirements checkable:
 
 \begin{center}\small
-\begin{tabularx}{\linewidth}{l l Y Y}
+\begin{tabularx}{\linewidth}{YYYYY}
 \toprule
-\textbf{From} & \textbf{To} & \textbf{Meaning in this model} & \textbf{Visual convention} \\
+\textbf{From} & \textbf{To} & \textbf{Meaning in this model} & \textbf{Visual expression} & \textbf{Acceptance check} \\
 \midrule
-R & K & Given activation & Solid arrow toward K \\
-K & P & Hypothetical influence & Dashed arrow toward P \\
-I & K & Given inhibition & Line ending in a T-bar at K \\
+R & K & Stipulated activation & Solid arrow from R to K & Arrow points R \ensuremath{\rightarrow} K \\
+K & P & Unverified influence & Dashed arrow from K to P & Clearly distinct from solid line \\
+I & K & Stipulated inhibition & Line ending in a flat T-bar at K & Not drawn as an activating arrowhead \\
 \bottomrule
 \end{tabularx}
 \end{center}
 
-\begin{figure}[htbp]\centering
-\includegraphics[width=\linewidth]{figures/mechanism-codex.png}
-\caption{An actual candidate from Codex's built-in image generation. A solid arrow, dashed arrow, and T-bar express the three stipulated relationships. All four symbols and relationships are fictional. This output was generated in Codex, not in SciDraw AI.}
-\label{fig:mechanism}
-\end{figure}
-
-Line styles and arrowheads have no universal meaning outside context. Their meaning depends on disciplinary convention, the definitions in the figure, and its legend. The conventions here distinguish three relationships. A real project should use forms its audience understands and add explicit labels where ambiguity remains.
-
-Review the result row by row: locate R and K and inspect the direction; check that the K-to-P connection remains dashed; then confirm that I's inhibitory endpoint is K. “Does this look right?” becomes a set of locatable questions.
-
-\section{Write an executable instruction for the mechanism}
-
-Select the mechanism-and-workflow route in the SciDraw AI guide, replace its default brief, and download a copy.
+In the \scidraw{} Figure Workflow Guide (\sdtool{figure-workflow}), select the ``Mechanism \& workflow'' route, replace the default brief with the specification below, and download a copy:
 
 \begin{Prompt}
-[Audience and use] Scientific-figure teaching; no biology background required.
-[Purpose] Distinguish given, hypothetical, and inhibitory relationships.
-[Source] Only the fictional model specified here.
-[Objects] R, K, P, I; each appears once.
-[Relationships]
-R activates K: a solid arrow from R to K.
-K may influence P: a dashed arrow from K to P.
-I inhibits K: a line ending with a perpendicular T-bar next to K.
-[Layout] R, K, P from left to right; I above K.
-[Visual language] White background; simple two-dimensional shapes; identify every object by its letter.
-[Constraints] Add no objects, relationships, molecular forms, or experimental results.
-[Legend] Explain the three line conventions and identify the fictional teaching model.
-[Review] Four objects and three relationships; check direction, endpoints, and labels.
+[Use & readers] Scientific figure pedagogy; no biology background required.
+[Goal] Enable the reader to distinguish a given activation, a hypothesised influence, and an inhibition.
+[Sources] Only the abstract teaching rules stipulated in this brief.
+[Objects] R, K, P, I; each symbol appears once.
+[Relations]
+R activates K: solid arrow from R to K, labelled "activation".
+K may influence P: dashed arrow from K to P, labelled "hypothesis".
+I inhibits K: line ending in a short perpendicular bar at K, labelled "inhibition".
+[Layout] R, K, P from left to right; I placed above K.
+[Visual style] White background, clean 2D shapes; objects identified by letter labels.
+[Constraints] Add no extra objects, relations, molecular forms, or experimental results.
+[Legend] Explain solid arrow, dashed arrow, and T-bar; state "abstract teaching model".
+[Acceptance] Four objects, three relations, with directions and labels matching row by row.
 \end{Prompt}
 
-This instruction provides concrete quality criteria: identifiable objects, accurate relationships, and a hypothesis that remains distinguishable from a given relationship. Color can be refined later; the relationships must hold first.
+\begin{figure}[htbp]\centering
+\includegraphics[width=\linewidth]{figures/ch02/ch02-02-abstract-mechanism.png}
+\caption{An abstract teaching model. The solid arrow is a given activation, the dashed arrow a hypothesised effect, and the T-bar an inhibition. All four symbols and relations are invented for teaching.}\label{fig:ch02-02}
+\end{figure}
 
-In the mechanism tool, place the instruction in the generation field. Review a candidate against the relationship table before requesting further changes. If an extra object appears, identify it and restate the requirement for exactly four objects, rather than asking only for a simpler design.
+Opening the Mechanism Figure Generator (\sdtool{mechanism-figure-generator}) or AI Drawing mode (\sdtool{ai-drawing}) produces a candidate diagram such as Figure~\ref{fig:ch02-02}. Rather than asking for ``top-journal polish,'' this input sets concrete quality criteria: identifiable objects, accurate polarity, and a hypothesis kept distinct from established links.
 
-For this edition, Codex's built-in image generator produced Figure~\ref{fig:mechanism}. The complete executed prompt and review are included in the repository. The four labels and three relationship types match the brief. Soft tonal variation remains inside the nodes, so this is a checked teaching candidate, not proof that every style constraint was followed exactly. It is not a SciDraw AI output.
+Three points are worth noting in Figure~\ref{fig:ch02-02}. First, line styles and arrowheads have no universal meaning outside context; their meaning is defined jointly by disciplinary convention, the figure's own rules, and its legend. Second, Figure~\ref{fig:ch02-02} includes the single letters \texttt{R}, \texttt{K}, \texttt{P}, and \texttt{I} directly in the base bitmap: isolated single characters are manageable in generated images, but multi-word terms and chemical formulas frequently suffer from garbled spelling or fused glyphs, so complex schematics should use a text-free base image with overlaid labels. Third, the circular nodes retain slight shading gradients, illustrating that generative outputs vary across runs and a single prompt does not automatically guarantee every stylistic detail.
 
-The executed generation prompt uses labels alone, with the explanatory words moved to the caption. This is an intentional layout choice recorded in the provenance. Outputs can vary between runs; an instruction does not guarantee that all requirements will be met automatically.
+To check Figure~\ref{fig:ch02-02} against the relation table, proceed row by row: locate \texttt{R} and \texttt{K} and inspect the solid arrow direction; confirm that the \texttt{K}-to-\texttt{P} connection is dashed; and verify that the T-bar from \texttt{I} lands on \texttt{K}. If an extra node appears, instruct the tool to delete the extra object and keep \texttt{R}, \texttt{K}, \texttt{P}, and \texttt{I} once each rather than asking for a ``simpler look.''
 
-\section{For a data plot, specify constraints by column}
+\section{From a paragraph to a relation table: capacity fade in an NMC cathode}
 
-A data brief must connect study design to table structure. Three columns in the first exercise already illustrate several possible ambiguities.
+Our warm-up had only three stipulated rules, whereas real manuscripts start from dense prose. Let us return to Dr.\ Zhou's materials-science case and read her eight-sentence Discussion paragraph (numbered \textbf{S1}--\textbf{S8} for tracking; this teaching passage was written for this book to synthesise review-level consensus and involves no experimental measurements):
 
-\texttt{sample\_id} identifies an object. \texttt{before} and \texttt{after} contain its two measurements. Eight rows represent eight fictional objects and sixteen observations. State object and measurement counts separately. In real research, also explain experimental units, repeated measurements, and technical replicates.
+\begin{BookNote}
+\textbf{S1} Secondary particles of a layered NMC cathode (LiNi$_x$Mn$_y$Co$_z$O$_2$) are agglomerates of many primary grains. \textbf{S2} During repeated cycling, the grains expand and contract anisotropically as lithium is extracted and reinserted; stress builds up at grain boundaries and opens intergranular microcracks inside the secondary particle (Ryu et al., 2018). \textbf{S3} The cracks let electrolyte penetrate the particle and expose fresh surface, and some fragments may lose contact with the conductive network, causing loss of active material. \textbf{S4} At high states of charge, the particle surface reconstructs from the layered structure toward a rock-salt-like phase with release of lattice oxygen; the resulting surface layer raises interfacial impedance (Jung et al., 2017). \textbf{S5} Meanwhile, the solid electrolyte interphase (SEI) on the graphite anode keeps thickening during cycling and consumes cyclable lithium, which is commonly one of the main contributors to capacity fade (Vetter et al., 2005; Birkl et al., 2017). \textbf{S6} We hypothesise that, in our cells, side reactions of the electrolyte on freshly exposed crack surfaces also contribute to the impedance rise. \textbf{S7} Transition-metal dissolution and deposition on the anode may also accelerate SEI growth, but is outside the scope of this paper. \textbf{S8} The cycling capacity curves are shown in Figure 4.
+\end{BookNote}
+
+The first step in turning this paragraph into a brief is to annotate S1 through S8 sentence by sentence: determine the \textbf{evidence status}, decide \textbf{whether to draw} the claim, and choose its \textbf{graphic expression}.
+
+Walking through the passage sentence by sentence: \textbf{S1} states the structural fact that a polycrystalline NMC secondary particle is an agglomerate of primary grains, which requires drawing a cross-section tiled with polygonal primary grains so the reader can see what ``intergranular cracking'' means. \textbf{S2} describes how anisotropic lattice expansion and contraction during cycling build up stress at grain boundaries and open intergranular microcracks (Ryu et al., 2018); this literature-established relation is drawn as microcracks running along grain boundaries in the cycled cathode particle. \textbf{S3} gives two direct consequences: electrolyte penetrates the cracks and wets fresh internal surfaces (pale-blue electrolyte filling the cracks), and some fragments lose electrical contact, causing loss of active material (one small grain cluster slightly separated at the right edge, labelled ``loss of active material'').
+
+Turning to the surface and anode: \textbf{S4} states that at high states of charge, the cathode surface reconstructs from a layered structure toward a rock-salt-like phase with lattice-oxygen release, raising interfacial impedance (Jung et al., 2017); this established relation is shown as a thin dark outer rim on the cycled cathode particle with a solid-box label ``Reconstructed surface layer \ensuremath{\rightarrow} higher impedance.'' \textbf{S5} notes that the SEI on the graphite anode thickens during cycling and consumes cyclable lithium, commonly one of the main contributors to capacity fade (Vetter et al., 2005; Birkl et al., 2017; on SEI evolution and degradation diagnostics, see also Peled \& Menkin, 2017; Edge et al., 2021). This requires a bottom row comparing pristine and cycled graphite: the pale-olive SEI shell thickens, orange lithium dots between the graphite layers drop noticeably, and some lithium dots become embedded in the SEI shell.
+
+The last three sentences reflect the author's scientific judgement. \textbf{S6}---that side reactions of the electrolyte on freshly exposed crack surfaces also contribute to the impedance rise---is the authors' hypothesis. It points to the same outcome as S4 (higher impedance) but has a different evidence status, so the overlay uses a dashed box and ``hypothesis'' tag pointing from the cracks. \textbf{S7} mentions transition-metal dissolution and anode deposition; although established in the literature, it is explicitly ``outside the scope of this paper,'' so the decision is \textbf{Do not draw}, with a note in the caption (``not shown: transition-metal dissolution and deposition''). \textbf{S8} refers to quantitative cycling curves in Figure 4, so our schematic omits all curves, axes, and numbers.
+
+\begin{figure}[htbp]\centering
+\input{figures/ch02/ch02-03-paragraph-to-table-en.tex}
+\caption{From a discussion paragraph to a relation table. Each sentence is first given an evidence status, then a drawing decision: established relations get solid styling, the authors' hypothesis gets a dashed box, and content outside the figure's scope (S7) or belonging to a data figure (S8) is left out and handled in the legend or another figure. The paragraph was written for this book.}\label{fig:ch02-03}
+\end{figure}
+
+Figure~\ref{fig:ch02-03} shows the complete mapping from S1--S8 to the relation table. The \texttt{Draw?} column is pivotal: a brief does not illustrate every sentence indiscriminately, but records the author's decisions on what to draw, how to distinguish evidence status, and what to leave to the caption or other figures.
+
+Dissecting domain mechanisms also requires following a strict rule: \textbf{simplifications must be stated explicitly}. Real electrode evolution involves details that a clean 2D schematic simplifies: first, while intergranular microcracks are the main cracking mode in polycrystalline secondary particles (S2), intragranular cracks are also reported in Ni-rich cathodes under deep cycling---this figure shows only intergranular cracks, so the text must not claim cracks run \emph{only} along grain boundaries, and the caption states ``Simplified: only intergranular cracks are shown and particles are not to scale''; second, the onset of surface reconstruction and oxygen release (S4) depends on Ni content and upper cutoff potential (Jung et al., 2017 compared onset potentials across NMC compositions), so writing ``at high states of charge'' keeps the statement conservative; third, although SEI thickening (S5) is widespread, the dominant fade mode varies across cell systems and operating conditions (Birkl et al., 2017), so we write ``commonly one of the main contributors'' rather than making an absolute claim.
+
+Consolidating the items marked ``Yes'' gives the nine-row relation table (R1--R9) used in the brief:
+
+\begin{center}\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\linewidth}{@{}l>{\raggedright\arraybackslash}p{24mm}>{\raggedright\arraybackslash}p{16mm}>{\raggedright\arraybackslash}p{16mm}YY@{}}
+\toprule
+\textbf{\#} & \textbf{From \ensuremath{\rightarrow} To / Result} & \textbf{Location} & \textbf{Status} & \textbf{Visual expression} & \textbf{Acceptance check} \\
+\midrule
+R1 & Pristine \ensuremath{\rightarrow} After cycling & Between columns & Process & 1 wide hollow arrow, left \ensuremath{\rightarrow} right & Only 1 arrow in image; paired particles match in size \\
+R2 & Anisotropic lattice change \ensuremath{\rightarrow} intergranular cracks & Inside cathode & Established & 6--10 thin cracks along grain boundaries after cycling & Cracks follow grain boundaries, none cuts through a grain; pristine has no cracks \\
+R3 & Cracks \ensuremath{\rightarrow} electrolyte ingress & Inside cracks & Established & Pale-blue fill inside crack network & No pale blue inside pristine cathode \\
+R4 & Cracks \ensuremath{\rightarrow} detached fragment (LAM) & Cathode right edge & Established & 1 small cluster of 3--5 grains slightly separated by a narrow gap & Exactly 1 detached cluster, not multi-site shattering \\
+R5 & High state of charge \ensuremath{\rightarrow} reconstructed surface layer & Cathode outer rim & Established & Thin dark slate-blue rim around outer surface & Dark rim appears only on cycled cathode outer surface \\
+R6 & Reconstructed surface layer \ensuremath{\rightarrow} higher impedance & Overlay & Established & Solid-box label pointing to outer dark rim & Solid box anchored to outer rim \\
+R7 & Cycling \ensuremath{\rightarrow} SEI thickening & Graphite surface & Established & Pristine: thin even olive shell; cycled: thicker uneven shell & Olive SEI appears only on graphite, never on cathode \\
+R8 & SEI thickening \ensuremath{\rightarrow} loss of cyclable lithium (LLI) & Graphite layers \& SEI & Established & Pristine: ~20 orange dots between layers; cycled: ~8 between layers, ~6 in SEI & Cycled interlayer dots clearly fewer than pristine; dots present in SEI \\
+R9 & Crack-surface side reactions \ensuremath{\rightarrow} higher impedance & Overlay & \textbf{Hypothesis} & Dashed box + ``hypothesis'' tag + leader line & Clearly distinct from R6 solid box; legend explains dashed box \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+We also list what is explicitly omitted: transition-metal dissolution and deposition, lithium plating, conductive carbon and binder, current collectors, gas evolution, separator, cell casing, and any data. In the \scidraw{} Figure Workflow Guide (\sdtool{figure-workflow}), Dr.\ Zhou selects the ``Mechanism \& workflow'' route, replaces the default brief with the specification below, downloads a copy, and generates candidates via the Mechanism Figure Generator (\sdtool{mechanism-figure-generator}) or AI Drawing (\sdtool{ai-drawing}). Key fields of the brief are shown below (full prompts are archived in the book repository):
+
+\begin{Prompt}
+[Use & readers] Discussion Figure 5 (two-column width 174 mm x 100 mm); materials-science reviewers outside electrochemistry.
+[Goal] Show cathode intergranular cracking, cathode surface reconstruction, and anode SEI thickening with their consequences, distinguishing established mechanisms from the authors' hypothesis.
+[Sources] Discussion paragraph S1-S8 and four references (Ryu 2018; Jung 2017; Vetter 2005; Birkl 2017); no experimental data.
+[Objects] 2 x 2 grid: top row pristine/cycled NMC secondary particle; bottom row pristine/cycled graphite anode particle; 1 process arrow between columns.
+[Relations] See table R1-R9; R9 (side reactions on new crack surfaces -> higher impedance) is the authors' hypothesis; R2-R8 are established in literature.
+[Layout] Landscape 16:9; left column pristine, right column cycled; bottom 12% empty for legend; whitespace around each particle for labels.
+[Visual style] White background, flat 2D cross-sections, no gradients or 3D; blue-gray cathode grains, pale-blue electrolyte, dark slate-blue rim, medium-gray graphite, pale-olive SEI, small orange lithium dots.
+[Constraints] No text or symbols in the base image; exclude cell casings, separators, current collectors, transition-metal dissolution, dendrites, and data curves.
+[Legend] Added in overlay: solid box = established in literature; dashed box = authors' hypothesis; caption states simplifications and omitted processes.
+[Acceptance] Four particles and one arrow; pristine cathode has no cracks or dark rim; cycled cracks follow grain boundaries with 1 detached cluster; SEI only on graphite.
+\end{Prompt}
+
+\section{Two inputs, same topic}
+
+To test what the brief changes in practice, we compare two inputs on the same topic. The first is the opening one-sentence vague prompt (V1):
+
+\begin{Prompt}
+Make a beautiful, professional scientific illustration of lithium-ion battery cathode degradation for a top journal. Landscape 16:9.
+\end{Prompt}
+
+\begin{figure}[htbp]\centering
+\begin{tikzpicture}
+  \node[anchor=south west, inner sep=0] (img) at (0,0)
+    {\includegraphics[width=\linewidth]{figures/ch02/ch02-04-nmc-vague.png}};
+  \begin{scope}[x={(img.south east)}, y={(img.north west)},
+    marknode/.style={circle, draw=red!80!black, line width=0.9pt, fill=white,
+      fill opacity=0.92, text opacity=1, inner sep=1.2pt,
+      font=\sffamily\bfseries\scriptsize, text=red!80!black}]
+    \node[marknode] at (0.33, 0.75) {1};
+    \node[marknode] at (0.58, 0.62) {2};
+    \node[marknode] at (0.58, 0.85) {3};
+    \node[marknode] at (0.88, 0.45) {4};
+    \node[marknode] at (0.25, 0.12) {5};
+  \end{scope}
+\end{tikzpicture}
+\caption{The result of a one-sentence request. Although polished and showing before-and-after stages with several legible mechanisms, the image cannot be verified against the paragraph: (1) locally overlapping, broken label text above the middle particle; (2) inclusion of transition-metal dissolution, explicitly excluded in S7; (3) no distinction between the authors' hypothesis (S6) and literature-established mechanisms; (4) 3D rocky surface texture and multiple flying fragments that obscure primary grain boundaries and prevent checking intergranular cracks or a single detached cluster; (5) cathode only, omitting the graphite anode and before-and-after SEI comparison (S5). The problem is not aesthetics; the input supplied no objects, relations, evidence status, or comparison.}\label{fig:ch02-04}
+\end{figure}
+
+Figure~\ref{fig:ch02-04} shows the actual output of that prompt. In fairness, the image is not worthless: it depicts a progression from ``Pristine cathode (Fresh)'' through ``During cycling'' to ``Degraded cathode (Degraded),'' includes a layered ball-and-stick/polyhedral crystal structure and four zoom-in callout circles, and contains readable English phrases such as ``Loss of active material and impedance rise.'' Thus one cannot claim that it lacks stages or states no consequences. Yet when checked against S1--S8 and our relation table, five concrete failures marked (1)--(5) prevent it from passing scientific review:
+
+\begin{itemize}
+\item \textbf{(1) Locally garbled, overlapping English label:} While most terms and formulas in the image are legible, the electrolyte label near ``CEI'' above the middle particle has overlapping, broken glyphs. Because the text is fused into a 3D shaded bitmap, it cannot be edited separately.
+\item \textbf{(2) Scope violation---drawing an excluded mechanism:} The second callout circle prominently adds ``2. Transition metal dissolution'' (showing Ni, Co, and Mn dissolving and migrating toward the anode), directly violating S7 and the brief's exclusion rule.
+\item \textbf{(3) Unseparated evidence status:} Callout 1 lists oxidised electrolyte, inorganic-rich CEI, and impedance rise, while callout 3 lists layered-to-spinel/rock-salt phase transformation. All items share the same bulleted style, neither placing the authors' hypothesis (S6) in a dashed box nor distinguishing it from established mechanisms (S4).
+\item \textbf{(4) 3D surface texture obscures grain boundaries and quantitative constraints:} The degraded sphere on the right is drawn as a fissured, rock-like 3D surface with multiple floating shards, and callout 4 lists both intragranular and intergranular fracture. This 3D rendering hides the polygonal primary grain boundaries (S1), making it impossible to verify whether 6--10 cracks run only along grain boundaries (R2) or to locate a single slightly detached cluster of 3--5 grains at the right edge (R4).
+\item \textbf{(5) Missing graphite anode and before-and-after SEI comparison:} The canvas shows only the cathode and omits the graphite anode panels altogether, leaving no way to check SEI thickening or interlayer lithium loss (S5, R7, R8). Note that ``CEI'' above the middle particle stands for cathode electrolyte interphase and must not be mistaken for a misplaced anode SEI.
+\end{itemize}
+
+Now consider the second input. Slicing \texttt{Objects}, \texttt{Relations}, \texttt{Layout}, \texttt{Visual style}, and \texttt{Constraints} from our brief in Section 2.4 yields a structured English prompt (V2; key sections below, full prompt in the book repository):
+
+\begin{Prompt}
+Flat 2D scientific schematic, landscape 16:9, pure white background. Clean
+flat fills, thin dark-gray outlines, no gradients, no 3D, no shadows.
+ABSOLUTELY NO TEXT, letters, numbers, formulas, or labels.
+
+LAYOUT: 2 x 2 grid of four cross-sections (Left = pristine, Right = cycled;
+Top = cathode, Bottom = graphite anode), separated by one hollow right arrow.
+Leave bottom 12% empty for legend and generous whitespace around particles.
+
+TOP LEFT (pristine cathode): round cross-section of 30-40 tightly packed
+polygonal blue-gray primary grains; no cracks, no dark rim, no blue inside.
+TOP RIGHT (cycled cathode, same size): 6-10 thin cracks ONLY along grain
+boundaries filled with pale blue; thin dark slate-blue outer rim; at right
+edge, exactly one small group of 3-5 grains slightly separated by a narrow gap.
+
+BOTTOM LEFT (pristine graphite): parallel medium-gray layers with a thin even
+pale olive shell (SEI) and ~20 small orange dots between layers.
+BOTTOM RIGHT (cycled graphite, same size): thicker uneven olive shell; only ~8
+orange dots remain between layers and ~6 orange dots embedded in the olive shell.
+
+STRICTLY EXCLUDE: cell casings, separators, lightning, metal ions, charts, axes.
+\end{Prompt}
+
+This structured prompt proceeds from global flat style and a no-text rule, to the $2\times 2$ comparison grid and whitespace margins, to the geometry and count changes of all four particles, and finally to exclusions and six colour roles. Stripping text from the bitmap and locking down left-versus-right contrasts turns every relation into a checkable visual feature.
+
+\begin{figure}[htbp]\centering
+\begin{tikzpicture}
+  \node[anchor=south west, inner sep=0] (img) at (0,0)
+    {\includegraphics[width=\linewidth]{figures/ch02/ch02-05-nmc-brief-v2.png}};
+  \begin{scope}[x={(img.south east)}, y={(img.north west)},
+    rnode/.style={rounded corners=2pt, draw=BookInk!75, line width=0.5pt,
+      fill=white, fill opacity=0.9, text opacity=1, inner sep=1.5pt,
+      font=\sffamily\bfseries\scriptsize, text=BookInk},
+    errnode/.style={regular polygon, regular polygon sides=3,
+      draw=red!80!black, line width=0.7pt, fill=white, fill opacity=0.92,
+      text opacity=1, inner sep=0.6pt, font=\sffamily\bfseries\tiny,
+      text=red!80!black}]
+    \node[rnode] at (0.50, 0.57) {R1};
+    \node[rnode] at (0.70, 0.80) {R2};
+    \node[rnode] at (0.78, 0.63) {R3};
+    \node[rnode] at (0.90, 0.81) {R4};
+    \node[rnode] at (0.61, 0.88) {R5};
+    \node[rnode] at (0.85, 0.90) {R6};
+    \node[rnode] at (0.62, 0.43) {R7};
+    \node[rnode] at (0.74, 0.28) {R8};
+    \node[errnode] at (0.93, 0.35) {!};
+    \node[errnode] at (0.18, 0.31) {!};
+    \node[errnode] at (0.26, 0.95) {!};
+  \end{scope}
+\end{tikzpicture}
+\caption{The draft V2 from a brief-driven prompt. The four particles, the process arrow, and most relations can be located row by row in the relation table (grey numbers R1--R8, with R6 marking the reconstructed surface rim anchor); red triangles (!) mark items that still need revision: the cycled graphite particle at the bottom right has a noticeably larger outer contour (including its shell) and 8 orange dots inside the SEI shell, the bottom-left graphite layers show white highlight streaks, and the top cathode particles are oversized with more than 40 primary grains.}\label{fig:ch02-05}
+\end{figure}
+
+Figure~\ref{fig:ch02-05} is the resulting draft V2. Auditing it row by row against R1--R8:
+
+\begin{itemize}
+\item \textbf{Relations passing visual inspection in the base image (R2, R3, R4, R5, R7):} The top-right cycled cathode shows about 8 outward-radiating crack branches along polygonal grain boundaries (forming a connected network) with no crack cutting through a grain interior, while the top-left pristine cathode has no cracks (R2); cracks are filled with pale-blue electrolyte and the pristine cathode has no internal pale blue (R3); the right edge has a single detached cluster of about 5 grains separated by a narrow pale-blue gap (R4); a thin dark slate-blue rim covers only the outer surface of the cycled cathode, providing a clean anchor for the R6 solid box in the overlay (R5); and a pale-olive SEI shell surrounds only the two bottom graphite particles, thin and even when pristine, visibly thicker and slightly uneven after cycling (R7). No text and no excluded objects appear anywhere.
+\item \textbf{Partial passes and specific deviations (R1, R8, and style details, red triangles):} First, under R1, all four particles and the single hollow right arrow are present and the two cathodes have similar diameters, but the bottom-right cycled graphite (including its shell) has a noticeably larger outer contour than the bottom-left pristine graphite. Second, counting the orange dots for R8 at high magnification gives 22 between layers in the pristine graphite, and 7 between layers plus 8 inside the SEI shell in the cycled graphite---capturing the right directional trend (interlayer lithium depletion and trapping in the SEI) but deviating from the requested ~20 / 8 / 6 (especially 8 in the shell rather than ~6). Third, the graphite layers contain irregular white highlights and shading, and the cathode particles are oversized (crowding the top margin), contain more than 40 visible grains, and differ in left-to-right grain tessellation.
+\end{itemize}
+
+Comparing Figure~\ref{fig:ch02-04} and Figure~\ref{fig:ch02-05} shows that the difference lies not in ``prompt-writing tricks,'' but in whether the input specifies objects, relations, evidence status, and spatial layout.
+
+\section{Check, revise, finalise}
+
+Starting from the row-by-row audit of Figure~\ref{fig:ch02-05}, we move to revision and finalisation. Because generative image edits can perturb the entire canvas, V3 keeps the full V2 prompt intact and appends a \texttt{CORRECTIONS} block at the end.
+
+A key practical rule applies here: \textbf{write correction instructions only for defects that actually appeared}. Many authors habitually repeat every possible warning during revision (such as re-stating rules against transgranular cracks or olive shells on the cathode); however, because V2 already passed on crack paths, electrolyte fill, single detached cluster, surface rim, and SEI placement, V3 appends only the two corrections addressing V2's actual deviations (particle size consistency and orange dot counts):
+
+\begin{Prompt}
+[Keep the full V2 prompt above unchanged, then append:]
+
+CORRECTIONS compared with the previous version (apply all, change nothing else):
+- Both cathode particles have the same diameter; both graphite particles have
+  the same size.
+- Pristine graphite: about 20 orange dots between layers. Cycled graphite: about
+  8 orange dots between layers and about 6 inside the olive shell.
+\end{Prompt}
+
+We ran this identical V3 prompt three times to produce three candidate base images. Comparing the three runs demonstrates why every revision requires re-checking the entire relation table:
+
+\begin{itemize}
+\item \textbf{Run 1 (rejected):} White highlights on the graphite layers dropped markedly, and orange dots measured 20 (pristine interlayer), 7 (cycled interlayer), and 8 (inside the SEI); however, the detached grain cluster on the right edge of the cycled cathode contained about 6 visible grains, exceeding the brief's limit of 3--5 grains.
+\item \textbf{Run 2 (eliminated for a scientific error):} Orange dots measured 21 (pristine interlayer), 8 (cycled interlayer), and 6 (inside the SEI)---nearly an exact match to 20 / 8 / 6---and the detached cluster had a compliant 4 grains. Yet inspecting the top-left \textbf{pristine cathode particle} at 200\% zoom revealed pale-blue intergranular cracks inside the uncycled control! Accurate dot counts cannot offset the scientific error of drawing electrolyte-filled cracks inside the pristine reference particle.
+\item \textbf{Run 3 (selected as the final base image):} The top-left pristine cathode has no cracks and no pale blue; the top-right cycled cathode shows about 7 main intergranular crack branches filled with pale blue, a dark slate-blue outer rim, and a single detached cluster of 4 grains at the right edge; white highlights on the bottom graphite layers are reduced, and the olive SEI shell appears only on graphite and thickens after cycling; orange dots measure 22 (pristine interlayer), 8 (cycled interlayer), and 7 (inside the SEI)---matching the target of 8 interlayer dots after cycling and coming closer to ~6 in the SEI than V2 or Run 1.
+\end{itemize}
+
+We also record the minor deviations that remain in Run 3: visible primary grain count still exceeds 40, cathode particle diameter remains somewhat large (leaving tight margins at the top and right), and left/right grain tessellations and graphite outer dimensions are not strictly identical. In a mechanism schematic, however, orange dots and polygonal grains are schematic symbols of directional change rather than empirical counts; stating ``orange dots are schematic, not counts'' and ``particles are not to scale'' in the caption allows this base image to move safely to the vector overlay stage.
+
+\begin{figure}[htbp]\centering
+\makebox[\linewidth][c]{\input{figures/ch02/ch02-06-nmc-final-en.tex}}
+\caption{\textbf{Three kinds of change during cycling of an NMC/graphite cell (schematic).} Top: after cycling, the NMC secondary particle cracks along grain boundaries, electrolyte enters the cracks and a fragment loses contact with the particle (loss of active material); a reconstructed surface layer raises interfacial impedance. Bottom: the SEI on graphite thickens and consumes cyclable lithium (orange dots are schematic, not counts). Solid boxes mark relations established in the literature (Ryu et al. 2018; Jung et al. 2017; Vetter et al. 2005; Birkl et al. 2017); the dashed box marks the authors' hypothesis. Simplified: only intergranular cracks are shown and particles are not to scale; transition-metal dissolution and deposition, lithium plating and changes in binder or conductive carbon are omitted. The base image was generated with an image model and labels were added by the authors (prompts and generation logs for the example figures in this chapter are available in the book repository).}\label{fig:ch02-06}
+\end{figure}
+
+Superimposing vector labels, leader lines, and the legend onto the text-free base image in a vector tool or LaTeX TikZ yields the final Figure~\ref{fig:ch02-06}. Bold column headers (``Pristine'' and ``After cycling'') sit at the top, row headers (``NMC secondary particle'' and ``Graphite anode'') sit on the left, and ``Cycling'' sits above the central arrow. The three literature-established consequences---``Reconstructed surface layer \ensuremath{\rightarrow} higher impedance,'' ``Detached fragment \ensuremath{\rightarrow} loss of active material,'' and ``Thicker SEI \ensuremath{\rightarrow} loss of cyclable lithium''---are placed in solid boxes, while ``Side reactions on new crack surfaces \ensuremath{\rightarrow} higher impedance (hypothesis)'' is placed in the single dashed box on the canvas, explained by the bottom legend.
+
+Final verification and archiving before sign-off cover three points:
+\begin{itemize}
+\item \textbf{Relation table and exclusions check:} All nine relations R1--R9 are locatable in the figure; omitted items (transition-metal dissolution and cycling curves) are absent from the graphic and declared in the caption alongside the simplifications.
+\item \textbf{Legend, terminology, and font-size check:} The solid- versus dashed-box legend matches the relation table; label wording (``intergranular cracks,'' ``reconstructed surface layer,'' ``SEI,'' ``cyclable lithium'') matches the manuscript text; and overlay type is \texttt{7 pt} with a \texttt{\textbackslash scriptsize} legend, keeping all text $\ge 6\text{ pt}$ at a two-column width of $174\text{ mm}$ (nudging label positions if oversized base particles crowd the margins).
+\item \textbf{Domain review and brief archiving:} Chemical and electrochemical phrasing (such as high-state-of-charge reconstruction conditions and SEI fade contribution) is confirmed by a materials/electrochemistry co-author, and the brief is archived across versions v1 (initial draft) \ensuremath{\rightarrow} v2 (adding the ``Draw?'' column and dashed-box rule) \ensuremath{\rightarrow} v3 (adding the two correction lines and three-run selection record).
+\end{itemize}
+
+\section{Constraints for data figures, down to the column}
+
+Comparing the NMC mechanism schematic with the paired data plot from Chapter 1 highlights the core difference between the two kinds of brief: \textbf{constraints for a mechanism schematic fall on objects and relations, whereas constraints for a data figure must be specified down to columns and rows}---which column is the pairing key, what units apply, which raw observations must not be altered, and which statistical tests are not performed.
+
+The simulated teaching dataset from Chapter 1 (\texttt{paired-example.csv}) has only three columns, yet it shows how a data brief eliminates field ambiguity. Here \texttt{sample\_id} identifies eight fictional units (\texttt{SIM01} to \texttt{SIM08}), while \texttt{before} and \texttt{after} record measurements at two time points in arbitrary units (\texttt{a.u.}). Eight rows correspond to eight independent units and sixteen raw observations. In real research, the brief must also state whether each row represents an independent experimental unit (such as separate cells or subjects) or technical replicates of a single system.
+
+Below is the executable specification for \scidraw{} Scientific Visualization (\sdtool{sci-vis}) or a plotting script:
 
 \begin{Prompt}
 Read the uploaded paired-example.csv.
-sample_id is the pairing key. before and after are two measurements in a.u.
-Create a paired point-and-line plot, with before then after on the x-axis.
-Connect the two observations belonging to each object.
-Keep all eight objects and the sixteen original values.
-Do not treat the columns as independent samples or connect different objects.
+sample_id is the pairing key; before and after are two measurements in a.u.
+Plot a paired point-and-line chart: place before and after on the x-axis, and
+connect the two points belonging to each sample_id with a straight line.
+Retain all eight objects and all sixteen original observations.
+Do not treat the two columns as independent samples or connect different objects.
 Title: "Simulated teaching data: individual changes".
-Show the measurements without significance tests or error bars.
-Do not remove SIM04 or change its decrease into an increase.
+Show raw measurements only: run no significance tests and add no error bars.
+Do not drop SIM04 or flip its downward trajectory into an increase.
 \end{Prompt}
 
-The final line is a check against the file: SIM04 really does decrease from 18 to 17 in this exercise. It does not prescribe a desired finding for real research. Define checks from your actual data, rather than forcing the figure to match an expected conclusion.
+\begin{figure}[htbp]\centering
+\includegraphics[width=\linewidth]{figures/ch02/ch02-07-paired-comparison-en.pdf}
+\caption{Two views of the same simulated data. Left: only the two means. Right: the pairing of all eight fictional objects is kept, including SIM04, which falls from 18 to 17. The script plots the raw CSV directly; no observations were generated or altered and no significance test was run.}\label{fig:ch02-07}
+\end{figure}
 
-“No error bars” is also specific to this exercise. When a different plot needs them, define whether they represent standard deviation, standard error, a confidence interval, or another quantity, and identify how it is calculated. “Add standard error bars” cannot be used as a vague synonym for any uncertainty interval.
+Figure~\ref{fig:ch02-07} shows the result plotted directly from the raw CSV. Panel A on the left shows only the two arithmetic means ($13.125$ and $16.500$), hiding both the paired design and individual spread; Panel B on the right retains the paired lines for all eight units, making the downward trajectory of \texttt{SIM04} from 18 to 17 clearly visible (Weissgerber et al., 2015). The final line ``Do not drop SIM04'' is not a demand that real experiments must show a decrease, but an integrity checkpoint built from a known fact in the raw table; real projects should set checkpoints from their own data tables rather than forcing a desired conclusion. Similarly, ``add no error bars'' applies only to this exercise; when another plot requires error bars, the brief must state whether they represent standard deviation, standard error, or a confidence interval.
 
-\section{When using a PDF helper, establish what was read}
+This column-level principle applies equally to Dr.\ Zhou's battery study. If she writes a brief for the ``Figure 4 cycling capacity curves'' mentioned in S8, she cannot merely write ``plot capacity fade curves''; she must specify the columns for cell ID, cycle number, C-rate, and temperature, and state whether the y-axis plots specific discharge capacity ($\text{mAh\,g}^{-1}$) or capacity retention ($\%$)---supplying exact column definitions without letting any tool invent observations.
 
-A paper's information is distributed across its abstract, body, figures, methods, and supplementary materials. How text is extracted affects the content available to a visual-prompt helper.
+\section{Know what the PDF assistant actually read}
 
-The SciDraw AI PDF helper examined for this edition reads up to the first five pages and uses a limited extract from the abstract or beginning of the document. It can assist with a research overview, but this does not establish that the entire paper, every figure, and the supplements have been interpreted.
+Information in a manuscript is distributed across the abstract, introduction, methods, results figures, discussion, and supplementary materials. When you upload a PDF, what text the system actually extracts determines what the drafted prompt will include and what it will miss.
 
-Before using it, prepare author-confirmed points: the research question, main method, result to show, and relevant conditions. Compare the helper's prompt with that list, restore omitted information, and only then proceed to drawing. A key result appearing later in a paper may be absent from an input limited to its opening pages.
+Currently, the PDF assistant in \scidraw{} \textbf{reads only the first five pages of a document and extracts a limited passage from the abstract or opening text} to draft a visual prompt. It is useful for drafting a quick study overview or graphical abstract, but you must not assume that the entire paper, later figures, and supplementary files have been read and understood.
 
-Record the input scope in the brief. For example: “Author-prepared abstract and result notes; PDF assistance used for drafting; key statements checked against the original.” This is more accurate than “automatically generated from the full paper” and makes future reconstruction easier.
+Dr.\ Zhou's main case makes this limit clear: in a typical manuscript, the first five pages contain only the title, abstract, introduction, and part of the methods, whereas the Discussion paragraph S1--S8 sits on pages 8--10. Relying on automatic PDF extraction alone means the assistant never sees S1--S8 on page 9---its drafted prompt cannot know that S6 is an author hypothesis needing a dashed box, or that S7 (transition-metal dissolution) was excluded from the figure.
 
-\section{Turn vague feedback into reviewable requests}
+Before using this entry point, prepare an author-confirmed list of key points or a relation table: the research question, core objects and relations, which link is a hypothesis, and what not to draw. Compare the PDF assistant's draft prompt against your relation table, restore omitted conclusions and constraints from later pages, and only then generate the figure. Meanwhile, record the reading scope in the \texttt{Sources} field of the brief---for example: ``Initial draft used the PDF assistant on the first five pages; specific relations and evidence status from Discussion paragraph S1--S8 on page 9 were supplemented and verified by the authors against the original text.''
 
-Repeated generation can become a search for a more appealing image without a clear purpose. Give each operation a defined job.
+\section{Turn vague feedback into checkable requests}
+
+Much repeated generation lacks a clear direction, merely hoping for a more appealing picture by chance. Rewriting subjective reactions into concrete requests tied to objects, positions, counts, or line styles gives each revision a verifiable task:
 
 \begin{center}\small
-\begin{tabularx}{\linewidth}{p{0.25\linewidth}Y}
+\begin{tabularx}{\linewidth}{YY}
 \toprule
-\textbf{Vague feedback} & \textbf{A more concrete request} \\
+\textbf{Vague feedback} & \textbf{Checkable revision request} \\
 \midrule
-More professional & Align R, K, and P horizontally; use one label size; retain all objects and relationships. \\
-Emphasize the result & Make the two measurements directly comparable while retaining individual lines and all observations. \\
-Simplify it & Remove decorative backgrounds and repeated explanation; retain four objects, three relationships, and the legend. \\
-Journal style & Use a white background and less decoration; apply the agreed text hierarchy and color roles. \\
-Complete the legend & Draft what can be identified from the image; the author supplies sample sizes, conditions, and statistical methods. \\
+Make it look more like a real battery & Keep flat 2D particle cross-sections; do not draw cylindrical or pouch cell casings, jelly rolls, separators, or current collectors \\
+Highlight the cracks & Draw 6--10 thin cracks of uniform width along primary grain boundaries inside the cycled cathode, filled with pale blue; no crack may cut across a grain \\
+Make it more professional & Align R, K, and P horizontally; unify label font size; retain all four objects and three relations \\
+Emphasise the result & Place before and after on the x-axis for direct comparison; retain individual pairing lines and all sixteen raw observations, and label SIM04 \\
+Simplify it a bit & Remove decorative backgrounds, white highlights on graphite, and out-of-scope transition-metal dissolution; keep four particles, one arrow, and the legend \\
+Use journal style & Use flat 2D fills on a white background without 3D shadows or glow; apply the agreed text hierarchy and six colour roles \\
+Auto-complete the caption & Draft descriptions of objects directly visible in the image; sample sizes, conditions, statistical methods, and simplification notes are supplied by the author \\
 \bottomrule
 \end{tabularx}
 \end{center}
 
-These requests do not guarantee error-free execution. They make execution assessable. Image edits can affect the whole image, so even a request to change one label should be followed by another check of objects and relationships.
+Specific phrasing does not guarantee that a generative model will never err on the next run (as V3 Run 2 showed when it added cracks to the pristine cathode while fixing dot counts), but it allows you to judge immediately whether the request was executed and locate what needs redoing. Because image edits can affect the whole canvas, always attach a ``Keep unchanged'' object list even to a single-detail edit, and re-verify the entire relation table afterwards.
 
-\section{Read the brief as if the research were unfamiliar}
+\section{Read your brief backwards before submitting}
 
-Temporarily set aside the background in your head and look for missing information in the text.
+Before turning a brief into a prompt and submitting it, do a \textbf{backwards reading}: read the brief as if it were unfamiliar material you are seeing for the first time, setting aside the background in your head to spot incomplete statements sentence by sentence.
 
-“The treatment group is higher” lacks a variable, condition, and evidential basis. “Split into two groups after this step” lacks a grouping rule. “Improves performance” lacks a metric, unit, and comparison. Supply the missing information or mark the claim as unresolved.
+For example, ``the treatment group is higher than the control group'' lacks the measured variable, condition, and evidence; ``split into two groups after this step'' lacks the grouping criterion; and ``interfacial impedance rises after cycling'' lacks whether the rise stems from the reconstructed surface layer or crack-surface side reactions, and whether each is established consensus or the authors' hypothesis. When you spot such a gap, consult your sources to fill it in or mark the claim ``to be confirmed.''
 
-A small mapping table can help: statement, source location, visual representation, and question still to resolve. In real projects, identify a column, file version, or record page. In this exercise, identify a teaching assumption. This prevents poorly sourced claims from slipping into an image.
+The most practical habit is to build a compact ``Claim---Source---Graphic expression---To be confirmed'' table for every key statement. In real projects, sources point to manuscript sentence numbers, data column names, or notebook pages; in abstract exercises, mark ``teaching stipulation.'' Below we demonstrate this with sentences S4, S6, and S7 from the NMC case:
 
-\section{Exercise and acceptance criteria}
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{30mm}>{\raggedright\arraybackslash}p{24mm}YY@{}}
+\toprule
+\textbf{Claim} & \textbf{Source} & \textbf{Graphic expression} & \textbf{To be confirmed} \\
+\midrule
+At high states of charge, a reconstructed surface layer raises interfacial impedance & Discussion S4; Jung et al., 2017 & Thin dark outer rim on cycled cathode + solid-box label & Confirm with electrochemistry co-author that ``at high states of charge'' fits our cutoff voltage; verify pristine particle has no dark rim \\
+Electrolyte side reactions on fresh crack surfaces contribute to the impedance rise & Discussion S6 (authors' hypothesis) & Overlay dashed box + ``hypothesis'' tag + dashed leader line & Confirm this is the only dashed box in the figure and that the bottom legend states ``dashed box = authors' hypothesis'' \\
+Transition-metal dissolution and anode deposition accelerate SEI growth & Discussion S7 (out of scope) & \textbf{Do not draw}; caption states ``transition-metal dissolution and deposition ... are omitted'' & Inspect the text-free base image to ensure the model did not add migrating metal ions or anode deposits \\
+\bottomrule
+\end{tabularx}
+\end{center}
 
-Complete two briefs: one for your research and one for either the fictional mechanism or paired-data example. Retain the original description and write a short revision note explaining which relationships, sources, and acceptance criteria you added.
+\section{What AI can and cannot do at this stage}
 
-Check whether objects can be counted, relationships can be examined one by one, data constraints map to columns, unknowns remain explicit, and the output has a concrete use.
+Table~\ref{tab:ch02-01} summarises what AI can do, what it cannot do, and what the author must verify when turning research content into a figure brief and iterating on early drafts.
 
-You now have an input that can move into figure creation. Chapter 3 will explore different compositions from the same brief and compare the work they ask the reader to do.
+\begin{table}[htbp]\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\caption{What AI can do, what it cannot do, and what the author must verify when writing a figure brief and iterating on initial drafts.}\label{tab:ch02-01}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{22mm}YYY@{}}
+\toprule
+\textbf{Task} & \textbf{What AI can do} & \textbf{What AI cannot do} & \textbf{What the author must verify} \\
+\midrule
+Drafting a brief from a paragraph & Extract nouns and verbs, draft an object list and relation table, and format them into the ten-field template & Judge which sentence is established consensus versus the authors' hypothesis; decide what not to draw & Source sentence and evidence status for every relation; the ``Draw?'' column \\
+Writing prompts & Rewrite the brief into an English prompt and add exclusion lists and layout descriptions & Guarantee that the generated output obeys every constraint & Field-by-field correspondence between submitted prompt and brief \\
+Generating mechanism schematics & Produce checkable compositional candidates & Guarantee correct crack morphology, SEI location, or object counts, or avoid adding unrequested objects & Row-by-row check against the relation table; counting objects and lithium dots \\
+Revising drafts & Execute object-specific correction blocks & Change only the specified detail without affecting other regions & Full re-verification of the whole figure after every edit \\
+PDF assistance & Draft visual prompts from the first five pages and an opening/abstract extract & Read conclusions in later pages, supplementary files, or figures and tables & Restore omitted points against the author's notes; record reading scope \\
+Data figure constraints & Plot charts according to column names and stated constraints & Know which column is the pairing key or what units apply unless written out & Raw point counts, pairing, units, and omitted statistical tests \\
+Drafting captions & Draft descriptions identifiable directly from the image & Supply sample sizes, experimental conditions, or statistical methods; separate hypothesis from fact & Source of every claim; whether hypotheses and simplifications are stated \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Chapter checklist and exercises}
+
+\subsection*{Chapter checklist}
+
+\begin{itemize}
+\item The brief has all ten fields, and each field either contains concrete information or is marked ``to be confirmed.''
+\item The goal sentence is specific enough to determine the objects, comparison mode, or layout.
+\item Every relation points to a specific source (paragraph sentence number, reference, or data column).
+\item Every relation carries an evidence status; hypotheses and established facts are distinguishable in the figure, and the legend explains the convention.
+\item Content not to be drawn is listed explicitly, together with whether it should be noted in the caption.
+\item Data figure constraints are specified down to column names, units, pairing keys, and statistical tests not performed.
+\item When using the PDF assistant, its reading scope is recorded and supplemented with author-confirmed points.
+\item Every prompt is sliced from the current version of the brief; when scientific content changes, the brief is updated first.
+\item Revision requests are specific to objects and accompanied by a ``Keep unchanged'' list.
+\end{itemize}
+
+\subsection*{Exercises}
+
+\begin{enumerate}
+\item \textbf{(Sentence-by-sentence annotation)} Pick a five- to eight-sentence paragraph from the Introduction or Discussion of one of your own papers. Following Section 2.4 and Figure~\ref{fig:ch02-03}, annotate the evidence status and ``Draw?'' decision for each sentence, identifying at least one sentence that is ``established, but not drawn'' and one that ``belongs to a data figure.''
+\item \textbf{(Rewriting a prompt)} Rewrite the following one-sentence request into a ten-field brief and an English generation prompt: ``Draw a clear, nice-looking schematic of solid electrolyte interphase formation.'' Include an object list, at least three relations with their evidence status, exclusions, and acceptance criteria; mark any unverified relation as ``to be confirmed.''
+\item \textbf{(Hands-on practice in \scidraw{})} In the Figure Workflow Guide (\sdtool{figure-workflow}), choose the ``Mechanism \& workflow'' route, paste the brief you wrote in Exercise 1 or 2, and download a copy. Enter the Mechanism Figure Generator (\sdtool{mechanism-figure-generator}): generate once with a one-sentence vague prompt and once with your brief-driven prompt. Score both images row by row against your relation table (correct / incorrect / missing), write one concrete revision instruction, generate a third time, and record how the scores change across the three versions.
+\end{enumerate}
+
+Completing these steps gives you a solid specification ready for visual design. Chapter 3 will discuss how to expand the same brief into alternative layout sketches and choose among them based on the reader's cognitive cost.
+
+\section*{References}
+
+{\sloppy
+\begin{itemize}
+\item Ryu H-H, Park K-J, Yoon CS, Sun Y-K. Capacity fading of Ni-rich Li[Ni$_x$Co$_y$Mn$_{1-x-y}$]O$_2$ ($0.6 \le x \le 0.95$) cathodes for high-energy-density lithium-ion batteries: bulk or surface degradation? \emph{Chemistry of Materials}. 2018;30(3):1155--1163. \path{doi:10.1021/acs.chemmater.7b05269}
+\item Jung R, Metzger M, Maglia F, Stinner C, Gasteiger HA. Oxygen release and its effect on the cycling stability of LiNi$_x$Mn$_y$Co$_z$O$_2$ (NMC) cathode materials for Li-ion batteries. \emph{Journal of The Electrochemical Society}. 2017;164(7):A1361--A1377. \path{doi:10.1149/2.0021707jes}
+\item Vetter J, Nov\'ak P, Wagner MR, Veit C, M\"oller K-C, Besenhard JO, Winter M, Wohlfahrt-Mehrens M, Vogler C, Hammouche A. Ageing mechanisms in lithium-ion batteries. \emph{Journal of Power Sources}. 2005;147(1--2):269--281. \path{doi:10.1016/j.jpowsour.2005.01.006}
+\item Birkl CR, Roberts MR, McTurk E, Bruce PG, Howey DA. Degradation diagnostics for lithium ion cells. \emph{Journal of Power Sources}. 2017;341:373--386. \path{doi:10.1016/j.jpowsour.2016.12.011}
+\item Peled E, Menkin S. Review---SEI: past, present and future. \emph{Journal of The Electrochemical Society}. 2017;164(7):A1703--A1719. \path{doi:10.1149/2.1441707jes}
+\item Edge JS, O'Kane S, Prosser R, Kirkaldy ND, Patel AN, Hales A, Ghosh A, Ai W, et al. Lithium ion battery degradation: what you need to know. \emph{Physical Chemistry Chemical Physics}. 2021;23(14):8200--8221. \path{doi:10.1039/D1CP00359C}
+\item Rougier NP, Droettboom M, Bourne PE. Ten simple rules for better figures. \emph{PLoS Computational Biology}. 2014;10(9):e1003833. \path{doi:10.1371/journal.pcbi.1003833}
+\item Weissgerber TL, Milic NM, Winham SJ, Garovic VD. Beyond bar and line graphs: time for a new data presentation paradigm. \emph{PLOS Biology}. 2015;13(4):e1002128. \path{doi:10.1371/journal.pbio.1002128}
+\end{itemize}
+\par}

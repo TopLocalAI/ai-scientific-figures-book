@@ -1,0 +1,36 @@
+% Compile from repo root: xelatex -interaction=nonstopmode production/tikz-preview-ch06.tex
+\documentclass[UTF8,fontset=fandol,10pt]{ctexart}
+\usepackage{graphicx}
+\input{shared/preamble}
+\makeatletter
+\let\ChSixPreviewDefcolor\definecolor
+\renewcommand{\definecolor}[3]{%
+  \@ifundefined{color@#1}{\ChSixPreviewDefcolor{#1}{#2}{#3}}{}%
+}
+\makeatother
+\setlength{\parindent}{0pt}
+\begin{document}
+\section*{FIG ch06-02 flow grammar (zh)}
+\noindent\input{figures/ch06/ch06-02-flow-grammar-zh.tex}
+\newpage
+\section*{FIG ch06-02 flow grammar (en)}
+\noindent\input{figures/ch06/ch06-02-flow-grammar-en.tex}
+\newpage
+\section*{FIG ch06-03 skeleton (zh)}
+\noindent\input{figures/ch06/ch06-03-skeleton-zh.tex}
+\newpage
+\section*{FIG ch06-03 skeleton (en)}
+\noindent\input{figures/ch06/ch06-03-skeleton-en.tex}
+\newpage
+\section*{FIG ch06-04 structure errors (zh)}
+\noindent\input{figures/ch06/ch06-04-structure-errors-zh.tex}
+\newpage
+\section*{FIG ch06-04 structure errors (en)}
+\noindent\input{figures/ch06/ch06-04-structure-errors-en.tex}
+\newpage
+\section*{FIG ch06-06 final (zh)}
+\noindent\input{figures/ch06/ch06-06-final-zh.tex}
+\newpage
+\section*{FIG ch06-06 final (en)}
+\noindent\input{figures/ch06/ch06-06-final-en.tex}
+\end{document}

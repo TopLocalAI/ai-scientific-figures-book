@@ -1,0 +1,5 @@
+# Chapter 6 workflow icons (FIG ch06-06)
+
+- **2026-10-29**: Codex icon sheet `figures/ch06/ch06-icons-sheet.png` not present at Cursor build time.
+- **Placeholder**: `scripts/ch06_figures.py` generated 12 geometric PNGs under `figures/ch06/icons/` (warm/cool palette per plan). Replace after Codex V3 sheet is cropped with `scripts/ch06_crop_icons.py`.
+- **Mapping**: 01 W1 … 12 C11 per `production/plans/ch06.md` §3.6 V4.

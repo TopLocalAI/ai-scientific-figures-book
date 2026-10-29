@@ -1,0 +1,134 @@
+% FIG ch06-04 structure errors (English)%
+\input{figures/ch06/ch06-styles.tex}%
+\begin{tikzpicture}[x=1mm, y=1mm, font=\sffamily\scriptsize, text=BookInk]%
+  \tikzset{%
+    onestep/.style={flowstep, minimum height=6.5mm},%
+    onedry/.style={flowstepdry, minimum height=6.5mm},%
+    oneseq/.style={flowstepseq, minimum height=6.5mm},%
+    twostep/.style={flowstep, minimum height=8.4mm},%
+    twoseq/.style={flowstepseq, minimum height=8.4mm},%
+    prod/.style={artifact, minimum height=6.5mm},%
+  }%
+  % (a)%
+  \node[anchor=north west, font=\sffamily\bfseries] (aH) at (0,0)%
+    {(a)\ Visualization drawn upstream of analysis};%
+  \node[onedry, anchor=north west] (a1b)%
+    at ([xshift=11mm, yshift=-1.5mm]aH.south west) {k-NN graph};%
+  \node[onedry, anchor=west] (a2b) at ([xshift=6mm]a1b.east) {UMAP};%
+  \node[onedry, anchor=west] (a3b) at ([xshift=6mm]a2b.east) {Clustering};%
+  \node[onedry, anchor=west] (a4b) at ([xshift=6mm]a3b.east) {Annotation};%
+  \draw[link] (a1b) -- (a2b) -- (a3b) -- (a4b);%
+  \node[anchor=east, font=\sffamily\bfseries, text=ChSixBad]%
+    at ([xshift=-4mm]a1b.west) {\bookcross};%
+
+  \node[onedry, anchor=north west] (a1g) at ([yshift=-2.6mm]a1b.south west) {k-NN graph};%
+  \node[onedry, anchor=west] (a2g) at ([xshift=6mm]a1g.east) {Clustering};%
+  \node[onedry, anchor=west] (a3g) at ([xshift=6mm]a2g.east) {Annotation};%
+  \node[onedry, anchor=north] (a4g) at ([yshift=-3.2mm]a1g.south) {UMAP};%
+  \node[prod, anchor=west] (a5g) at ([xshift=6mm]a4g.east) {Display only};%
+  \draw[link] (a1g) -- (a2g) -- (a3g);%
+  \draw[link] (a1g.south) -- (a4g.north);%
+  \draw[link] (a4g) -- (a5g);%
+  \coordinate (aGmid) at ($(a1g.north)!0.5!(a4g.south)$);%
+  \coordinate (aMark) at (a1g.west |- aGmid);%
+  \node[anchor=east, font=\sffamily\bfseries, text=BookTeal]%
+    at ([xshift=-4mm]aMark) {\bookcheck};%
+  \coordinate (aNoteAt) at (a4g.south -| 0,0);%
+  \node[anchor=north west, text width=120mm, text=BookInk!75] (aNote)%
+    at ([yshift=-1.5mm]aNoteAt)%
+    {Make UMAP a parallel branch from the k-NN graph, not linked to clustering or annotation};%
+
+  % (b)%
+  \node[anchor=north west, font=\sffamily\bfseries] (bH)%
+    at ([yshift=-1.8mm]aNote.south west) {(b)\ Step and product in one box};%
+  \node[onedry, anchor=north west, text width=42mm] (b1)%
+    at ([xshift=11mm, yshift=-1.5mm]bH.south west)%
+    {FASTQ $\rightarrow$ align $\rightarrow$ matrix};%
+  \node[anchor=east, font=\sffamily\bfseries, text=ChSixBad]%
+    at ([xshift=-4mm]b1.west) {\bookcross};%
+
+  \node[prod, anchor=north west, minimum width=16mm] (b2a)%
+    at ([yshift=-2.8mm]b1.south west) {FASTQ};%
+  \node[onedry, anchor=west, text width=32mm] (b2b)%
+    at ([xshift=6.5mm]b2a.east) {Align \& UMI count};%
+  \node[prod, anchor=west, text width=30mm] (b2c)%
+    at ([xshift=6.5mm]b2b.east) {Raw count matrix};%
+  \draw[link] (b2a) -- (b2b);%
+  \draw[link] (b2b) -- (b2c);%
+  \node[anchor=east, font=\sffamily\bfseries, text=BookTeal]%
+    at ([xshift=-4mm]b2a.west) {\bookcheck};%
+  \coordinate (bNoteAt) at (b2b.south -| 0,0);%
+  \node[anchor=north west, text width=120mm, text=BookInk!75] (bNote)%
+    at ([yshift=-1.5mm]bNoteAt)%
+    {Separate step boxes and product parallelograms so each hand-off is visible};%
+
+  % (c)%
+  \node[anchor=north west, font=\sffamily\bfseries] (cH)%
+    at ([yshift=-1.8mm]bNote.south west) {(c)\ QC gate with no exit};%
+  \node[onestep, anchor=north west, text width=26mm] (c1b)%
+    at ([xshift=11mm, yshift=-1.5mm]cH.south west) {Dissociation};%
+  \node[onestep, anchor=west, text width=30mm] (c2b)%
+    at ([xshift=6mm]c1b.east) {Viability check};%
+  \node[onestep, anchor=west, text width=20mm] (c3b)%
+    at ([xshift=6mm]c2b.east) {Loading};%
+  \draw[link] (c1b) -- (c2b) -- (c3b);%
+  \node[anchor=east, font=\sffamily\bfseries, text=ChSixBad]%
+    at ([xshift=-4mm]c1b.west) {\bookcross};%
+
+  \node[onestep, anchor=north west, text width=26mm] (c1g)%
+    at ([yshift=-3.6mm]c1b.south west) {Dissociation};%
+  \node[gate, anchor=west, text width=15mm, minimum height=9mm, aspect=1.6] (c2g)%
+    at ([xshift=6.5mm]c1g.east) {Viability};%
+  \node[onestep, anchor=west, text width=20mm] (c3g)%
+    at ([xshift=13mm]c2g.east) {Loading};%
+  \draw[link] (c1g) -- (c2g);%
+  \draw[link] (c2g) -- (c3g);%
+  \node[passlabel, anchor=south] (cPass)%
+    at ([yshift=1.8mm]$(c2g.east)!0.5!(c3g.west)$) {Pass};%
+  \coordinate (cBase) at ($(c1g.south)!0.5!(c2g.south)+(0,-3.8mm)$);%
+  \draw[back, rounded corners=1.6mm] (c2g.south) -- (c2g.south |- cBase)%
+    -- (c1g.south |- cBase) -- (c1g.south);%
+  \node[taglab, anchor=north] (cFailLab) at ([yshift=-1.2mm]cBase) {Fail};%
+  \coordinate (cMid) at ($(c2g.north)!0.5!(cFailLab.south)$);%
+  \coordinate (cMark) at (c1g.west |- cMid);%
+  \node[anchor=east, font=\sffamily\bfseries, text=BookTeal]%
+    at ([xshift=-4mm]cMark) {\bookcheck};%
+  \coordinate (cNoteAt) at (cFailLab.south -| 0,0);%
+  \node[anchor=north west, text width=120mm, text=BookInk!75] (cNote)%
+    at ([yshift=-1.5mm]cNoteAt)%
+    {Use a diamond with a fail arc back to the earlier step};%
+
+  % (d)%
+  \node[anchor=north west, font=\sffamily\bfseries] (dH)%
+    at ([yshift=-1.8mm]cNote.south west) {(d)\ Parallel samples drawn in series};%
+  \node[twostep, anchor=north west, text width=28mm] (d1b)%
+    at ([xshift=11mm, yshift=-1.5mm]dH.south west) {Sample 1\\dissociation};%
+  \node[twostep, anchor=west, text width=28mm] (d2b)%
+    at ([xshift=6mm]d1b.east) {Sample 2\\dissociation};%
+  \node[twoseq, anchor=west, text width=24mm] (d3b)%
+    at ([xshift=6mm]d2b.east) {Sequencing};%
+  \draw[link] (d1b) -- (d2b) -- (d3b);%
+  \node[anchor=east, font=\sffamily\bfseries, text=ChSixBad]%
+    at ([xshift=-4mm]d1b.west) {\bookcross};%
+
+  \node[twostep, anchor=north west, text width=40mm] (d1g)%
+    at ([yshift=-2.6mm]d1b.south west) {Sample 1:\\dissociation $\rightarrow$ library};%
+  \node[twostep, anchor=north west, text width=40mm] (d2g)%
+    at ([yshift=-1.8mm]d1g.south west) {Sample 2:\\dissociation $\rightarrow$ library};%
+  \coordinate (dJoin) at ([xshift=7mm]$(d1g.east)!0.5!(d2g.east)$);%
+  \node[twoseq, anchor=west, text width=26mm] (d3g)%
+    at ([xshift=5.5mm]dJoin) {Pool \& sequence};%
+  \draw[link] (d1g.east) -- (d1g.east -| dJoin);%
+  \draw[link] (d2g.east) -- (d2g.east -| dJoin);%
+  \draw[BookInk, semithick] (d1g.east -| dJoin) -- (d2g.east -| dJoin);%
+  \fill[BookInk] (dJoin) circle (0.7pt);%
+  \draw[link] (dJoin) -- (d3g.west);%
+  \coordinate (dMid) at ($(d1g.north)!0.5!(d2g.south)$);%
+  \coordinate (dMark) at (d1g.west |- dMid);%
+  \node[anchor=east, font=\sffamily\bfseries, text=BookTeal]%
+    at ([xshift=-4mm]dMark) {\bookcheck};%
+  \coordinate (dNoteAt) at (d2g.south -| 0,0);%
+  \node[anchor=north west, text width=120mm, text=BookInk!75]%
+    at ([yshift=-1.5mm]dNoteAt)%
+    {Draw samples in parallel and join at a merge point before sequencing};%
+\end{tikzpicture}%

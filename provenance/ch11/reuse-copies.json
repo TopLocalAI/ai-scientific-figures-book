@@ -1,0 +1,30 @@
+{
+  "reuse": [
+    {
+      "label": "FIG ch11-07 panel a (ch07 v2-brief)",
+      "source": "cases/ch07-insulin-glut4/images/v2-brief.png",
+      "target": "figures/ch11/ch11-07a-ch07-v2.png",
+      "sha256": "e015f1063cc3a71de4449550943637b12de3d9e240cb263eadc365e4a11192f0",
+      "bytes": 1291215,
+      "copied_on": "2026-10-29"
+    },
+    {
+      "label": "FIG ch11-07 panel b (ch07 v3-revised-alt1)",
+      "source": "cases/ch07-insulin-glut4/images/v3-revised-alt1.png",
+      "target": "figures/ch11/ch11-07b-ch07-v3-alt1.png",
+      "sha256": "6c850ef6b0fb88541a1db65fc6c18fe585dc298d62e337bd9fc02617f45c5a84",
+      "bytes": 1300319,
+      "copied_on": "2026-10-29"
+    },
+    {
+      "label": "FIG ch11-07 panel c (ch07 v3-revised)",
+      "source": "cases/ch07-insulin-glut4/images/v3-revised.png",
+      "target": "figures/ch11/ch11-07c-ch07-v3.png",
+      "sha256": "3708ab7446cbf30599e3c761f399388b527a89fffaa2e07a06746041633db346",
+      "bytes": 1294239,
+      "copied_on": "2026-10-29"
+    }
+  ],
+  "missing_sources": [],
+  "date": "2026-10-29"
+}

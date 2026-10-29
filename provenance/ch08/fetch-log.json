@@ -1,0 +1,57 @@
+{
+  "bbbc": [
+    {
+      "file": "data/ch08/raw/IXMtest_A13_s1_w1B35C6D5D-DBF9-4779-990D-5E7AFB14D600.tif",
+      "zip_url": "https://data.broadinstitute.org/bbbc/BBBC022/BBBC022_v1_images_20585w1.zip",
+      "member": "IXMtest_A13_s1_w1B35C6D5D-DBF9-4779-990D-5E7AFB14D600.tif",
+      "downloaded": "2026-10-29",
+      "sha256": "4be40f814481002aa878dcb34fc4fb45ddd84bd2c7380880408f0de1d1e21f2a",
+      "license": "CC0 1.0 (BBBC022v1)"
+    },
+    {
+      "file": "data/ch08/raw/IXMtest_A13_s1_w5B257EE32-37B0-4698-891B-11B1B3D3D0C1.tif",
+      "zip_url": "https://data.broadinstitute.org/bbbc/BBBC022/BBBC022_v1_images_20585w5.zip",
+      "member": "IXMtest_A13_s1_w5B257EE32-37B0-4698-891B-11B1B3D3D0C1.tif",
+      "downloaded": "2026-10-29",
+      "sha256": "c1c441e44e91481c56e73140ec5b919f67697f07f8f6db4c853c9b9736ec486a",
+      "license": "CC0 1.0 (BBBC022v1)"
+    },
+    {
+      "file": "data/ch08/raw/IXMtest_A13_s2_w1951890F6-3FBD-488D-A559-E437F411FE17.tif",
+      "zip_url": "https://data.broadinstitute.org/bbbc/BBBC022/BBBC022_v1_images_20585w1.zip",
+      "member": "IXMtest_A13_s2_w1951890F6-3FBD-488D-A559-E437F411FE17.tif",
+      "downloaded": "2026-10-29",
+      "sha256": "800419706668d4de834865ff95f10e9d3aa3e2563ce101c7f29a389baa1f9174",
+      "license": "CC0 1.0 (BBBC022v1)"
+    },
+    {
+      "file": "data/ch08/raw/IXMtest_A13_s2_w5E4FF8FF2-B6AC-4AC6-810D-535064B5C89C.tif",
+      "zip_url": "https://data.broadinstitute.org/bbbc/BBBC022/BBBC022_v1_images_20585w5.zip",
+      "member": "IXMtest_A13_s2_w5E4FF8FF2-B6AC-4AC6-810D-535064B5C89C.tif",
+      "downloaded": "2026-10-29",
+      "sha256": "b3d11076696b2bf4e7c4fb9bd7dd72c96f64ec4c8a8e42920022ea722f5ff2c5",
+      "license": "CC0 1.0 (BBBC022v1)"
+    },
+    {
+      "file": "data/ch08/BBBC022_v1_image.csv",
+      "url": "https://data.broadinstitute.org/bbbc/BBBC022/BBBC022_v1_image.csv",
+      "downloaded": "2026-10-29",
+      "sha256": "2666ae70ab8c076f34cc81d22ddd67a92969a097c058dd19d6be345f14ad5cda",
+      "license": "CC0 1.0"
+    }
+  ],
+  "sourced": [
+    {
+      "file": "data/ch08/sourced/FluorescentCells.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/FluorescentCells.jpg",
+      "downloaded": "2026-10-29",
+      "sha256": "9a33cb62580b9d8c5142e5d73f2a585bce5f5100d2de3e9fab84d323c2fdb3dd"
+    },
+    {
+      "file": "data/ch08/sourced/Leaf_epidermis.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Leaf_epidermis.jpg",
+      "downloaded": "2026-10-29",
+      "sha256": "8d65dba295c8cbc89a5e7ede0b4443ed48596ed4d6d03bca5f87c75c8796e62c"
+    }
+  ]
+}

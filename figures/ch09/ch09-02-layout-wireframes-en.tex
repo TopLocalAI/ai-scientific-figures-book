@@ -1,0 +1,38 @@
+% FIG ch09-02 layout wireframes (English)
+\begin{tikzpicture}[
+  x=1mm, y=1mm,
+  font=\sffamily\footnotesize,
+  text=BookInk,
+  frame/.style={draw=BookInk!70, line width=0.5pt},
+  cell/.style={draw=BookRule, fill=BookPale!50, line width=0.3pt},
+  bad/.style={pattern=north east lines, pattern color=BookInk!25},
+]
+  \node[anchor=west, font=\bfseries] at (0, 125) {Option A (equal 2$\times$2 cells)};
+  \draw[frame] (0, 68) rectangle (174, 122);
+  \node[anchor=south] at (87, 122) {174 mm};
+  \foreach \x/\y/\w/\h in {0/68/84/53, 90/68/84/53, 0/10/84/53, 90/10/84/53} {
+    \draw[cell] (\x,\y) rectangle (\x+\w,\y+\h);
+  }
+  \draw[bad] (90,68) rectangle (174,121);
+  \node[anchor=west, text=BookTeal] at (92, 95) {stretch req.\ \ding{55}};
+  \node[anchor=west, align=left, text width=84mm] at (0, 4) {
+    Pros: simple grid. Issue: panel b must be stretched to fill its cell.
+  };
+
+  \node[anchor=west, font=\bfseries] at (0, 248) {Option B (chosen)};
+  \draw[frame] (0, 186) rectangle (174, 240);
+  \draw[cell] (0,214) rectangle (84,264);
+  \draw[cell] (90,214) rectangle (174,264);
+  \draw[cell] (0,154) rectangle (84,210);
+  \draw[cell] (90,154) rectangle (174,210);
+  \draw[BookTeal, dashed, line width=0.4pt] (12,154) -- (12,210);
+  \draw[BookTeal, dashed, line width=0.4pt] (102,154) -- (102,210);
+  \node[text=BookTeal, font=\scriptsize] at (57,152) {align};
+  \node[text=BookTeal, font=\scriptsize] at (147,152) {align};
+  \node[anchor=west, align=left, text width=90mm] at (0, 178) {
+    Top row 84$\times$50 mm; bottom 84$\times$56 mm; 6 mm column gap, 8 mm row gap.
+  };
+  \node[anchor=west, align=left, text width=84mm] at (0, 168) {
+    Pros: keeps aspect ratio of b; aligns c/d axes. Issue: sizes must be planned upfront.
+  };
+\end{tikzpicture}

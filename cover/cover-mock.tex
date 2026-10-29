@@ -1,0 +1,19 @@
+% Cover mockup: \def\img{...}\def\dark{0|1} before \input
+\documentclass[UTF8,fontset=fandol]{ctexart}
+\usepackage[paperwidth=176mm,paperheight=246mm,margin=0mm]{geometry}
+\usepackage{tikz,xcolor,fontspec}
+\setsansfont{texgyreheros-regular.otf}[BoldFont=texgyreheros-bold.otf]
+\definecolor{BookTeal}{HTML}{176C68}\definecolor{BookInk}{HTML}{23363E}
+\pagestyle{empty}
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=south] at (current page.south) {\includegraphics[width=176mm]{\img}};
+\ifnum\dark=1 \colorlet{T}{white}\colorlet{A}{BookTeal!40!white}\else\colorlet{T}{BookInk}\colorlet{A}{BookTeal}\fi
+\node[anchor=north west,text=A,font=\sffamily\bfseries\small] at ([xshift=20mm,yshift=-24mm]current page.north west) {TopLocalAI 开源书籍 · 以 SciDraw AI 为实践平台};
+\draw[A,line width=1.2pt] ([xshift=20mm,yshift=-32mm]current page.north west) -- ++(18mm,0);
+\node[anchor=north west,text=T,font=\bfseries\fontsize{34}{40}\selectfont,align=left] at ([xshift=19mm,yshift=-38mm]current page.north west) {用 AI\\画好科研图};
+\node[anchor=north west,text=T,font=\fontsize{15}{20}\selectfont] at ([xshift=20mm,yshift=-80mm]current page.north west) {从研究思路到论文配图};
+\node[anchor=north west,text=A,font=\sffamily\fontsize{10}{13}\selectfont,align=left] at ([xshift=20mm,yshift=-90mm]current page.north west) {Use AI to Make Better Scientific Figures};
+\node[anchor=south west,text=T,font=\small] at ([xshift=20mm,yshift=12mm]current page.south west) {TopLocalAI contributors};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,36 @@
+% FIG ch09-01 panel argument map (English)
+\begin{tikzpicture}[
+  x=1mm, y=1mm,
+  font=\sffamily\small,
+  text=BookInk,
+  mainbox/.style={
+    draw=BookTeal, line width=0.6pt, rounded corners=2pt,
+    fill=BookPale, align=center, text width=150mm, inner sep=3mm,
+  },
+  explain/.style={
+    draw=BookRule, fill=BookRule!35, rounded corners=2pt,
+    align=left, text width=38mm, inner sep=2.5mm, minimum height=18mm,
+  },
+  moved/.style={
+    draw=BookInk!40, dashed, rounded corners=2pt,
+    align=left, text width=155mm, inner sep=2.5mm,
+  },
+]
+  \node[mainbox] (q) at (87, 58)
+    {Main question: does interface passivation raise both initial efficiency and operational stability?};
+  \foreach \i/\x/\t in {
+    a/20/schematic, b/62/morphology, c/104/performance, d/146/stability} {
+    \node[explain] (\i) at (\x, 32) {
+      \textbf{\i}\par
+      Answers: what changed / layer continuity / initial efficiency / stability over time\par
+      \scriptsize Evidence: \t
+    };
+  }
+  \draw[-{Stealth[length=2mm]}, BookInk!60, thick] (q.south) -- (a.north);
+  \draw[-{Stealth[length=2mm]}, BookInk!60] (a.east) -- (b.west);
+  \draw[-{Stealth[length=2mm]}, BookInk!60] (b.east) -- (c.west);
+  \draw[-{Stealth[length=2mm]}, BookInk!60] (c.east) -- (d.west);
+  \node[moved] at (87, 8) {
+    Candidate moved out (\textbf{example}): XRD pattern $\rightarrow$ Supplementary Information (does not serve the main question)
+  };
+\end{tikzpicture}

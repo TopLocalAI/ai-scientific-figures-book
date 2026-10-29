@@ -1,0 +1,29 @@
+### provenance/ch03/ch03-05b-r2.png
+
+- 工具：Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）
+- 模型：不知道：工具未返回具体模型标识。
+- 日期：2026-10-29
+- 本阶段第几次：2
+- 参考图：provenance/ch03/ch03-05b-r1.png
+- 输出：1672×941，RGB PNG；SHA-256：`4625b1b689b237edc0d5449af1137a819fc8fbe8ffe105edbb1eac42984c8e05`
+- prompt 改动原因：保留修改 2 全文，追加保留唯一供体说明；原文首次调用删除了供体。
+- 人工图像修改：无。
+
+画面内容 / 核验要点逐条检查：
+
+- 保留；供体修改第 2 次。短供体保留在下通道，在青绿写入段正上方，数量为 1，上通道没有供体。
+- 供体相对 r1 向下移动约 15 px；其青绿中心与结果青绿中心接近。
+- 供体原本已在正确通道；此次是微调，不宣称解决了不存在的通道外供体或复制问题。
+- 未经要求的再渲染仍存在：差值 >15 的像素占全图 4.1006%，上排 3.5317%；未见新增科学对象。
+- 共通核验：未见文字；像素宽度未达2400；约16:9；未真人复核。
+
+实际完整 prompt（保留换行）：
+
+```text
+Edit the selected image. Change only one thing: move the short teal donor DNA
+so that it lies inside the lower repair lane only, directly above the DNA gap
+in that lane, horizontally centered on the gap. Remove any copy of the donor
+outside the lower lane. Keep everything else unchanged. No text.
+
+Keep exactly one visible separate donor double-stranded DNA inside the LOWER rectangle. Its existing location, directly above the teal inserted segment, is already close to correct: retain that short donor and horizontally align its teal middle with the teal middle of the long lower DNA. Do not erase or merge the donor with the long DNA. There is no donor outside the lower rectangle to remove.
+```

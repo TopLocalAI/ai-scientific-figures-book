@@ -1,0 +1,52 @@
+% FIG ch03-04 layout comparison (Chinese)
+\begin{tikzpicture}[
+  x=1mm, y=1mm,
+  font=\sffamily\footnotesize,
+  text=BookInk,
+  wf/.style={draw=black!50, fill=black!4, line width=0.4pt},
+  main/.style={fill=teal!25, draw=none},
+]
+  \def\fw{52}\def\fh{33}
+  \begin{scope}[shift={(0,58)}]
+    \draw[wf] (0,0) rectangle (\fw,\fh);
+    \fill[main] (0.68*\fw,0.05*\fh) rectangle (0.96*\fw,0.43*\fh);
+    \node[anchor=north, font=\bfseries] at (0.5*\fw,\fh+2) {A};
+    \node[font=\scriptsize, anchor=south] at (0.5*\fw,-1.5) {约 11\%};
+  \end{scope}
+  \begin{scope}[shift={(56,58)}]
+    \draw[wf] (0,0) rectangle (\fw,\fh);
+    \fill[main] (0.15*\fw,0.12*\fh) rectangle (0.85*\fw,0.47*\fh);
+    \node[anchor=north, font=\bfseries] at (0.5*\fw,\fh+2) {B};
+    \node[font=\scriptsize, anchor=south] at (0.5*\fw,-1.5) {约 25\%};
+  \end{scope}
+  \begin{scope}[shift={(112,58)}]
+    \draw[wf] (0,0) rectangle (\fw,\fh);
+    \fill[main] (0,0) rectangle (\fw,0.50*\fh);
+    \node[anchor=north, font=\bfseries] at (0.5*\fw,\fh+2) {C};
+    \node[font=\scriptsize, anchor=south] at (0.5*\fw,-1.5) {约 50\%};
+  \end{scope}
+  \node[font=\scriptsize, text=BookInk!70, anchor=north west] at (0,54)
+    {青绿区为两种修复结果所占面积（线框示意；候选 PNG 实测后更新）};
+
+  \matrix (m) [
+    matrix of nodes,
+    anchor=north west,
+    row sep=1.8mm,
+    column sep=3mm,
+    nodes={font=\scriptsize, inner sep=2pt},
+    column 1/.style={nodes={anchor=west}, text width=38mm},
+    column 2/.style={nodes={anchor=center}, text width=12mm},
+    column 3/.style={nodes={anchor=center}, text width=12mm},
+    column 4/.style={nodes={anchor=center}, text width=12mm},
+  ] at (0,48) {
+    & {A} & {B} & {C} \\
+    入口唯一 & {$\bullet$} & {$\circ$} & {$\bullet$} \\
+    顺序与事件一致 & {$\bullet$} & {\tikz[baseline=-0.6ex]{\fill[BookTeal] (0,0) arc (90:270:0.35); \draw[BookTeal] (0,0) circle (0.35);}} & {$\bullet$} \\
+    两种结果可直接对照 & {$\circ$} & {$\circ$} & {$\bullet$} \\
+    主要信息的面积 & {$\circ$} & {\tikz[baseline=-0.6ex]{\fill[BookTeal] (0,0) arc (90:270:0.35); \draw[BookTeal] (0,0) circle (0.35);}} & {$\bullet$} \\
+    174\,mm 下标签空间 & {\tikz[baseline=-0.6ex]{\fill[BookTeal] (0,0) arc (90:270:0.35); \draw[BookTeal] (0,0) circle (0.35);}} & {\tikz[baseline=-0.6ex]{\fill[BookTeal] (0,0) arc (90:270:0.35); \draw[BookTeal] (0,0) circle (0.35);}} & {$\bullet$} \\
+    适合的用途 & {幻灯片} & {概念图} & {论文总览} \\
+  };
+  \draw[BookTeal, line width=0.8pt, rounded corners=1pt]
+    ([xshift=-2mm,yshift=2mm]m-1-4.north west) rectangle ([xshift=2mm,yshift=-2mm]m-7-4.south east);
+\end{tikzpicture}

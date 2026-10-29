@@ -1,0 +1,37 @@
+% FIG ch13-08 delivery package tree (Chinese)
+\usetikzlibrary{positioning}
+\providecommand{\ChThirteenMarkTool}{\tikz[baseline=-0.55ex]{\fill[BookInk] (0,0) rectangle (1.5mm,1.5mm);}}
+\providecommand{\ChThirteenMarkSelf}{\tikz[baseline=-0.55ex]{\draw[BookInk, line width=0.35pt] (0,0) rectangle (1.5mm,1.5mm);}}
+\providecommand{\tag}[1]{{\tiny\color{BookInk!75}#1}}
+\noindent
+\begin{tikzpicture}[
+  font=\sffamily\scriptsize, text=BookInk,
+  folder/.style={anchor=west, align=left},
+  tagline/.style={font=\tiny, text=BookInk!75, align=left},
+]
+  \node[folder] (root) at (0,0) {perovskite-fig2\_\\delivery\_2026-10-29/};
+  \node[folder, below=2mm of root.south west, xshift=4mm] (readme) {README.md};
+  \node[tagline, below=0.5mm of readme.south west] (readmetag) {这是什么、\\怎么复现、\\联系人};
+  \node[folder, below=1.5mm of readmetag.south west, xshift=4mm] (b0) {00\_brief/\\[-2pt]\tag{任务书、}\\[-1pt]\tag{期刊要求摘录}};
+  \node[folder, below=1.5mm of b0.south west, xshift=4mm] (s1) {01\_source/ \ChThirteenMarkSelf\ 原图与 CSV\\[-2pt]\tag{工具 ZIP 不含}};
+  \node[folder, below=1.5mm of s1.south west, xshift=4mm] (s1d) {data/ · images/};
+  \node[folder, below=1.5mm of s1d.south west] (c2) {02\_code/ \ChThirteenMarkSelf\ 脚本与环境};
+  \node[folder, below=1.5mm of c2.south west, xshift=4mm] (d3) {03\_drafts/ \ChThirteenMarkSelf\ v01–v04\\[-2pt]与修改指令};
+  \node[folder, below=1.5mm of d3.south west, xshift=4mm] (f4) {04\_final/ \ChThirteenMarkTool\ 论文/汇报/\\[-2pt]海报终稿};
+  \node[folder, below=1.5mm of f4.south west, xshift=4mm] (f4p) {paper/ · talk/ · poster/};
+  \node[folder, below=1.5mm of f4p.south west] (r5) {05\_records/};
+  \node[folder, below=1.5mm of r5.south west, xshift=4mm] (r5a) {ai-use-log.md \ChThirteenMarkSelf};
+  \node[folder, below=1mm of r5a.south west] (r5b) {processing-log.md \ChThirteenMarkSelf};
+  \node[folder, below=1mm of r5b.south west] (r5c) {checks/ \ChThirteenMarkTool\ 检查报告\\[-2pt]与命令输出};
+  \node[folder, below=1mm of r5c.south west] (r5d) {multi-panel-export/ \ChThirteenMarkTool\ 组图 ZIP};
+
+  \draw[BookInk!40, thin] (root.south west) ++(0,-1mm) coordinate (rt) -- (readme.west |- rt) -- (readme.west);
+  \foreach \a/\b in {readmetag/b0,b0/s1,s1/s1d,s1d/c2,c2/d3,d3/f4,f4/f4p,f4p/r5,r5/r5a,r5a/r5b,r5b/r5c,r5c/r5d} {
+    \draw[BookInk!30, thin] (\a.south west) ++(0,-0.5mm) coordinate (st) -- (\b.west |- st) -- (\b.west);
+  }
+
+  \node[tagline, anchor=north west] at ([yshift=-3mm]r5d.south-|root.west) {%
+    \ChThirteenMarkTool\ 来自工具导出（组图 ZIP、\\数据下载、检查报告）\\[2pt]
+    \ChThirteenMarkSelf\ 必须作者另存（原图、脚本、\\任务书、AI 使用记录）\\[4pt]
+    README 三问：这是什么？\\怎么复现？\\用了哪些 AI、怎么核对的？};
+\end{tikzpicture}

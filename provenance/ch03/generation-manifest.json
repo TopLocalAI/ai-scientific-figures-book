@@ -1,0 +1,387 @@
+[
+  {
+    "key": "ch03-02a-sketch-linear",
+    "file": "figures/ch03/ch03-02a-sketch-linear.png",
+    "attempt": 1,
+    "prompt": "A rough pencil planning sketch on slightly off-white sketchbook paper,\nphotographed flat from directly above, evenly lit, no hands, no pencil, no other\nobjects. Landscape 16:9. Single graphite pencil, loose confident lines, a few\nconstruction lines and faint erasure marks. Simple shapes only: rounded blobs,\npairs of parallel lines with short rungs (double-stranded DNA), a wavy line\n(RNA), arrows. Strictly no writing of any kind: no letters, no words, no\nnumbers, no labels, no title, no annotations. Pencil gray only, no color.\nBottom tenth of the page left blank.\n\nLayout: one horizontal row of four steps from left to right, connected by short\narrows. Step 1 at far left: a rounded two-lobed blob with a short wavy line\ntucked inside it. Step 2: a horizontal ladder-like double line with the same\nblob sitting on it; a small shaded rectangle on the upper line at the right\nedge of the blob. Step 3: the double line with a clear gap cut through both\nlines, the small shaded rectangle right next to the gap. Step 4 at far right,\nsqueezed: the arrow splits into two small arrows, one going up-right and one\ngoing down-right, each ending at a short double line; the lower one has a\nsmall separate short double line floating above it.",
+    "reference": [],
+    "source": "codex-output/exec-4b861227-d0c9-4ed6-89fa-4fe272f4c746.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "dc6ede54676ec401fffd564b4ca4e46d409e6382c126a257a587afc5f856b390"
+  },
+  {
+    "key": "ch03-02b-sketch-hub",
+    "file": "figures/ch03/ch03-02b-sketch-hub-alt1.png",
+    "attempt": 1,
+    "prompt": "A rough pencil planning sketch on slightly off-white sketchbook paper,\nphotographed flat from directly above, evenly lit, no hands, no pencil, no other\nobjects. Landscape 16:9. Single graphite pencil, loose confident lines, a few\nconstruction lines and faint erasure marks. Simple shapes only: rounded blobs,\npairs of parallel lines with short rungs (double-stranded DNA), a wavy line\n(RNA), arrows. Strictly no writing of any kind: no letters, no words, no\nnumbers, no labels, no title, no annotations. Pencil gray only, no color.\nBottom tenth of the page left blank.\n\nLayout: radial. In the exact center, a large rounded two-lobed blob sitting on a\nshort ladder-like double line. Around it, at the four corners of the page,\nfour smaller shapes: top-left a short wavy line, top-right a small shaded\nrectangle on a short double line, bottom-left a short double line with a tiny\nzigzag mark, bottom-right a short double line with a short thick inserted\nsegment and a separate short double line above it. Arrows connect the center\nto each corner: two arrows point inward, two point outward. No clear starting\npoint.\n\nOutput resolution: 2560 × 1440 pixels (16:9); at least 2400 pixels wide.",
+    "reference": [],
+    "source": "codex-output/exec-ca2ae8ea-11b7-4156-bac2-1de6f88f6184.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "2ff17e753142f863f1753f33e45b65c91bd22c6957852d6d8fbb88aef9894109"
+  },
+  {
+    "key": "ch03-02b-sketch-hub",
+    "file": "figures/ch03/ch03-02b-sketch-hub.png",
+    "attempt": 2,
+    "prompt": "A rough pencil planning sketch on slightly off-white sketchbook paper,\nphotographed flat from directly above, evenly lit, no hands, no pencil, no other\nobjects. Landscape 16:9. Single graphite pencil, loose confident lines, a few\nconstruction lines and faint erasure marks. Simple shapes only: rounded blobs,\npairs of parallel lines with short rungs (double-stranded DNA), a wavy line\n(RNA), arrows. Strictly no writing of any kind: no letters, no words, no\nnumbers, no labels, no title, no annotations. Pencil gray only, no color.\nBottom tenth of the page left blank.\n\nLayout: radial. In the exact center, a large rounded two-lobed blob sitting on a\nshort ladder-like double line. Around it, at the four corners of the page,\nfour smaller shapes: top-left a short wavy line, top-right a small shaded\nrectangle on a short double line, bottom-left a short double line with a tiny\nzigzag mark, bottom-right a short double line with a short thick inserted\nsegment and a separate short double line above it. Arrows connect the center\nto each corner: two arrows point inward, two point outward. No clear starting\npoint.",
+    "reference": [],
+    "source": "codex-output/exec-3d5914c4-c529-42fc-bd3f-d8cc50634da2.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "9779f77a6fb4d39671222fee26c103b34de3fe8671471eb8e5c2bbed235e702e"
+  },
+  {
+    "key": "ch03-02c-sketch-branch",
+    "file": "figures/ch03/ch03-02c-sketch-branch-alt1.png",
+    "attempt": 1,
+    "prompt": "A rough pencil planning sketch on slightly off-white sketchbook paper,\nphotographed flat from directly above, evenly lit, no hands, no pencil, no other\nobjects. Landscape 16:9. Single graphite pencil, loose confident lines, a few\nconstruction lines and faint erasure marks. Simple shapes only: rounded blobs,\npairs of parallel lines with short rungs (double-stranded DNA), a wavy line\n(RNA), arrows. Strictly no writing of any kind: no letters, no words, no\nnumbers, no labels, no title, no annotations. Pencil gray only, no color.\nBottom tenth of the page left blank.\n\nLayout: two tiers. Upper third of the page: a compact row of three small steps\nfrom left to right connected by arrows (a two-lobed blob with a wavy line\ninside; the blob sitting on a ladder-like double line with a small shaded\nrectangle; the double line with a gap through both lines, the shaded rectangle\nright next to the gap). From the third step, one arrow goes down and splits\ninto two arrows. Lower part of the page: two wide horizontal lanes of equal\nheight, stacked one above the other, each framed by a light pencil rectangle.\nUpper lane: a long double line with a tiny zigzag mark at the middle. Lower\nlane: a short separate double line floating above the middle of a long double\nline, and the long double line has a short thick inserted segment at the\nmiddle. The long double lines in both lanes start and end at the same x\npositions.",
+    "reference": [],
+    "source": "codex-output/exec-b3f85a81-b871-4ccc-a7dc-4284f041b28e.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "e4cb32e8752f0ce4c497981be0f89b1612f319be1530b0406ff2e479815c991e"
+  },
+  {
+    "key": "ch03-02c-sketch-branch",
+    "file": "figures/ch03/ch03-02c-sketch-branch-alt2.png",
+    "attempt": 2,
+    "prompt": "A rough pencil planning sketch on slightly off-white sketchbook paper,\nphotographed flat from directly above, evenly lit, no hands, no pencil, no other\nobjects. Landscape 16:9. Single graphite pencil, loose confident lines, a few\nconstruction lines and faint erasure marks. Simple shapes only: rounded blobs,\npairs of parallel lines with short rungs (double-stranded DNA), a wavy line\n(RNA), arrows. Strictly no writing of any kind: no letters, no words, no\nnumbers, no labels, no title, no annotations. Pencil gray only, no color.\nBottom tenth of the page left blank.\n\nLayout: two tiers. Upper third of the page: a compact row of three small steps\nfrom left to right connected by arrows (a two-lobed blob with a wavy line\ninside; the blob sitting on a ladder-like double line with a small shaded\nrectangle; the double line with a gap through both lines, the shaded rectangle\nright next to the gap). From the third step, one arrow goes down and splits\ninto two arrows. Lower part of the page: two wide horizontal lanes of equal\nheight, stacked one above the other, each framed by a light pencil rectangle.\nUpper lane: a long double line with a tiny zigzag mark at the middle. Lower\nlane: a short separate double line floating above the middle of a long double\nline, and the long double line has a short thick inserted segment at the\nmiddle. The long double lines in both lanes start and end at the same x\npositions.",
+    "reference": [],
+    "source": "codex-output/exec-dba0099a-deef-429b-b085-7ce88917402e.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "de88a932d6c07e424137f4ec9a0d4a74d5283a1c39b9aa3570bf67db50c0d1d4"
+  },
+  {
+    "key": "ch03-02c-sketch-branch",
+    "file": "figures/ch03/ch03-02c-sketch-branch.png",
+    "attempt": 3,
+    "prompt": "A rough pencil planning sketch on slightly off-white sketchbook paper,\nphotographed flat from directly above, evenly lit, no hands, no pencil, no other\nobjects. Landscape 16:9. Single graphite pencil, loose confident lines, a few\nconstruction lines and faint erasure marks. Simple shapes only: rounded blobs,\npairs of parallel lines with short rungs (double-stranded DNA), a wavy line\n(RNA), arrows. Strictly no writing of any kind: no letters, no words, no\nnumbers, no labels, no title, no annotations. Pencil gray only, no color.\nBottom tenth of the page left blank.\n\nLayout: two tiers. Upper third of the page: a compact row of three small steps\nfrom left to right connected by arrows (a two-lobed blob with a wavy line\ninside; the blob sitting on a ladder-like double line with a small shaded\nrectangle; the double line with a gap through both lines, the shaded rectangle\nright next to the gap). From the third step, one arrow goes down and splits\ninto two arrows. Lower part of the page: two wide horizontal lanes of equal\nheight, stacked one above the other, each framed by a light pencil rectangle.\nUpper lane: a long double line with a tiny zigzag mark at the middle. Lower\nlane: a short separate double line floating above the middle of a long double\nline, and the long double line has a short thick inserted segment at the\nmiddle. The long double lines in both lanes start and end at the same x\npositions.\n\nRouting clarification: the two outgoing branch arrows MUST end at two DIFFERENT lanes. Route the branch down along the far right OUTSIDE both rectangles. One left-pointing arrow enters the upper rectangle through its right edge; the other continues downward outside the upper rectangle and enters the LOWER rectangle through its right edge. Never point both arrowheads at the upper rectangle. The upper lane DNA is continuous through its tiny zigzag indel mark, not a large open break.",
+    "reference": [],
+    "source": "codex-output/exec-22ce9cf1-f198-4c78-93dd-30678b71cea2.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "6bfa80f7c121743f3b1c0b81dc750c019649a29f9ef24b9da87ec0f66a58e035"
+  },
+  {
+    "key": "ch03-03a-cand-linear",
+    "file": "figures/ch03/ch03-03a-cand-linear.png",
+    "attempt": 1,
+    "prompt": "Flat 2D scientific overview schematic for a journal figure, landscape 16:9,\npure white background. Clean vector illustration style: flat fills, thin dark\ngray outlines, no gradients, no shadows, no highlights, no 3D, no glow, no\ntexture. ABSOLUTELY NO TEXT: no letters, no words, no numbers, no symbols, no\nlabels, no legend, no title.\n\nFollow the layout of the attached pencil sketch closely: same regions, same\nrelative positions, same arrow directions.\n\nOBJECTS (use these exact visual identities in every step where they appear):\n- Cas9: a rounded two-lobed protein shape, muted blue-gray (#7C93A8).\n- sgRNA: a single orange (#E69F00) strand with a short straight segment (the\n  spacer) and a small hairpin loop scaffold, partly inside Cas9.\n- Genomic DNA: two parallel dark gray (#4D4D4D) lines with short light gray\n  rungs between them.\n- PAM: a short bright yellow (#F0E442) segment on the upper DNA line.\n- Double-strand break: a clean gap through both DNA lines, right next to the PAM.\n- Donor template: a short separate double-stranded DNA; its two ends dark gray\n  (homology arms), its middle segment teal (#009E73).\n- NHEJ result: a continuous DNA with one small reddish-purple (#CC79A7) mark at\n  the former break site.\n- HDR result: a continuous DNA with a teal (#009E73) segment at the former\n  break site, the same length as the donor's middle segment.\n\nSTEPS: (1) Cas9 bound to sgRNA. (2) Cas9-sgRNA sitting on the DNA at the PAM, the\norange spacer lying alongside the lower DNA line, the upper line slightly\npushed away. (3) The DNA with the break next to the PAM, Cas9 lifted away.\n(4) Repair by end joining, giving the NHEJ result, with no donor. (5) Repair\nusing the donor template, giving the HDR result; the donor appears only here.\nSteps are connected by solid dark gray arrows with filled heads; after step 3\nthe arrow splits into two equal arrows.\n\nDO NOT DRAW: cells, nucleus, chromosomes, scissors, lightning, sparkles,\ndouble-helix twisting, realistic protein structure, any charts or data.\nBottom 10% of the image empty.\n\nLAYOUT: one row of five steps left to right; steps 4 and 5 stacked at the\nright end.",
+    "reference": [
+      "figures/ch03/ch03-02a-sketch-linear.png"
+    ],
+    "source": "codex-output/exec-0bba94dc-e95a-44b3-ab2a-3962ee8ed1dc.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "5cb88f76617d168699b75001dce03a9b3343057ab0fa99d40c3962b8b6ccfea3"
+  },
+  {
+    "key": "ch03-03b-cand-hub",
+    "file": "figures/ch03/ch03-03b-cand-hub-alt1.png",
+    "attempt": 1,
+    "prompt": "Flat 2D scientific overview schematic for a journal figure, landscape 16:9,\npure white background. Clean vector illustration style: flat fills, thin dark\ngray outlines, no gradients, no shadows, no highlights, no 3D, no glow, no\ntexture. ABSOLUTELY NO TEXT: no letters, no words, no numbers, no symbols, no\nlabels, no legend, no title.\n\nFollow the layout of the attached pencil sketch closely: same regions, same\nrelative positions, same arrow directions.\n\nOBJECTS (use these exact visual identities in every step where they appear):\n- Cas9: a rounded two-lobed protein shape, muted blue-gray (#7C93A8).\n- sgRNA: a single orange (#E69F00) strand with a short straight segment (the\n  spacer) and a small hairpin loop scaffold, partly inside Cas9.\n- Genomic DNA: two parallel dark gray (#4D4D4D) lines with short light gray\n  rungs between them.\n- PAM: a short bright yellow (#F0E442) segment on the upper DNA line.\n- Double-strand break: a clean gap through both DNA lines, right next to the PAM.\n- Donor template: a short separate double-stranded DNA; its two ends dark gray\n  (homology arms), its middle segment teal (#009E73).\n- NHEJ result: a continuous DNA with one small reddish-purple (#CC79A7) mark at\n  the former break site.\n- HDR result: a continuous DNA with a teal (#009E73) segment at the former\n  break site, the same length as the donor's middle segment.\n\nSTEPS: (1) Cas9 bound to sgRNA. (2) Cas9-sgRNA sitting on the DNA at the PAM, the\norange spacer lying alongside the lower DNA line, the upper line slightly\npushed away. (3) The DNA with the break next to the PAM, Cas9 lifted away.\n(4) Repair by end joining, giving the NHEJ result, with no donor. (5) Repair\nusing the donor template, giving the HDR result; the donor appears only here.\nSteps are connected by solid dark gray arrows with filled heads; after step 3\nthe arrow splits into two equal arrows.\n\nDO NOT DRAW: cells, nucleus, chromosomes, scissors, lightning, sparkles,\ndouble-helix twisting, realistic protein structure, any charts or data.\nBottom 10% of the image empty.\n\nLAYOUT: radial; the DNA-bound Cas9 complex (step 2-3 merged) in the\ncenter, steps 1, 4, 5 and the PAM detail around it.",
+    "reference": [
+      "figures/ch03/ch03-02b-sketch-hub.png"
+    ],
+    "source": "codex-output/exec-5f43ef0a-9784-441e-a32d-34fce35b03ec.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "fa8b4bbcf4edd6f12cd3ed32caa370be532b0c516850bd2f7a1727481bc435a5"
+  },
+  {
+    "key": "ch03-03b-cand-hub",
+    "file": "figures/ch03/ch03-03b-cand-hub-alt2.png",
+    "attempt": 2,
+    "prompt": "Flat 2D scientific overview schematic for a journal figure, landscape 16:9,\npure white background. Clean vector illustration style: flat fills, thin dark\ngray outlines, no gradients, no shadows, no highlights, no 3D, no glow, no\ntexture. ABSOLUTELY NO TEXT: no letters, no words, no numbers, no symbols, no\nlabels, no legend, no title.\n\nFollow the layout of the attached pencil sketch closely: same regions, same\nrelative positions, same arrow directions.\n\nOBJECTS (use these exact visual identities in every step where they appear):\n- Cas9: a rounded two-lobed protein shape, muted blue-gray (#7C93A8).\n- sgRNA: a single orange (#E69F00) strand with a short straight segment (the\n  spacer) and a small hairpin loop scaffold, partly inside Cas9.\n- Genomic DNA: two parallel dark gray (#4D4D4D) lines with short light gray\n  rungs between them.\n- PAM: a short bright yellow (#F0E442) segment on the upper DNA line.\n- Double-strand break: a clean gap through both DNA lines, right next to the PAM.\n- Donor template: a short separate double-stranded DNA; its two ends dark gray\n  (homology arms), its middle segment teal (#009E73).\n- NHEJ result: a continuous DNA with one small reddish-purple (#CC79A7) mark at\n  the former break site.\n- HDR result: a continuous DNA with a teal (#009E73) segment at the former\n  break site, the same length as the donor's middle segment.\n\nSTEPS: (1) Cas9 bound to sgRNA. (2) Cas9-sgRNA sitting on the DNA at the PAM, the\norange spacer lying alongside the lower DNA line, the upper line slightly\npushed away. (3) The DNA with the break next to the PAM, Cas9 lifted away.\n(4) Repair by end joining, giving the NHEJ result, with no donor. (5) Repair\nusing the donor template, giving the HDR result; the donor appears only here.\nSteps are connected by solid dark gray arrows with filled heads; after step 3\nthe arrow splits into two equal arrows.\n\nDO NOT DRAW: cells, nucleus, chromosomes, scissors, lightning, sparkles,\ndouble-helix twisting, realistic protein structure, any charts or data.\nBottom 10% of the image empty.\n\nLAYOUT: radial; the DNA-bound Cas9 complex (step 2-3 merged) in the\ncenter, steps 1, 4, 5 and the PAM detail around it.",
+    "reference": [
+      "figures/ch03/ch03-02b-sketch-hub.png"
+    ],
+    "source": "codex-output/exec-492d57e8-71e8-4902-9ee3-04f7db3c1e12.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "e98086b1cc0622089cb132d6aed072ae2d59eee2c8f9e843db7efa4c2f2823a9"
+  },
+  {
+    "key": "ch03-03b-cand-hub",
+    "file": "figures/ch03/ch03-03b-cand-hub.png",
+    "attempt": 3,
+    "prompt": "Flat 2D scientific overview schematic for a journal figure, landscape 16:9,\npure white background. Clean vector illustration style: flat fills, thin dark\ngray outlines, no gradients, no shadows, no highlights, no 3D, no glow, no\ntexture. ABSOLUTELY NO TEXT: no letters, no words, no numbers, no symbols, no\nlabels, no legend, no title.\n\nFollow the layout of the attached pencil sketch closely: same regions, same\nrelative positions, same arrow directions.\n\nOBJECTS (use these exact visual identities in every step where they appear):\n- Cas9: a rounded two-lobed protein shape, muted blue-gray (#7C93A8).\n- sgRNA: a single orange (#E69F00) strand with a short straight segment (the\n  spacer) and a small hairpin loop scaffold, partly inside Cas9.\n- Genomic DNA: two parallel dark gray (#4D4D4D) lines with short light gray\n  rungs between them.\n- PAM: a short bright yellow (#F0E442) segment on the upper DNA line.\n- Double-strand break: a clean gap through both DNA lines, right next to the PAM.\n- Donor template: a short separate double-stranded DNA; its two ends dark gray\n  (homology arms), its middle segment teal (#009E73).\n- NHEJ result: a continuous DNA with one small reddish-purple (#CC79A7) mark at\n  the former break site.\n- HDR result: a continuous DNA with a teal (#009E73) segment at the former\n  break site, the same length as the donor's middle segment.\n\nSTEPS: (1) Cas9 bound to sgRNA. (2) Cas9-sgRNA sitting on the DNA at the PAM, the\norange spacer lying alongside the lower DNA line, the upper line slightly\npushed away. (3) The DNA with the break next to the PAM, Cas9 lifted away.\n(4) Repair by end joining, giving the NHEJ result, with no donor. (5) Repair\nusing the donor template, giving the HDR result; the donor appears only here.\nSteps are connected by solid dark gray arrows with filled heads; after step 3\nthe arrow splits into two equal arrows.\n\nDO NOT DRAW: cells, nucleus, chromosomes, scissors, lightning, sparkles,\ndouble-helix twisting, realistic protein structure, any charts or data.\nBottom 10% of the image empty.\n\nLAYOUT: radial; the DNA-bound Cas9 complex (step 2-3 merged) in the\ncenter, steps 1, 4, 5 and the PAM detail around it.\n\nMatch the deliberately confusing hub sketch exactly: use exactly FOUR connecting arrows, each with exactly ONE arrowhead. Top-left to center (inward); bottom-left to center (inward); center to top-right (outward); center to bottom-right (outward). No bidirectional arrows, no additional arrows. This is a pedagogical example of ambiguous reading order, so preserve these mixed directions.",
+    "reference": [
+      "figures/ch03/ch03-02b-sketch-hub.png"
+    ],
+    "source": "codex-output/exec-8f6f9f70-dabb-405a-af2e-0c8fd3b0039a.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "da342fbc65813812249bf117c83f5f553d36f475b2b959e85e865ba6f048354c"
+  },
+  {
+    "key": "ch03-03c-cand-branch",
+    "file": "figures/ch03/ch03-03c-cand-branch.png",
+    "attempt": 1,
+    "prompt": "Flat 2D scientific overview schematic for a journal figure, landscape 16:9,\npure white background. Clean vector illustration style: flat fills, thin dark\ngray outlines, no gradients, no shadows, no highlights, no 3D, no glow, no\ntexture. ABSOLUTELY NO TEXT: no letters, no words, no numbers, no symbols, no\nlabels, no legend, no title.\n\nFollow the layout of the attached pencil sketch closely: same regions, same\nrelative positions, same arrow directions.\n\nOBJECTS (use these exact visual identities in every step where they appear):\n- Cas9: a rounded two-lobed protein shape, muted blue-gray (#7C93A8).\n- sgRNA: a single orange (#E69F00) strand with a short straight segment (the\n  spacer) and a small hairpin loop scaffold, partly inside Cas9.\n- Genomic DNA: two parallel dark gray (#4D4D4D) lines with short light gray\n  rungs between them.\n- PAM: a short bright yellow (#F0E442) segment on the upper DNA line.\n- Double-strand break: a clean gap through both DNA lines, right next to the PAM.\n- Donor template: a short separate double-stranded DNA; its two ends dark gray\n  (homology arms), its middle segment teal (#009E73).\n- NHEJ result: a continuous DNA with one small reddish-purple (#CC79A7) mark at\n  the former break site.\n- HDR result: a continuous DNA with a teal (#009E73) segment at the former\n  break site, the same length as the donor's middle segment.\n\nSTEPS: (1) Cas9 bound to sgRNA. (2) Cas9-sgRNA sitting on the DNA at the PAM, the\norange spacer lying alongside the lower DNA line, the upper line slightly\npushed away. (3) The DNA with the break next to the PAM, Cas9 lifted away.\n(4) Repair by end joining, giving the NHEJ result, with no donor. (5) Repair\nusing the donor template, giving the HDR result; the donor appears only here.\nSteps are connected by solid dark gray arrows with filled heads; after step 3\nthe arrow splits into two equal arrows.\n\nDO NOT DRAW: cells, nucleus, chromosomes, scissors, lightning, sparkles,\ndouble-helix twisting, realistic protein structure, any charts or data.\nBottom 10% of the image empty.\n\nLAYOUT: steps 1-3 as a compact\nrow across the top third; below, two equal-height horizontal lanes stacked\nvertically, upper lane step 4, lower lane step 5, with the DNA in both lanes\naligned at the same x positions and length.",
+    "reference": [
+      "figures/ch03/ch03-02c-sketch-branch.png"
+    ],
+    "source": "codex-output/exec-bf55bc01-771b-4971-baca-85c23d6b9ef1.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "589b0ebc028c8477fd064fd1958a3384d58ee7d09b36ae6f5c9111030951667b"
+  },
+  {
+    "key": "ch03-05b-r1",
+    "file": "provenance/ch03/ch03-05b-r1-alt1.png",
+    "attempt": 1,
+    "prompt": "Edit the selected image. Change only one thing: move the small yellow PAM\nsegment so that it sits directly next to the right side of the DNA gap at the\ncleavage step, on the upper strand, touching the gap. Keep every other object,\ncolor, line weight and position unchanged. Do not add any text.",
+    "reference": [
+      "figures/ch03/ch03-03c-cand-branch.png"
+    ],
+    "source": "codex-output/exec-ee7d313e-042e-4c08-a687-e2ed8171db3f.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "8de6cdb3bf02739b8603813a1c2b6856d333031ef47208dc61f31a4b5eff9d0a"
+  },
+  {
+    "key": "ch03-05b-r1",
+    "file": "provenance/ch03/ch03-05b-r1.png",
+    "attempt": 2,
+    "prompt": "Edit the selected image. Change only one thing: move the small yellow PAM\nsegment so that it sits directly next to the right side of the DNA gap at the\ncleavage step, on the upper strand, touching the gap. Keep every other object,\ncolor, line weight and position unchanged. Do not add any text.\n\nThe cleavage-step DNA at the TOP RIGHT currently has TWO yellow highlights, one on each side of the gap. Erase the yellow highlight LEFT of that gap, replacing it with the ordinary dark-gray DNA line. Retain exactly ONE yellow highlight RIGHT of that gap, touching the gap on the upper strand. This is the only change.",
+    "reference": [
+      "figures/ch03/ch03-03c-cand-branch.png"
+    ],
+    "source": "codex-output/exec-e687dc82-c795-4b2f-8328-37d306c349ff.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "7f3ff13203e69334edceb56d434c32d241b5ac376ba268eab8df9057594de9a0"
+  },
+  {
+    "key": "ch03-05b-r2",
+    "file": "provenance/ch03/ch03-05b-r2-alt1.png",
+    "attempt": 1,
+    "prompt": "Edit the selected image. Change only one thing: move the short teal donor DNA\nso that it lies inside the lower repair lane only, directly above the DNA gap\nin that lane, horizontally centered on the gap. Remove any copy of the donor\noutside the lower lane. Keep everything else unchanged. No text.",
+    "reference": [
+      "provenance/ch03/ch03-05b-r1.png"
+    ],
+    "source": "codex-output/exec-e7404a14-a8fa-4997-8224-ec4d148d5b1c.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "c1d47829a2d155e8d7fe6198e97fe974be05e3e9c1d753112b61772aa9666622"
+  },
+  {
+    "key": "ch03-05b-r2",
+    "file": "provenance/ch03/ch03-05b-r2.png",
+    "attempt": 2,
+    "prompt": "Edit the selected image. Change only one thing: move the short teal donor DNA\nso that it lies inside the lower repair lane only, directly above the DNA gap\nin that lane, horizontally centered on the gap. Remove any copy of the donor\noutside the lower lane. Keep everything else unchanged. No text.\n\nKeep exactly one visible separate donor double-stranded DNA inside the LOWER rectangle. Its existing location, directly above the teal inserted segment, is already close to correct: retain that short donor and horizontally align its teal middle with the teal middle of the long lower DNA. Do not erase or merge the donor with the long DNA. There is no donor outside the lower rectangle to remove.",
+    "reference": [
+      "provenance/ch03/ch03-05b-r1.png"
+    ],
+    "source": "codex-output/exec-57112523-15be-4e19-b874-112fbb8c3ae3.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "4625b1b689b237edc0d5449af1137a819fc8fbe8ffe105edbb1eac42984c8e05"
+  },
+  {
+    "key": "ch03-05b-r3",
+    "file": "provenance/ch03/ch03-05b-r3-alt1.png",
+    "attempt": 1,
+    "prompt": "Edit the selected image. Change only one thing: make the two repair lanes the\nsame height, and draw the DNA in both lanes at the same horizontal position and\nthe same length, so the two results line up vertically for comparison. Keep\ncolors, objects and the top row unchanged. No text.",
+    "reference": [
+      "provenance/ch03/ch03-05b-r2.png"
+    ],
+    "source": "codex-output/exec-e3d176e3-a0ad-4be7-bd21-c012d36c9fa0.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "5d070c4471264ea5bc9e980075a5a31001b6492020268550c46803b64b0a3c75"
+  },
+  {
+    "key": "ch03-05b-r3",
+    "file": "provenance/ch03/ch03-05b-r3-alt2.png",
+    "attempt": 2,
+    "prompt": "Edit the selected image. Change only one thing: make the two repair lanes the\nsame height, and draw the DNA in both lanes at the same horizontal position and\nthe same length, so the two results line up vertically for comparison. Keep\ncolors, objects and the top row unchanged. No text.\n\nAlign geometry only, NOT the identities of the two repair outcomes. Upper lane must retain ONLY its tiny magenta indel mark, with absolutely no teal and no donor. Lower lane must retain its teal inserted segment and exactly ONE SEPARATE short donor DNA above it, with absolutely no magenta. Preserve both outcomes and the visible donor exactly. Make both rectangular lanes 180 pixels high; keep their long DNA left endpoints and right endpoints aligned. Do not alter any top-row object.",
+    "reference": [
+      "provenance/ch03/ch03-05b-r2.png"
+    ],
+    "source": "codex-output/exec-69cb84fd-a3e8-42e8-adcf-f8e9e5c4f91c.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "892863f51d88ada681e7c5bfd431171a2823bbeafc44f71955e422fb905df697"
+  },
+  {
+    "key": "ch03-05b-r3",
+    "file": "provenance/ch03/ch03-05b-r3.png",
+    "attempt": 3,
+    "prompt": "Edit the selected image. Change only one thing: make the two repair lanes the\nsame height, and draw the DNA in both lanes at the same horizontal position and\nthe same length, so the two results line up vertically for comparison. Keep\ncolors, objects and the top row unchanged. No text.\n\nMinimal geometric operation on this 1672 by 941 image: the lower lane rectangle already spans approximately y=568 to y=768 (200 pixels). Move ONLY the TOP BORDER of the upper lane rectangle from approximately y=386 up to y=340, leaving its bottom border at approximately y=540 (also 200 pixels). The long DNA endpoints are already aligned closely enough: keep both long DNA drawings and their positions unchanged. Keep the separate donor above the lower DNA, all color marks and the entire top row unchanged. Upper outcome stays magenta-only; lower outcome stays teal-only with one separate donor. Do not make the two outcomes identical.",
+    "reference": [
+      "provenance/ch03/ch03-05b-r2.png"
+    ],
+    "source": "codex-output/exec-b8c5ad92-ead2-422f-93c9-1f9a29856e44.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "da95a663832c5d81d95763fc09a25b5d4177583a32bb583debbaedfb459d2ff0"
+  },
+  {
+    "key": "ch03-05b-v3-revised",
+    "file": "figures/ch03/ch03-05b-v3-revised.png",
+    "attempt": 3,
+    "prompt": "Edit the selected image. Change only one thing: make the two repair lanes the\nsame height, and draw the DNA in both lanes at the same horizontal position and\nthe same length, so the two results line up vertically for comparison. Keep\ncolors, objects and the top row unchanged. No text.\n\nMinimal geometric operation on this 1672 by 941 image: the lower lane rectangle already spans approximately y=568 to y=768 (200 pixels). Move ONLY the TOP BORDER of the upper lane rectangle from approximately y=386 up to y=340, leaving its bottom border at approximately y=540 (also 200 pixels). The long DNA endpoints are already aligned closely enough: keep both long DNA drawings and their positions unchanged. Keep the separate donor above the lower DNA, all color marks and the entire top row unchanged. Upper outcome stays magenta-only; lower outcome stays teal-only with one separate donor. Do not make the two outcomes identical.",
+    "reference": [
+      "provenance/ch03/ch03-05b-r2.png"
+    ],
+    "source": "codex-output/exec-b8c5ad92-ead2-422f-93c9-1f9a29856e44.png",
+    "alias_of": "provenance/ch03/ch03-05b-r3.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "da95a663832c5d81d95763fc09a25b5d4177583a32bb583debbaedfb459d2ff0"
+  },
+  {
+    "key": "ch03-06-final-base",
+    "file": "figures/ch03/ch03-06-final-base-alt1.png",
+    "attempt": 1,
+    "prompt": "Edit the selected image. Change only one thing: shift the three steps of the top\nrow to the left so that the right 30% of the top row is empty white space.\nKeep sizes, colors and the two lower lanes unchanged. No text.",
+    "reference": [
+      "figures/ch03/ch03-05b-v3-revised.png"
+    ],
+    "source": "codex-output/exec-473c0e21-70a8-4c57-a713-1937ea044afa.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "e86ceaaaf7ec3c699beacdb1a4a1a2736657fb6daa0e916e3b965d68cce53460"
+  },
+  {
+    "key": "ch03-06-final-base",
+    "file": "figures/ch03/ch03-06-final-base.png",
+    "attempt": 2,
+    "prompt": "Edit the selected image. Change only one thing: shift the three steps of the top\nrow to the left so that the right 30% of the top row is empty white space.\nKeep sizes, colors and the two lower lanes unchanged. No text.\n\nReserve the entire rectangle x=1170 to 1671, y=0 to 329 as EMPTY WHITE for a later inset; absolutely no DNA or connector in this rectangle. Arrange all three top-row steps to finish before x=1130. Keep the top-row process continuous: route the arrow from the cleavage DNA downward to y=335 and then rightward below the reserved rectangle to meet the existing two-way branch. Retain exactly one yellow PAM on the upper strand immediately right of the cleavage gap. Preserve both lower lanes, their separate donor and distinct magenta/teal outcomes.",
+    "reference": [
+      "figures/ch03/ch03-05b-v3-revised.png"
+    ],
+    "source": "codex-output/exec-30bfed08-d1f9-4883-ab5c-d7e7eee5d983.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "16aec379a84d184d28c4126cf997ddbe9dafa9adbb09fa42b2c708ffae1b1119"
+  },
+  {
+    "key": "ch03-06-final-base",
+    "file": "figures/ch03/ch03-06-final-base-alt2.png",
+    "attempt": 3,
+    "prompt": "Edit the selected image. Change only one thing: shift the three steps of the top\nrow to the left so that the right 30% of the top row is empty white space.\nKeep sizes, colors and the two lower lanes unchanged. No text.\n\nReserve a completely empty inset rectangle covering the RIGHT 30% of the canvas and the TOP 35% of its height. All three top-row steps must fit inside the LEFT 68% of the canvas. Connect the cleavage step to the two existing repair branches by a right-angle connector that travels DOWN first and then RIGHT, with its entire horizontal part immediately ABOVE the upper lane rectangle's top border. The horizontal connector must be BELOW the inset rectangle, not across it. Keep every lower-lane object, donor and outcome mark unchanged. Keep the cleavage PAM as ONE yellow segment on the upper strand, on the RIGHT side of the gap.",
+    "reference": [
+      "figures/ch03/ch03-05b-v3-revised.png"
+    ],
+    "source": "codex-output/exec-dad930da-010b-488e-9f81-85322edaaae5.png",
+    "date": "2026-10-29",
+    "tool": "Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）",
+    "model": "不知道：工具未返回具体模型标识。",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "fb8d7f5b1645f169255a44d6358b36bde182b1c10d263074b841fe53f0a9ff7a"
+  }
+]

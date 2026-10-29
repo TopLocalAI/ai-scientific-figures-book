@@ -1,0 +1,15 @@
+% FIG ch03-06 final overview labels (English)
+\begin{tikzpicture}[font=\sffamily\scriptsize, text=BookInk]
+  \node[inner sep=0, anchor=south west] (img) at (0,0) {%
+    \includegraphics[width=\linewidth]{figures/ch03/ch03-06-final-base.png}};
+  \begin{scope}[x={(img.south east)},y={(img.north west)}]
+    \node[anchor=south west, inner sep=0, scale=0.35] at (0.68,0.55) {%
+      \input{figures/ch03/ch03-07-pam-inset-en.tex}};
+    \node[font=\bfseries\footnotesize, fill=white, fill opacity=0.85, inner sep=1pt]
+      at (0.10,0.92) {Cas9};
+    \node[font=\bfseries\footnotesize, fill=white, fill opacity=0.85, inner sep=1pt]
+      at (0.06,0.72) {sgRNA};
+    \node[font=\footnotesize, align=left, anchor=north west] at (0.02,0.03) {%
+      Legend: step / alternative repair routes / PAM / indel / donor-derived sequence};
+  \end{scope}
+\end{tikzpicture}

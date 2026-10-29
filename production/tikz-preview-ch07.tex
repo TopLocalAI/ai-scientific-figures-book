@@ -1,0 +1,43 @@
+% Compile from repo root:
+%   xelatex -interaction=nonstopmode -output-directory=production production/tikz-preview-ch07.tex
+\documentclass[UTF8,fontset=fandol,10pt]{ctexart}
+\usepackage{graphicx}
+\input{shared/preamble}
+\makeatletter
+\let\ChSeven@defcolor\definecolor
+\renewcommand{\definecolor}[3]{%
+  \@ifundefined{color@#1}{\ChSeven@defcolor{#1}{#2}{#3}}{}%
+}
+\makeatother
+\setlength{\parindent}{0pt}
+\begin{document}
+\section*{FIG ch07-01 mechanism grammar (zh)}
+\input{figures/ch07/ch07-01-mechanism-grammar-zh.tex}
+\newpage
+\section*{FIG ch07-01 mechanism grammar (en)}
+\input{figures/ch07/ch07-01-mechanism-grammar-en.tex}
+\newpage
+\section*{FIG ch07-02 v0 sketch overlay}
+\input{figures/ch07/ch07-02-v0-sketch-overlay.tex}
+\newpage
+\section*{FIG ch07-03a V1 errors}
+\input{figures/ch07/ch07-03a-v1-errors.tex}
+\newpage
+\section*{FIG ch07-06 GLUT4 final (zh)}
+\input{figures/ch07/ch07-06-v4-final-zh.tex}
+\newpage
+\section*{FIG ch07-06 GLUT4 final (en)}
+\input{figures/ch07/ch07-06-v4-final-en.tex}
+\newpage
+\section*{FIG ch07-07 battery errors (zh)}
+\input{figures/ch07/ch07-07-battery-errors-zh.tex}
+\newpage
+\section*{FIG ch07-07 battery errors (en)}
+\input{figures/ch07/ch07-07-battery-errors-en.tex}
+\newpage
+\section*{FIG ch07-08 charge/discharge (zh)}
+\input{figures/ch07/ch07-08-battery-charge-discharge-zh.tex}
+\newpage
+\section*{FIG ch07-08 charge/discharge (en)}
+\input{figures/ch07/ch07-08-battery-charge-discharge-en.tex}
+\end{document}

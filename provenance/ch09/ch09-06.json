@@ -1,0 +1,59 @@
+{
+  "version": "v1",
+  "deliberate_errors": [
+    {
+      "id": 3,
+      "note": "passivation purple not teal"
+    },
+    {
+      "id": 1,
+      "note": "panel letter styles mixed"
+    },
+    {
+      "id": 7,
+      "note": "b stretched aspect auto"
+    },
+    {
+      "id": 9,
+      "note": "missing model-generated label on b"
+    },
+    {
+      "id": 2,
+      "note": "c replotted at 8x6 then scaled ~4.5pt ticks"
+    },
+    {
+      "id": 4,
+      "note": "both solid lines greyscale indistinguishable"
+    },
+    {
+      "id": 5,
+      "note": "legend box on c"
+    },
+    {
+      "id": 10,
+      "note": "panel title duplicates caption"
+    },
+    {
+      "id": 3,
+      "note": "d uses red/green not book palette"
+    },
+    {
+      "id": 9,
+      "note": "no 0.8 reference line on d"
+    },
+    {
+      "id": 6,
+      "note": "axis boxes misaligned",
+      "left_mm": 1.3743131868131861,
+      "bottom_mm": 3.187644787644788
+    },
+    {
+      "id": 8,
+      "note": "uneven panel spacing from gridspec"
+    }
+  ],
+  "axis_misalignment_mm": {
+    "left_mm": 1.3743131868131861,
+    "bottom_mm": 3.187644787644788
+  }
+}

@@ -1,0 +1,33 @@
+% Compile from repo root: xelatex -interaction=nonstopmode production/tikz-preview-ch09.tex
+\documentclass[UTF8,fontset=fandol,10pt]{ctexart}
+\usepackage[margin=14mm]{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{ulem}
+\usepackage{pifont}
+\usetikzlibrary{arrows.meta,calc,fit,positioning,matrix,shapes.geometric,patterns}
+\definecolor{BookTeal}{HTML}{176C68}
+\definecolor{BookInk}{HTML}{23363E}
+\definecolor{BookRule}{HTML}{C8D6D6}
+\definecolor{BookPale}{HTML}{F1F6F5}
+\graphicspath{{./}}
+\setlength{\parindent}{0pt}
+\begin{document}
+\section*{FIG ch09-01 panel argument map (zh)}
+\input{figures/ch09/ch09-01-panel-argument-map-zh.tex}
+\newpage
+\section*{FIG ch09-01 panel argument map (en)}
+\input{figures/ch09/ch09-01-panel-argument-map-en.tex}
+\newpage
+\section*{FIG ch09-02 layout wireframes (zh)}
+\input{figures/ch09/ch09-02-layout-wireframes-zh.tex}
+\newpage
+\section*{FIG ch09-02 layout wireframes (en)}
+\input{figures/ch09/ch09-02-layout-wireframes-en.tex}
+\newpage
+\section*{FIG ch09-08 legend drafting (zh)}
+\input{figures/ch09/ch09-08-legend-drafting-zh.tex}
+\newpage
+\section*{FIG ch09-08 legend drafting (en)}
+\input{figures/ch09/ch09-08-legend-drafting-en.tex}
+\end{document}

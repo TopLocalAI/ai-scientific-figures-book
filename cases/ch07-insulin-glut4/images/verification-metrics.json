@@ -1,0 +1,288 @@
+{
+  "method": "For each specified label rectangle, count RGB pixels where max-min>25 OR mean<220; this flags artwork and is not a literal all-white test. Pixel thresholds do not verify semantics.",
+  "v4_label_areas": [
+    {
+      "area": 1,
+      "box": [
+        0.02,
+        0.1,
+        0.02,
+        0.07
+      ],
+      "ink_percent": 0.0
+    },
+    {
+      "area": 2,
+      "box": [
+        0.17,
+        0.26,
+        0.05,
+        0.09
+      ],
+      "ink_percent": 0.0
+    },
+    {
+      "area": 3,
+      "box": [
+        0.17,
+        0.33,
+        0.12,
+        0.17
+      ],
+      "ink_percent": 1.1
+    },
+    {
+      "area": 4,
+      "box": [
+        0.16,
+        0.26,
+        0.52,
+        0.57
+      ],
+      "ink_percent": 0.0
+    },
+    {
+      "area": 5,
+      "box": [
+        0.24,
+        0.36,
+        0.41,
+        0.46
+      ],
+      "ink_percent": 4.51
+    },
+    {
+      "area": 6,
+      "box": [
+        0.33,
+        0.45,
+        0.3,
+        0.34
+      ],
+      "ink_percent": 11.07
+    },
+    {
+      "area": 7,
+      "box": [
+        0.4,
+        0.48,
+        0.41,
+        0.45
+      ],
+      "ink_percent": 0.0
+    },
+    {
+      "area": 8,
+      "box": [
+        0.57,
+        0.62,
+        0.39,
+        0.44
+      ],
+      "ink_percent": 5.17
+    },
+    {
+      "area": 9,
+      "box": [
+        0.58,
+        0.66,
+        0.6,
+        0.64
+      ],
+      "ink_percent": 0.0
+    },
+    {
+      "area": 10,
+      "box": [
+        0.68,
+        0.8,
+        0.47,
+        0.51
+      ],
+      "ink_percent": 20.31
+    },
+    {
+      "area": 11,
+      "box": [
+        0.62,
+        0.7,
+        0.66,
+        0.7
+      ],
+      "ink_percent": 0.0
+    },
+    {
+      "area": 12,
+      "box": [
+        0.83,
+        0.97,
+        0.82,
+        0.86
+      ],
+      "ink_percent": 0.0
+    },
+    {
+      "area": 13,
+      "box": [
+        0.9,
+        0.99,
+        0.3,
+        0.35
+      ],
+      "ink_percent": 2.85
+    },
+    {
+      "area": 14,
+      "box": [
+        0.92,
+        0.99,
+        0.08,
+        0.12
+      ],
+      "ink_percent": 16.91
+    },
+    {
+      "area": 15,
+      "box": [
+        0.02,
+        0.12,
+        0.8,
+        0.85
+      ],
+      "ink_percent": 0.0
+    },
+    {
+      "area": 16,
+      "box": [
+        0.6,
+        0.78,
+        0.15,
+        0.19
+      ],
+      "ink_percent": 0.0
+    }
+  ],
+  "case_plan_sha256_current": "1974cdafef04180d72da2c8e1b1f111a1adda5208560f318fbaff050c7c4e834",
+  "pixel_dimensions": [
+    {
+      "file": "cmp-a1-mixed-arrows.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "effective_ppi_at_174mm": 211.37
+    },
+    {
+      "file": "cmp-a2-unified-arrows.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "effective_ppi_at_174mm": 211.37
+    },
+    {
+      "file": "cmp-b1-too-many-colors-alt1.png",
+      "size": [
+        1672,
+        941
+      ],
+      "effective_ppi_at_174mm": 244.07
+    },
+    {
+      "file": "cmp-b1-too-many-colors.png",
+      "size": [
+        1672,
+        941
+      ],
+      "effective_ppi_at_174mm": 244.07
+    },
+    {
+      "file": "v0-sketch-alt1.png",
+      "size": [
+        1672,
+        941
+      ],
+      "effective_ppi_at_174mm": 244.07
+    },
+    {
+      "file": "v0-sketch-alt2.png",
+      "size": [
+        1672,
+        941
+      ],
+      "effective_ppi_at_174mm": 244.07
+    },
+    {
+      "file": "v0-sketch.png",
+      "size": [
+        1672,
+        941
+      ],
+      "effective_ppi_at_174mm": 244.07
+    },
+    {
+      "file": "v1-vague.png",
+      "size": [
+        1672,
+        941
+      ],
+      "effective_ppi_at_174mm": 244.07
+    },
+    {
+      "file": "v2-brief-alt1.png",
+      "size": [
+        1672,
+        941
+      ],
+      "effective_ppi_at_174mm": 244.07
+    },
+    {
+      "file": "v2-brief.png",
+      "size": [
+        1672,
+        941
+      ],
+      "effective_ppi_at_174mm": 244.07
+    },
+    {
+      "file": "v3-revised-alt1.png",
+      "size": [
+        1672,
+        941
+      ],
+      "effective_ppi_at_174mm": 244.07
+    },
+    {
+      "file": "v3-revised.png",
+      "size": [
+        1672,
+        941
+      ],
+      "effective_ppi_at_174mm": 244.07
+    },
+    {
+      "file": "v4-base-alt1.png",
+      "size": [
+        1672,
+        941
+      ],
+      "effective_ppi_at_174mm": 244.07
+    },
+    {
+      "file": "v4-base-alt2.png",
+      "size": [
+        1672,
+        941
+      ],
+      "effective_ppi_at_174mm": 244.07
+    },
+    {
+      "file": "v4-base.png",
+      "size": [
+        1672,
+        941
+      ],
+      "effective_ppi_at_174mm": 244.07
+    }
+  ]
+}

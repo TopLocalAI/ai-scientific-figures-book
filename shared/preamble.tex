@@ -19,7 +19,9 @@
 \definecolor{BookRule}{HTML}{C8D6D6}
 \definecolor{BookPale}{HTML}{F1F6F5}
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,shapes.misc,fit,backgrounds,calc,matrix}
+\usepackage{rotating}
+\usepackage{pdfpages}
 \usepackage{fvextra}
 \DefineVerbatimEnvironment{Prompt}{Verbatim}{fontsize=\small,breaklines=true,breakanywhere=true,frame=single,rulecolor=\color{BookRule},framesep=2mm}
 \usepackage{caption}
@@ -43,6 +45,36 @@
 \newcommand{\bookversion}{0.1.0}
 \newcommand{\bookdate}{2026-10-29}
 \newcommand{\scidraw}{SciDraw AI}
+% Drawn marks: the book fonts lack U+2713/U+2715.
+\newcommand{\bookcheck}{\tikz[x=1em,y=1em,baseline=-0.1em,line width=0.12em,line cap=round,line join=round]\draw[color=.] (0,0.3)--(0.28,0)--(0.75,0.7);}
+\newcommand{\bookcross}{\tikz[x=1em,y=1em,baseline=-0.1em,line width=0.12em,line cap=round]{\draw[color=.] (0,0)--(0.6,0.65);\draw[color=.] (0,0.65)--(0.6,0);}}
+% Circled numbers and the inhibition sign are missing from the book fonts; draw them.
+\usepackage{newunicodechar}
+\newcommand{\bookcirc}[1]{\tikz[baseline=(n.base)]\node[circle,draw,inner sep=0.5pt,minimum size=1.05em,font=\sffamily\scriptsize] (n) {#1};}
+\newcommand{\bookcircfill}[1]{\tikz[baseline=(n.base)]\node[circle,fill,inner sep=0.5pt,minimum size=1.05em,font=\sffamily\scriptsize\bfseries,text=white] (n) {#1};}
+\newunicodechar{①}{\bookcirc{1}}
+\newunicodechar{②}{\bookcirc{2}}
+\newunicodechar{③}{\bookcirc{3}}
+\newunicodechar{④}{\bookcirc{4}}
+\newunicodechar{⑤}{\bookcirc{5}}
+\newunicodechar{⑥}{\bookcirc{6}}
+\newunicodechar{⑦}{\bookcirc{7}}
+\newunicodechar{⑧}{\bookcirc{8}}
+\newunicodechar{⑨}{\bookcirc{9}}
+\newunicodechar{⑩}{\bookcirc{10}}
+\newunicodechar{⑪}{\bookcirc{11}}
+\newunicodechar{⑫}{\bookcirc{12}}
+\newunicodechar{⑬}{\bookcirc{13}}
+\newunicodechar{❶}{\bookcircfill{1}}
+\newunicodechar{❷}{\bookcircfill{2}}
+\newunicodechar{❸}{\bookcircfill{3}}
+\newunicodechar{❹}{\bookcircfill{4}}
+\newunicodechar{❺}{\bookcircfill{5}}
+\newunicodechar{❻}{\bookcircfill{6}}
+\newunicodechar{❼}{\bookcircfill{7}}
+\newunicodechar{⊣}{\ensuremath{\dashv}}
+\providecommand{\sdbase}{https://sci-draw.com}
+\newcommand{\sdtool}[1]{\href{\sdbase/#1}{\texttt{/#1}}}
 \newcommand{\bookrepo}{https://github.com/TopLocalAI/ai-scientific-figures-book}
 \newenvironment{BookNote}{\begin{quote}\small\color{BookInk}}{\end{quote}}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}

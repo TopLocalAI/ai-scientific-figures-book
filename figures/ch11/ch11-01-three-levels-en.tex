@@ -1,0 +1,49 @@
+% FIG ch11-01 three levels (English)
+\usetikzlibrary{arrows.meta,positioning,calc}
+\begin{tikzpicture}[x=\linewidth/100,y=\linewidth/100]
+\begin{scope}[
+  font=\sffamily\small,
+  level/.style={
+    draw=BookRule, line width=0.5pt, rounded corners=2pt,
+    minimum width=50mm, minimum height=15mm, align=left, inner sep=4pt,
+    text width=48mm, anchor=west,
+  },
+  qbox/.style={
+    draw=BookRule, fill=BookPale!40, rounded corners=2pt,
+    align=center, inner sep=3pt, text width=22mm, font=\scriptsize,
+  },
+]
+  \node[
+    draw=BookTeal, line width=0.7pt, fill=white, rounded corners=3pt,
+    align=center, inner sep=5pt, text width=24mm, font=\small,
+  ] (bubble) at (8,42) {Make it nicer};
+  \draw[BookInk!55, dashed, -{Stealth[length=2mm]}] (bubble.east) -- (22,42);
+
+  \node[qbox] (q1) at (32,58) {Where does\\your eye stop?};
+  \node[qbox, below=3mm of q1] (q2) {What might\\readers misread?};
+  \node[qbox, below=3mm of q2] (q3) {What should match\\but does not?};
+
+  \foreach \q in {q1,q2,q3} {
+    \draw[BookInk!45, -{Stealth[length=1.6mm]}] (\q.east) -- ++(6,0);
+  }
+
+  \node[level, fill=BookInk, text=white] (L1) at (54,66) {%
+    \textbf{Level 1\quad Scientific errors}\\[-1pt]
+    {\scriptsize e.g.\ drawn as a suspension bridge; data arrows reversed}\\
+    {\scriptsize\textcolor{BookPale!90}{Fix: return to the brief; regenerate if needed}}};
+  \node[level, fill=BookInk!60, text=BookInk, below=2.5mm of L1] (L2) {%
+    \textbf{Level 2\quad Reading obstacles}\\[-1pt]
+    {\scriptsize e.g.\ wireless links look like stay cables; icons too small at 160\,mm}\\
+    {\scriptsize Fix: one class of change at a time}};
+  \node[level, fill=BookInk!30, text=BookInk, below=2.5mm of L2] (L3) {%
+    \textbf{Level 3\quad Visual consistency}\\[-1pt]
+    {\scriptsize e.g.\ same sensor type in different colours; uneven line weights}\\
+    {\scriptsize Fix: unify in the layout layer first}};
+
+  \coordinate (ordA) at ($(L1.west)+(-3,0)$);
+  \coordinate (ordB) at ($(L3.west)+(-3,0)$);
+  \draw[BookInk!70, line width=0.8pt, -{Stealth[length=2.4mm]}] (ordA) -- (ordB);
+  \node[font=\scriptsize, align=center, text width=46mm, anchor=north]
+    at ($(L3.south)+(0,-2.5mm)$) {Work top to bottom; after each edit, re-check all three levels};
+\end{scope}
+\end{tikzpicture}

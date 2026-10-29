@@ -15,6 +15,13 @@ This repository has two license scopes:
    MIT License.
    Full text: LICENSES/MIT.txt
 
+Third-party datasets and images (listed in ASSETS.md, for example the USGS,
+NOAA, palmerpenguins and BBBC022 files under data/ and the Wikimedia Commons
+images) are not covered by the CC BY 4.0 grant above; they remain under the
+terms set by their providers, which ASSETS.md records for each file. Data
+without an open licence (HOT, Global Carbon Budget) is not redistributed;
+scripts/fetch_ch04_data.py downloads it from the provider.
+
 See ASSETS.md for the source and review status of each figure. Licenses apply
 only to rights held by the contributors. AI-generated assets are offered to
 the extent such rights exist and are held; no exclusive copyright status is

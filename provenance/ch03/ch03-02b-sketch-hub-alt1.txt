@@ -1,0 +1,42 @@
+### figures/ch03/ch03-02b-sketch-hub-alt1.png
+
+- 工具：Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）
+- 模型：不知道：工具未返回具体模型标识。
+- 日期：2026-10-29
+- 本阶段第几次：1
+- 参考图：无；从文字生成
+- 输出：1672×941，RGB PNG；SHA-256：`2ff17e753142f863f1753f33e45b65c91bd22c6957852d6d8fbb88aef9894109`
+- prompt 改动原因：保留规划全文，末尾追加输出分辨率，以尝试达到章节的 ≥2400 px 要求；工具仍输出 1672×941。
+- 人工图像修改：无。
+
+画面内容 / 核验要点逐条检查：
+
+- 落选；第 1 次。中心蛋白与四角对象齐全，无唯一线性入口。
+- 箭头为右上、右下向内，左上、左下向外，满足数量上的两进两出，但与最后选中的方向分配不同。
+- 左下 indel 被画成偏大的独立闪电状折线，偏离 tiny zigzag mark；中心蛋白为上下双叶、排线较重。
+- 为满足章节 ≥2400 px 的要求追加了输出分辨率句，但实际仍为 1672×941；后续不再重复这一无效追加。
+- 共通核验：未见文字；像素宽度未达2400；约16:9；未真人复核。
+
+实际完整 prompt（保留换行）：
+
+```text
+A rough pencil planning sketch on slightly off-white sketchbook paper,
+photographed flat from directly above, evenly lit, no hands, no pencil, no other
+objects. Landscape 16:9. Single graphite pencil, loose confident lines, a few
+construction lines and faint erasure marks. Simple shapes only: rounded blobs,
+pairs of parallel lines with short rungs (double-stranded DNA), a wavy line
+(RNA), arrows. Strictly no writing of any kind: no letters, no words, no
+numbers, no labels, no title, no annotations. Pencil gray only, no color.
+Bottom tenth of the page left blank.
+
+Layout: radial. In the exact center, a large rounded two-lobed blob sitting on a
+short ladder-like double line. Around it, at the four corners of the page,
+four smaller shapes: top-left a short wavy line, top-right a small shaded
+rectangle on a short double line, bottom-left a short double line with a tiny
+zigzag mark, bottom-right a short double line with a short thick inserted
+segment and a separate short double line above it. Arrows connect the center
+to each corner: two arrows point inward, two point outward. No clear starting
+point.
+
+Output resolution: 2560 × 1440 pixels (16:9); at least 2400 pixels wide.
+```

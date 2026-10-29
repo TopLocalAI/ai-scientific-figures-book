@@ -1,0 +1,197 @@
+$ ls -l figures/ch03/
+total 48016
+-rw-r--r--@ 1 zeroone  staff     3982 Oct 29 16:10 ch03-01-reading-order-en.tex
+-rw-r--r--@ 1 zeroone  staff     4085 Oct 29 16:10 ch03-01-reading-order-zh.tex
+-rw-r--r--@ 1 zeroone  staff     1233 Oct 29 16:08 ch03-02-three-sketches-en.tex
+-rw-r--r--@ 1 zeroone  staff     1269 Oct 29 16:08 ch03-02-three-sketches-zh.tex
+-rw-r--r--@ 1 zeroone  staff  2382319 Oct 29 16:11 ch03-02a-sketch-linear.png
+-rw-r--r--@ 1 zeroone  staff  2182569 Oct 29 16:11 ch03-02b-sketch-hub-alt1.png
+-rw-r--r--@ 1 zeroone  staff  2447360 Oct 29 16:11 ch03-02b-sketch-hub.png
+-rw-r--r--@ 1 zeroone  staff  2317470 Oct 29 16:11 ch03-02c-sketch-branch-alt1.png
+-rw-r--r--@ 1 zeroone  staff  2199212 Oct 29 16:11 ch03-02c-sketch-branch-alt2.png
+-rw-r--r--@ 1 zeroone  staff  2343218 Oct 29 16:11 ch03-02c-sketch-branch.png
+-rw-r--r--@ 1 zeroone  staff     1533 Oct 29 16:09 ch03-03-three-candidates-en.tex
+-rw-r--r--@ 1 zeroone  staff     1533 Oct 29 16:09 ch03-03-three-candidates-zh.tex
+-rw-r--r--@ 1 zeroone  staff  1045115 Oct 29 16:14 ch03-03a-cand-linear.png
+-rw-r--r--@ 1 zeroone  staff  1085445 Oct 29 16:14 ch03-03b-cand-hub-alt1.png
+-rw-r--r--@ 1 zeroone  staff  1090641 Oct 29 16:14 ch03-03b-cand-hub-alt2.png
+-rw-r--r--@ 1 zeroone  staff  1109512 Oct 29 16:14 ch03-03b-cand-hub.png
+-rw-r--r--@ 1 zeroone  staff  1111858 Oct 29 16:14 ch03-03c-cand-branch.png
+-rw-r--r--@ 1 zeroone  staff     2692 Oct 29 16:09 ch03-04-layout-comparison-en.tex
+-rw-r--r--@ 1 zeroone  staff     2673 Oct 29 16:09 ch03-04-layout-comparison-zh.tex
+-rw-r--r--@ 1 zeroone  staff      840 Oct 29 16:09 ch03-05a-v1-issues-en.tex
+-rw-r--r--@ 1 zeroone  staff      840 Oct 29 16:09 ch03-05a-v1-issues-zh.tex
+-rw-r--r--@ 1 zeroone  staff  1245218 Oct 29 16:19 ch03-05b-v3-revised.png
+-rw-r--r--@ 1 zeroone  staff  1375060 Oct 29 16:20 ch03-06-final-base-alt1.png
+-rw-r--r--@ 1 zeroone  staff  1394046 Oct 29 16:23 ch03-06-final-base-alt2.png
+-rw-r--r--@ 1 zeroone  staff  1163589 Oct 29 16:20 ch03-06-final-base.png
+-rw-r--r--@ 1 zeroone  staff      856 Oct 29 16:09 ch03-06-final-en.tex
+-rw-r--r--@ 1 zeroone  staff      871 Oct 29 16:09 ch03-06-final-zh.tex
+-rw-r--r--@ 1 zeroone  staff     1901 Oct 29 16:09 ch03-07-pam-inset-en.tex
+-rw-r--r--@ 1 zeroone  staff     1886 Oct 29 16:09 ch03-07-pam-inset-zh.tex
+
+$ PNG pixel dimensions (Pillow read + verify)
+figures/ch03/ch03-02a-sketch-linear.png	1672 x 941	RGB	2382319 bytes
+figures/ch03/ch03-02b-sketch-hub-alt1.png	1672 x 941	RGB	2182569 bytes
+figures/ch03/ch03-02b-sketch-hub.png	1672 x 941	RGB	2447360 bytes
+figures/ch03/ch03-02c-sketch-branch-alt1.png	1672 x 941	RGB	2317470 bytes
+figures/ch03/ch03-02c-sketch-branch-alt2.png	1672 x 941	RGB	2199212 bytes
+figures/ch03/ch03-02c-sketch-branch.png	1672 x 941	RGB	2343218 bytes
+figures/ch03/ch03-03a-cand-linear.png	1672 x 941	RGB	1045115 bytes
+figures/ch03/ch03-03b-cand-hub-alt1.png	1672 x 941	RGB	1085445 bytes
+figures/ch03/ch03-03b-cand-hub-alt2.png	1672 x 941	RGB	1090641 bytes
+figures/ch03/ch03-03b-cand-hub.png	1672 x 941	RGB	1109512 bytes
+figures/ch03/ch03-03c-cand-branch.png	1672 x 941	RGB	1111858 bytes
+figures/ch03/ch03-05b-v3-revised.png	1672 x 941	RGB	1245218 bytes
+figures/ch03/ch03-06-final-base-alt1.png	1672 x 941	RGB	1375060 bytes
+figures/ch03/ch03-06-final-base-alt2.png	1672 x 941	RGB	1394046 bytes
+figures/ch03/ch03-06-final-base.png	1672 x 941	RGB	1163589 bytes
+provenance/ch03/ch03-05b-r1-alt1.png	1672 x 941	RGB	1418615 bytes
+provenance/ch03/ch03-05b-r1.png	1672 x 941	RGB	1473993 bytes
+provenance/ch03/ch03-05b-r2-alt1.png	1672 x 941	RGB	1471157 bytes
+provenance/ch03/ch03-05b-r2.png	1672 x 941	RGB	1475263 bytes
+provenance/ch03/ch03-05b-r3-alt1.png	1672 x 941	RGB	1431122 bytes
+provenance/ch03/ch03-05b-r3-alt2.png	1672 x 941	RGB	1309372 bytes
+provenance/ch03/ch03-05b-r3.png	1672 x 941	RGB	1245218 bytes
+
+$ Geometry measurement
+{
+  "ch03-03c-cand-branch": {
+    "dna_bboxes_xyxy": [
+      [
+        96,
+        443,
+        1436,
+        492
+      ],
+      [
+        94,
+        684,
+        1432,
+        734
+      ]
+    ],
+    "frame_rows": [
+      387.0,
+      540.0,
+      569.0,
+      767.0
+    ],
+    "frame_heights": [
+      153.0,
+      198.0
+    ],
+    "frame_height_difference_percent": 29.41176470588236,
+    "dna_endpoint_max_error_px": 4,
+    "dna_endpoint_error_percent": 0.2985074626865672
+  },
+  "ch03-05b-v3-revised": {
+    "dna_bboxes_xyxy": [
+      [
+        95,
+        443,
+        1435,
+        493
+      ],
+      [
+        94,
+        698,
+        1432,
+        748
+      ]
+    ],
+    "frame_rows": [
+      356.0,
+      557.5,
+      583.0,
+      796.5
+    ],
+    "frame_heights": [
+      201.5,
+      213.5
+    ],
+    "frame_height_difference_percent": 5.955334987593042,
+    "dna_endpoint_max_error_px": 3,
+    "dna_endpoint_error_percent": 0.22388059701492538
+  },
+  "ch03-06-final-base": {
+    "dna_bboxes_xyxy": [
+      [
+        95,
+        444,
+        1435,
+        493
+      ],
+      [
+        93,
+        698,
+        1432,
+        747
+      ]
+    ],
+    "frame_rows": [
+      356.0,
+      557.5,
+      583.0,
+      796.0
+    ],
+    "frame_heights": [
+      201.5,
+      213.0
+    ],
+    "frame_height_difference_percent": 5.707196029776673,
+    "dna_endpoint_max_error_px": 3,
+    "dna_endpoint_error_percent": 0.22388059701492538,
+    "right_30_percent_clear_height_px": 301,
+    "right_30_percent_clear_height_percent": 31.987247608926673,
+    "grayscale_samples": {
+      "PAM": {
+        "roi_xyxy": [
+          928,
+          220,
+          958,
+          232
+        ],
+        "median_rgb": [
+          249.0,
+          242.0,
+          12.0
+        ],
+        "luma": 226.88219999999998
+      },
+      "donor": {
+        "roi_xyxy": [
+          710,
+          648,
+          735,
+          670
+        ],
+        "median_rgb": [
+          1.0,
+          164.0,
+          144.0
+        ],
+        "luma": 127.90219999999998
+      }
+    }
+  }
+}
+
+$ Revision pixel comparison
+{
+  "r1": {
+    "changed_pixels_percent": 3.714426269518836,
+    "top_row_changed_percent": 4.016547049441786,
+    "threshold": "max absolute RGB channel difference > 15/255"
+  },
+  "r2": {
+    "changed_pixels_percent": 4.100608128378138,
+    "top_row_changed_percent": 3.531698564593302,
+    "threshold": "max absolute RGB channel difference > 15/255"
+  },
+  "r3": {
+    "changed_pixels_percent": 13.688799454921721,
+    "top_row_changed_percent": 7.286483253588518,
+    "threshold": "max absolute RGB channel difference > 15/255"
+  }
+}

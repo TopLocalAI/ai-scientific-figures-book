@@ -1,0 +1,59 @@
+{
+  "figure": "ch10-07-thumbnail-test",
+  "script": "scripts/ch10_thumbnail_test.py",
+  "canvas_px": [
+    2000,
+    800
+  ],
+  "toc_thumb_px": [
+    500,
+    200
+  ],
+  "random_seed": 20261029,
+  "missing_codex_inputs": [
+    "figures/ch10/ch10-06-final-en.png",
+    "figures/ch10/ch10-05-overclaim-en.png"
+  ],
+  "assertions": {
+    "scaled_good_px": 9.0,
+    "scaled_bad_px": 3.5,
+    "thumb_width_px": 500
+  },
+  "runs": [
+    {
+      "language": "en",
+      "output_png": "figures/ch10/ch10-07-thumbnail-test-en.png",
+      "output_png_px": [
+        3210,
+        1680
+      ],
+      "output_sha256": "655b69c4f32cf38c2d662ecc4ef52516ff0b8330687fbb0c67fb6883c87a9e6b",
+      "stage_font_good_px": 36,
+      "stage_font_bad_px": 14,
+      "scaled_stage_height_good_px": 9.0,
+      "scaled_stage_height_bad_px": 3.5,
+      "thumb_height_px": 200,
+      "resize_filter": "PIL.Image.Resampling.LANCZOS",
+      "base_art_source": "data/ch10/simulated/ch10-06-final-base-en.png",
+      "simulated_base": true
+    },
+    {
+      "language": "zh",
+      "output_png": "figures/ch10/ch10-07-thumbnail-test-zh.png",
+      "output_png_px": [
+        3210,
+        1680
+      ],
+      "output_sha256": "dac1e52bf80f673b31602db801a303d729d92fde5387dc7295f2a3dfa0c2d787",
+      "stage_font_good_px": 36,
+      "stage_font_bad_px": 14,
+      "scaled_stage_height_good_px": 9.0,
+      "scaled_stage_height_bad_px": 3.5,
+      "thumb_height_px": 200,
+      "resize_filter": "PIL.Image.Resampling.LANCZOS",
+      "base_art_source": "data/ch10/simulated/ch10-06-final-base-en.png",
+      "simulated_base": true
+    }
+  ],
+  "note": "Good/bad rows differ only in stage-label font size on the same base pixels."
+}

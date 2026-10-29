@@ -1,0 +1,28 @@
+\begin{tikzpicture}[
+  box/.style={draw=BookTeal,rounded corners=2pt,fill=BookPale,minimum width=34mm,minimum height=12mm,align=center,font=\small},
+  link/.style={-{Stealth[length=2mm]},thick,draw=BookInk},
+  loop/.style={-{Stealth[length=1.8mm]},dashed,draw=BookInk!60},
+  note/.style={font=\scriptsize,text=BookInk!70,align=center}
+]
+\node[box] (a) {Define the task};
+\node[box,right=9mm of a] (b) {Gather materials};
+\node[box,right=9mm of b] (c) {Make a draft};
+\node[box,below=18mm of c] (d) {Check and revise};
+\node[box,left=9mm of d] (e) {Assemble and explain};
+\node[box,left=9mm of e] (f) {Check and deliver};
+\node[note,below=5mm of a] {Brief v1};
+\node[note,below=5mm of b] {Data dictionary};
+\node[note,below=5mm of c] {d1, s1};
+\node[note,below=5mm of d] {Revision list};
+\node[note,below=5mm of e] {Panels \& legend};
+\node[note,below=5mm of f] {Delivery pack};
+\draw[link] (a)--(b);
+\draw[link] (b)--(c);
+\draw[link] (c)--(d);
+\draw[link] (d)--(e);
+\draw[link] (e)--(f);
+\draw[loop] (d.north west) to[bend right=42] (b.south);
+\draw[loop] (f.north) to[bend right=48] (a.south);
+\node[note,align=center,text width=20mm] at ($(b.south)!0.45!(d.north west)+(0,-10mm)$) {Return if a check fails};
+\node[note,align=center,text width=20mm] at ($(a.south)!0.45!(f.north)+(-24mm,2mm)$) {Return if a check fails};
+\end{tikzpicture}

@@ -1,0 +1,38 @@
+% FIG ch13-04 what's inside the file (English)
+\usetikzlibrary{arrows.meta,positioning,fit}
+\begin{tikzpicture}[
+  font=\sffamily\footnotesize, text=BookInk,
+  card/.style={draw=BookRule, line width=0.6pt, rounded corners=3pt,
+    fill=BookPale!30, minimum width=42mm, minimum height=38mm, align=center, inner sep=5pt},
+]
+  \node[card] (C1) at (0,0) {%
+    \textbf{Raster files}\\PNG, TIFF, JPEG\\[4pt]
+    \tikz{\foreach \x in {0,1,2,3} \foreach \y in {0,1,2,3}
+      \fill[BookTeal!35] (\x*0.35,\y*0.35) rectangle ++(0.32,0.32);}\\[3pt]
+    \scriptsize Zoom in to see pixels;\\photos and micrographs};
+  \node[card, right=6mm of C1] (C2) {%
+    \textbf{Vector content}\\paths and text inside PDF/SVG/EPS\\[4pt]
+    \tikz{\draw[BookTeal, line width=0.8pt] (0,0.6) .. controls (0.5,1.2) and (1.2,0.2) .. (1.6,0.8);
+      \node[font=\sffamily] at (0.8,0.2) {Aa};}\\[3pt]
+    \scriptsize Edges stay sharp;\\selectable text, embedded fonts};
+  \node[card, right=6mm of C2] (C3) {%
+    \textbf{Container}\\vector-like name, bitmap inside\\[4pt]
+    \tikz{\draw[BookRule, fill=white] (-0.1,-0.1) rectangle (1.7,1.3);
+      \foreach \x in {0,1,2} \foreach \y in {0,1,2}
+        \fill[BookInk!25] (0.2+\x*0.35,0.2+\y*0.28) rectangle ++(0.3,0.24);}\\[3pt]
+    \scriptsize PDF/SVG/EPS/PPTX\\may wrap a single bitmap};
+
+  \node[draw=BookTeal, fill=white, rounded corners=2pt, inner sep=5pt,
+    text width=132mm, align=left, font=\scriptsize, below=8mm of C2] (how) {%
+    \textbf{How to check:}\ 
+    \texttt{pdffonts}, \texttt{pdfimages -list}, 800\,\% zoom,
+    search SVG for \texttt{<image}, unzip PPTX \texttt{ppt/media/}.};
+
+  \node[draw=BookRule, fill=BookPale!15, rounded corners=2pt, inner sep=4pt,
+    text width=132mm, align=left, font=\scriptsize, below=3mm of how] {%
+    \textbf{SciDraw AI exports to note:}
+    declarative chart PDF/EPS is raster-wrapped;
+    image-to-SVG text mode keeps a bitmap background;
+    image-to-PPTX is background + OCR boxes;
+    multi-panel PPTX uses bitmap panels and text labels.};
+\end{tikzpicture}

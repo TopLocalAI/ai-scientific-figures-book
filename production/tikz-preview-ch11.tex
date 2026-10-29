@@ -1,0 +1,30 @@
+% Compile from repo root: xelatex -interaction=nonstopmode production/tikz-preview-ch11.tex
+\documentclass[UTF8,fontset=fandol,10pt]{ctexart}
+\usepackage{graphicx}
+\input{shared/preamble}
+\makeatletter
+\let\ChEleven@defcolor\definecolor
+\renewcommand{\definecolor}[3]{%
+  \@ifundefined{color@#1}{\ChEleven@defcolor{#1}{#2}{#3}}{}%
+}
+\makeatother
+\setlength{\parindent}{0pt}
+\begin{document}
+\section*{FIG ch11-01 three levels (zh)}
+\input{figures/ch11/ch11-01-three-levels-zh.tex}
+\newpage
+\section*{FIG ch11-01 three levels (en)}
+\input{figures/ch11/ch11-01-three-levels-en.tex}
+\newpage
+\section*{FIG ch11-07 ch07 collateral (zh)}
+\input{figures/ch11/ch11-07-ch07-collateral-zh.tex}
+\newpage
+\section*{FIG ch11-07 ch07 collateral (en)}
+\input{figures/ch11/ch11-07-ch07-collateral-en.tex}
+\newpage
+\section*{FIG ch11-08 version tree (zh)}
+\input{figures/ch11/ch11-08-version-tree-zh.tex}
+\newpage
+\section*{FIG ch11-08 version tree (en)}
+\input{figures/ch11/ch11-08-version-tree-en.tex}
+\end{document}

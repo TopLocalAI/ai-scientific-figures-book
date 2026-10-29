@@ -1,0 +1,95 @@
+% FIG ch07-08 charge/discharge overlay (Chinese) — shared structural base, twice
+\definecolor{ch07Li}{HTML}{D9822B}
+\definecolor{ch07wire}{HTML}{3A3A3A}
+\definecolor{ch07elec}{HTML}{3A3A3A}
+\definecolor{ch07electrolyte}{HTML}{E3F0F8}
+\makeatletter
+\@ifundefined{chsevenpanelbase}{%
+  \newcommand{\chsevenpanelbase}{figures/ch07/ch07-08-battery-base.png}
+}{}
+\@ifundefined{chsevendrawcircuit}{%
+\newcommand{\chsevendrawcircuit}[1]{%
+  \def\ChSevenWireY{1.10}%
+  \def\ChSevenTabY{0.878}%
+  \draw[ch07wire, line width=0.8pt] (0.194, \ChSevenTabY) -- (0.194, \ChSevenWireY);
+  \draw[ch07wire, line width=0.8pt] (0.805, \ChSevenTabY) -- (0.805, \ChSevenWireY);
+  \draw[ch07wire, line width=0.8pt] (0.194, \ChSevenWireY) -- (0.805, \ChSevenWireY);
+  \node[draw=ch07wire, line width=0.6pt, rounded corners=1.5pt, fill=white,
+    font=\sffamily\scriptsize, inner sep=1.6pt]
+    at (0.50, \ChSevenWireY) {#1};
+  \foreach \chyy in {0.38, 0.52, 0.66} {%
+    \draw[-{Stealth[length=2mm]}, ch07Li, line width=0.9pt]
+      (0.68, 1-\chyy) -- (0.32, 1-\chyy);
+  }%
+  \node[font=\sffamily\scriptsize, text=ch07Li, fill=white, inner sep=0.7pt]
+    at (0.50, 1-0.30) {Li\textsuperscript{+}};
+  \draw[ch07elec, line width=0.7pt, dashed, -{Stealth[length=1.5mm]}]
+    (0.76, \ChSevenWireY) -- (0.62, \ChSevenWireY);
+  \draw[ch07elec, line width=0.7pt, dashed, -{Stealth[length=1.5mm]}]
+    (0.38, \ChSevenWireY) -- (0.24, \ChSevenWireY);
+}
+}{}
+\@ifundefined{chsevendrawcircuitb}{%
+\newcommand{\chsevendrawcircuitb}[1]{%
+  \def\ChSevenWireY{1.10}%
+  \def\ChSevenTabY{0.878}%
+  \draw[ch07wire, line width=0.8pt] (0.194, \ChSevenTabY) -- (0.194, \ChSevenWireY);
+  \draw[ch07wire, line width=0.8pt] (0.805, \ChSevenTabY) -- (0.805, \ChSevenWireY);
+  \draw[ch07wire, line width=0.8pt] (0.194, \ChSevenWireY) -- (0.805, \ChSevenWireY);
+  \node[draw=ch07wire, line width=0.6pt, rounded corners=1.5pt, fill=white,
+    font=\sffamily\scriptsize, inner sep=1.6pt]
+    at (0.50, \ChSevenWireY) {#1};
+  \foreach \chyy in {0.38, 0.52, 0.66} {%
+    \draw[-{Stealth[length=2mm]}, ch07Li, line width=0.9pt]
+      (0.32, 1-\chyy) -- (0.68, 1-\chyy);
+  }%
+  \node[font=\sffamily\scriptsize, text=ch07Li, fill=white, inner sep=0.7pt]
+    at (0.50, 1-0.30) {Li\textsuperscript{+}};
+  \draw[ch07elec, line width=0.7pt, dashed, -{Stealth[length=1.5mm]}]
+    (0.24, \ChSevenWireY) -- (0.38, \ChSevenWireY);
+  \draw[ch07elec, line width=0.7pt, dashed, -{Stealth[length=1.5mm]}]
+    (0.62, \ChSevenWireY) -- (0.76, \ChSevenWireY);
+}
+}{}
+\makeatother
+\begin{tikzpicture}
+  \node[anchor=south west, inner sep=0] (imgA) at (0,0)
+    {\includegraphics[width=0.49\linewidth]{\chsevenpanelbase}};
+  \node[anchor=south west, inner sep=0] (imgB) at (0.51\linewidth,0)
+    {\includegraphics[width=0.49\linewidth]{\chsevenpanelbase}};
+  \begin{scope}[shift={(imgA.south west)},
+    x={($(imgA.south east)-(imgA.south west)$)},
+    y={($(imgA.north west)-(imgA.south west)$)},
+    font=\sffamily\small]
+    \node[anchor=south west, font=\sffamily\small] at (0.00, 1.20) {\textbf{(a)} 充电};
+    \node[font=\sffamily\scriptsize, anchor=north west] at (0.25, 1.045) {负极极耳};
+    \node[font=\sffamily\scriptsize, anchor=north east] at (0.75, 1.045) {正极极耳};
+    \chsevendrawcircuit{充电器}
+  \end{scope}
+  \begin{scope}[shift={(imgB.south west)},
+    x={($(imgB.south east)-(imgB.south west)$)},
+    y={($(imgB.north west)-(imgB.south west)$)},
+    font=\sffamily\small]
+    \node[anchor=south west, font=\sffamily\small] at (0.00, 1.20) {\textbf{(b)} 放电};
+    \chsevendrawcircuitb{负载}
+  \end{scope}
+  \begin{scope}[shift={(imgA.south west)},
+    x={($(imgA.south east)-(imgA.south west)$)},
+    y={($(imgA.north west)-(imgA.south west)$)},
+    font=\sffamily\scriptsize]
+    \node[align=center, anchor=north] at (0.323, 0.19) {负极\\（石墨）};
+    \node[anchor=north] at (0.50, 0.19) {隔膜};
+    \node[align=center, anchor=north] at (0.678, 0.19) {正极\\（LiCoO\textsubscript{2}）};
+    \draw[BookInk!45, thin] (0.193, 0.19) -- (0.193, -0.02);
+    \node[align=center, anchor=north] at (0.193, -0.02) {铜\\集流体};
+    \draw[BookInk!45, thin] (0.806, 0.19) -- (0.806, -0.02);
+    \node[align=center, anchor=north] at (0.806, -0.02) {铝\\集流体};
+  \end{scope}
+  \node[anchor=north, font=\sffamily\scriptsize, align=center] at (0.5\linewidth, -0.13\linewidth) {%
+    \begin{tabular}{@{}c@{\qquad}c@{}}
+      \tikz{\draw[-{Stealth[length=1.5mm]}, ch07Li, line width=0.7pt] (0,0) -- (0.2,0);} Li\textsuperscript{+} 迁移（电解液中） &
+      \tikz{\draw[ch07elec, line width=0.6pt, dashed, -{Stealth[length=1.2mm]}] (0,0) -- (0.2,0);} 电子流（外电路） \\[0.4em]
+      \multicolumn{2}{c}{\tikz{\fill[ch07electrolyte] (0,0) rectangle (0.08,0.06);} 电解液（填充孔隙）} \\[0.35em]
+      \multicolumn{2}{c}{两侧浅灰竖条为外壳}
+    \end{tabular}};
+\end{tikzpicture}

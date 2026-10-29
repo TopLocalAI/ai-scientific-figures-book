@@ -1,0 +1,278 @@
+{
+  "scope": "Only figures/ch06 and provenance/ch06; no commit/push; no sub-agent; no SciDraw claims",
+  "cache_directory": "codex-output",
+  "generation_calls": 6,
+  "records": [
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/ch06-01-v1-vague.png",
+      "attempt": 1,
+      "selected": true,
+      "prompt": "Create a professional, colorful flowchart of a single-cell RNA sequencing experiment and\ndata analysis workflow, from tissue to cell type annotation. Landscape 16:9.",
+      "prompt_change": "无，逐字使用规划 §3.6 V1。",
+      "source": "exec-22adb2e7-1fe9-4d59-a08a-3c173ca28a97.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/ch06-01-v1-vague-alt1.png",
+      "attempt": 2,
+      "selected": false,
+      "prompt": "Create a professional, colorful flowchart of a single-cell RNA sequencing experiment and\ndata analysis workflow, from tissue to cell type annotation. Landscape 16:9.\n\nTechnical output requirement: render a native 2560 × 1440 pixel PNG canvas, exact 16:9 landscape aspect ratio, at least 2400 pixels wide. Keep the entire illustration within this canvas. This is a pixel-dimension requirement, not text to draw.",
+      "prompt_change": "保留原提示词全文，仅追加原生 2560×1440/至少2400宽要求；首轮尺寸不达标。第二轮仍不达标。",
+      "source": "exec-f1b04b60-2adc-4a17-91dc-fc2cbdf904a9.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/ch06-05-v2-brief-alt1.png",
+      "attempt": 1,
+      "selected": false,
+      "prompt": "A clean, flat, vector-style scientific workflow diagram on a pure white background,\nlandscape 16:9. Two horizontal swim lanes separated by a thin light-grey line.\nTop lane (very light warm beige background): a left-to-right sequence of nine small\nrounded-rectangle steps, each with one simple icon inside: (1) a small piece of pink\nsoft tissue on a dish, (2) a conical tube with tiny enzyme droplets, (3) a cell strainer\nmesh over a tube, (4) a diamond-shaped checkpoint containing a counting grid with a few\nround cells, (5) a microfluidic chip whose channel forms droplets, each droplet holding\none cell and one bead, (6) a small PCR tube, (7) short double-stranded DNA fragments\nwith coloured end caps, (8) a second diamond-shaped checkpoint containing a small\nfragment-size curve, (9) a benchtop sequencer box. Between steps 1 and 8, every step\nis drawn as a stack of two slightly offset cards (two samples processed in parallel);\nthe two stacks merge into the single sequencer at step 9. A dashed curved arrow returns\nfrom checkpoint 4 back to step 2, and from checkpoint 8 back to step 7.\nA small circle connector at the right end of the top lane, and an identical circle at\nthe left end of the bottom lane.\nBottom lane (very light cool blue-grey background): a left-to-right sequence: a monitor\nwith aligned reads, a grid matrix of small squares, a diamond checkpoint with a filter\nfunnel (with two small optional dashed boxes above it, joined back into it), a bar-like\nnormalisation symbol, a short list of highlighted rows, a scatter of points with two\nperpendicular axes arrows (PCA), a network graph of dots and edges; from the network\ngraph the path splits into two branches: upper branch to a set of coloured point\nclusters, lower branch to a two-dimensional point embedding; only the upper branch\ncontinues to a heat-map-like marker table and then to a final cluster map with blank\ntag shapes. A dashed curved arrow returns from the final map back to the checkpoint.\nWarm muted orange-brown accents in the top lane, muted teal-blue accents in the bottom\nlane, dark slate arrows of uniform weight with solid triangular heads. Generous white\nspace. No text, no letters, no numbers, no labels, no symbols, no logos. No 3D, no\ngradients, no shadows, no microscope, no DNA double helix, no gears, no people.",
+      "prompt_change": "无，逐字使用规划 §3.6 V2。",
+      "source": "exec-acf7aedf-119a-4cd7-92a5-5099b563b7b7.png",
+      "dimensions": [
+        1983,
+        793
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/ch06-05-v2-brief.png",
+      "attempt": 2,
+      "selected": true,
+      "prompt": "A clean, flat, vector-style scientific workflow diagram on a pure white background,\nlandscape 16:9. Two horizontal swim lanes separated by a thin light-grey line.\nTop lane (very light warm beige background): a left-to-right sequence of nine small\nrounded-rectangle steps, each with one simple icon inside: (1) a small piece of pink\nsoft tissue on a dish, (2) a conical tube with tiny enzyme droplets, (3) a cell strainer\nmesh over a tube, (4) a diamond-shaped checkpoint containing a counting grid with a few\nround cells, (5) a microfluidic chip whose channel forms droplets, each droplet holding\none cell and one bead, (6) a small PCR tube, (7) short double-stranded DNA fragments\nwith coloured end caps, (8) a second diamond-shaped checkpoint containing a small\nfragment-size curve, (9) a benchtop sequencer box. Between steps 1 and 8, every step\nis drawn as a stack of two slightly offset cards (two samples processed in parallel);\nthe two stacks merge into the single sequencer at step 9. A dashed curved arrow returns\nfrom checkpoint 4 back to step 2, and from checkpoint 8 back to step 7.\nA small circle connector at the right end of the top lane, and an identical circle at\nthe left end of the bottom lane.\nBottom lane (very light cool blue-grey background): a left-to-right sequence: a monitor\nwith aligned reads, a grid matrix of small squares, a diamond checkpoint with a filter\nfunnel (with two small optional dashed boxes above it, joined back into it), a bar-like\nnormalisation symbol, a short list of highlighted rows, a scatter of points with two\nperpendicular axes arrows (PCA), a network graph of dots and edges; from the network\ngraph the path splits into two branches: upper branch to a set of coloured point\nclusters, lower branch to a two-dimensional point embedding; only the upper branch\ncontinues to a heat-map-like marker table and then to a final cluster map with blank\ntag shapes. A dashed curved arrow returns from the final map back to the checkpoint.\nWarm muted orange-brown accents in the top lane, muted teal-blue accents in the bottom\nlane, dark slate arrows of uniform weight with solid triangular heads. Generous white\nspace. No text, no letters, no numbers, no labels, no symbols, no logos. No 3D, no\ngradients, no shadows, no microscope, no DNA double helix, no gears, no people.\n\nTechnical output requirement: render a native 2560 × 1440 pixel PNG canvas, exact 16:9 landscape aspect ratio, at least 2400 pixels wide. Keep the entire illustration within this canvas; do not crop to a panoramic aspect ratio. This is a pixel-dimension requirement, not text to draw.",
+      "prompt_change": "保留原提示词全文，仅追加原生2560×1440/至少2400宽及不裁为全景的要求；首轮画幅与尺寸不达标。第二轮画幅恢复，宽度仍不达标。",
+      "source": "exec-575f70d4-3649-4473-8106-9cb4735cf772.png",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/ch06-icons-sheet.png",
+      "attempt": 1,
+      "selected": true,
+      "prompt": "A sheet of twelve flat vector scientific icons arranged in an even grid of four columns\nand three rows on a pure white background. Each icon sits centred in its own invisible\nsquare cell with wide white margins and does not touch any other icon. All icons share\nthe same style: simple geometric shapes, uniform dark slate outline of medium weight,\nflat fills, no gradients, no shadows, no 3D.\nRow 1 (warm muted orange-brown accent #B5653A with pale beige fills):\n 1. a small piece of pink soft tissue on a shallow petri dish;\n 2. a conical centrifuge tube with three tiny droplets falling into it;\n 3. a round cell strainer mesh sitting on top of a tube;\n 4. a square counting grid with five round cells, one cell drawn darker.\nRow 2 (same warm accent, except icon 8 in deep amber #8A6D1F):\n 5. a small rectangular microfluidic chip with one channel pinching off round droplets,\n    each droplet containing one small cell and one small bead;\n 6. a single small PCR tube with a closed cap;\n 7. three short double-stranded DNA fragments, each with small coloured end caps;\n 8. a benchtop sequencing instrument: a box with a small slot holding a flow cell.\nRow 3 (muted teal-blue accent #2F6F8F with pale blue-grey fills):\n 9. a computer monitor showing several short horizontal bars aligned under one long bar;\n10. a square grid matrix of small cells with varied light-to-dark shading;\n11. a network of dots connected by thin edges;\n12. four clusters of dots, each cluster in a different muted colour, with one blank\n    rounded tag shape next to it.\nNo text, no letters, no numbers, no labels, no arrows between icons, no logos,\nno microscope, no DNA double helix, no people. Aspect ratio 4:3.",
+      "prompt_change": "无，逐字使用规划 §3.6 V3。",
+      "source": "exec-04a26c26-5a4c-43cf-b781-b00c665cb456.png",
+      "dimensions": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/ch06-icon-08-corrected-source.png",
+      "attempt": 2,
+      "selected": true,
+      "prompt": "Edit only this one sequencing-instrument icon. Preserve its simple scientific icon style, dark slate outline, white background, and approximately square framing. Replace the printer-like front paper tray and paper-output slot with a small closed optical flow-cell cartridge bay: a glass rectangular microfluidic flow cell in a shallow enclosed cartridge, with tiny parallel fluidic channels visible through a small window. The instrument should read as a compact benchtop DNA sequencing instrument, not a printer. Use flat pale beige fills with a restrained deep amber #8A6D1F accent on the cartridge and dark slate outlines. No gradients, no shadows, no 3D rendering. No sheets of paper, no paper trays, no keyboards. No text, no letters, no numbers, no labels, no symbols, no logos. One isolated icon only, with generous white margin. Aspect ratio 1:1.",
+      "prompt_change": "按规划允许的单图标修改流程，仅修改 icon 08 的打印机式纸托/出纸口为光学流动池卡匣；此为局部修正提示词，不是原 V3 提示词。",
+      "referenced_image": "figures/ch06/icons/ch06-icon-08.png",
+      "source": "exec-7deb29ee-8513-4fa0-b92d-6a75025fce11.png",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "derived": [
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/icons/ch06-icon-01.png",
+      "type": "existing_crop_created_by_parallel_workflow",
+      "attempt": 1,
+      "generation_source": "figures/ch06/ch06-icons-sheet.png",
+      "prompt": "A sheet of twelve flat vector scientific icons arranged in an even grid of four columns\nand three rows on a pure white background. Each icon sits centred in its own invisible\nsquare cell with wide white margins and does not touch any other icon. All icons share\nthe same style: simple geometric shapes, uniform dark slate outline of medium weight,\nflat fills, no gradients, no shadows, no 3D.\nRow 1 (warm muted orange-brown accent #B5653A with pale beige fills):\n 1. a small piece of pink soft tissue on a shallow petri dish;\n 2. a conical centrifuge tube with three tiny droplets falling into it;\n 3. a round cell strainer mesh sitting on top of a tube;\n 4. a square counting grid with five round cells, one cell drawn darker.\nRow 2 (same warm accent, except icon 8 in deep amber #8A6D1F):\n 5. a small rectangular microfluidic chip with one channel pinching off round droplets,\n    each droplet containing one small cell and one small bead;\n 6. a single small PCR tube with a closed cap;\n 7. three short double-stranded DNA fragments, each with small coloured end caps;\n 8. a benchtop sequencing instrument: a box with a small slot holding a flow cell.\nRow 3 (muted teal-blue accent #2F6F8F with pale blue-grey fills):\n 9. a computer monitor showing several short horizontal bars aligned under one long bar;\n10. a square grid matrix of small cells with varied light-to-dark shading;\n11. a network of dots connected by thin edges;\n12. four clusters of dots, each cluster in a different muted colour, with one blank\n    rounded tag shape next to it.\nNo text, no letters, no numbers, no labels, no arrows between icons, no logos,\nno microscope, no DNA double helix, no people. Aspect ratio 4:3.",
+      "ownership_note": "本轮发现这些切片已由并行流程写入，未覆盖；本条记录其与本轮生成图标表的画面对应关系，不声称由本轮裁切。"
+    },
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/icons/ch06-icon-02.png",
+      "type": "existing_crop_created_by_parallel_workflow",
+      "attempt": 1,
+      "generation_source": "figures/ch06/ch06-icons-sheet.png",
+      "prompt": "A sheet of twelve flat vector scientific icons arranged in an even grid of four columns\nand three rows on a pure white background. Each icon sits centred in its own invisible\nsquare cell with wide white margins and does not touch any other icon. All icons share\nthe same style: simple geometric shapes, uniform dark slate outline of medium weight,\nflat fills, no gradients, no shadows, no 3D.\nRow 1 (warm muted orange-brown accent #B5653A with pale beige fills):\n 1. a small piece of pink soft tissue on a shallow petri dish;\n 2. a conical centrifuge tube with three tiny droplets falling into it;\n 3. a round cell strainer mesh sitting on top of a tube;\n 4. a square counting grid with five round cells, one cell drawn darker.\nRow 2 (same warm accent, except icon 8 in deep amber #8A6D1F):\n 5. a small rectangular microfluidic chip with one channel pinching off round droplets,\n    each droplet containing one small cell and one small bead;\n 6. a single small PCR tube with a closed cap;\n 7. three short double-stranded DNA fragments, each with small coloured end caps;\n 8. a benchtop sequencing instrument: a box with a small slot holding a flow cell.\nRow 3 (muted teal-blue accent #2F6F8F with pale blue-grey fills):\n 9. a computer monitor showing several short horizontal bars aligned under one long bar;\n10. a square grid matrix of small cells with varied light-to-dark shading;\n11. a network of dots connected by thin edges;\n12. four clusters of dots, each cluster in a different muted colour, with one blank\n    rounded tag shape next to it.\nNo text, no letters, no numbers, no labels, no arrows between icons, no logos,\nno microscope, no DNA double helix, no people. Aspect ratio 4:3.",
+      "ownership_note": "本轮发现这些切片已由并行流程写入，未覆盖；本条记录其与本轮生成图标表的画面对应关系，不声称由本轮裁切。"
+    },
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/icons/ch06-icon-03.png",
+      "type": "existing_crop_created_by_parallel_workflow",
+      "attempt": 1,
+      "generation_source": "figures/ch06/ch06-icons-sheet.png",
+      "prompt": "A sheet of twelve flat vector scientific icons arranged in an even grid of four columns\nand three rows on a pure white background. Each icon sits centred in its own invisible\nsquare cell with wide white margins and does not touch any other icon. All icons share\nthe same style: simple geometric shapes, uniform dark slate outline of medium weight,\nflat fills, no gradients, no shadows, no 3D.\nRow 1 (warm muted orange-brown accent #B5653A with pale beige fills):\n 1. a small piece of pink soft tissue on a shallow petri dish;\n 2. a conical centrifuge tube with three tiny droplets falling into it;\n 3. a round cell strainer mesh sitting on top of a tube;\n 4. a square counting grid with five round cells, one cell drawn darker.\nRow 2 (same warm accent, except icon 8 in deep amber #8A6D1F):\n 5. a small rectangular microfluidic chip with one channel pinching off round droplets,\n    each droplet containing one small cell and one small bead;\n 6. a single small PCR tube with a closed cap;\n 7. three short double-stranded DNA fragments, each with small coloured end caps;\n 8. a benchtop sequencing instrument: a box with a small slot holding a flow cell.\nRow 3 (muted teal-blue accent #2F6F8F with pale blue-grey fills):\n 9. a computer monitor showing several short horizontal bars aligned under one long bar;\n10. a square grid matrix of small cells with varied light-to-dark shading;\n11. a network of dots connected by thin edges;\n12. four clusters of dots, each cluster in a different muted colour, with one blank\n    rounded tag shape next to it.\nNo text, no letters, no numbers, no labels, no arrows between icons, no logos,\nno microscope, no DNA double helix, no people. Aspect ratio 4:3.",
+      "ownership_note": "本轮发现这些切片已由并行流程写入，未覆盖；本条记录其与本轮生成图标表的画面对应关系，不声称由本轮裁切。"
+    },
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/icons/ch06-icon-04.png",
+      "type": "existing_crop_created_by_parallel_workflow",
+      "attempt": 1,
+      "generation_source": "figures/ch06/ch06-icons-sheet.png",
+      "prompt": "A sheet of twelve flat vector scientific icons arranged in an even grid of four columns\nand three rows on a pure white background. Each icon sits centred in its own invisible\nsquare cell with wide white margins and does not touch any other icon. All icons share\nthe same style: simple geometric shapes, uniform dark slate outline of medium weight,\nflat fills, no gradients, no shadows, no 3D.\nRow 1 (warm muted orange-brown accent #B5653A with pale beige fills):\n 1. a small piece of pink soft tissue on a shallow petri dish;\n 2. a conical centrifuge tube with three tiny droplets falling into it;\n 3. a round cell strainer mesh sitting on top of a tube;\n 4. a square counting grid with five round cells, one cell drawn darker.\nRow 2 (same warm accent, except icon 8 in deep amber #8A6D1F):\n 5. a small rectangular microfluidic chip with one channel pinching off round droplets,\n    each droplet containing one small cell and one small bead;\n 6. a single small PCR tube with a closed cap;\n 7. three short double-stranded DNA fragments, each with small coloured end caps;\n 8. a benchtop sequencing instrument: a box with a small slot holding a flow cell.\nRow 3 (muted teal-blue accent #2F6F8F with pale blue-grey fills):\n 9. a computer monitor showing several short horizontal bars aligned under one long bar;\n10. a square grid matrix of small cells with varied light-to-dark shading;\n11. a network of dots connected by thin edges;\n12. four clusters of dots, each cluster in a different muted colour, with one blank\n    rounded tag shape next to it.\nNo text, no letters, no numbers, no labels, no arrows between icons, no logos,\nno microscope, no DNA double helix, no people. Aspect ratio 4:3.",
+      "ownership_note": "本轮发现这些切片已由并行流程写入，未覆盖；本条记录其与本轮生成图标表的画面对应关系，不声称由本轮裁切。"
+    },
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/icons/ch06-icon-05.png",
+      "type": "existing_crop_created_by_parallel_workflow",
+      "attempt": 1,
+      "generation_source": "figures/ch06/ch06-icons-sheet.png",
+      "prompt": "A sheet of twelve flat vector scientific icons arranged in an even grid of four columns\nand three rows on a pure white background. Each icon sits centred in its own invisible\nsquare cell with wide white margins and does not touch any other icon. All icons share\nthe same style: simple geometric shapes, uniform dark slate outline of medium weight,\nflat fills, no gradients, no shadows, no 3D.\nRow 1 (warm muted orange-brown accent #B5653A with pale beige fills):\n 1. a small piece of pink soft tissue on a shallow petri dish;\n 2. a conical centrifuge tube with three tiny droplets falling into it;\n 3. a round cell strainer mesh sitting on top of a tube;\n 4. a square counting grid with five round cells, one cell drawn darker.\nRow 2 (same warm accent, except icon 8 in deep amber #8A6D1F):\n 5. a small rectangular microfluidic chip with one channel pinching off round droplets,\n    each droplet containing one small cell and one small bead;\n 6. a single small PCR tube with a closed cap;\n 7. three short double-stranded DNA fragments, each with small coloured end caps;\n 8. a benchtop sequencing instrument: a box with a small slot holding a flow cell.\nRow 3 (muted teal-blue accent #2F6F8F with pale blue-grey fills):\n 9. a computer monitor showing several short horizontal bars aligned under one long bar;\n10. a square grid matrix of small cells with varied light-to-dark shading;\n11. a network of dots connected by thin edges;\n12. four clusters of dots, each cluster in a different muted colour, with one blank\n    rounded tag shape next to it.\nNo text, no letters, no numbers, no labels, no arrows between icons, no logos,\nno microscope, no DNA double helix, no people. Aspect ratio 4:3.",
+      "ownership_note": "本轮发现这些切片已由并行流程写入，未覆盖；本条记录其与本轮生成图标表的画面对应关系，不声称由本轮裁切。"
+    },
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/icons/ch06-icon-06.png",
+      "type": "existing_crop_created_by_parallel_workflow",
+      "attempt": 1,
+      "generation_source": "figures/ch06/ch06-icons-sheet.png",
+      "prompt": "A sheet of twelve flat vector scientific icons arranged in an even grid of four columns\nand three rows on a pure white background. Each icon sits centred in its own invisible\nsquare cell with wide white margins and does not touch any other icon. All icons share\nthe same style: simple geometric shapes, uniform dark slate outline of medium weight,\nflat fills, no gradients, no shadows, no 3D.\nRow 1 (warm muted orange-brown accent #B5653A with pale beige fills):\n 1. a small piece of pink soft tissue on a shallow petri dish;\n 2. a conical centrifuge tube with three tiny droplets falling into it;\n 3. a round cell strainer mesh sitting on top of a tube;\n 4. a square counting grid with five round cells, one cell drawn darker.\nRow 2 (same warm accent, except icon 8 in deep amber #8A6D1F):\n 5. a small rectangular microfluidic chip with one channel pinching off round droplets,\n    each droplet containing one small cell and one small bead;\n 6. a single small PCR tube with a closed cap;\n 7. three short double-stranded DNA fragments, each with small coloured end caps;\n 8. a benchtop sequencing instrument: a box with a small slot holding a flow cell.\nRow 3 (muted teal-blue accent #2F6F8F with pale blue-grey fills):\n 9. a computer monitor showing several short horizontal bars aligned under one long bar;\n10. a square grid matrix of small cells with varied light-to-dark shading;\n11. a network of dots connected by thin edges;\n12. four clusters of dots, each cluster in a different muted colour, with one blank\n    rounded tag shape next to it.\nNo text, no letters, no numbers, no labels, no arrows between icons, no logos,\nno microscope, no DNA double helix, no people. Aspect ratio 4:3.",
+      "ownership_note": "本轮发现这些切片已由并行流程写入，未覆盖；本条记录其与本轮生成图标表的画面对应关系，不声称由本轮裁切。"
+    },
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/icons/ch06-icon-07.png",
+      "type": "existing_crop_created_by_parallel_workflow",
+      "attempt": 1,
+      "generation_source": "figures/ch06/ch06-icons-sheet.png",
+      "prompt": "A sheet of twelve flat vector scientific icons arranged in an even grid of four columns\nand three rows on a pure white background. Each icon sits centred in its own invisible\nsquare cell with wide white margins and does not touch any other icon. All icons share\nthe same style: simple geometric shapes, uniform dark slate outline of medium weight,\nflat fills, no gradients, no shadows, no 3D.\nRow 1 (warm muted orange-brown accent #B5653A with pale beige fills):\n 1. a small piece of pink soft tissue on a shallow petri dish;\n 2. a conical centrifuge tube with three tiny droplets falling into it;\n 3. a round cell strainer mesh sitting on top of a tube;\n 4. a square counting grid with five round cells, one cell drawn darker.\nRow 2 (same warm accent, except icon 8 in deep amber #8A6D1F):\n 5. a small rectangular microfluidic chip with one channel pinching off round droplets,\n    each droplet containing one small cell and one small bead;\n 6. a single small PCR tube with a closed cap;\n 7. three short double-stranded DNA fragments, each with small coloured end caps;\n 8. a benchtop sequencing instrument: a box with a small slot holding a flow cell.\nRow 3 (muted teal-blue accent #2F6F8F with pale blue-grey fills):\n 9. a computer monitor showing several short horizontal bars aligned under one long bar;\n10. a square grid matrix of small cells with varied light-to-dark shading;\n11. a network of dots connected by thin edges;\n12. four clusters of dots, each cluster in a different muted colour, with one blank\n    rounded tag shape next to it.\nNo text, no letters, no numbers, no labels, no arrows between icons, no logos,\nno microscope, no DNA double helix, no people. Aspect ratio 4:3.",
+      "ownership_note": "本轮发现这些切片已由并行流程写入，未覆盖；本条记录其与本轮生成图标表的画面对应关系，不声称由本轮裁切。"
+    },
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/icons/ch06-icon-08.png",
+      "type": "existing_crop_created_by_parallel_workflow",
+      "attempt": 1,
+      "generation_source": "figures/ch06/ch06-icons-sheet.png",
+      "prompt": "A sheet of twelve flat vector scientific icons arranged in an even grid of four columns\nand three rows on a pure white background. Each icon sits centred in its own invisible\nsquare cell with wide white margins and does not touch any other icon. All icons share\nthe same style: simple geometric shapes, uniform dark slate outline of medium weight,\nflat fills, no gradients, no shadows, no 3D.\nRow 1 (warm muted orange-brown accent #B5653A with pale beige fills):\n 1. a small piece of pink soft tissue on a shallow petri dish;\n 2. a conical centrifuge tube with three tiny droplets falling into it;\n 3. a round cell strainer mesh sitting on top of a tube;\n 4. a square counting grid with five round cells, one cell drawn darker.\nRow 2 (same warm accent, except icon 8 in deep amber #8A6D1F):\n 5. a small rectangular microfluidic chip with one channel pinching off round droplets,\n    each droplet containing one small cell and one small bead;\n 6. a single small PCR tube with a closed cap;\n 7. three short double-stranded DNA fragments, each with small coloured end caps;\n 8. a benchtop sequencing instrument: a box with a small slot holding a flow cell.\nRow 3 (muted teal-blue accent #2F6F8F with pale blue-grey fills):\n 9. a computer monitor showing several short horizontal bars aligned under one long bar;\n10. a square grid matrix of small cells with varied light-to-dark shading;\n11. a network of dots connected by thin edges;\n12. four clusters of dots, each cluster in a different muted colour, with one blank\n    rounded tag shape next to it.\nNo text, no letters, no numbers, no labels, no arrows between icons, no logos,\nno microscope, no DNA double helix, no people. Aspect ratio 4:3.",
+      "ownership_note": "本轮发现这些切片已由并行流程写入，未覆盖；本条记录其与本轮生成图标表的画面对应关系，不声称由本轮裁切。"
+    },
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/icons/ch06-icon-09.png",
+      "type": "existing_crop_created_by_parallel_workflow",
+      "attempt": 1,
+      "generation_source": "figures/ch06/ch06-icons-sheet.png",
+      "prompt": "A sheet of twelve flat vector scientific icons arranged in an even grid of four columns\nand three rows on a pure white background. Each icon sits centred in its own invisible\nsquare cell with wide white margins and does not touch any other icon. All icons share\nthe same style: simple geometric shapes, uniform dark slate outline of medium weight,\nflat fills, no gradients, no shadows, no 3D.\nRow 1 (warm muted orange-brown accent #B5653A with pale beige fills):\n 1. a small piece of pink soft tissue on a shallow petri dish;\n 2. a conical centrifuge tube with three tiny droplets falling into it;\n 3. a round cell strainer mesh sitting on top of a tube;\n 4. a square counting grid with five round cells, one cell drawn darker.\nRow 2 (same warm accent, except icon 8 in deep amber #8A6D1F):\n 5. a small rectangular microfluidic chip with one channel pinching off round droplets,\n    each droplet containing one small cell and one small bead;\n 6. a single small PCR tube with a closed cap;\n 7. three short double-stranded DNA fragments, each with small coloured end caps;\n 8. a benchtop sequencing instrument: a box with a small slot holding a flow cell.\nRow 3 (muted teal-blue accent #2F6F8F with pale blue-grey fills):\n 9. a computer monitor showing several short horizontal bars aligned under one long bar;\n10. a square grid matrix of small cells with varied light-to-dark shading;\n11. a network of dots connected by thin edges;\n12. four clusters of dots, each cluster in a different muted colour, with one blank\n    rounded tag shape next to it.\nNo text, no letters, no numbers, no labels, no arrows between icons, no logos,\nno microscope, no DNA double helix, no people. Aspect ratio 4:3.",
+      "ownership_note": "本轮发现这些切片已由并行流程写入，未覆盖；本条记录其与本轮生成图标表的画面对应关系，不声称由本轮裁切。"
+    },
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/icons/ch06-icon-10.png",
+      "type": "existing_crop_created_by_parallel_workflow",
+      "attempt": 1,
+      "generation_source": "figures/ch06/ch06-icons-sheet.png",
+      "prompt": "A sheet of twelve flat vector scientific icons arranged in an even grid of four columns\nand three rows on a pure white background. Each icon sits centred in its own invisible\nsquare cell with wide white margins and does not touch any other icon. All icons share\nthe same style: simple geometric shapes, uniform dark slate outline of medium weight,\nflat fills, no gradients, no shadows, no 3D.\nRow 1 (warm muted orange-brown accent #B5653A with pale beige fills):\n 1. a small piece of pink soft tissue on a shallow petri dish;\n 2. a conical centrifuge tube with three tiny droplets falling into it;\n 3. a round cell strainer mesh sitting on top of a tube;\n 4. a square counting grid with five round cells, one cell drawn darker.\nRow 2 (same warm accent, except icon 8 in deep amber #8A6D1F):\n 5. a small rectangular microfluidic chip with one channel pinching off round droplets,\n    each droplet containing one small cell and one small bead;\n 6. a single small PCR tube with a closed cap;\n 7. three short double-stranded DNA fragments, each with small coloured end caps;\n 8. a benchtop sequencing instrument: a box with a small slot holding a flow cell.\nRow 3 (muted teal-blue accent #2F6F8F with pale blue-grey fills):\n 9. a computer monitor showing several short horizontal bars aligned under one long bar;\n10. a square grid matrix of small cells with varied light-to-dark shading;\n11. a network of dots connected by thin edges;\n12. four clusters of dots, each cluster in a different muted colour, with one blank\n    rounded tag shape next to it.\nNo text, no letters, no numbers, no labels, no arrows between icons, no logos,\nno microscope, no DNA double helix, no people. Aspect ratio 4:3.",
+      "ownership_note": "本轮发现这些切片已由并行流程写入，未覆盖；本条记录其与本轮生成图标表的画面对应关系，不声称由本轮裁切。"
+    },
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/icons/ch06-icon-11.png",
+      "type": "existing_crop_created_by_parallel_workflow",
+      "attempt": 1,
+      "generation_source": "figures/ch06/ch06-icons-sheet.png",
+      "prompt": "A sheet of twelve flat vector scientific icons arranged in an even grid of four columns\nand three rows on a pure white background. Each icon sits centred in its own invisible\nsquare cell with wide white margins and does not touch any other icon. All icons share\nthe same style: simple geometric shapes, uniform dark slate outline of medium weight,\nflat fills, no gradients, no shadows, no 3D.\nRow 1 (warm muted orange-brown accent #B5653A with pale beige fills):\n 1. a small piece of pink soft tissue on a shallow petri dish;\n 2. a conical centrifuge tube with three tiny droplets falling into it;\n 3. a round cell strainer mesh sitting on top of a tube;\n 4. a square counting grid with five round cells, one cell drawn darker.\nRow 2 (same warm accent, except icon 8 in deep amber #8A6D1F):\n 5. a small rectangular microfluidic chip with one channel pinching off round droplets,\n    each droplet containing one small cell and one small bead;\n 6. a single small PCR tube with a closed cap;\n 7. three short double-stranded DNA fragments, each with small coloured end caps;\n 8. a benchtop sequencing instrument: a box with a small slot holding a flow cell.\nRow 3 (muted teal-blue accent #2F6F8F with pale blue-grey fills):\n 9. a computer monitor showing several short horizontal bars aligned under one long bar;\n10. a square grid matrix of small cells with varied light-to-dark shading;\n11. a network of dots connected by thin edges;\n12. four clusters of dots, each cluster in a different muted colour, with one blank\n    rounded tag shape next to it.\nNo text, no letters, no numbers, no labels, no arrows between icons, no logos,\nno microscope, no DNA double helix, no people. Aspect ratio 4:3.",
+      "ownership_note": "本轮发现这些切片已由并行流程写入，未覆盖；本条记录其与本轮生成图标表的画面对应关系，不声称由本轮裁切。"
+    },
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/icons/ch06-icon-12.png",
+      "type": "existing_crop_created_by_parallel_workflow",
+      "attempt": 1,
+      "generation_source": "figures/ch06/ch06-icons-sheet.png",
+      "prompt": "A sheet of twelve flat vector scientific icons arranged in an even grid of four columns\nand three rows on a pure white background. Each icon sits centred in its own invisible\nsquare cell with wide white margins and does not touch any other icon. All icons share\nthe same style: simple geometric shapes, uniform dark slate outline of medium weight,\nflat fills, no gradients, no shadows, no 3D.\nRow 1 (warm muted orange-brown accent #B5653A with pale beige fills):\n 1. a small piece of pink soft tissue on a shallow petri dish;\n 2. a conical centrifuge tube with three tiny droplets falling into it;\n 3. a round cell strainer mesh sitting on top of a tube;\n 4. a square counting grid with five round cells, one cell drawn darker.\nRow 2 (same warm accent, except icon 8 in deep amber #8A6D1F):\n 5. a small rectangular microfluidic chip with one channel pinching off round droplets,\n    each droplet containing one small cell and one small bead;\n 6. a single small PCR tube with a closed cap;\n 7. three short double-stranded DNA fragments, each with small coloured end caps;\n 8. a benchtop sequencing instrument: a box with a small slot holding a flow cell.\nRow 3 (muted teal-blue accent #2F6F8F with pale blue-grey fills):\n 9. a computer monitor showing several short horizontal bars aligned under one long bar;\n10. a square grid matrix of small cells with varied light-to-dark shading;\n11. a network of dots connected by thin edges;\n12. four clusters of dots, each cluster in a different muted colour, with one blank\n    rounded tag shape next to it.\nNo text, no letters, no numbers, no labels, no arrows between icons, no logos,\nno microscope, no DNA double helix, no people. Aspect ratio 4:3.",
+      "ownership_note": "本轮发现这些切片已由并行流程写入，未覆盖；本条记录其与本轮生成图标表的画面对应关系，不声称由本轮裁切。"
+    },
+    {
+      "date": "2026-10-29",
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+      "model": "不知道；工具返回未提供具体模型名称",
+      "manual_retouch": false,
+      "file": "figures/ch06/icons/ch06-icon-08-corrected.png",
+      "type": "crop_and_white_to_alpha",
+      "attempt": 2,
+      "generation_source": "figures/ch06/ch06-icon-08-corrected-source.png",
+      "prompt": "Edit only this one sequencing-instrument icon. Preserve its simple scientific icon style, dark slate outline, white background, and approximately square framing. Replace the printer-like front paper tray and paper-output slot with a small closed optical flow-cell cartridge bay: a glass rectangular microfluidic flow cell in a shallow enclosed cartridge, with tiny parallel fluidic channels visible through a small window. The instrument should read as a compact benchtop DNA sequencing instrument, not a printer. Use flat pale beige fills with a restrained deep amber #8A6D1F accent on the cartridge and dark slate outlines. No gradients, no shadows, no 3D rendering. No sheets of paper, no paper trays, no keyboards. No text, no letters, no numbers, no labels, no symbols, no logos. One isolated icon only, with generous white margin. Aspect ratio 1:1.",
+      "processing": {
+        "rgb_background_rule": "R>245 AND G>245 AND B>245 -> alpha 0; otherwise alpha 255",
+        "bbox": [
+          63,
+          165,
+          1191,
+          1071
+        ],
+        "margin_px": 68,
+        "dimensions": [
+          1264,
+          1042
+        ],
+        "resampling": false
+      },
+      "ownership_note": "本轮新建；未覆盖既有 ch06-icon-08.png。"
+    }
+  ]
+}
+

@@ -1,0 +1,364 @@
+{
+  "chapter": "08",
+  "generated_on": "2026-10-29",
+  "bbbc_downloads": [
+    {
+      "file": "data/ch08/raw/IXMtest_A13_s1_w1B35C6D5D-DBF9-4779-990D-5E7AFB14D600.tif",
+      "zip_url": "https://data.broadinstitute.org/bbbc/BBBC022/BBBC022_v1_images_20585w1.zip",
+      "member": "IXMtest_A13_s1_w1B35C6D5D-DBF9-4779-990D-5E7AFB14D600.tif",
+      "downloaded": "2026-10-29",
+      "sha256": "4be40f814481002aa878dcb34fc4fb45ddd84bd2c7380880408f0de1d1e21f2a",
+      "license": "CC0 1.0 (BBBC022v1)"
+    },
+    {
+      "file": "data/ch08/raw/IXMtest_A13_s1_w5B257EE32-37B0-4698-891B-11B1B3D3D0C1.tif",
+      "zip_url": "https://data.broadinstitute.org/bbbc/BBBC022/BBBC022_v1_images_20585w5.zip",
+      "member": "IXMtest_A13_s1_w5B257EE32-37B0-4698-891B-11B1B3D3D0C1.tif",
+      "downloaded": "2026-10-29",
+      "sha256": "c1c441e44e91481c56e73140ec5b919f67697f07f8f6db4c853c9b9736ec486a",
+      "license": "CC0 1.0 (BBBC022v1)"
+    },
+    {
+      "file": "data/ch08/raw/IXMtest_A13_s2_w1951890F6-3FBD-488D-A559-E437F411FE17.tif",
+      "zip_url": "https://data.broadinstitute.org/bbbc/BBBC022/BBBC022_v1_images_20585w1.zip",
+      "member": "IXMtest_A13_s2_w1951890F6-3FBD-488D-A559-E437F411FE17.tif",
+      "downloaded": "2026-10-29",
+      "sha256": "800419706668d4de834865ff95f10e9d3aa3e2563ce101c7f29a389baa1f9174",
+      "license": "CC0 1.0 (BBBC022v1)"
+    },
+    {
+      "file": "data/ch08/raw/IXMtest_A13_s2_w5E4FF8FF2-B6AC-4AC6-810D-535064B5C89C.tif",
+      "zip_url": "https://data.broadinstitute.org/bbbc/BBBC022/BBBC022_v1_images_20585w5.zip",
+      "member": "IXMtest_A13_s2_w5E4FF8FF2-B6AC-4AC6-810D-535064B5C89C.tif",
+      "downloaded": "2026-10-29",
+      "sha256": "b3d11076696b2bf4e7c4fb9bd7dd72c96f64ec4c8a8e42920022ea722f5ff2c5",
+      "license": "CC0 1.0 (BBBC022v1)"
+    },
+    {
+      "file": "data/ch08/BBBC022_v1_image.csv",
+      "url": "https://data.broadinstitute.org/bbbc/BBBC022/BBBC022_v1_image.csv",
+      "downloaded": "2026-10-29",
+      "sha256": "2666ae70ab8c076f34cc81d22ddd67a92969a097c058dd19d6be345f14ad5cda",
+      "license": "CC0 1.0"
+    }
+  ],
+  "sourced_downloads": [
+    {
+      "file": "data/ch08/sourced/FluorescentCells.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/FluorescentCells.jpg",
+      "downloaded": "2026-10-29",
+      "sha256": "9a33cb62580b9d8c5142e5d73f2a585bce5f5100d2de3e9fab84d323c2fdb3dd"
+    },
+    {
+      "file": "data/ch08/sourced/Leaf_epidermis.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Leaf_epidermis.jpg",
+      "downloaded": "2026-10-29",
+      "sha256": "8d65dba295c8cbc89a5e7ede0b4443ed48596ed4d6d03bca5f87c75c8796e62c"
+    }
+  ],
+  "bbbc_assertions": {
+    "hoechst_s1_mean": 238.40440152519895,
+    "mito_s1_mean": 373.1842119805482,
+    "mito_s2_mean": 366.33420092838196,
+    "mito_s1_saturated": 12
+  },
+  "leaf_scale_px": 720,
+  "figure_provenance": {
+    "fig07_input": {
+      "gt_box": [
+        640,
+        680,
+        1152,
+        1192
+      ],
+      "downsample_factor": 4,
+      "lr_path": "data/ch08/fig07-input-lowres.png",
+      "gt_sha256": "297c5e39691ea41f4f31b2e20a8e9a18e0b476b114c994fb0f4d58851da8d58e"
+    },
+    "ch08-01": {
+      "zh": {
+        "mappings": [
+          {
+            "vmin": 0,
+            "vmax": 65535,
+            "white_fraction_pct": 0.0
+          },
+          {
+            "vmin": 121,
+            "vmax": 1655,
+            "white_fraction_pct": 0.0
+          },
+          {
+            "vmin": 132,
+            "vmax": 1236,
+            "white_fraction_pct": 0.09974580017683467
+          }
+        ]
+      },
+      "en": {
+        "mappings": [
+          {
+            "vmin": 0,
+            "vmax": 65535,
+            "white_fraction_pct": 0.0
+          },
+          {
+            "vmin": 121,
+            "vmax": 1655,
+            "white_fraction_pct": 0.0
+          },
+          {
+            "vmin": 132,
+            "vmax": 1236,
+            "white_fraction_pct": 0.09974580017683467
+          }
+        ]
+      }
+    },
+    "ch08-02": {
+      "zh": {
+        "linear_range": [
+          218,
+          1140
+        ],
+        "gamma": 0.5,
+        "clip_white_point": 532.0,
+        "rois": {
+          "bright": [
+            340,
+            210,
+            355,
+            225
+          ],
+          "dim": [
+            120,
+            380,
+            135,
+            395
+          ]
+        },
+        "white_fraction_clip_pct": 9.940594606542883,
+        "intensity_ratios": [
+          {
+            "raw_ratio": 3.5722543352601144,
+            "display_ratio": 3.650488225157955
+          },
+          {
+            "raw_ratio": 3.5722543352601144,
+            "display_ratio": 1.8649524480450863
+          },
+          {
+            "raw_ratio": 3.5722543352601144,
+            "display_ratio": 3.4905479320602626
+          }
+        ]
+      },
+      "en": {
+        "linear_range": [
+          218,
+          1140
+        ],
+        "gamma": 0.5,
+        "clip_white_point": 532.0,
+        "rois": {
+          "bright": [
+            340,
+            210,
+            355,
+            225
+          ],
+          "dim": [
+            120,
+            380,
+            135,
+            395
+          ]
+        },
+        "white_fraction_clip_pct": 9.940594606542883,
+        "intensity_ratios": [
+          {
+            "raw_ratio": 3.5722543352601144,
+            "display_ratio": 3.650488225157955
+          },
+          {
+            "raw_ratio": 3.5722543352601144,
+            "display_ratio": 1.8649524480450863
+          },
+          {
+            "raw_ratio": 3.5722543352601144,
+            "display_ratio": 3.4905479320602626
+          }
+        ]
+      }
+    },
+    "ch08-03": {
+      "zh": {
+        "mean_s1": 373.1842119805482,
+        "mean_s2": 366.33420092838196,
+        "wrong_range_s2": [
+          196,
+          700
+        ],
+        "shared_range": [
+          218,
+          1140
+        ]
+      },
+      "en": {
+        "mean_s1": 373.1842119805482,
+        "mean_s2": 366.33420092838196,
+        "wrong_range_s2": [
+          196,
+          700
+        ],
+        "shared_range": [
+          218,
+          1140
+        ]
+      }
+    },
+    "ch08-04": {
+      "zh": {
+        "crop": [
+          198,
+          110,
+          498,
+          410
+        ],
+        "ranges": {
+          "hoechst": [
+            132,
+            1236
+          ],
+          "mito": [
+            218,
+            1140
+          ]
+        }
+      },
+      "en": {
+        "crop": [
+          198,
+          110,
+          498,
+          410
+        ],
+        "ranges": {
+          "hoechst": [
+            132,
+            1236
+          ],
+          "mito": [
+            218,
+            1140
+          ]
+        }
+      }
+    },
+    "ch08-05": {
+      "zh": {
+        "scale_px": 720,
+        "um_per_px": 0.2777777777777778,
+        "crop": [
+          480,
+          320,
+          1504,
+          1344
+        ],
+        "inset_box": [
+          900,
+          720,
+          1100,
+          920
+        ],
+        "wrong_scale_deliberately_wrong": true
+      },
+      "en": {
+        "scale_px": 720,
+        "um_per_px": 0.2777777777777778,
+        "crop": [
+          480,
+          320,
+          1504,
+          1344
+        ],
+        "inset_box": [
+          900,
+          720,
+          1100,
+          920
+        ],
+        "wrong_scale_deliberately_wrong": true
+      }
+    },
+    "ch08-06": {
+      "zh": {
+        "size": [
+          512,
+          512
+        ],
+        "calibration": null
+      },
+      "en": {
+        "size": [
+          512,
+          512
+        ],
+        "calibration": null
+      }
+    },
+    "ch08-07": {
+      "zh": {
+        "gt_crop": [
+          640,
+          680,
+          1152,
+          1192
+        ],
+        "lr_shape": [
+          128,
+          128
+        ],
+        "codex_output": null,
+        "complete": false
+      },
+      "en": {
+        "gt_crop": [
+          640,
+          680,
+          1152,
+          1192
+        ],
+        "lr_shape": [
+          128,
+          128
+        ],
+        "codex_output": null,
+        "complete": false
+      }
+    }
+  },
+  "figures": {
+    "python": [
+      "ch08-01-raw-display-mapping",
+      "ch08-02-linear-vs-gamma",
+      "ch08-03-consistent-display",
+      "ch08-04-pseudocolor-colorblind",
+      "ch08-05-crop-inset-scalebar",
+      "ch08-06-no-calibration",
+      "ch08-07-ai-enhancement",
+      "ch08-08-case-v1",
+      "ch08-08-case-final"
+    ],
+    "tikz": [
+      "ch08-08-case-v1-overlay"
+    ],
+    "reuse": [],
+    "sourced": [
+      "FluorescentCells.jpg",
+      "Leaf_epidermis.jpg",
+      "BBBC022 TIFF×4"
+    ]
+  },
+  "fig07_codex_complete": false
+}

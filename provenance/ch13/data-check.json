@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-29",
+  "data_status": "simulated teaching data",
+  "paired_example": {
+    "objects": 8,
+    "SIM04_pair": [
+      18.0,
+      17.0
+    ],
+    "scaled_font_pt_at_85mm": 4.58
+  },
+  "sim_perovskite_jv": {
+    "control_points": 2201,
+    "modified_points": 2281,
+    "control_PCE_percent": 19.2096,
+    "modified_PCE_percent": 20.9785
+  },
+  "figures": [
+    "ch13-02a-upsampled",
+    "ch13-02b-native",
+    "ch13-03-text-at-final-width",
+    "ch13-05-vector-vs-container",
+    "ch13-06-grayscale-and-cvd"
+  ],
+  "skipped": [
+    "ch13-07-figure-checker-report (sourced screenshot per task note)"
+  ]
+}

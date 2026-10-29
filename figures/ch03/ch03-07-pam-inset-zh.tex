@@ -1,0 +1,50 @@
+% FIG ch03-07 PAM inset (Chinese)
+\begin{tikzpicture}[
+  x=1mm, y=1mm,
+  font=\sffamily\scriptsize,
+  text=BookInk,
+]
+  \node[anchor=east] at (-2, 21.2) {非靶链};
+  \node[anchor=east] at (-2, 7.2) {靶链};
+  \node at (6, 23.6) {5$'$};
+  \node at (54.5, 23.6) {3$'$};
+  \node at (55.5, 4.4) {5$'$};
+  \node at (6, 4.4) {3$'$};
+
+  \foreach \i in {0,...,19} {
+    \pgfmathsetmacro{\x}{6+\i*2.4}
+    \draw[draw=BookInk!50, fill=white] (\x,20) rectangle (\x+2.4,22.4);
+  }
+  \foreach \i in {0,1,2} {
+    \pgfmathsetmacro{\x}{6+(17+\i)*2.4}
+    \draw[draw=BookInk!50, fill=yellow!70] (\x,20) rectangle (\x+2.4,22.4);
+  }
+  \node[anchor=west, text=BookInk!80] at (6+17*2.4, 28.2) {PAM（NGG）};
+
+  \foreach \i in {0,...,19} {
+    \pgfmathsetmacro{\x}{6+\i*2.4}
+    \draw[draw=BookInk!50, fill=white] (\x,6) rectangle (\x+2.4,8.4);
+  }
+  \foreach \i in {0,...,19} {
+    \pgfmathsetmacro{\x}{6+\i*2.4}
+    \draw[BookInk!35, thin] (\x+1.2,8.4) -- (\x+1.2,11.6);
+    \draw[draw=orange!80!black, fill=orange!25, line width=1pt]
+      (\x,4) rectangle (\x+2.4,6.4);
+  }
+  \draw[orange!80!black, line width=0.8pt]
+    (6+19*2.4+2.4, 5) .. controls (6+21*2.4, 8) .. (6+21*2.4, 12)
+    .. controls (6+21*2.4, 14) .. (6+19*2.4, 14);
+
+  \node[anchor=west] at (6, 0.5) {sgRNA 间隔序列};
+  \pgfmathsetmacro{\cx}{6+16.5*2.4+1.2}
+  \fill[black] (\cx,20) -- (\cx-0.8,21.2) -- (\cx+0.8,21.2) -- cycle;
+  \fill[black] (\cx,6) -- (\cx-0.8,4.8) -- (\cx+0.8,4.8) -- cycle;
+  \node[anchor=west] at (6+17.5*2.4, 13) {切点};
+  \node[anchor=west, font=\scriptsize] at (6+16*2.4, 17) {RuvC};
+  \node[anchor=west, font=\scriptsize] at (6+16*2.4, 3) {HNH};
+
+  \draw[decorate, decoration={brace, amplitude=3pt}] (6, 15.5) -- (6+20*2.4, 15.5)
+    node[midway, above=4pt] {约 20 nt};
+  \draw[decorate, decoration={brace, amplitude=2pt, mirror}] (6+16*2.4, 22.5) -- (6+17*2.4, 22.5)
+    node[midway, below=2pt] {3 bp};
+\end{tikzpicture}

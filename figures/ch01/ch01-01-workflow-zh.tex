@@ -1,0 +1,28 @@
+\begin{tikzpicture}[
+  box/.style={draw=BookTeal,rounded corners=2pt,fill=BookPale,minimum width=34mm,minimum height=12mm,align=center,font=\small},
+  link/.style={-{Stealth[length=2mm]},thick,draw=BookInk},
+  loop/.style={-{Stealth[length=1.8mm]},dashed,draw=BookInk!60},
+  note/.style={font=\scriptsize,text=BookInk!70,align=center}
+]
+\node[box] (a) {说明任务};
+\node[box,right=9mm of a] (b) {准备材料};
+\node[box,right=9mm of b] (c) {制作初稿};
+\node[box,below=18mm of c] (d) {检查并修改};
+\node[box,left=9mm of d] (e) {组织说明};
+\node[box,left=9mm of e] (f) {检查与交付};
+\node[note,below=5mm of a] {任务书 v1};
+\node[note,below=5mm of b] {数据字典};
+\node[note,below=5mm of c] {d1、s1};
+\node[note,below=5mm of d] {修改单};
+\node[note,below=5mm of e] {组图与图注};
+\node[note,below=5mm of f] {交付包};
+\draw[link] (a)--(b);
+\draw[link] (b)--(c);
+\draw[link] (c)--(d);
+\draw[link] (d)--(e);
+\draw[link] (e)--(f);
+\draw[loop] (d.north west) to[bend right=42] (b.south);
+\draw[loop] (f.north) to[bend right=48] (a.south);
+\node[note,align=center,text width=18mm] at ($(b.south)!0.45!(d.north west)+(0,-10mm)$) {发现问题时返回};
+\node[note,align=center,text width=18mm] at ($(a.south)!0.45!(f.north)+(-22mm,2mm)$) {发现问题时返回};
+\end{tikzpicture}

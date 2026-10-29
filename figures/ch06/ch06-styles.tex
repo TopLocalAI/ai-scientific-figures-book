@@ -1,0 +1,81 @@
+% Shared styles for chapter 6 workflow TikZ figures.%
+% Every figure inputs this file, so commands are defined with \providecommand.%
+\providecolor{BookTeal}{HTML}{176C68}%
+\providecolor{BookInk}{HTML}{23363E}%
+\providecolor{BookRule}{HTML}{C8D6D6}%
+\providecolor{BookPale}{HTML}{F1F6F5}%
+\definecolor{WetPale}{HTML}{FBF1EA}%
+\definecolor{Wet}{HTML}{B5653A}%
+\definecolor{Seq}{HTML}{8A6D1F}%
+\definecolor{DryPale}{HTML}{EEF4F7}%
+\definecolor{Dry}{HTML}{2F6F8F}%
+\definecolor{ChSixFeedback}{HTML}{7A8A90}%
+\definecolor{ChSixBad}{HTML}{C0392B}%
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,shapes.misc,fit,backgrounds,calc}%
+\ifdefined\ChSixLayersReady\else%
+  \pgfdeclarelayer{chsixlane}%
+  \pgfsetlayers{chsixlane,background,main}%
+  \def\ChSixLayersReady{}%
+\fi%
+
+\tikzset{%
+  chsix/.style={font=\sffamily\scriptsize, text=BookInk, align=center},%
+  flowstep/.style={%
+    chsix, rounded corners=2pt, draw=Wet, line width=0.45pt, fill=white,%
+    text width=19mm, minimum height=7.4mm, inner sep=1.3pt,%
+  },%
+  flowstepdry/.style={flowstep, draw=Dry},%
+  flowstepseq/.style={flowstep, draw=Seq},%
+  artifact/.style={%
+    chsix, trapezium, trapezium left angle=70, trapezium right angle=110,%
+    trapezium stretches=true,%
+    draw=BookInk, line width=0.45pt, fill=white,%
+    minimum height=6.2mm, inner sep=1.2pt,%
+  },%
+  gate/.style={%
+    chsix, diamond, aspect=1.7, draw=BookInk, line width=0.45pt, fill=white,%
+    text width=12mm, inner sep=0.6pt, minimum height=8mm,%
+  },%
+  opt/.style={flowstep, dashed, draw=BookInk!70},%
+  optdry/.style={flowstepdry, dashed, draw=BookInk!70},%
+  stack/.style={flowstep},%
+  link/.style={-{Stealth[length=1.6mm]}, semithick, draw=BookInk},%
+  linkthin/.style={-{Stealth[length=1.2mm]}, thin, draw=BookInk!80},%
+  back/.style={-{Stealth[length=1.5mm]}, dashed, draw=ChSixFeedback},%
+  conn/.style={%
+    circle, draw=BookInk, line width=0.5pt, minimum size=4.6mm,%
+    font=\sffamily\scriptsize\bfseries, inner sep=0pt, text=BookInk,%
+  },%
+  lanetitle/.style={font=\sffamily\bfseries\small, text=BookInk, align=left},%
+  passlabel/.style={font=\sffamily\scriptsize, text=BookInk, fill=white, inner sep=0.7pt, align=center},%
+  mergelabel/.style={font=\sffamily\scriptsize, text=BookInk, fill=white, inner sep=0.8pt, align=center},%
+  taglab/.style={font=\sffamily\scriptsize, text=ChSixFeedback, fill=white, inner sep=0.8pt, align=center},%
+  gramcap/.style={font=\sffamily\scriptsize, text=BookInk, align=left, anchor=west},%
+}%
+
+% Offset card behind a two-sample step. Text stays on the front node only.%
+\providecommand{\ChSixCardBack}[1]{%
+  \begin{pgfonlayer}{background}%
+    \draw[Wet, line width=0.45pt, rounded corners=2pt, fill=white]%
+      ([shift={(-0.55mm,0.55mm)}]#1.south west)%
+      rectangle ([shift={(-0.55mm,0.55mm)}]#1.north east);%
+  \end{pgfonlayer}%
+}%
+% #1 options, #2 name, #3 position (with parentheses), #4 text%
+\providecommand{\ChSixCard}[4]{%
+  \node[stack, #1] (#2) at #3 {#4};%
+  \ChSixCardBack{#2}%
+}%
+
+\providecommand{\ChSixMaybeLabel}[1]{%
+  \ifdefined\nolabels\else#1\fi%
+}%
+
+\providecommand{\ChSixIcon}[2]{%
+  \ifdefined\ChSixShowIcons%
+    \IfFileExists{#1}{%
+      \node[anchor=south, inner sep=0] at ([yshift=0.7mm]#2.north)%
+        {\includegraphics[height=5.4mm]{#1}};%
+    }{}%
+  \fi%
+}%

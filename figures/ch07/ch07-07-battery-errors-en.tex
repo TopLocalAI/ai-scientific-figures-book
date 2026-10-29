@@ -1,0 +1,25 @@
+% FIG ch07-07 battery common errors overlay (English)
+\definecolor{ch07err}{HTML}{C0392B}
+\begin{tikzpicture}
+  \node[anchor=south west, inner sep=0] (img) at (0,0)
+    {\includegraphics[width=\linewidth]{figures/ch07/ch07-07-battery-errors.png}};
+  \begin{scope}[x={(img.south east)}, y={(img.north west)},
+    font=\sffamily\small]
+    \node[font=\bfseries] at (0.50, 1-0.02) {Charging (incorrect example)};
+    \node[font=\scriptsize] at (0.20, 1-0.90) {Al foil};
+    \node[font=\scriptsize, align=center] at (0.315, 1-0.90) {Negative\\(graphite)};
+    \node[font=\scriptsize, align=center] at (0.525, 1-0.90) {Positive\\(e.g.\ LiCoO$_2$)};
+    \node[font=\scriptsize] at (0.69, 1-0.90) {Separator};
+    \node[font=\scriptsize] at (0.76, 1-0.94) {Cu foil};
+    \node[font=\scriptsize, rotate=90, anchor=south] at (0.15, 1-0.20) {Pouch};
+    \node[font=\scriptsize] at (0.20, 1-0.11) {Negative tab};
+    \node[font=\scriptsize] at (0.76, 1-0.11) {Positive tab};
+    \node[font=\scriptsize\bfseries, text=white, fill=ch07err, circle, inner sep=1.5pt] at (0.20, 1-0.22) {1};
+    \node[font=\scriptsize\bfseries, text=white, fill=ch07err, circle, inner sep=1.5pt] at (0.76, 1-0.22) {1};
+    \node[font=\scriptsize\bfseries, text=white, fill=ch07err, circle, inner sep=1.5pt] at (0.42, 1-0.22) {2};
+    \node[font=\scriptsize\bfseries, text=white, fill=ch07err, circle, inner sep=1.5pt] at (0.40, 1-0.55) {3};
+    \node[font=\scriptsize\bfseries, text=white, fill=ch07err, circle, inner sep=1.5pt] at (0.50, 1-0.08) {4};
+    \node[font=\scriptsize, text=BookInk!80, anchor=north] at (0.50, 1-0.96)
+      {1--4 map to checklist S2, S1, S4, S7 in Table~7-3};
+  \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,13 @@
+{
+  "blur_sigma_px": 2.0,
+  "diff_threshold": 40,
+  "min_region_area_px": 180,
+  "resize": "LANCZOS to smaller of pair",
+  "pending_inputs": [
+    "figures/ch11/ch11-04-v3-collateral.png"
+  ],
+  "object_count_rows_ch11": 6,
+  "object_count_rows_ch07": 4,
+  "ch07_changed_fraction": 0.14601246256400346,
+  "ch07_regions": 24
+}

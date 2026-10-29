@@ -1,0 +1,36 @@
+{
+  "chapter": "04",
+  "generated_on": "2026-10-29",
+  "datasets": {
+    "mlo_rows": 823,
+    "mlo_first": "1958-03",
+    "mlo_last": "2026-09",
+    "mlo_mean_average_ppm": 361.4391,
+    "hot_rows": 355,
+    "hot_valid_pco2": 346,
+    "hot_valid_ph": 346,
+    "hot_first_cruise": "1988-10-31",
+    "ohc_pentad_rows": 67,
+    "ohc_year_min": 1957.5,
+    "ohc_year_max": 2023.5,
+    "ohc_wo_700_mean": 3.8373,
+    "ohc_wo_2000_mean": 5.0887,
+    "gcb_rows": 66,
+    "gcb_first_year": 1959,
+    "gcb_last_year": 2024,
+    "gcb_mean_ocean_sink": 2.2128,
+    "gcb_mean_ocean_share_pct": 27.0132
+  },
+  "figures_python": [
+    "ch04-01-inconsistent-set",
+    "ch04-02-spec-page",
+    "ch04-03-cvd-check",
+    "ch04-05-fig2-carbonate",
+    "ch04-06-fig3-ohc",
+    "ch04-07-fig4-budget",
+    "ch04-08-consistent-set"
+  ],
+  "codex_pending": [],
+  "reuse_figures_in_plan": 0,
+  "sourced_figures_in_plan": 0
+}

@@ -1,0 +1,117 @@
+{
+  "chapter": "05",
+  "generated_on": "2026-10-29",
+  "data_downloads": {
+    "datasets": [
+      {
+        "file": "data/ch05/penguins.csv",
+        "url": "https://raw.githubusercontent.com/allisonhorst/palmerpenguins/v0.1.0/inst/extdata/penguins.csv",
+        "downloaded": "2026-10-29",
+        "sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93"
+      },
+      {
+        "file": "data/ch05/co2_mm_mlo.csv",
+        "url": "https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.csv",
+        "downloaded": "2026-10-29",
+        "sha256": "d895fb5b4a59fb5e4cd98e69b7667fe5bef595c6581f630852b12cb41c07f675"
+      },
+      {
+        "file": "data/ch05/paired-example.csv",
+        "source": "data/paired-example.csv (simulated, CC BY 4.0)",
+        "sha256": "99b7d80e85ef966c73e70da0c3061c5201560935cb7d8be47f247c04b9650271"
+      }
+    ]
+  },
+  "penguins": {
+    "species_mass": {
+      "Adelie": {
+        "n": 151,
+        "mean": 3700.6623,
+        "sd": 458.5661,
+        "sem": 37.3176,
+        "ci_half_width": 73.736,
+        "median": 3700.0
+      },
+      "Chinstrap": {
+        "n": 68,
+        "mean": 3733.0882,
+        "sd": 384.3351,
+        "sem": 46.6075,
+        "ci_half_width": 93.0289,
+        "median": 3700.0
+      },
+      "Gentoo": {
+        "n": 123,
+        "mean": 5076.0163,
+        "sd": 504.1162,
+        "sem": 45.4546,
+        "ci_half_width": 89.982,
+        "median": 5000.0
+      }
+    },
+    "species_sex_groups": 6,
+    "pooled_bill_r": -0.235
+  },
+  "paired_simulated": {
+    "data_status": "simulated teaching data",
+    "n_objects": 8,
+    "differences": [
+      4.0,
+      3.0,
+      4.0,
+      -1.0,
+      4.0,
+      5.0,
+      4.0,
+      4.0
+    ],
+    "mean_difference": 3.375,
+    "before_mean": 13.125,
+    "after_mean": 16.5
+  },
+  "co2": {
+    "co2_meta": {
+      "rows": 823,
+      "file_creation": "# File Creation: Fri Oct  9 13:08:07 2026",
+      "first_month_average": 315.71,
+      "average_min": 312.42,
+      "average_max": 432.34,
+      "last_row": {
+        "year": 2026.0,
+        "month": 9.0,
+        "average": 426.07
+      }
+    },
+    "growth_min": 0.41666666666674246,
+    "growth_max": 3.5241666666667015,
+    "growth_1960": 0.9266666666666765,
+    "growth_2025": 2.7449999999999477,
+    "heatmap_shape": [
+      67,
+      12
+    ],
+    "greyscale_method": "ITU-R BT.601 luma on colormap strip"
+  },
+  "figures": {
+    "python": [
+      "ch05-01-group-forms",
+      "ch05-02-case-final",
+      "ch05-03-paired-views",
+      "ch05-04-co2-series",
+      "ch05-05-axis-bad",
+      "ch05-05-axis-good",
+      "ch05-06-dual-axis-bad",
+      "ch05-06-dual-axis-good",
+      "ch05-07-colormap-bad",
+      "ch05-07-colormap-good",
+      "ch05-08-scatter-cvd"
+    ],
+    "tikz": [],
+    "reuse": [],
+    "sourced": []
+  },
+  "notes": [
+    "SciDraw scivis screenshots not in scope for this script.",
+    "No kind:tikz or kind:reuse figures in ch05 plan."
+  ]
+}

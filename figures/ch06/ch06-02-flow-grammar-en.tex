@@ -1,0 +1,54 @@
+% FIG ch06-02 flow grammar (English)%
+\input{figures/ch06/ch06-styles.tex}%
+\begin{tikzpicture}[x=1mm, y=1mm, font=\sffamily\scriptsize, text=BookInk]%
+  \node[anchor=north west, font=\sffamily\bfseries\small] (titleL) at (0,0) {Node \& arrow grammar};%
+  \draw[BookRule, line width=0.4pt] (0,-7) rectangle (128,-126);%
+
+  \node[flowstep] (g1) at (16,-14) {Step};%
+  \node[gramcap, text width=88mm] at (36,-14) {Rounded rectangle — what is done};%
+
+  \node[artifact] (g2) at (16,-25) {Product};%
+  \node[gramcap, text width=88mm] at (36,-25)%
+    {Parallelogram — material or data handed to the next step};%
+
+  \node[gate] (g3) at (16,-38) {QC};%
+  \node[passlabel, anchor=west] at ([xshift=1.5mm]g3.east) {Pass};%
+  \node[taglab, anchor=north west] at ([xshift=1.5mm, yshift=-0.6mm]g3.south east) {Fail};%
+  \node[gramcap, text width=88mm] at (36,-38) {Diamond — two exits (pass / fail)};%
+
+  \node[opt] (g4) at (16,-50) {Optional};%
+  \node[gramcap, text width=88mm] at (36,-50) {Dashed rounded rectangle};%
+
+  \node[stack] (gs1) at (13,-61) {};%
+  \ChSixCardBack{gs1}%
+  \node[stack] (gs2) at (16.2,-61) {Sample};%
+  \node[gramcap, text width=88mm] at (36,-61) {Offset stack — done for each sample};%
+
+  \draw[link] (6,-72) -- ++(16,0);%
+  \node[gramcap, text width=88mm] at (36,-72) {Solid arrow — sequence \& hand-off};%
+
+  \draw[back] (6,-83) to[out=20, in=160] (24,-83);%
+  \node[gramcap, text width=88mm] at (36,-83) {Dashed arc — feedback / return};%
+
+  \fill (16,-94) circle (0.7pt);%
+  \node[gramcap, text width=88mm] at (36,-94) {Dot — branch / merge point};%
+
+  \node[conn] (gc) at (16,-105) {A};%
+  \node[gramcap, text width=88mm] at (36,-105) {Circle connector — continues elsewhere};%
+
+  \fill[WetPale, draw=Wet, line width=0.3pt] (6,-116) rectangle (16,-122);%
+  \fill[DryPale, draw=Dry, line width=0.3pt] (18,-116) rectangle (28,-122);%
+  \node[gramcap, text width=88mm] at (36,-119) {Swim-lane fill — wet lab / computational};%
+
+  \node[anchor=north west, font=\sffamily\bfseries\small] (titleR) at (0,-130) {Workflow $\neq$ causation};%
+  \node[flowstep] (d1) at (20,-146) {Dissociation};%
+  \node[artifact] (d2) at (52,-146) {Single-cell\\suspension};%
+  \draw[link] (d1) -- (d2);%
+  \node[gramcap] at (76,-146) {Workflow: sequence \& hand-off};%
+
+  \node[flowstep] (e1) at (20,-164) {Dissociation};%
+  \node[gramcap, text width=72mm] at (42,-164) {$\Rightarrow$ stress-gene expression rises};%
+  \draw[BookInk!45, densely dotted] (e1.east) -- ++(6,0);%
+  \node[gramcap, anchor=north west, text width=122mm] at (0,-176)%
+    {Mechanistic claims belong in notes or captions, not workflow arrows (van den Brink et al.\ 2017).};%
+\end{tikzpicture}%

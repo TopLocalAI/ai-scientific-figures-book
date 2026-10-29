@@ -1,0 +1,58 @@
+% FIG ch13-01 pixels, physical size, effective resolution (English)
+% Column widths are drawn at 1:2 (1 mm of column width = 0.5 mm on the page).
+\begin{tikzpicture}[x=1mm, y=1mm, font=\sffamily\fontsize{8}{10}\selectfont, text=BookInk,
+    >=Stealth]
+  \tikzset{
+    lbl/.style={inner sep=0pt, outer sep=0pt, anchor=south west},
+    result/.style={inner sep=0pt, outer sep=0pt, anchor=north west},
+    tick/.style={inner sep=0.4pt, outer sep=0pt, anchor=north},
+    takeaway/.style={draw=BookTeal, line width=0.6pt, fill=white, rounded corners=1.2pt,
+      inner sep=1.8mm, align=center, text width=122mm, font=\sffamily\fontsize{8}{10.5}\selectfont},
+  }
+
+  % One bitmap file
+  \draw[BookRule, line width=0.6pt, fill=BookPale, rounded corners=1.2pt]
+    (0.6, 43.0) rectangle (30.0, 76.8);
+  \begin{scope}
+    \clip (6.2, 63.2) rectangle (24.2, 73.325);
+    \fill[white] (6.2, 63.2) rectangle (24.2, 73.325);
+    \foreach \i in {0,...,15} {
+      \foreach \j in {0,...,8} {
+        \pgfmathparse{mod(\i+\j,2) ? 18 : 8}
+        \fill[BookTeal!\pgfmathresult]
+          (6.2+1.125*\i, 63.2+1.125*\j) rectangle ++(1.125, 1.125);
+      }
+    }
+  \end{scope}
+  \draw[BookRule, line width=0.4pt] (6.2, 63.2) rectangle (24.2, 73.325);
+  \node[align=center, inner sep=0pt, anchor=center] at (15.3, 53.2)
+    {{\fontsize{9}{11}\selectfont File:}\\[2.5pt]1920 × 1080\,px};
+
+  % Shared origin of the two width bars. 85 mm -> 42.5 mm; 180 mm -> 90 mm.
+  \def\xO{36.2}
+  \def\sS{0.5}
+
+  \node[lbl] at (\xO, 73.4) {Single column 85\,mm};
+  \fill[BookTeal] (\xO, 68.4) rectangle ({\xO+85*\sS}, 71.8);
+  \node[result] at (\xO, 66.6) {1920 ÷ (85 ÷ 25.4) ≈ \textbf{574\,ppi}};
+
+  \node[lbl] at (\xO, 56.6) {Double column 180\,mm};
+  \fill[BookTeal] (\xO, 51.6) rectangle ({\xO+180*\sS}, 55.0);
+  \node[result] at (\xO, 49.8) {1920 ÷ (180 ÷ 25.4) ≈ \textbf{271\,ppi}};
+
+  \draw[BookInk, line width=0.55pt, ->] (30.0, 70.1) -- (\xO, 70.1);
+  \draw[BookInk, line width=0.55pt, ->] (30.0, 53.3) -- (\xO, 53.3);
+
+  % Ruler in the same scale as the bars
+  \draw[BookInk, line width=0.7pt] (\xO, 41.2) -- ({\xO+180*\sS}, 41.2);
+  \foreach \mm/\lab in {0/0, 85/85, 180/180\,mm} {
+    \draw[BookInk, line width=0.55pt] ({\xO+\mm*\sS}, 41.2) -- ({\xO+\mm*\sS}, 39.6);
+    \node[tick] at ({\xO+\mm*\sS}, 39.3) {\lab};
+  }
+  \node[inner sep=0pt, outer sep=0pt, anchor=north west] at (0.6, 34.6)
+    {Same scale (1\,mm of column width = 0.5\,mm on this page)};
+
+  \node[takeaway, anchor=north west] at (0.6, 29.2) {%
+    effective ppi = pixels ÷ (width in mm ÷ 25.4)\\[2pt]
+    Changing the dpi tag does not change the pixel count.};
+\end{tikzpicture}

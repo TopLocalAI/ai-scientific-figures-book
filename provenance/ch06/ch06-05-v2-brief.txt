@@ -1,0 +1,38 @@
+Date: 2026-10-29
+Detailed visual checks and selection reasons: codex-images.md
+No manual retouching; source PNGs copied unchanged. Concrete model name unknown.
+
+{
+  "date": "2026-10-29",
+  "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+  "model": "不知道；工具返回未提供具体模型名称",
+  "manual_retouch": false,
+  "file": "figures/ch06/ch06-05-v2-brief-alt1.png",
+  "attempt": 1,
+  "selected": false,
+  "prompt": "A clean, flat, vector-style scientific workflow diagram on a pure white background,\nlandscape 16:9. Two horizontal swim lanes separated by a thin light-grey line.\nTop lane (very light warm beige background): a left-to-right sequence of nine small\nrounded-rectangle steps, each with one simple icon inside: (1) a small piece of pink\nsoft tissue on a dish, (2) a conical tube with tiny enzyme droplets, (3) a cell strainer\nmesh over a tube, (4) a diamond-shaped checkpoint containing a counting grid with a few\nround cells, (5) a microfluidic chip whose channel forms droplets, each droplet holding\none cell and one bead, (6) a small PCR tube, (7) short double-stranded DNA fragments\nwith coloured end caps, (8) a second diamond-shaped checkpoint containing a small\nfragment-size curve, (9) a benchtop sequencer box. Between steps 1 and 8, every step\nis drawn as a stack of two slightly offset cards (two samples processed in parallel);\nthe two stacks merge into the single sequencer at step 9. A dashed curved arrow returns\nfrom checkpoint 4 back to step 2, and from checkpoint 8 back to step 7.\nA small circle connector at the right end of the top lane, and an identical circle at\nthe left end of the bottom lane.\nBottom lane (very light cool blue-grey background): a left-to-right sequence: a monitor\nwith aligned reads, a grid matrix of small squares, a diamond checkpoint with a filter\nfunnel (with two small optional dashed boxes above it, joined back into it), a bar-like\nnormalisation symbol, a short list of highlighted rows, a scatter of points with two\nperpendicular axes arrows (PCA), a network graph of dots and edges; from the network\ngraph the path splits into two branches: upper branch to a set of coloured point\nclusters, lower branch to a two-dimensional point embedding; only the upper branch\ncontinues to a heat-map-like marker table and then to a final cluster map with blank\ntag shapes. A dashed curved arrow returns from the final map back to the checkpoint.\nWarm muted orange-brown accents in the top lane, muted teal-blue accents in the bottom\nlane, dark slate arrows of uniform weight with solid triangular heads. Generous white\nspace. No text, no letters, no numbers, no labels, no symbols, no logos. No 3D, no\ngradients, no shadows, no microscope, no DNA double helix, no gears, no people.",
+  "prompt_change": "无，逐字使用规划 §3.6 V2。",
+  "source": "exec-acf7aedf-119a-4cd7-92a5-5099b563b7b7.png",
+  "dimensions": [
+    1983,
+    793
+  ]
+}
+
+{
+  "date": "2026-10-29",
+  "tool": "image_gen.imagegen (tools.image_gen__imagegen)",
+  "model": "不知道；工具返回未提供具体模型名称",
+  "manual_retouch": false,
+  "file": "figures/ch06/ch06-05-v2-brief.png",
+  "attempt": 2,
+  "selected": true,
+  "prompt": "A clean, flat, vector-style scientific workflow diagram on a pure white background,\nlandscape 16:9. Two horizontal swim lanes separated by a thin light-grey line.\nTop lane (very light warm beige background): a left-to-right sequence of nine small\nrounded-rectangle steps, each with one simple icon inside: (1) a small piece of pink\nsoft tissue on a dish, (2) a conical tube with tiny enzyme droplets, (3) a cell strainer\nmesh over a tube, (4) a diamond-shaped checkpoint containing a counting grid with a few\nround cells, (5) a microfluidic chip whose channel forms droplets, each droplet holding\none cell and one bead, (6) a small PCR tube, (7) short double-stranded DNA fragments\nwith coloured end caps, (8) a second diamond-shaped checkpoint containing a small\nfragment-size curve, (9) a benchtop sequencer box. Between steps 1 and 8, every step\nis drawn as a stack of two slightly offset cards (two samples processed in parallel);\nthe two stacks merge into the single sequencer at step 9. A dashed curved arrow returns\nfrom checkpoint 4 back to step 2, and from checkpoint 8 back to step 7.\nA small circle connector at the right end of the top lane, and an identical circle at\nthe left end of the bottom lane.\nBottom lane (very light cool blue-grey background): a left-to-right sequence: a monitor\nwith aligned reads, a grid matrix of small squares, a diamond checkpoint with a filter\nfunnel (with two small optional dashed boxes above it, joined back into it), a bar-like\nnormalisation symbol, a short list of highlighted rows, a scatter of points with two\nperpendicular axes arrows (PCA), a network graph of dots and edges; from the network\ngraph the path splits into two branches: upper branch to a set of coloured point\nclusters, lower branch to a two-dimensional point embedding; only the upper branch\ncontinues to a heat-map-like marker table and then to a final cluster map with blank\ntag shapes. A dashed curved arrow returns from the final map back to the checkpoint.\nWarm muted orange-brown accents in the top lane, muted teal-blue accents in the bottom\nlane, dark slate arrows of uniform weight with solid triangular heads. Generous white\nspace. No text, no letters, no numbers, no labels, no symbols, no logos. No 3D, no\ngradients, no shadows, no microscope, no DNA double helix, no gears, no people.\n\nTechnical output requirement: render a native 2560 × 1440 pixel PNG canvas, exact 16:9 landscape aspect ratio, at least 2400 pixels wide. Keep the entire illustration within this canvas; do not crop to a panoramic aspect ratio. This is a pixel-dimension requirement, not text to draw.",
+  "prompt_change": "保留原提示词全文，仅追加原生2560×1440/至少2400宽及不裁为全景的要求；首轮画幅与尺寸不达标。第二轮画幅恢复，宽度仍不达标。",
+  "source": "exec-575f70d4-3649-4473-8106-9cb4735cf772.png",
+  "dimensions": [
+    1672,
+    941
+  ]
+}
+

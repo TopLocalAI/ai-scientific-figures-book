@@ -1,0 +1,43 @@
+### figures/ch03/ch03-02c-sketch-branch-alt2.png
+
+- 工具：Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）
+- 模型：不知道：工具未返回具体模型标识。
+- 日期：2026-10-29
+- 本阶段第几次：2
+- 参考图：无；从文字生成
+- 输出：1672×941，RGB PNG；SHA-256：`de88a932d6c07e424137f4ec9a0d4a74d5283a1c39b9aa3570bf67db50c0d1d4`
+- prompt 改动原因：未追加/改写规划英文 prompt；仅作规划要求的公共段拼接或 LAYOUT 占位替换。
+- 人工图像修改：无。
+
+画面内容 / 核验要点逐条检查：
+
+- 落选；第 2 次，原 prompt 重试。上排与两通道保留，DNA 端点大致对齐。
+- 失败：两个箭头仍都指向上通道；下通道无明确入箭头。
+- 上通道折线悬在大缺口中，框高度仍不同；没有文字。
+- 共通核验：未见文字；像素宽度未达2400；约16:9；未真人复核。
+
+实际完整 prompt（保留换行）：
+
+```text
+A rough pencil planning sketch on slightly off-white sketchbook paper,
+photographed flat from directly above, evenly lit, no hands, no pencil, no other
+objects. Landscape 16:9. Single graphite pencil, loose confident lines, a few
+construction lines and faint erasure marks. Simple shapes only: rounded blobs,
+pairs of parallel lines with short rungs (double-stranded DNA), a wavy line
+(RNA), arrows. Strictly no writing of any kind: no letters, no words, no
+numbers, no labels, no title, no annotations. Pencil gray only, no color.
+Bottom tenth of the page left blank.
+
+Layout: two tiers. Upper third of the page: a compact row of three small steps
+from left to right connected by arrows (a two-lobed blob with a wavy line
+inside; the blob sitting on a ladder-like double line with a small shaded
+rectangle; the double line with a gap through both lines, the shaded rectangle
+right next to the gap). From the third step, one arrow goes down and splits
+into two arrows. Lower part of the page: two wide horizontal lanes of equal
+height, stacked one above the other, each framed by a light pencil rectangle.
+Upper lane: a long double line with a tiny zigzag mark at the middle. Lower
+lane: a short separate double line floating above the middle of a long double
+line, and the long double line has a short thick inserted segment at the
+middle. The long double lines in both lanes start and end at the same x
+positions.
+```

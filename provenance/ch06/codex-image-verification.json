@@ -1,0 +1,167 @@
+[
+  {
+    "file": "figures/ch06/ch06-01-v1-vague-alt1.png",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "bytes": 1994126,
+    "sha256": "b04a5729262dde755c374a3830ce410e9d1b6530a5958bc0ce0bf4652666da79"
+  },
+  {
+    "file": "figures/ch06/ch06-01-v1-vague.png",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "bytes": 1905795,
+    "sha256": "d0824a2a487b9298d31b3664cc1195602507457b802c38521f5e23eff5ad0884"
+  },
+  {
+    "file": "figures/ch06/ch06-05-v2-brief-alt1.png",
+    "width": 1983,
+    "height": 793,
+    "mode": "RGB",
+    "bytes": 1356880,
+    "sha256": "c0b8fbd43b378bbf52ba90955aee7813d526d80e4b6bd077333930a28c319af4"
+  },
+  {
+    "file": "figures/ch06/ch06-05-v2-brief.png",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "bytes": 1335942,
+    "sha256": "164b5d6d8664d09b65342cb8a17d533bca78afd8f62f038363ad77b531b89676"
+  },
+  {
+    "file": "figures/ch06/ch06-icon-08-corrected-source.png",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "bytes": 1166421,
+    "sha256": "7b0d8363d35ccb526ffaa1478d54f59966e418e0c3af0bf58c1ed6aca3ae8ae4"
+  },
+  {
+    "file": "figures/ch06/ch06-icons-sheet.png",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGB",
+    "bytes": 1343766,
+    "sha256": "f6abdae2b6e5dda4e524d39b71a1d587aed6cafb1f128fd3260a01646114ad7d"
+  },
+  {
+    "file": "figures/ch06/icons/ch06-icon-01.png",
+    "width": 315,
+    "height": 176,
+    "mode": "RGBA",
+    "bytes": 64417,
+    "sha256": "4dfb53b93ec528e3a6d78a8ac5c9cfe7c88c07d6c802bfd379f36be93e442112",
+    "transparent_pixels": 22811
+  },
+  {
+    "file": "figures/ch06/icons/ch06-icon-02.png",
+    "width": 133,
+    "height": 347,
+    "mode": "RGBA",
+    "bytes": 44533,
+    "sha256": "ee06c3e2fe1f3a48c8eba83f7ef7cb00885b014255d0b712c24c1c5e36ded825",
+    "transparent_pixels": 31405
+  },
+  {
+    "file": "figures/ch06/icons/ch06-icon-03.png",
+    "width": 245,
+    "height": 294,
+    "mode": "RGBA",
+    "bytes": 79047,
+    "sha256": "af50bae02c7c26ea4ad9b1f3791d49fe8151dc1a21e1969a902cd666d2e87a76",
+    "transparent_pixels": 49850
+  },
+  {
+    "file": "figures/ch06/icons/ch06-icon-04.png",
+    "width": 301,
+    "height": 284,
+    "mode": "RGBA",
+    "bytes": 88354,
+    "sha256": "fd173754933d04f3dac98546d81f773ebec0e18203262b4aded59f2965959f77",
+    "transparent_pixels": 18475
+  },
+  {
+    "file": "figures/ch06/icons/ch06-icon-05.png",
+    "width": 351,
+    "height": 199,
+    "mode": "RGBA",
+    "bytes": 74638,
+    "sha256": "c6c67226f5e572fddd06b90fecb5afb28ccb379cb9bd828fce45087bbc707a01",
+    "transparent_pixels": 16924
+  },
+  {
+    "file": "figures/ch06/icons/ch06-icon-06.png",
+    "width": 154,
+    "height": 253,
+    "mode": "RGBA",
+    "bytes": 38425,
+    "sha256": "2bc1cca3c6ac0b76b43343f55f5215371cdb18573d9086661cf8a1ba296e6ef0",
+    "transparent_pixels": 24004
+  },
+  {
+    "file": "figures/ch06/icons/ch06-icon-07.png",
+    "width": 262,
+    "height": 265,
+    "mode": "RGBA",
+    "bytes": 74063,
+    "sha256": "ccd6a6a9904803839caa8ccff14608ab0f90da66da52d160d5e9eb28f9232383",
+    "transparent_pixels": 49765
+  },
+  {
+    "file": "figures/ch06/icons/ch06-icon-08-corrected.png",
+    "width": 1264,
+    "height": 1042,
+    "mode": "RGBA",
+    "bytes": 767470,
+    "sha256": "7dac2f13ec555ee237be211c232330ed692dfd008d6e9566e3fca39f17f302cf",
+    "transparent_pixels": 448348
+  },
+  {
+    "file": "figures/ch06/icons/ch06-icon-08.png",
+    "width": 349,
+    "height": 289,
+    "mode": "RGBA",
+    "bytes": 102478,
+    "sha256": "b237da4ddcebb4300c5d89442e03b61646c41fdafded17e1d7e11c20cc91279b",
+    "transparent_pixels": 34055
+  },
+  {
+    "file": "figures/ch06/icons/ch06-icon-09.png",
+    "width": 346,
+    "height": 288,
+    "mode": "RGBA",
+    "bytes": 68718,
+    "sha256": "bbfab18cc9b24717a96887bd3cabdb4e1e19d71927c78e3130719a6b4428e602",
+    "transparent_pixels": 31177
+  },
+  {
+    "file": "figures/ch06/icons/ch06-icon-10.png",
+    "width": 289,
+    "height": 279,
+    "mode": "RGBA",
+    "bytes": 74210,
+    "sha256": "559211165c8bc01b15f57b2eefcfc6f5bc865a412d34351b656176da91702729",
+    "transparent_pixels": 17422
+  },
+  {
+    "file": "figures/ch06/icons/ch06-icon-11.png",
+    "width": 309,
+    "height": 279,
+    "mode": "RGBA",
+    "bytes": 90455,
+    "sha256": "933ee86f52523ab5506d7716bf37e2349cdac08d9374c8588b22bc04f9811fad",
+    "transparent_pixels": 69676
+  },
+  {
+    "file": "figures/ch06/icons/ch06-icon-12.png",
+    "width": 342,
+    "height": 298,
+    "mode": "RGBA",
+    "bytes": 119702,
+    "sha256": "a366a5ac3bde14b1e651da4884eae8290a162ee91f3022e15bc8e98f1d1cbe1f",
+    "transparent_pixels": 77422
+  }
+]

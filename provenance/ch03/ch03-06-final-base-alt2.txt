@@ -1,0 +1,27 @@
+### figures/ch03/ch03-06-final-base-alt2.png
+
+- 工具：Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）
+- 模型：不知道：工具未返回具体模型标识。
+- 日期：2026-10-29
+- 本阶段第几次：3
+- 参考图：figures/ch03/ch03-05b-v3-revised.png
+- 输出：1672×941，RGB PNG；SHA-256：`fb8d7f5b1645f169255a44d6358b36bde182b1c10d263074b841fe53f0a9ff7a`
+- prompt 改动原因：保留终稿留白指令全文，追加比例化留白与连线约束；第二次留白高度略不足。
+- 人工图像修改：无。
+
+画面内容 / 核验要点逐条检查：
+
+- 落选；终稿留白第 3 次。右上留白增加到目标附近。
+- 但第三步连接线改为只指向上方矩形，与右侧两分支干线脱节，破坏同一断裂、两条并列修复的路径。
+- 下方两通道整体下移；尽管颜色身份保留，因拓扑副作用选回第 2 次。
+- 共通核验：未见文字；像素宽度未达2400；约16:9；未真人复核。
+
+实际完整 prompt（保留换行）：
+
+```text
+Edit the selected image. Change only one thing: shift the three steps of the top
+row to the left so that the right 30% of the top row is empty white space.
+Keep sizes, colors and the two lower lanes unchanged. No text.
+
+Reserve a completely empty inset rectangle covering the RIGHT 30% of the canvas and the TOP 35% of its height. All three top-row steps must fit inside the LEFT 68% of the canvas. Connect the cleavage step to the two existing repair branches by a right-angle connector that travels DOWN first and then RIGHT, with its entire horizontal part immediately ABOVE the upper lane rectangle's top border. The horizontal connector must be BELOW the inset rectangle, not across it. Keep every lower-lane object, donor and outcome mark unchanged. Keep the cleavage PAM as ONE yellow segment on the upper strand, on the RIGHT side of the gap.
+```

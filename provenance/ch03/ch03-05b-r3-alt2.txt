@@ -1,0 +1,28 @@
+### provenance/ch03/ch03-05b-r3-alt2.png
+
+- 工具：Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）
+- 模型：不知道：工具未返回具体模型标识。
+- 日期：2026-10-29
+- 本阶段第几次：2
+- 参考图：provenance/ch03/ch03-05b-r2.png
+- 输出：1672×941，RGB PNG；SHA-256：`892863f51d88ada681e7c5bfd431171a2823bbeafc44f71955e422fb905df697`
+- prompt 改动原因：保留修改 3 全文，追加通道对象身份与 180 px 框高限制；首次修改混淆两结果并删除供体。
+- 人工图像修改：无。
+
+画面内容 / 核验要点逐条检查：
+
+- 落选；通道对齐第 2 次。追加身份保留说明后，NHEJ 红紫、HDR 青绿及短供体均恢复/保留。
+- 框高度仍明显不同，下框被加高而不是与上框等高；下通道整体下移。
+- 对象科学身份较第 1 次正确，但几何目标没有充分达成，故第 3 次仍从 r2 开始。
+- 共通核验：未见文字；像素宽度未达2400；约16:9；未真人复核。
+
+实际完整 prompt（保留换行）：
+
+```text
+Edit the selected image. Change only one thing: make the two repair lanes the
+same height, and draw the DNA in both lanes at the same horizontal position and
+the same length, so the two results line up vertically for comparison. Keep
+colors, objects and the top row unchanged. No text.
+
+Align geometry only, NOT the identities of the two repair outcomes. Upper lane must retain ONLY its tiny magenta indel mark, with absolutely no teal and no donor. Lower lane must retain its teal inserted segment and exactly ONE SEPARATE short donor DNA above it, with absolutely no magenta. Preserve both outcomes and the visible donor exactly. Make both rectangular lanes 180 pixels high; keep their long DNA left endpoints and right endpoints aligned. Do not alter any top-row object.
+```

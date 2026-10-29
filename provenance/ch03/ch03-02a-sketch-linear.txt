@@ -1,0 +1,41 @@
+### figures/ch03/ch03-02a-sketch-linear.png
+
+- 工具：Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）
+- 模型：不知道：工具未返回具体模型标识。
+- 日期：2026-10-29
+- 本阶段第几次：1
+- 参考图：无；从文字生成
+- 输出：1672×941，RGB PNG；SHA-256：`dc6ede54676ec401fffd564b4ca4e46d409e6382c126a257a587afc5f856b390`
+- prompt 改动原因：未追加/改写规划英文 prompt；仅作规划要求的公共段拼接或 LAYOUT 占位替换。
+- 人工图像修改：无。
+
+画面内容 / 核验要点逐条检查：
+
+- 保留；第 1 次。线性四步、右端上下挤放的两个结果及下方短供体均可见。
+- 入口在左，箭头总体左→右，分支末端分别指向上下结果；阶段间箭头未画成连续连线。
+- 双叶轮廓、内部波线、梯状 DNA、切口右侧阴影小段齐全；下端约 10% 留白。
+- 模拟铅笔草图；与另外两张均为灰铅笔、暖白纸，但纸纹、线宽和中央蛋白排线并非严格一致。
+- 共通核验：未见文字；像素宽度未达2400；约16:9；未真人复核。
+
+实际完整 prompt（保留换行）：
+
+```text
+A rough pencil planning sketch on slightly off-white sketchbook paper,
+photographed flat from directly above, evenly lit, no hands, no pencil, no other
+objects. Landscape 16:9. Single graphite pencil, loose confident lines, a few
+construction lines and faint erasure marks. Simple shapes only: rounded blobs,
+pairs of parallel lines with short rungs (double-stranded DNA), a wavy line
+(RNA), arrows. Strictly no writing of any kind: no letters, no words, no
+numbers, no labels, no title, no annotations. Pencil gray only, no color.
+Bottom tenth of the page left blank.
+
+Layout: one horizontal row of four steps from left to right, connected by short
+arrows. Step 1 at far left: a rounded two-lobed blob with a short wavy line
+tucked inside it. Step 2: a horizontal ladder-like double line with the same
+blob sitting on it; a small shaded rectangle on the upper line at the right
+edge of the blob. Step 3: the double line with a clear gap cut through both
+lines, the small shaded rectangle right next to the gap. Step 4 at far right,
+squeezed: the arrow splits into two small arrows, one going up-right and one
+going down-right, each ending at a short double line; the lower one has a
+small separate short double line floating above it.
+```

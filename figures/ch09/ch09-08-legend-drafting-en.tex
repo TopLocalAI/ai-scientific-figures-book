@@ -1,0 +1,30 @@
+% FIG ch09-08 legend drafting (English)
+\begin{tikzpicture}[
+  x=1mm, y=1mm,
+  font=\sffamily\scriptsize,
+  text=BookInk,
+  col/.style={draw=BookInk!45, line width=0.4pt, rounded corners=1pt, inner sep=2mm, align=justify, text width=78mm},
+  hi/.style={fill=BookPale, draw=BookTeal, line width=0.8pt, rounded corners=1pt, inner sep=1.5mm},
+  tag/.style={font=\tiny\bfseries, text=BookTeal, anchor=east},
+]
+  \node[font=\small\bfseries, anchor=west] at (0, 118) {Legend drafting checklist};
+  \node[col, anchor=north west] at (0, 112) {
+    \textbf{/figure-legend draft (verbatim)}\par\vspace{1mm}
+    \fbox{\parbox[t]{72mm}{\centering Pending measurement; see \texttt{provenance/ch09/figure-legend-draft-en.txt}}}
+  };
+  \node[col, anchor=north west] at (88, 112) {
+    \textbf{Author-completed (excerpt)}\par\vspace{1mm}
+    \tikz{\node[hi, text width=72mm, anchor=west] at (0,0) {
+      \textbf{Fig.~2 |} Effect of interface passivation \ldots\ (\textbf{simulated teaching data}).
+    }; \node[tag] at (-1,0) {[data]};}\par
+    \tikz{\node[hi, text width=72mm, anchor=west] at (0,0) {
+      \textbf{b}, illustration drawn by an image-generation model; \textbf{not a micrograph} \ldots
+    }; \node[tag] at (-1,0) {[definition]};}\par
+    \tikz{\node[hi, text width=72mm, anchor=west] at (0,0) {
+      Panels c and d: one simulated curve per group; no statistical test; see \texttt{sim\_perovskite.py}.
+    }; \node[tag] at (-1,0) {[source]};}
+  };
+  \node[anchor=west, text=BookInk!70] at (0, 4) {
+    Correction: \sout{cross-section image} $\rightarrow$ model-generated illustration, not a micrograph
+  };
+\end{tikzpicture}

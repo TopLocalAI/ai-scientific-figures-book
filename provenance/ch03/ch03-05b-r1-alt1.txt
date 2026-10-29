@@ -1,0 +1,25 @@
+### provenance/ch03/ch03-05b-r1-alt1.png
+
+- 工具：Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）
+- 模型：不知道：工具未返回具体模型标识。
+- 日期：2026-10-29
+- 本阶段第几次：1
+- 参考图：figures/ch03/ch03-03c-cand-branch.png
+- 输出：1672×941，RGB PNG；SHA-256：`8de6cdb3bf02739b8603813a1c2b6856d333031ef47208dc61f31a4b5eff9d0a`
+- prompt 改动原因：未追加/改写规划英文 prompt；仅作规划要求的公共段拼接或 LAYOUT 占位替换。
+- 人工图像修改：无。
+
+画面内容 / 核验要点逐条检查：
+
+- 落选；PAM 修改第 1 次。按 §3.8 修改 1 原文调用，结果仍在缺口左右各保留一个黄色 PAM。
+- 目标未达成；其他对象布局大致保留，但存在再渲染差异。下一次回到候选 C 重试。
+- 共通核验：未见文字；像素宽度未达2400；约16:9；未真人复核。
+
+实际完整 prompt（保留换行）：
+
+```text
+Edit the selected image. Change only one thing: move the small yellow PAM
+segment so that it sits directly next to the right side of the DNA gap at the
+cleavage step, on the upper strand, touching the gap. Keep every other object,
+color, line weight and position unchanged. Do not add any text.
+```

@@ -1,0 +1,40 @@
+{
+  "v1": {
+    "final": false,
+    "deliberate_error": true,
+    "per_panel_autocontrast": true,
+    "red_green_merge": true,
+    "wrong_scale_px": 50,
+    "wrong_scale_label_um": 20,
+    "gamma_mito": 0.6,
+    "inset_brightest_cell": [
+      488,
+      184,
+      552,
+      248
+    ],
+    "bicubic_x4": true
+  },
+  "final": {
+    "final": true,
+    "inset_box": [
+      280,
+      328,
+      344,
+      392
+    ],
+    "hoechst_range": [
+      132,
+      1236
+    ],
+    "mito_range": [
+      218,
+      1140
+    ],
+    "scale_ac_um": 50,
+    "scale_ac_px": 76.21951219512195,
+    "scale_d_um": 10,
+    "scale_d_px": 45.73170731707317,
+    "saturated_mito_pixels": 12
+  }
+}

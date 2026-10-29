@@ -1,0 +1,34 @@
+$ ls -l figures/ch10/
+total 36640
+-rw-r--r--@ 1 zeroone  staff     2023 Oct 29 16:07 ch10-01-ga-formats-en.tex
+-rw-r--r--@ 1 zeroone  staff     2155 Oct 29 16:07 ch10-01-ga-formats-zh.tex
+-rw-r--r--@ 1 zeroone  staff     2249 Oct 29 16:06 ch10-02-paper-to-card-en.tex
+-rw-r--r--@ 1 zeroone  staff     2234 Oct 29 16:06 ch10-02-paper-to-card-zh.tex
+-rw-r--r--@ 1 zeroone  staff  1133899 Oct 29 16:13 ch10-03-composition-a-narrative-alt1.png
+-rw-r--r--@ 1 zeroone  staff  1166488 Oct 29 16:13 ch10-03-composition-a-narrative.png
+-rw-r--r--@ 1 zeroone  staff  1390664 Oct 29 16:13 ch10-04-composition-b-central-alt1.png
+-rw-r--r--@ 1 zeroone  staff  1282775 Oct 29 16:13 ch10-04-composition-b-central-alt2.png
+-rw-r--r--@ 1 zeroone  staff  1283931 Oct 29 16:13 ch10-04-composition-b-central.png
+-rw-r--r--@ 1 zeroone  staff  2813012 Oct 29 16:13 ch10-05-overclaim-alt1.png
+-rw-r--r--@ 1 zeroone  staff  2694703 Oct 29 16:15 ch10-05-overclaim-alt2.png
+-rw-r--r--@ 1 zeroone  staff  2901991 Oct 29 16:15 ch10-05-overclaim.png
+-rw-r--r--@ 1 zeroone  staff  1159071 Oct 29 16:13 ch10-06-final-base-alt1.png
+-rw-r--r--@ 1 zeroone  staff  1167086 Oct 29 16:13 ch10-06-final-base-alt2.png
+-rw-r--r--@ 1 zeroone  staff  1189299 Oct 29 16:13 ch10-06-final-base.png
+-rw-r--r--@ 1 zeroone  staff    75198 Oct 29 16:07 ch10-07-thumbnail-test-en.pdf
+-rw-r--r--@ 1 zeroone  staff   126609 Oct 29 16:07 ch10-07-thumbnail-test-en.png
+-rw-r--r--@ 1 zeroone  staff    83468 Oct 29 16:07 ch10-07-thumbnail-test-zh.pdf
+-rw-r--r--@ 1 zeroone  staff   136630 Oct 29 16:07 ch10-07-thumbnail-test-zh.png
+
+Pixel dimensions (this run only; Pillow Image.size):
+ch10-03-composition-a-narrative-alt1.png: 2000 x 800 px; aspect=2.50000000; RGB; PNG valid
+ch10-03-composition-a-narrative.png: 2000 x 800 px; aspect=2.50000000; RGB; PNG valid
+ch10-04-composition-b-central-alt1.png: 2000 x 800 px; aspect=2.50000000; RGB; PNG valid
+ch10-04-composition-b-central-alt2.png: 2000 x 800 px; aspect=2.50000000; RGB; PNG valid
+ch10-04-composition-b-central.png: 2000 x 800 px; aspect=2.50000000; RGB; PNG valid
+ch10-05-overclaim-alt1.png: 2000 x 800 px; aspect=2.50000000; RGB; PNG valid
+ch10-05-overclaim-alt2.png: 2000 x 800 px; aspect=2.50000000; RGB; PNG valid
+ch10-05-overclaim.png: 2000 x 800 px; aspect=2.50000000; RGB; PNG valid
+ch10-06-final-base-alt1.png: 2000 x 800 px; aspect=2.50000000; RGB; PNG valid
+ch10-06-final-base-alt2.png: 2000 x 800 px; aspect=2.50000000; RGB; PNG valid
+ch10-06-final-base.png: 2000 x 800 px; aspect=2.50000000; RGB; PNG valid

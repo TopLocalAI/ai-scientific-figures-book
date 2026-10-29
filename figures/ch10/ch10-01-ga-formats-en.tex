@@ -1,0 +1,41 @@
+% FIG ch10-01 ga-formats (English)
+\usetikzlibrary{positioning}
+\begin{tikzpicture}[x=0.06mm,y=0.06mm, font=\sffamily\small, text=BookInk]
+  \tikzset{
+    frame/.style={draw=BookInk, line width=0.35mm, fill=white},
+    guide/.style={draw=BookInk!30, line width=0.25mm},
+    figcap/.style={font=\sffamily\small, text=BookInk, align=center},
+  }
+  \def\baseY{1200}
+  \draw[frame] (0,\baseY-531) rectangle (1328,\baseY);
+  \node[figcap, anchor=south] at (664,\baseY-531-18) {Elsevier general guidelines};
+  \node[figcap, font=\scriptsize, text=BookInk!85] at (664,\baseY-531-38)
+    {$\geq 1328 \times 531$ px (5:2)};
+  \draw[guide, -{Stealth[length=2mm]}] (120, \baseY-265) -- (1208, \baseY-265);
+  \draw[frame] (40, \baseY-531-280) rectangle (540, \baseY-531-80);
+  \node[figcap, font=\scriptsize, text width=38mm] at (290, \baseY-531-300)
+    {TOC display size ($\approx$200 px high)};
+  \draw[guide, thin] (664, \baseY-531) -- (290, \baseY-531-80);
+  \draw[frame] (1450, 0) rectangle (2650, 1200);
+  \node[figcap, anchor=south] at (2050, -18) {Cell Press};
+  \node[figcap, font=\scriptsize, text=BookInk!85] at (2050, -38)
+    {$1200 \times 1200$ px, 300 dpi};
+  \draw[guide] (2050, 600) -- (1750, 900);
+  \draw[guide] (2050, 600) -- (2350, 900);
+  \draw[guide] (2050, 600) -- (2350, 300);
+  \draw[guide] (2050, 600) -- (1750, 300);
+  \draw[guide, -{Stealth[length=1.8mm]}] (1750, 900) -- (2350, 300);
+  \draw[frame] (2780, \baseY-526) rectangle (3755, \baseY);
+  \coordinate (acs-cap) at (3267.5, \baseY-526);
+  \node[figcap, anchor=north, text width=50mm, align=center] (acs-t) at ([yshift=-1.5mm]acs-cap)
+    {ACS (\textit{J. Org. Chem.}\\example)};
+  \node[figcap, font=\scriptsize, text=BookInk!85, anchor=north, text width=50mm, align=center,
+    below=2.5mm of acs-t] (acs-m)
+    {$\leq 8.25 \times 4.45\ \mathrm{cm}$};
+  \node[figcap, font=\scriptsize, text=BookInk!85, anchor=north, text width=50mm, align=center,
+    below=1.5mm of acs-m]
+    {pixels at 300 dpi: $975 \times 526$ px};
+  \draw[guide, -{Stealth[length=2mm]}] (2880, \baseY-263) -- (3655, \baseY-263);
+  \node[figcap, font=\scriptsize, text=BookInk!70, anchor=north west, text width=70mm] at (0, -75)
+    {Check the target journal's current page before submission (accessed October 2026).};
+\end{tikzpicture}

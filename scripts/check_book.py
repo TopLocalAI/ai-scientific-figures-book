@@ -27,10 +27,17 @@ image_record = json.loads((ROOT / "provenance/mechanism-review.json").read_text(
 assert hashlib.sha256((ROOT / image_record["asset"]).read_bytes()).hexdigest() == image_record["sha256"]
 assert (ROOT / image_record["prompt"]).is_file()
 
-for chapter, section_count in [("01-workflow", 7), ("02-brief", 9)]:
-    for lang in ("zh", "en"):
-        text = (ROOT / f"chapters/{lang}/{chapter}.tex").read_text()
-        assert len(re.findall(r"\\section\{", text)) == section_count
+# Every Chinese chapter has an English counterpart with the same sections and labels.
+zh_chapters = sorted((ROOT / "chapters/zh").glob("[01][0-9]-*.tex"))
+assert len(zh_chapters) == 14, [p.name for p in zh_chapters]  # preface + 13 chapters
+for zh_path in zh_chapters:
+    en_path = ROOT / "chapters/en" / zh_path.name
+    assert en_path.is_file(), en_path.name
+    zh_text, en_text = zh_path.read_text(), en_path.read_text()
+    sections = lambda s: len(re.findall(r"\\section\*?\{", s))
+    labels = lambda s: sorted(re.findall(r"\\label\{([^}]+)\}", s))
+    assert sections(zh_text) == sections(en_text), zh_path.name
+    assert labels(zh_text) == labels(en_text), zh_path.name
 for lang in ("zh", "en"):
     for asset in (
         f"figures/paired-comparison-{lang}.pdf",
@@ -44,4 +51,4 @@ for lang in ("zh", "en"):
 for entry in ("main.tex", "main-en.tex"):
     for source in re.findall(r"\\input\{([^}]+)\}", (ROOT / entry).read_text()):
         assert (ROOT / f"{source}.tex").is_file(), source
-print("PASS: bilingual sections, source files, original image hash, and simulated-data invariants")
+print("PASS: 13 bilingual chapters with matching sections and labels, source files, original image hash, and simulated-data invariants")

@@ -1,0 +1,18 @@
+PASS: 11 unique PNG files = 4 selected + 7 alternatives
+PASS: ch10-03: 2 attempts; first prompt exactly matches plan; one selected
+PASS: ch10-04: 3 attempts; first prompt exactly matches plan; one selected
+PASS: ch10-05: 3 attempts; first prompt exactly matches plan; one selected
+PASS: ch10-06: 3 attempts; first prompt exactly matches plan; one selected
+PASS: ch10-03-composition-a-narrative.png: readable PNG, 2000 x 800, SHA-256 matches, full prompt and review in provenance
+PASS: ch10-03-composition-a-narrative-alt1.png: readable PNG, 2000 x 800, SHA-256 matches, full prompt and review in provenance
+PASS: ch10-04-composition-b-central-alt1.png: readable PNG, 2000 x 800, SHA-256 matches, full prompt and review in provenance
+PASS: ch10-04-composition-b-central-alt2.png: readable PNG, 2000 x 800, SHA-256 matches, full prompt and review in provenance
+PASS: ch10-04-composition-b-central.png: readable PNG, 2000 x 800, SHA-256 matches, full prompt and review in provenance
+PASS: ch10-05-overclaim-alt1.png: readable PNG, 2000 x 800, SHA-256 matches, full prompt and review in provenance
+PASS: ch10-05-overclaim-alt2.png: readable PNG, 2000 x 800, SHA-256 matches, full prompt and review in provenance
+PASS: ch10-05-overclaim.png: readable PNG, 2000 x 800, SHA-256 matches, full prompt and review in provenance
+PASS: ch10-06-final-base-alt1.png: readable PNG, 2000 x 800, SHA-256 matches, full prompt and review in provenance
+PASS: ch10-06-final-base-alt2.png: readable PNG, 2000 x 800, SHA-256 matches, full prompt and review in provenance
+PASS: ch10-06-final-base.png: readable PNG, 2000 x 800, SHA-256 matches, full prompt and review in provenance
+PASS: 11 full prompt sections and 11 per-attempt visual review sections
+NOTE: Strict visual-spec deviations remain and are explicitly documented; C1-C9 are not all passed.

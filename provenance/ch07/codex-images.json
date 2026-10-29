@@ -1,0 +1,206 @@
+{
+  "date": "2026-10-29",
+  "scope": [
+    "FIG ch07-07",
+    "FIG ch07-08"
+  ],
+  "attempts_per_figure": 3,
+  "records": [
+    {
+      "key": "error",
+      "attempt": 1,
+      "source": "exec-4a3e29ec-67d3-44aa-a35a-249f98826cdc.png",
+      "file": "ch07-07-battery-errors-alt1.png",
+      "size": [
+        1672,
+        941
+      ],
+      "bytes": 1464675,
+      "ratio": 1.7768331562167907,
+      "relative_ratio_error_pct": 0.053134962805516384,
+      "sha256": "88aa7dd037e44e44b69438be75b73a565e2ce4a684a51cc379d7724ca32bc08e",
+      "prompt": "Flat 2D cross-section schematic of a single cell unit of a lithium-ion pouch\nbattery, landscape 16:9, at least 1920 px wide, pure white background, clean\nvector illustration, flat fills, thin dark gray (#3A3A3A) outlines, no\ngradients, no shadows, no highlights, no 3D, no texture.\n\nABSOLUTELY NO TEXT: no letters, no words, no numbers, no symbols such as \"+\"\nor \"-\", no labels, no legend, no title, no watermark.\n\nThis is a deliberately WRONG teaching example. Draw the layers exactly in the\norder given, even though it is not the real order.\n\nLAYERS, drawn as vertical bands side by side, filling x 0.14-0.86 and\ny 0.25-0.85 of the image (x from left, y from top), from left to right:\n1. Outer pouch film: thin light gray band (#C9C9C9) with a darker inner line,\n   x 0.14-0.16.\n2. Aluminium foil: thin solid light silver-gray band (#B5B9BE), x 0.19-0.21,\n   with a narrow silver tab rising from its top edge to y 0.10.\n3. Graphite layer: x 0.21-0.42, many small dark charcoal (#4A4A4A) flat\n   flake-shaped particles stacked roughly horizontally.\n4. Oxide layer: x 0.42-0.63, many rounded clustered spherical particles in\n   muted slate blue (#6F86A6), touching the graphite flakes directly with no\n   gap and nothing in between.\n5. Separator: x 0.63-0.75, a white band with many tiny round pores and a light\n   gray outline.\n6. Copper foil: thin solid copper-colored band (#B87333), x 0.75-0.77, with a\n   narrow copper tab rising from its top edge to y 0.10.\n7. Outer pouch film: thin light gray band, x 0.84-0.86.\nFill the gaps between particles in layers 3 and 4 with a very pale blue\n(#E3F0F8).\n\nIONS AND ARROWS:\n- Six small solid orange (#D9822B) spheres inside the graphite and oxide\n  layers, each with a short solid orange arrow pointing to the RIGHT, moving\n  from the graphite layer toward the oxide layer.\n- One thin dark gray wire above the cell connecting the top of the silver tab\n  to the top of the copper tab at y 0.06. Place three small orange spheres ON\n  the wire, each with a small orange arrow pointing along the wire.\nNo other arrows, no battery symbol, no plus or minus signs.\n\nBottom 10% of the image left empty.",
+      "prompt_change_reason": "规划中的英文代码块逐字使用，未改写、未补充。",
+      "selected": false,
+      "observations": [
+        "层序：外壳膜—银灰铝集流体—炭灰片状石墨—灰蓝圆颗粒正极—白色多孔隔膜—铜色集流体—外壳膜，符合指定的错误层序。",
+        "错误①（S2）：负极侧是银灰铝箔，正极侧是铜色箔，集流体对调确实存在；两侧极耳颜色与各自箔一致。",
+        "错误②（S1）：石墨与灰蓝颗粒层直接相邻，界面没有隔膜；可见局部颗粒边缘接触。白色多孔隔膜错放在正极与右侧集流体之间。",
+        "错误③（S4）：电极内恰有六个橙色圆点，各有一根向右的短箭头，方向为石墨→正极。底图没有“充电”文字，须由后续标签层设定充电语境；未提前声称带标题面板已核验。",
+        "错误④（S7）：顶部导线连接两极耳；导线上恰有三个橙色圆点，各配向右的橙色箭头，明确体现把 Li⁺ 画到外电路的指定错误。",
+        "额外对象：未见额外离子箭头、电池符号、充电器、负载或其他过程支路。视觉检查未发现第五类明确科学错误；这不代替电化学同行复核。",
+        "无字检查：看图未发现文字、字母标签、数字、伪文字行、+/−号、图例文字或水印。多孔带中个别圆圈未闭合，属于孔轮廓绘制瑕疵，不是文字标签。",
+        "留白：底部至少10%没有对象。整体为二维横向截面，能看清七个层位；有轻微填充斑驳，背景不是逐像素纯白，未严格满足纯色、无纹理要求。",
+        "坐标（目测近似）：层体 y≈0.166–0.805，明显高于要求的0.25–0.85；右铜箔 x≈0.785–0.806，比规定0.75–0.77偏右。导线 y≈0.064 接近0.06。",
+        "与正例对比：石墨和正极层的总视觉宽度可比较，但两图层体顶边不齐，不能直接沿用同一标签坐标。",
+        "落选原因：四种指定错误均成立，但层体顶部漂移比第3次明显。"
+      ],
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen via functions.exec)",
+      "model": "不知道（工具返回中未披露具体模型）",
+      "source_path": "codex-output/exec-4a3e29ec-67d3-44aa-a35a-249f98826cdc.png"
+    },
+    {
+      "key": "error",
+      "attempt": 2,
+      "source": "exec-808b35de-9c87-41d9-9ec0-1ca2eacb130b.png",
+      "file": "ch07-07-battery-errors-alt2.png",
+      "size": [
+        1672,
+        941
+      ],
+      "bytes": 1431517,
+      "ratio": 1.7768331562167907,
+      "relative_ratio_error_pct": 0.053134962805516384,
+      "sha256": "4fd399ef5e9a2c06bb958536d5612591f310980fc49dfc650abeaf5f140361f2",
+      "prompt": "Flat 2D cross-section schematic of a single cell unit of a lithium-ion pouch\nbattery, landscape 16:9, at least 1920 px wide, pure white background, clean\nvector illustration, flat fills, thin dark gray (#3A3A3A) outlines, no\ngradients, no shadows, no highlights, no 3D, no texture.\n\nABSOLUTELY NO TEXT: no letters, no words, no numbers, no symbols such as \"+\"\nor \"-\", no labels, no legend, no title, no watermark.\n\nThis is a deliberately WRONG teaching example. Draw the layers exactly in the\norder given, even though it is not the real order.\n\nLAYERS, drawn as vertical bands side by side, filling x 0.14-0.86 and\ny 0.25-0.85 of the image (x from left, y from top), from left to right:\n1. Outer pouch film: thin light gray band (#C9C9C9) with a darker inner line,\n   x 0.14-0.16.\n2. Aluminium foil: thin solid light silver-gray band (#B5B9BE), x 0.19-0.21,\n   with a narrow silver tab rising from its top edge to y 0.10.\n3. Graphite layer: x 0.21-0.42, many small dark charcoal (#4A4A4A) flat\n   flake-shaped particles stacked roughly horizontally.\n4. Oxide layer: x 0.42-0.63, many rounded clustered spherical particles in\n   muted slate blue (#6F86A6), touching the graphite flakes directly with no\n   gap and nothing in between.\n5. Separator: x 0.63-0.75, a white band with many tiny round pores and a light\n   gray outline.\n6. Copper foil: thin solid copper-colored band (#B87333), x 0.75-0.77, with a\n   narrow copper tab rising from its top edge to y 0.10.\n7. Outer pouch film: thin light gray band, x 0.84-0.86.\nFill the gaps between particles in layers 3 and 4 with a very pale blue\n(#E3F0F8).\n\nIONS AND ARROWS:\n- Six small solid orange (#D9822B) spheres inside the graphite and oxide\n  layers, each with a short solid orange arrow pointing to the RIGHT, moving\n  from the graphite layer toward the oxide layer.\n- One thin dark gray wire above the cell connecting the top of the silver tab\n  to the top of the copper tab at y 0.06. Place three small orange spheres ON\n  the wire, each with a small orange arrow pointing along the wire.\nNo other arrows, no battery symbol, no plus or minus signs.\n\nBottom 10% of the image left empty.\n\nOUTPUT RESOLUTION: Generate the actual PNG at 2560 x 1440 pixels, exactly 16:9. The delivered raster must be 2560 pixels wide and 1440 pixels high; preserve every content requirement above.",
+      "prompt_change_reason": "规划英文代码块完整保留，仅在末尾追加OUTPUT RESOLUTION段。原因：第1次实际输出1672×941，低于要求；请求2560×1440以同时满足两图最低宽度及16:9。结果尺寸要求未生效。",
+      "selected": false,
+      "observations": [
+        "层序：外壳膜—银灰铝集流体—炭灰片状石墨—灰蓝圆颗粒正极—白色多孔隔膜—铜色集流体—外壳膜，符合指定的错误层序。",
+        "错误①（S2）：负极侧是银灰铝箔，正极侧是铜色箔，集流体对调确实存在；两侧极耳颜色与各自箔一致。",
+        "错误②（S1）：石墨与灰蓝颗粒层直接相邻，界面没有隔膜；可见局部颗粒边缘接触。白色多孔隔膜错放在正极与右侧集流体之间。",
+        "错误③（S4）：电极内恰有六个橙色圆点，各有一根向右的短箭头，方向为石墨→正极。底图没有“充电”文字，须由后续标签层设定充电语境；未提前声称带标题面板已核验。",
+        "错误④（S7）：顶部导线连接两极耳；导线上恰有三个橙色圆点，各配向右的橙色箭头，明确体现把 Li⁺ 画到外电路的指定错误。",
+        "额外对象：未见额外离子箭头、电池符号、充电器、负载或其他过程支路。视觉检查未发现第五类明确科学错误；这不代替电化学同行复核。",
+        "无字检查：看图未发现文字、字母标签、数字、伪文字行、+/−号、图例文字或水印。多孔带中个别圆圈未闭合，属于孔轮廓绘制瑕疵，不是文字标签。",
+        "留白：底部至少10%没有对象。整体为二维横向截面，能看清七个层位；有轻微填充斑驳，背景不是逐像素纯白，未严格满足纯色、无纹理要求。",
+        "坐标（目测近似）：层体 y≈0.194–0.798；右铜箔 x≈0.784–0.808；导线 y≈0.074。与规定坐标仍有偏移。",
+        "与正例对比：和所选正例的层体顶边较接近，但本图隔膜宽度约0.14画幅，宽于原定0.12；右侧集流体位置未按反例提示词固定。",
+        "落选原因：四种指定错误均成立，但第3次层体更接近原定y区间；第2次分辨率补充没有生效。"
+      ],
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen via functions.exec)",
+      "model": "不知道（工具返回中未披露具体模型）",
+      "source_path": "codex-output/exec-808b35de-9c87-41d9-9ec0-1ca2eacb130b.png"
+    },
+    {
+      "key": "error",
+      "attempt": 3,
+      "source": "exec-07c239a5-b194-47dc-983c-2335e647405d.png",
+      "file": "ch07-07-battery-errors.png",
+      "size": [
+        1672,
+        941
+      ],
+      "bytes": 1446231,
+      "ratio": 1.7768331562167907,
+      "relative_ratio_error_pct": 0.053134962805516384,
+      "sha256": "c91e1f87fcc36bd26aae0f0c4547678c192186c0d4d5927044c5febfc73a1ec9",
+      "prompt": "Flat 2D cross-section schematic of a single cell unit of a lithium-ion pouch\nbattery, landscape 16:9, at least 1920 px wide, pure white background, clean\nvector illustration, flat fills, thin dark gray (#3A3A3A) outlines, no\ngradients, no shadows, no highlights, no 3D, no texture.\n\nABSOLUTELY NO TEXT: no letters, no words, no numbers, no symbols such as \"+\"\nor \"-\", no labels, no legend, no title, no watermark.\n\nThis is a deliberately WRONG teaching example. Draw the layers exactly in the\norder given, even though it is not the real order.\n\nLAYERS, drawn as vertical bands side by side, filling x 0.14-0.86 and\ny 0.25-0.85 of the image (x from left, y from top), from left to right:\n1. Outer pouch film: thin light gray band (#C9C9C9) with a darker inner line,\n   x 0.14-0.16.\n2. Aluminium foil: thin solid light silver-gray band (#B5B9BE), x 0.19-0.21,\n   with a narrow silver tab rising from its top edge to y 0.10.\n3. Graphite layer: x 0.21-0.42, many small dark charcoal (#4A4A4A) flat\n   flake-shaped particles stacked roughly horizontally.\n4. Oxide layer: x 0.42-0.63, many rounded clustered spherical particles in\n   muted slate blue (#6F86A6), touching the graphite flakes directly with no\n   gap and nothing in between.\n5. Separator: x 0.63-0.75, a white band with many tiny round pores and a light\n   gray outline.\n6. Copper foil: thin solid copper-colored band (#B87333), x 0.75-0.77, with a\n   narrow copper tab rising from its top edge to y 0.10.\n7. Outer pouch film: thin light gray band, x 0.84-0.86.\nFill the gaps between particles in layers 3 and 4 with a very pale blue\n(#E3F0F8).\n\nIONS AND ARROWS:\n- Six small solid orange (#D9822B) spheres inside the graphite and oxide\n  layers, each with a short solid orange arrow pointing to the RIGHT, moving\n  from the graphite layer toward the oxide layer.\n- One thin dark gray wire above the cell connecting the top of the silver tab\n  to the top of the copper tab at y 0.06. Place three small orange spheres ON\n  the wire, each with a small orange arrow pointing along the wire.\nNo other arrows, no battery symbol, no plus or minus signs.\n\nBottom 10% of the image left empty.\n\nFINAL OUTPUT CHECK: Deliver one native-resolution 2560 x 1440 pixel PNG, not a smaller preview. Use an exactly 16:9 canvas. The rectangular layer stack must start at y = 0.25 and end at y = 0.85; follow each x-coordinate given above literally. Use perfectly uniform flat colour fills and a pure white background without paper grain, colour mottling, sketch strokes or shading. Keep all the layer materials, particle forms, permitted objects and forbidden objects exactly as specified above.",
+      "prompt_change_reason": "规划英文代码块完整保留，仅在末尾追加FINAL OUTPUT CHECK段（不包含第2次追加段）。原因：第2次仍为1672×941且坐标漂移、轻微斑驳；最后一次强调尺寸、原有层带坐标和纯色风格。",
+      "selected": true,
+      "observations": [
+        "层序：外壳膜—银灰铝集流体—炭灰片状石墨—灰蓝圆颗粒正极—白色多孔隔膜—铜色集流体—外壳膜，符合指定的错误层序。",
+        "错误①（S2）：负极侧是银灰铝箔，正极侧是铜色箔，集流体对调确实存在；两侧极耳颜色与各自箔一致。",
+        "错误②（S1）：石墨与灰蓝颗粒层直接相邻，界面没有隔膜；可见局部颗粒边缘接触。白色多孔隔膜错放在正极与右侧集流体之间。",
+        "错误③（S4）：电极内恰有六个橙色圆点，各有一根向右的短箭头，方向为石墨→正极。底图没有“充电”文字，须由后续标签层设定充电语境；未提前声称带标题面板已核验。",
+        "错误④（S7）：顶部导线连接两极耳；导线上恰有三个橙色圆点，各配向右的橙色箭头，明确体现把 Li⁺ 画到外电路的指定错误。",
+        "额外对象：未见额外离子箭头、电池符号、充电器、负载或其他过程支路。视觉检查未发现第五类明确科学错误；这不代替电化学同行复核。",
+        "无字检查：看图未发现文字、字母标签、数字、伪文字行、+/−号、图例文字或水印。多孔带中个别圆圈未闭合，属于孔轮廓绘制瑕疵，不是文字标签。",
+        "留白：底部至少10%没有对象。整体为二维横向截面，能看清七个层位；有轻微填充斑驳，背景不是逐像素纯白，未严格满足纯色、无纹理要求。",
+        "坐标（目测近似）：层体 x≈0.131–0.871、y≈0.243–0.828，三次中最接近规定的y=0.25–0.85；仍未精确对齐。",
+        "坐标残差：石墨/正极交界 x≈0.430（规定0.42）；正极/隔膜交界 x≈0.648（规定0.63）；右铜箔 x≈0.788–0.808（规定0.75–0.77）；导线 y≈0.092（规定0.06），极耳顶端约0.138（规定0.10）。",
+        "与所选正例对比：石墨、正极、隔膜宽度量级一致；层体顶边分别约0.243与0.203，右集流体位置相近。不是像素级配准的一对，叠加标签必须按各自实际底图调整。",
+        "选用原因：六个内部离子、三个外电路离子与全部右向箭头清楚，四种指定错误齐全；三次中主体纵向位置最接近任务书。尺寸和风格残差仍保留为未达标项。"
+      ],
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen via functions.exec)",
+      "model": "不知道（工具返回中未披露具体模型）",
+      "source_path": "codex-output/exec-07c239a5-b194-47dc-983c-2335e647405d.png"
+    },
+    {
+      "key": "base",
+      "attempt": 1,
+      "source": "exec-b05ae204-6821-49c7-b6c2-2a1ef41eda83.png",
+      "file": "ch07-08-battery-base-alt1.png",
+      "size": [
+        1672,
+        941
+      ],
+      "bytes": 1543750,
+      "ratio": 1.7768331562167907,
+      "relative_ratio_error_pct": 0.053134962805516384,
+      "sha256": "99224d244362e6b2645dc7a7c84c3b12b3ec678bb99a7c7d52777c4d1fda0476",
+      "prompt": "Flat 2D cross-section schematic of a single cell unit of a lithium-ion pouch\nbattery, landscape 16:9, at least 2400 px wide, pure white background, clean\nvector illustration, flat fills, thin dark gray (#3A3A3A) outlines, no\ngradients, no shadows, no highlights, no 3D, no texture, crisp edges.\n\nABSOLUTELY NO TEXT: no letters, no words, no numbers, no symbols such as \"+\"\nor \"-\", no labels, no legend, no title, no watermark.\n\nSTRUCTURE ONLY: do not draw any ions, electrons, spheres representing ions,\narrows, wires, circuits, battery symbols, chargers or light bulbs. These will\nbe added later by the author.\n\nLAYERS, drawn as vertical bands side by side, filling x 0.14-0.86 and\ny 0.25-0.85 of the image (x from left, y from top), from left to right:\n1. Outer pouch film: thin light gray band (#C9C9C9) with a darker inner line,\n   x 0.14-0.16.\n2. Copper foil current collector: thin solid copper-colored band (#B87333),\n   x 0.19-0.21, with a narrow copper tab rising from its top edge, ending at\n   y 0.14.\n3. Negative electrode coating: x 0.21-0.43, many small dark charcoal (#4A4A4A)\n   flat flake-shaped graphite particles stacked roughly horizontally, with\n   small gaps between them.\n4. Separator: x 0.43-0.57, a white band with many tiny round pores and a light\n   gray outline, clearly separating the two electrode coatings; the two\n   coatings must not touch each other anywhere.\n5. Positive electrode coating: x 0.57-0.79, many rounded clustered spherical\n   particles in muted slate blue (#6F86A6), with small gaps between them.\n6. Aluminium foil current collector: thin solid light silver-gray band\n   (#B5B9BE), x 0.79-0.81, with a narrow silver tab rising from its top edge,\n   ending at y 0.14.\n7. Outer pouch film: thin light gray band, x 0.84-0.86.\n\nELECTROLYTE: fill all the gaps between particles in layers 3 and 5 and the\npores of the separator (layer 4) with a very pale blue (#E3F0F8), so that the\npale blue is continuous from the negative coating, through the separator, into\nthe positive coating. Do not draw the electrolyte as a separate liquid layer.\n\nBoth coatings have similar visual density. Keep the region above y 0.14 and\nthe bottom 12% of the image completely empty. Keep a 4% empty margin on the\nleft and right.",
+      "prompt_change_reason": "规划中的英文代码块逐字使用，未改写、未补充。",
+      "selected": false,
+      "observations": [
+        "层序（S1）：外壳—铜色集流体—炭灰片状石墨负极—白色多孔隔膜—灰蓝圆颗粒正极—银灰铝集流体—外壳，顺序正确。",
+        "集流体（S2）：左铜右铝，两种金属各有一个向上延伸的同色极耳，与负极、正极一一对应。",
+        "电极隔离：隔膜位于中间并贯穿整个电极高度，左右两电极在图中没有接触。",
+        "过程元素禁用：未见独立离子标记、电子、箭头、导线、电路、充电器、灯泡或电池符号。灰蓝圆颗粒是规划规定的正极材料，不是额外离子。",
+        "无字检查：未发现文字、字母标签、数字、伪文字行、+/−号、图例或水印；少数孔边缘不闭合，记录为形状瑕疵。",
+        "留白：底部12%及左右至少4%没有对象，足以供后续标签层使用。二维横向画法成立，但有轻微斑驳及描边粗细变化，背景不是逐像素纯白。",
+        "电解液（S3）：两电极空隙与隔膜多数圆孔均呈浅蓝，能够表达浸润；但外壳和集流体之间额外出现两条浅蓝竖带，容易被理解为独立电解液层，与不另画液体层的要求冲突。",
+        "密度：石墨与正极团簇均较密集，形状差异清晰。",
+        "坐标（目测近似）：层体 y≈0.201–0.813；极耳顶端 y≈0.109，进入了本应完全留空的y<0.14区域；隔膜 x≈0.432–0.568，横向位置接近规划。",
+        "落选原因：额外浅蓝侧带和顶部留白偏差；第2次保留正确层序并去掉侧带，科学表达相对更合适。"
+      ],
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen via functions.exec)",
+      "model": "不知道（工具返回中未披露具体模型）",
+      "source_path": "codex-output/exec-b05ae204-6821-49c7-b6c2-2a1ef41eda83.png"
+    },
+    {
+      "key": "base",
+      "attempt": 2,
+      "source": "exec-95570e2c-f0a7-49c0-bc9f-9047b9509370.png",
+      "file": "ch07-08-battery-base.png",
+      "size": [
+        1672,
+        941
+      ],
+      "bytes": 1515019,
+      "ratio": 1.7768331562167907,
+      "relative_ratio_error_pct": 0.053134962805516384,
+      "sha256": "590eed4dfbdb7bbe1f0dcff2a378677d87ffa512c64a62895af27b058d9695c0",
+      "prompt": "Flat 2D cross-section schematic of a single cell unit of a lithium-ion pouch\nbattery, landscape 16:9, at least 2400 px wide, pure white background, clean\nvector illustration, flat fills, thin dark gray (#3A3A3A) outlines, no\ngradients, no shadows, no highlights, no 3D, no texture, crisp edges.\n\nABSOLUTELY NO TEXT: no letters, no words, no numbers, no symbols such as \"+\"\nor \"-\", no labels, no legend, no title, no watermark.\n\nSTRUCTURE ONLY: do not draw any ions, electrons, spheres representing ions,\narrows, wires, circuits, battery symbols, chargers or light bulbs. These will\nbe added later by the author.\n\nLAYERS, drawn as vertical bands side by side, filling x 0.14-0.86 and\ny 0.25-0.85 of the image (x from left, y from top), from left to right:\n1. Outer pouch film: thin light gray band (#C9C9C9) with a darker inner line,\n   x 0.14-0.16.\n2. Copper foil current collector: thin solid copper-colored band (#B87333),\n   x 0.19-0.21, with a narrow copper tab rising from its top edge, ending at\n   y 0.14.\n3. Negative electrode coating: x 0.21-0.43, many small dark charcoal (#4A4A4A)\n   flat flake-shaped graphite particles stacked roughly horizontally, with\n   small gaps between them.\n4. Separator: x 0.43-0.57, a white band with many tiny round pores and a light\n   gray outline, clearly separating the two electrode coatings; the two\n   coatings must not touch each other anywhere.\n5. Positive electrode coating: x 0.57-0.79, many rounded clustered spherical\n   particles in muted slate blue (#6F86A6), with small gaps between them.\n6. Aluminium foil current collector: thin solid light silver-gray band\n   (#B5B9BE), x 0.79-0.81, with a narrow silver tab rising from its top edge,\n   ending at y 0.14.\n7. Outer pouch film: thin light gray band, x 0.84-0.86.\n\nELECTROLYTE: fill all the gaps between particles in layers 3 and 5 and the\npores of the separator (layer 4) with a very pale blue (#E3F0F8), so that the\npale blue is continuous from the negative coating, through the separator, into\nthe positive coating. Do not draw the electrolyte as a separate liquid layer.\n\nBoth coatings have similar visual density. Keep the region above y 0.14 and\nthe bottom 12% of the image completely empty. Keep a 4% empty margin on the\nleft and right.\n\nOUTPUT RESOLUTION: Generate the actual PNG at 2560 x 1440 pixels, exactly 16:9. The delivered raster must be 2560 pixels wide and 1440 pixels high; preserve every content requirement above.",
+      "prompt_change_reason": "规划英文代码块完整保留，仅在末尾追加OUTPUT RESOLUTION段。原因：第1次实际输出1672×941，低于要求；请求2560×1440以同时满足两图最低宽度及16:9。结果尺寸要求未生效。",
+      "selected": true,
+      "observations": [
+        "层序（S1）：外壳—铜色集流体—炭灰片状石墨负极—白色多孔隔膜—灰蓝圆颗粒正极—银灰铝集流体—外壳，顺序正确。",
+        "集流体（S2）：左铜右铝，两种金属各有一个向上延伸的同色极耳，与负极、正极一一对应。",
+        "电极隔离：隔膜位于中间并贯穿整个电极高度，左右两电极在图中没有接触。",
+        "过程元素禁用：未见独立离子标记、电子、箭头、导线、电路、充电器、灯泡或电池符号。灰蓝圆颗粒是规划规定的正极材料，不是额外离子。",
+        "无字检查：未发现文字、字母标签、数字、伪文字行、+/−号、图例或水印；少数孔边缘不闭合，记录为形状瑕疵。",
+        "留白：底部12%及左右至少4%没有对象，足以供后续标签层使用。二维横向画法成立，但有轻微斑驳及描边粗细变化，背景不是逐像素纯白。",
+        "电解液（S3，部分满足）：两个电极颗粒间隙可见浅蓝，隔膜许多圆孔也有浅蓝填充；未另画液体层。个别孔内部接近白色、浅蓝分布不均，不能把严格的“浅蓝在隔膜中连续”判为完全通过；连续性主要靠同色孔隙暗示，未呈现可逐一追踪的贯通孔道。",
+        "密度：两侧均为密集颗粒涂层，正极团簇局部更拥挤；大体可比，不是精确相同填充率。",
+        "坐标（目测近似）：层体 x≈0.134–0.866、y≈0.203–0.792；极耳顶端约y=0.121，未保持y<0.14区域完全空白；隔膜 x≈0.437–0.565。铜箔约x=0.181–0.207、铝箔约x=0.794–0.820，需要实测调整标签与外电路连接点。",
+        "选用原因：层序、集流体、中央隔膜及无过程元素均正确；与第1次相比没有额外浅蓝侧带，与第3次相比隔膜孔隙的蓝色表达更接近要求。仍有分辨率、上方留白、孔隙着色和风格残差，未标为全验收通过。"
+      ],
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen via functions.exec)",
+      "model": "不知道（工具返回中未披露具体模型）",
+      "source_path": "codex-output/exec-95570e2c-f0a7-49c0-bc9f-9047b9509370.png"
+    },
+    {
+      "key": "base",
+      "attempt": 3,
+      "source": "exec-d5f5dfd8-eace-4777-bf9c-4cf7a232edc4.png",
+      "file": "ch07-08-battery-base-alt2.png",
+      "size": [
+        1672,
+        941
+      ],
+      "bytes": 1359375,
+      "ratio": 1.7768331562167907,
+      "relative_ratio_error_pct": 0.053134962805516384,
+      "sha256": "c5c2088cb707ab6a2988db79d380f6baa8cadf6c5662c1934dce079cf1daaf82",
+      "prompt": "Flat 2D cross-section schematic of a single cell unit of a lithium-ion pouch\nbattery, landscape 16:9, at least 2400 px wide, pure white background, clean\nvector illustration, flat fills, thin dark gray (#3A3A3A) outlines, no\ngradients, no shadows, no highlights, no 3D, no texture, crisp edges.\n\nABSOLUTELY NO TEXT: no letters, no words, no numbers, no symbols such as \"+\"\nor \"-\", no labels, no legend, no title, no watermark.\n\nSTRUCTURE ONLY: do not draw any ions, electrons, spheres representing ions,\narrows, wires, circuits, battery symbols, chargers or light bulbs. These will\nbe added later by the author.\n\nLAYERS, drawn as vertical bands side by side, filling x 0.14-0.86 and\ny 0.25-0.85 of the image (x from left, y from top), from left to right:\n1. Outer pouch film: thin light gray band (#C9C9C9) with a darker inner line,\n   x 0.14-0.16.\n2. Copper foil current collector: thin solid copper-colored band (#B87333),\n   x 0.19-0.21, with a narrow copper tab rising from its top edge, ending at\n   y 0.14.\n3. Negative electrode coating: x 0.21-0.43, many small dark charcoal (#4A4A4A)\n   flat flake-shaped graphite particles stacked roughly horizontally, with\n   small gaps between them.\n4. Separator: x 0.43-0.57, a white band with many tiny round pores and a light\n   gray outline, clearly separating the two electrode coatings; the two\n   coatings must not touch each other anywhere.\n5. Positive electrode coating: x 0.57-0.79, many rounded clustered spherical\n   particles in muted slate blue (#6F86A6), with small gaps between them.\n6. Aluminium foil current collector: thin solid light silver-gray band\n   (#B5B9BE), x 0.79-0.81, with a narrow silver tab rising from its top edge,\n   ending at y 0.14.\n7. Outer pouch film: thin light gray band, x 0.84-0.86.\n\nELECTROLYTE: fill all the gaps between particles in layers 3 and 5 and the\npores of the separator (layer 4) with a very pale blue (#E3F0F8), so that the\npale blue is continuous from the negative coating, through the separator, into\nthe positive coating. Do not draw the electrolyte as a separate liquid layer.\n\nBoth coatings have similar visual density. Keep the region above y 0.14 and\nthe bottom 12% of the image completely empty. Keep a 4% empty margin on the\nleft and right.\n\nFINAL OUTPUT CHECK: Deliver one native-resolution 2560 x 1440 pixel PNG, not a smaller preview. Use an exactly 16:9 canvas. The rectangular layer stack must start at y = 0.25 and end at y = 0.85; follow each x-coordinate given above literally. Use perfectly uniform flat colour fills and a pure white background without paper grain, colour mottling, sketch strokes or shading. Keep all the layer materials, particle forms, permitted objects and forbidden objects exactly as specified above.",
+      "prompt_change_reason": "规划英文代码块完整保留，仅在末尾追加FINAL OUTPUT CHECK段（不包含第2次追加段）。原因：第2次仍为1672×941且坐标漂移、轻微斑驳；最后一次强调尺寸、原有层带坐标和纯色风格。",
+      "selected": false,
+      "observations": [
+        "层序（S1）：外壳—铜色集流体—炭灰片状石墨负极—白色多孔隔膜—灰蓝圆颗粒正极—银灰铝集流体—外壳，顺序正确。",
+        "集流体（S2）：左铜右铝，两种金属各有一个向上延伸的同色极耳，与负极、正极一一对应。",
+        "电极隔离：隔膜位于中间并贯穿整个电极高度，左右两电极在图中没有接触。",
+        "过程元素禁用：未见独立离子标记、电子、箭头、导线、电路、充电器、灯泡或电池符号。灰蓝圆颗粒是规划规定的正极材料，不是额外离子。",
+        "无字检查：未发现文字、字母标签、数字、伪文字行、+/−号、图例或水印；少数孔边缘不闭合，记录为形状瑕疵。",
+        "留白：底部12%及左右至少4%没有对象，足以供后续标签层使用。二维横向画法成立，但有轻微斑驳及描边粗细变化，背景不是逐像素纯白。",
+        "电解液（S3，未完全满足）：两电极间隙浅蓝，但中间隔膜更像浅蓝底上留出白色圆孔；孔内没有稳定填入规定的浅蓝，与要求的孔隙浸润表达不一致。",
+        "密度：正极颗粒比石墨层更稀疏，大块浅蓝空隙较多，左右视觉密度不够接近。",
+        "坐标（目测近似）：层体 y≈0.228–0.800；极耳顶端约0.147，满足y<0.14留白；隔膜 x≈0.434–0.568。虽然顶部位置比前两次改善，但主体下缘仍早于规定0.85。",
+        "落选原因：孔隙颜色和电极视觉密度比第2次弱；第3次尺寸、纯色和坐标强调仍未完全奏效。"
+      ],
+      "tool": "image_gen.imagegen (tools.image_gen__imagegen via functions.exec)",
+      "model": "不知道（工具返回中未披露具体模型）",
+      "source_path": "codex-output/exec-d5f5dfd8-eace-4777-bf9c-4cf7a232edc4.png"
+    }
+  ]
+}

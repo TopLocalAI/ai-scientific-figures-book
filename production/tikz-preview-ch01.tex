@@ -1,0 +1,34 @@
+% Preview all chapter 1 TikZ figures (compile with xelatex from BOOK root).
+\documentclass[UTF8,a4paper]{ctexart}
+\usepackage{fontspec}
+\setmainfont{texgyrepagella-regular.otf}
+\setsansfont{texgyreheros-regular.otf}
+\usepackage[margin=18mm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\definecolor{BookTeal}{HTML}{176C68}
+\definecolor{BookInk}{HTML}{23363E}
+\definecolor{BookRule}{HTML}{C8D6D6}
+\definecolor{BookPale}{HTML}{F1F6F5}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathreplacing}
+\usepackage{subcaption}
+\begin{document}
+\section*{FIG ch01-01 workflow (zh)}
+\input{figures/ch01/ch01-01-workflow-zh.tex}
+\newpage
+\section*{FIG ch01-01 workflow (en)}
+\input{figures/ch01/ch01-01-workflow-en.tex}
+\newpage
+\section*{FIG ch01-02 material map (zh)}
+\input{figures/ch01/ch01-02-material-map-zh.tex}
+\newpage
+\section*{FIG ch01-02 material map (en)}
+\input{figures/ch01/ch01-02-material-map-en.tex}
+\newpage
+\section*{FIG ch01-07 final composite (zh)}
+\input{figures/ch01/ch01-07-figure2-final-zh.tex}
+\newpage
+\section*{FIG ch01-07 final composite (en)}
+\input{figures/ch01/ch01-07-figure2-final-en.tex}
+\end{document}

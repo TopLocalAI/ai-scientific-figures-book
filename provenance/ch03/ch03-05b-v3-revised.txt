@@ -1,0 +1,29 @@
+### figures/ch03/ch03-05b-v3-revised.png
+
+- 工具：Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）
+- 模型：不知道：工具未返回具体模型标识。
+- 日期：2026-10-29
+- 本阶段第几次：3
+- 参考图：provenance/ch03/ch03-05b-r2.png
+- 输出：1672×941，RGB PNG；SHA-256：`da95a663832c5d81d95763fc09a25b5d4177583a32bb583debbaedfb459d2ff0`
+- prompt 改动原因：与 r3 相同，无新调用；沿用 r3 实际完整 prompt。
+- 人工图像修改：无。
+
+画面内容 / 核验要点逐条检查：
+
+- 直接复制选中的 ch03-05b-r3.png；不是一次额外生成，与 r3 的 SHA-256 相同。
+- PAM 单段位于切口右侧上链，供体只在下通道，两种结果可辨；DNA 端点误差 0.224% <2%。
+- 仍有 5.96% 框高差、轻微纹理/高光；RNA 与靶链配对的线条表达不够明确，应由确定性 PAM 插图澄清。
+- 与 03c 尺寸相同，可并排比较；预期的供体复制或细胞核问题实际上未出现，正文标注必须改用实际问题。
+- 共通核验：未见文字；像素宽度未达2400；约16:9；未真人复核。
+
+实际完整 prompt（保留换行）：
+
+```text
+Edit the selected image. Change only one thing: make the two repair lanes the
+same height, and draw the DNA in both lanes at the same horizontal position and
+the same length, so the two results line up vertically for comparison. Keep
+colors, objects and the top row unchanged. No text.
+
+Minimal geometric operation on this 1672 by 941 image: the lower lane rectangle already spans approximately y=568 to y=768 (200 pixels). Move ONLY the TOP BORDER of the upper lane rectangle from approximately y=386 up to y=340, leaving its bottom border at approximately y=540 (also 200 pixels). The long DNA endpoints are already aligned closely enough: keep both long DNA drawings and their positions unchanged. Keep the separate donor above the lower DNA, all color marks and the entire top row unchanged. Upper outcome stays magenta-only; lower outcome stays teal-only with one separate donor. Do not make the two outcomes identical.
+```

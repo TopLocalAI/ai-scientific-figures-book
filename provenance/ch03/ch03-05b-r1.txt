@@ -1,0 +1,28 @@
+### provenance/ch03/ch03-05b-r1.png
+
+- 工具：Codex 内置 image_gen.imagegen（functions.exec 内 tools.image_gen__imagegen）
+- 模型：不知道：工具未返回具体模型标识。
+- 日期：2026-10-29
+- 本阶段第几次：2
+- 参考图：figures/ch03/ch03-03c-cand-branch.png
+- 输出：1672×941，RGB PNG；SHA-256：`7f3ff13203e69334edceb56d434c32d241b5ac376ba268eab8df9057594de9a0`
+- prompt 改动原因：保留修改 1 全文，追加删除左侧重复 PAM 的定位说明；原文首次调用无效。
+- 人工图像修改：无。
+
+画面内容 / 核验要点逐条检查：
+
+- 保留；PAM 修改第 2 次。追加定位说明后，删除切口左侧黄色段，只保留右侧上链、贴近缺口的黄色段。
+- 两结果、供体、箭头及上排对象均保留，未发现新的对象增删。
+- 并非像素锁定：与候选 C 相比，RGB 差值 >15 的像素占全图 3.7144%，上排占 4.0165%；细描边和色彩纹理发生再渲染。
+- 共通核验：未见文字；像素宽度未达2400；约16:9；未真人复核。
+
+实际完整 prompt（保留换行）：
+
+```text
+Edit the selected image. Change only one thing: move the small yellow PAM
+segment so that it sits directly next to the right side of the DNA gap at the
+cleavage step, on the upper strand, touching the gap. Keep every other object,
+color, line weight and position unchanged. Do not add any text.
+
+The cleavage-step DNA at the TOP RIGHT currently has TWO yellow highlights, one on each side of the gap. Erase the yellow highlight LEFT of that gap, replacing it with the ordinary dark-gray DNA line. Retain exactly ONE yellow highlight RIGHT of that gap, touching the gap on the upper strand. This is the only change.
+```

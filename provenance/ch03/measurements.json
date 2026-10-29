@@ -1,0 +1,385 @@
+{
+  "checked_at": "2026-10-29T16:27:10.808925+08:00",
+  "images": {
+    "figures/ch03/ch03-02a-sketch-linear.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2382319,
+      "sha256": "dc6ede54676ec401fffd564b4ca4e46d409e6382c126a257a587afc5f856b390",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "figures/ch03/ch03-02b-sketch-hub-alt1.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2182569,
+      "sha256": "2ff17e753142f863f1753f33e45b65c91bd22c6957852d6d8fbb88aef9894109",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "figures/ch03/ch03-02b-sketch-hub.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2447360,
+      "sha256": "9779f77a6fb4d39671222fee26c103b34de3fe8671471eb8e5c2bbed235e702e",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "figures/ch03/ch03-02c-sketch-branch-alt1.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2317470,
+      "sha256": "e4cb32e8752f0ce4c497981be0f89b1612f319be1530b0406ff2e479815c991e",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "figures/ch03/ch03-02c-sketch-branch-alt2.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2199212,
+      "sha256": "de88a932d6c07e424137f4ec9a0d4a74d5283a1c39b9aa3570bf67db50c0d1d4",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "figures/ch03/ch03-02c-sketch-branch.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2343218,
+      "sha256": "6bfa80f7c121743f3b1c0b81dc750c019649a29f9ef24b9da87ec0f66a58e035",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "figures/ch03/ch03-03a-cand-linear.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1045115,
+      "sha256": "5cb88f76617d168699b75001dce03a9b3343057ab0fa99d40c3962b8b6ccfea3",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "figures/ch03/ch03-03b-cand-hub-alt1.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1085445,
+      "sha256": "fa8b4bbcf4edd6f12cd3ed32caa370be532b0c516850bd2f7a1727481bc435a5",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "figures/ch03/ch03-03b-cand-hub-alt2.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1090641,
+      "sha256": "e98086b1cc0622089cb132d6aed072ae2d59eee2c8f9e843db7efa4c2f2823a9",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "figures/ch03/ch03-03b-cand-hub.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1109512,
+      "sha256": "da342fbc65813812249bf117c83f5f553d36f475b2b959e85e865ba6f048354c",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "figures/ch03/ch03-03c-cand-branch.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1111858,
+      "sha256": "589b0ebc028c8477fd064fd1958a3384d58ee7d09b36ae6f5c9111030951667b",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "provenance/ch03/ch03-05b-r1-alt1.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1418615,
+      "sha256": "8de6cdb3bf02739b8603813a1c2b6856d333031ef47208dc61f31a4b5eff9d0a",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "provenance/ch03/ch03-05b-r1.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1473993,
+      "sha256": "7f3ff13203e69334edceb56d434c32d241b5ac376ba268eab8df9057594de9a0",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "provenance/ch03/ch03-05b-r2-alt1.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1471157,
+      "sha256": "c1d47829a2d155e8d7fe6198e97fe974be05e3e9c1d753112b61772aa9666622",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "provenance/ch03/ch03-05b-r2.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1475263,
+      "sha256": "4625b1b689b237edc0d5449af1137a819fc8fbe8ffe105edbb1eac42984c8e05",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "provenance/ch03/ch03-05b-r3-alt1.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1431122,
+      "sha256": "5d070c4471264ea5bc9e980075a5a31001b6492020268550c46803b64b0a3c75",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "provenance/ch03/ch03-05b-r3-alt2.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1309372,
+      "sha256": "892863f51d88ada681e7c5bfd431171a2823bbeafc44f71955e422fb905df697",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "provenance/ch03/ch03-05b-r3.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1245218,
+      "sha256": "da95a663832c5d81d95763fc09a25b5d4177583a32bb583debbaedfb459d2ff0",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "figures/ch03/ch03-05b-v3-revised.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1245218,
+      "sha256": "da95a663832c5d81d95763fc09a25b5d4177583a32bb583debbaedfb459d2ff0",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "figures/ch03/ch03-06-final-base-alt1.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1375060,
+      "sha256": "e86ceaaaf7ec3c699beacdb1a4a1a2736657fb6daa0e916e3b965d68cce53460",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "figures/ch03/ch03-06-final-base.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1163589,
+      "sha256": "16aec379a84d184d28c4126cf997ddbe9dafa9adbb09fa42b2c708ffae1b1119",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    },
+    "figures/ch03/ch03-06-final-base-alt2.png": {
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1394046,
+      "sha256": "fb8d7f5b1645f169255a44d6358b36bde182b1c10d263074b841fe53f0a9ff7a",
+      "width_at_least_2400": false,
+      "aspect_ratio": 1.7768331562167907,
+      "ratio_relative_error_percent": 0.05313496280551222,
+      "bottom_tenth_dark_pixels": 0
+    }
+  },
+  "geometry": {
+    "ch03-03c-cand-branch": {
+      "dna_bboxes_xyxy": [
+        [
+          96,
+          443,
+          1436,
+          492
+        ],
+        [
+          94,
+          684,
+          1432,
+          734
+        ]
+      ],
+      "frame_rows": [
+        387.0,
+        540.0,
+        569.0,
+        767.0
+      ],
+      "frame_heights": [
+        153.0,
+        198.0
+      ],
+      "frame_height_difference_percent": 29.41176470588236,
+      "dna_endpoint_max_error_px": 4,
+      "dna_endpoint_error_percent": 0.2985074626865672
+    },
+    "ch03-05b-v3-revised": {
+      "dna_bboxes_xyxy": [
+        [
+          95,
+          443,
+          1435,
+          493
+        ],
+        [
+          94,
+          698,
+          1432,
+          748
+        ]
+      ],
+      "frame_rows": [
+        356.0,
+        557.5,
+        583.0,
+        796.5
+      ],
+      "frame_heights": [
+        201.5,
+        213.5
+      ],
+      "frame_height_difference_percent": 5.955334987593042,
+      "dna_endpoint_max_error_px": 3,
+      "dna_endpoint_error_percent": 0.22388059701492538
+    },
+    "ch03-06-final-base": {
+      "dna_bboxes_xyxy": [
+        [
+          95,
+          444,
+          1435,
+          493
+        ],
+        [
+          93,
+          698,
+          1432,
+          747
+        ]
+      ],
+      "frame_rows": [
+        356.0,
+        557.5,
+        583.0,
+        796.0
+      ],
+      "frame_heights": [
+        201.5,
+        213.0
+      ],
+      "frame_height_difference_percent": 5.707196029776673,
+      "dna_endpoint_max_error_px": 3,
+      "dna_endpoint_error_percent": 0.22388059701492538,
+      "right_30_percent_clear_height_px": 301,
+      "right_30_percent_clear_height_percent": 31.987247608926673,
+      "grayscale_samples": {
+        "PAM": {
+          "roi_xyxy": [
+            928,
+            220,
+            958,
+            232
+          ],
+          "median_rgb": [
+            249.0,
+            242.0,
+            12.0
+          ],
+          "luma": 226.88219999999998
+        },
+        "donor": {
+          "roi_xyxy": [
+            710,
+            648,
+            735,
+            670
+          ],
+          "median_rgb": [
+            1.0,
+            164.0,
+            144.0
+          ],
+          "luma": 127.90219999999998
+        }
+      }
+    }
+  },
+  "revision_differences": {
+    "r1": {
+      "changed_pixels_percent": 3.714426269518836,
+      "top_row_changed_percent": 4.016547049441786,
+      "threshold": "max absolute RGB channel difference > 15/255"
+    },
+    "r2": {
+      "changed_pixels_percent": 4.100608128378138,
+      "top_row_changed_percent": 3.531698564593302,
+      "threshold": "max absolute RGB channel difference > 15/255"
+    },
+    "r3": {
+      "changed_pixels_percent": 13.688799454921721,
+      "top_row_changed_percent": 7.286483253588518,
+      "threshold": "max absolute RGB channel difference > 15/255"
+    }
+  }
+}

@@ -1,9 +1,11 @@
 % !TeX program = xelatex
 \documentclass[UTF8,openany,fontset=fandol,zihao=-4]{ctexbook}
+\newcommand{\sdbase}{https://sci-draw.com/zh}
 \input{shared/preamble}
 \ctexset{chapter={format=\Large\bfseries,beforeskip=12pt,afterskip=22pt}}
 \hypersetup{pdftitle={用 AI 画好科研图：从研究思路到论文配图},pdfauthor={TopLocalAI contributors},pdflang={zh-CN}}
 \begin{document}
+\includepdf[pages=1,fitpaper=false,noautoscale=false]{cover/cover-zh.pdf}
 \begin{titlepage}
 \color{BookInk}
 \vspace*{18mm}
@@ -15,21 +17,36 @@
 \vspace{14mm}
 {\large 以 SciDraw AI 为实践平台\par}
 \vfill
-{\large 中文版 · 工作稿 v\bookversion\par}
+{\large 中文版 · v\bookversion\par}
 \vspace{3mm}
 {\normalsize \bookdate\par}
 \vspace{8mm}
-{\small 前言与第一、二章；其余章节列入写作计划。\par}
 \end{titlepage}
 \frontmatter
 \chapter*{版本与使用说明}
-本书由 TopLocalAI 开放维护，采用 LaTeX 编写，提供中文和英文两个版本。当前工作稿包含前言、第一章和第二章，以及完整章节计划、练习材料和案例来源说明。
+本书由 TopLocalAI 开放维护，采用 LaTeX 编写，提供中文和英文两个版本，共十三章，另有前言和附录。
 
-正文以 SciDraw AI 组织实践路线。本版图例由 Codex 辅助制作：数据图来自公开的模拟 CSV 和可运行脚本，机制图来自 Codex 内置图像生成。它们不被描述为 SciDraw AI 的生成结果。界面截图来自本地开发版，向导的公开上线状态须另行确认。
+正文以 \scidraw{}（\href{https://sci-draw.com/zh}{sci-draw.com}）组织实践路线。书中提到的工具入口如下，电子版可直接点击：
+
+\begin{center}\small
+\begin{tabular}{@{}ll@{}}
+提示词绘图、草图、参考图修改 & \href{https://sci-draw.com/zh/ai-drawing}{sci-draw.com/zh/ai-drawing}\\
+机制图 & \href{https://sci-draw.com/zh/mechanism-figure-generator}{sci-draw.com/zh/mechanism-figure-generator}\\
+流程图 & \href{https://sci-draw.com/zh/workflow-diagram-generator}{sci-draw.com/zh/workflow-diagram-generator}\\
+数据可视化 & \href{https://sci-draw.com/zh/sci-vis}{sci-draw.com/zh/sci-vis}\\
+组图 & \href{https://sci-draw.com/zh/multi-panel-figure-maker}{sci-draw.com/zh/multi-panel-figure-maker}\\
+图形摘要 & \href{https://sci-draw.com/zh/graphical-abstract-maker}{sci-draw.com/zh/graphical-abstract-maker}\\
+图注辅助 & \href{https://sci-draw.com/zh/figure-legend}{sci-draw.com/zh/figure-legend}\\
+科研绘图向导（串起以上工具） & \href{https://sci-draw.com/zh/figure-workflow}{sci-draw.com/zh/figure-workflow}\\
+图片检查 & \href{https://sci-draw.com/zh/figure-checker}{sci-draw.com/zh/figure-checker}\\
+\end{tabular}
+\end{center}
+
+书中的示意图例由图像生成模型制作，数据图来自公开数据集或明确标注的模拟数据及可运行脚本；每幅图的实际制作工具、提示词与修改过程记录在本书仓库中。
 
 书稿、原创教学数据和图版按 \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0} 提供；构建脚本、绘图程序与通用排版代码按 MIT 许可证提供。许可范围及素材说明见仓库中的 LICENSE、ASSETS.md 和 provenance 目录。产品名称与商标不因开源而转让。
 
-请引用：TopLocalAI contributors. \emph{用 AI 画好科研图：从研究思路到论文配图}. 工作稿 v\bookversion, \bookdate.
+请引用：TopLocalAI contributors. \emph{用 AI 画好科研图：从研究思路到论文配图}. v\bookversion, \bookdate.
 
 \url{https://github.com/TopLocalAI/ai-scientific-figures-book}
 \begingroup\small\linespread{1.0}\selectfont
@@ -40,6 +57,17 @@
 \mainmatter
 \input{chapters/zh/01-workflow}
 \input{chapters/zh/02-brief}
+\input{chapters/zh/03-composition}
+\input{chapters/zh/04-visual-language}
+\input{chapters/zh/05-data-visualization}
+\input{chapters/zh/06-methods-flowcharts}
+\input{chapters/zh/07-mechanism}
+\input{chapters/zh/08-experimental-images}
+\input{chapters/zh/09-multi-panel}
+\input{chapters/zh/10-graphical-abstract}
+\input{chapters/zh/11-revision}
+\input{chapters/zh/12-slides-posters}
+\input{chapters/zh/13-delivery}
 \appendix
 \input{chapters/zh/appendices}
 \backmatter
