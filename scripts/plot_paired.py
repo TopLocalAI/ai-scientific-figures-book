@@ -38,10 +38,10 @@ def render(language, rows, pairs):
         ).strip()
         if not font_path:
             raise RuntimeError("Install TeX Live's Fandol fonts to render Chinese labels.")
-        font = FontProperties(fname=font_path)
+        font = FontProperties(fname=font_path, family="sans-serif")
     before, after = zip(*pairs)
     plt.rcParams.update({
-        "font.family": "DejaVu Sans", "font.size": 10,
+        "font.family": "sans-serif", "font.size": 10,
         "pdf.fonttype": 42, "ps.fonttype": 42, "axes.linewidth": 0.7,
     })
     fig, axes = plt.subplots(1, 2, figsize=(7.3, 4.25), sharey=True)
@@ -74,11 +74,26 @@ def render(language, rows, pairs):
         ax.tick_params(axis="both", length=3)
     axes[0].set_ylabel(labels[3], fontproperties=font)
     for extension in ("pdf", "png"):
-        fig.savefig(
-            ROOT / f"figures/paired-comparison-{language}.{extension}",
-            dpi=220, facecolor="white",
-            metadata={"Creator": "TopLocalAI / Codex reproducible plotting script"},
-        )
+        # XeLaTeX embeds Fandol's OpenType CFF outlines correctly. Sending
+        # this font through Matplotlib's Type 42 PDF path can leave CJK text
+        # extractable but invisible in PDF viewers. Keep the plot vector-based.
+        use_pgf = language == "zh" and extension == "pdf"
+        with matplotlib.rc_context({
+            "pgf.texsystem": "xelatex",
+            "pgf.rcfonts": False,
+            "pgf.preamble": (
+                r"\usepackage{fontspec}\usepackage{xeCJK}"
+                r"\setsansfont{texgyreheros-regular.otf}"
+                r"\setCJKmainfont{FandolHei-Regular.otf}"
+                r"\setCJKsansfont{FandolHei-Regular.otf}"
+            ),
+        }):
+            fig.savefig(
+                ROOT / f"figures/paired-comparison-{language}.{extension}",
+                backend="pgf" if use_pgf else None,
+                dpi=220, facecolor="white",
+                metadata={"Creator": "TopLocalAI / Codex reproducible plotting script"},
+            )
     plt.close(fig)
     return means
 
