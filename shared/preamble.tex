@@ -74,7 +74,9 @@
 \newunicodechar{❼}{\bookcircfill{7}}
 \newunicodechar{⊣}{\ensuremath{\dashv}}
 \providecommand{\sdbase}{https://sci-draw.com}
-\newcommand{\sdtool}[1]{\href{\sdbase/#1}{\texttt{/#1}}}
+% Tool links may break after / and - so they never run into the margin.
+\expandafter\def\expandafter\UrlBreaks\expandafter{\UrlBreaks\do\-}
+\newcommand{\sdtool}[1]{\href{\sdbase/#1}{\nolinkurl{/#1}}}
 \newcommand{\bookrepo}{https://github.com/TopLocalAI/ai-scientific-figures-book}
 \newenvironment{BookNote}{\begin{quote}\small\color{BookInk}}{\end{quote}}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}

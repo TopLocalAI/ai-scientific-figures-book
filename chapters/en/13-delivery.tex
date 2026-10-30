@@ -288,7 +288,7 @@ Figure~\ref{fig:ch13-08} uses filled squares and open squares to distinguish too
 \item \textbf{Data plots log source integrity, but scripts must be saved in \texttt{02\_code/}:} \sdtool{sci-vis} records the source table's hash, byte size, and row count and lets you download the data, but plotting code is not downloadable from the UI; archive reproduction scripts in \texttt{02\_code/}.
 \end{itemize}
 
-Use a four-part filename rule across the package: \texttt{<project>\_\allowbreak<figure-or-venue>\_\allowbreak<content>\_\allowbreak v<2-digit-version>\allowbreak[\_<lang>].<ext>} (e.g., \texttt{perovskite\_\allowbreak fig2c\_\allowbreak jv\_\allowbreak v05\_en.pdf}). Follow three rules: (1) lowercase ASCII, digits, hyphens, and underscores only; (2) increment version numbers monotonically (\texttt{v01}, \texttt{v02}\dots) and never use \texttt{final}; (3) state which version was submitted in the root \texttt{README.md}.
+Use a four-part filename rule across the package: \path{<project>_<figure-or-venue>_<content>_v<2-digit-version>[_<lang>].<ext>} (e.g., \texttt{perovskite\_\allowbreak fig2c\_\allowbreak jv\_\allowbreak v05\_en.pdf}). Follow three rules: (1) lowercase ASCII, digits, hyphens, and underscores only; (2) increment version numbers monotonically (\texttt{v01}, \texttt{v02}\dots) and never use \texttt{final}; (3) state which version was submitted in the root \texttt{README.md}.
 
 Inside \texttt{05\_records/}, store the \textbf{AI-use log (\texttt{ai-use-log.md})} and \textbf{processing log (\texttt{processing-log.md})}:
 

@@ -198,7 +198,7 @@ SHA-256 前 16 位 & \texttt{4be40f814481002a}（全长 64 位见目录 CSV） &
 \end{tabularx}
 \end{table}
 
-\textbf{第二步：编写任务书（交付物 2）。}在 \scidraw{} 科研绘图向导（\sdtool{figure-workflow}）中选择“已有图片组图”路线，编写并保存任务书：
+\textbf{第二步：编写任务书（交付物 2）。}把下面的任务书写在自己的文档里并保存；之后在 \scidraw{} 科研绘图向导（\sdtool{figure-workflow}）选“多面板组图”，按路线进入组图工具（\sdtool{multi-panel-figure-maker}）时对照使用：
 
 \begin{Prompt}
 【用途与读者】论文补充材料方法图（Supplementary Figure），双栏宽 174 mm；
@@ -362,7 +362,7 @@ and the processing log are provided as Supplementary Data.
 \begin{enumerate}
 \item \textbf{（判断题组，纸笔）}针对下列 6 条处理描述：(1)“对处理组单独提高亮度以便看清”；(2)“对整幅合成图统一施加 $\gamma = 0.8$ 并在图注说明”；(3)“用克隆工具去掉一粒灰尘”；(4)“把两个视野的细胞拼到同一面板且不加分隔线”；(5)“按 $0.1\%/99.9\%$ 分位数设置线性范围并统一应用于所有面板”；(6)“把 JPEG 截图交给 AI 放大到 4K”。逐条判断属于“可接受”“可接受但须披露”还是“不可接受”，并引用第 5 节的规则说明理由（参考答案见附录）。
 \item \textbf{（比例尺计算，脚本）}下载 \path{Leaf_epidermis.jpg}（Wikimedia Commons），自己编写脚本测量底部数据条中标尺线的像素长度，计算像素尺寸；为一个 $600 \times 600\ \text{px}$ 的裁剪区域画 $100\ \mu\text{m}$ 比例尺；再把该区域 $2\times$ 最近邻放大并重算比例尺。与本章数值（$720\ \text{px}$、$0.278\ \mu\text{m/px}$）比较，并说明这个像素尺寸依赖什么前提。
-\item \textbf{（\scidraw{} 实操）}用本章脚本生成的四个终稿面板，在科研绘图向导（\sdtool{figure-workflow}）中选择“已有图片组图”路线，进入组图工具（\sdtool{multi-panel-figure-maker}）：选 $174\ \text{mm}$ 双栏预设、$2 \times 2$ 网格、自动编号；导出 ZIP；打开处理记录，找出“未做亮度、对比度、颜色改动”的声明，写一段话说明为什么这句话对本图不完整，并把脚本的 \path{processing-log.json} 合并成一份完整处理说明。最后用 \sdtool{figure-checker} 检查导出图，记录它报告了什么、没有报告什么。
+\item \textbf{（\scidraw{} 实操）}用本章脚本生成的四个终稿面板，在科研绘图向导（\sdtool{figure-workflow}）中选“多面板组图”，从第 1 步“排版组图”进入组图工具（\sdtool{multi-panel-figure-maker}）：选 $174\ \text{mm}$ 双栏预设、$2 \times 2$ 网格、自动编号；导出 ZIP；打开处理记录，找出“未做亮度、对比度、颜色改动”的声明，写一段话说明为什么这句话对本图不完整，并把脚本的 \path{processing-log.json} 合并成一份完整处理说明。最后用 \sdtool{figure-checker} 检查导出图，记录它报告了什么、没有报告什么。
 \end{enumerate}
 
 \section*{参考文献}

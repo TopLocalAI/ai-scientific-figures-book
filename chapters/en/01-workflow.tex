@@ -106,7 +106,7 @@ The study area is the Raccoon River watershed in west-central Iowa, USA, an inte
 
 Lin retrieves the full-year 2016 approved daily record from the USGS National Water Information System (NWIS) for the downstream gauge at Van Meter, Iowa (station 05484500). Here she sets an explicit scientific boundary: \textbf{this figure shows only the temporal covariation of nitrate concentration and stream discharge at station 05484500 during 2016, alongside a simplified schematic of the transport pathway from tile-drained cropland to the gauge; it does not perform quantitative source apportionment, calculate nitrogen loads, or make causal or statistical significance claims.} The U.S. Environmental Protection Agency (EPA) Maximum Contaminant Level (MCL) of $10\ \text{mg/L}$ (as N) applies legally to finished public drinking water rather than untreated river water, and is shown strictly as a numerical reference line.
 
-\textbf{Stage 1: Define the task---writing a verifiable drawing brief.} Learning from her initial false start, Lin selects her route in the \scidraw{} figure workflow guide (\sdtool{figure-workflow}), expands her goal into a structured drawing brief, and saves a local copy. Below are the core fields (the complete version is in the \texttt{cases/} directory of the book repository):
+\textbf{Stage 1: Define the task---writing a verifiable drawing brief.} Learning from her initial false start, Lin expands her goal into a structured drawing brief and saves it as a text file in her project folder; later, after picking a route in the \scidraw{} figure workflow guide (\sdtool{figure-workflow}), she pastes it into the tool at each step. Below are the core fields (the complete version is in the \texttt{cases/} directory of the book repository):
 
 \begin{Prompt}
 [Use and audience] Environmental science paper Figure 2, double-column width 174 mm,
@@ -318,21 +318,20 @@ Finally, in Stage 6 (``Check and deliver''), inspect the figure at 100\% of its 
 
 \section{Choosing a route in SciDraw AI}
 
-Opening the figure workflow guide (\sdtool{figure-workflow}) in \scidraw{} presents four task routes: \textbf{Mechanism \& workflow, Data visualization, Multi-panel figure, and Graphical abstract} (Figure~\ref{fig:ch01-08}). Once a route is chosen, the left column lists the steps while the right panel provides required materials, an editable drawing brief box, outputs to save, and pre-step verification checks.
+The figure workflow guide (\sdtool{figure-workflow}) in \scidraw{} first asks which kind of figure you are making: \textbf{Mechanism \& workflow diagram, Data figure, Multi-panel figure, or Graphical abstract} (Figure~\ref{fig:ch01-08}). Once you pick one, the page shows a short ordered route of three or four steps, each with a one-sentence description and a button that opens the matching tool. The mechanism route, for example, runs: Generate a first draft (mechanism diagram generator, or the flow diagram generator for a flowchart) $\rightarrow$ Refine details (AI Drawing) $\rightarrow$ Write the figure legend (legend tool) $\rightarrow$ Check and export (figure checker). Each step works on its own, so if you already have a draft you can start at step 2.
 
 \begin{figure}[htbp]\centering
 \includegraphics[width=0.92\linewidth,height=0.68\textheight,keepaspectratio]{figures/ch01/ch01-08-guide-ui-en.png}
-\caption{The \scidraw{} figure workflow guide (development build, October 29, 2026). The guide lists steps, required materials, and verification checks by task; the brief and progress are stored only in the current browser.}\label{fig:ch01-08}
+\caption{The \scidraw{} figure workflow guide (30 October 2026). With ``Mechanism \& workflow diagram'' selected, the page lists a four-step route---Generate a first draft, Refine details, Write the figure legend, Check and export---each with one sentence and a button that opens the tool.}\label{fig:ch01-08}
 \end{figure}
 
-A composite figure can chain two routes together: our case followed the ``Data visualization'' route into \sdtool{sci-vis} for panel b, then the ``Mechanism \& workflow'' route into \sdtool{workflow-diagram-generator} or \sdtool{ai-drawing} for panel a, before moving to the panel assembly, legend, and checking tools. If you already have a finished plot and only need a legend or resolution check, you can jump directly to that step.
+A composite figure can chain two routes together: our case followed the ``Data figure'' route into \sdtool{sci-vis} for panel b, then the ``Mechanism \& workflow diagram'' route into \sdtool{workflow-diagram-generator} or \sdtool{ai-drawing} for panel a, before moving to the panel assembly, legend, and checking tools. If you already have a finished plot and only need a legend or resolution check, you can jump directly to that step.
 
-Keep four platform facts in mind when using the guide:
+Keep three platform facts in mind when using the guide:
 \begin{enumerate}
-\item \textbf{Your brief and progress are saved only in the current browser:} Switching browsers, clearing cache, or using private browsing erases the record. Click ``Download brief'' immediately after editing to save a copy in your project folder.
-\item \textbf{Clicking ``Next step'' does not mean completion:} ``Next step'' only switches the displayed instructions; click ``I checked this step --- mark complete'' only after verifying every checklist item. You can uncheck a step at any time to return and fix an upstream issue.
-\item \textbf{Cross-tool handoff uses download and upload:} Opening a drawing or visualization tool from the guide carries task and session context, but sending individual panels to the assembly, legend, or checking tools does not transfer images automatically. Download clearly named files (such as \texttt{panel-b-nitrate-v2.pdf}) and upload them to the next tool to avoid passing outdated drafts.
-\item \textbf{The guide does not perform scientific review for you:} It supplies steps and checklists, but verifying units, quality codes, and evidential boundaries remains the author's job.
+\item \textbf{The guide stores neither your brief nor your progress:} The page only shows the route and links to the tools; it has no brief editor and does not track which step you have reached. Write the brief in your own document or text file, keep it in the project folder as the record, and paste it into the tool at each step.
+\item \textbf{Cross-tool handoff uses download and upload:} The guide's buttons simply open the matching tool; they do not carry your brief or images along. When sending individual panels to the assembly, legend, or checking tools, download clearly named files (such as \texttt{panel-b-nitrate-v2.pdf}) and upload them to the next tool, which also avoids passing outdated drafts.
+\item \textbf{The guide does not perform scientific review for you:} It supplies only the order of steps and the tool links; verifying units, quality codes, and evidential boundaries remains the author's job.
 \end{enumerate}
 
 \section{Keep a small archive for every figure}
@@ -343,7 +342,7 @@ Creating a small folder with a fixed structure on your local drive or code repos
 fig2-raccoon-nitrate/
   source/   usgs-05484500-2016.rdb (raw download backup, read-only)
             raccoon-2016-daily.csv, data-dictionary.md (fields, units, flags, DOI, date)
-  brief/    figure2-brief-v1.txt (downloaded brief), prompts-log.txt (all submitted inputs)
+  brief/    figure2-brief-v1.txt (your saved brief), prompts-log.txt (all submitted inputs)
   drafts/   panel-b-draft1.pdf, panel-b-revised.pdf, panel-a-candidates/,
             revision-notes.md (the 8 draft defects and return-path revision log)
   final/    figure2-final.pdf, figure2-final.tiff, legend-zh.txt, legend-en.txt,
@@ -385,7 +384,7 @@ Check and deliver & Technical checks (resolution, color mode, grayscale, color-v
 \item Every revision round is recorded: what changed, why, and which stage the workflow returned to.
 \item The final figure has been checked for text and line legibility at its actual print dimensions.
 \item Every number, source, and processing note in the figure legend is backed by the archive.
-\item ``Complete'' in the workflow guide was marked by me after verification, not merely because a page was opened.
+\item I moved on from each step only after checking its output against the brief, not merely because a tool page had been opened.
 \item The delivery package includes an AI-use log, and I checked the target journal's current requirements before submission.
 \end{itemize}
 
@@ -394,7 +393,7 @@ Check and deliver & Technical checks (resolution, color mode, grayscale, color-v
 \begin{enumerate}
 \item \textbf{(Task sentences)} Write two alternative task sentences for this chapter's case: one focused on ``how many days high concentrations persist in spring,'' and another focused on ``concentrations during low-flow periods.'' Explain how each would change the chart type, time range, or annotations.
 \item \textbf{(Finding defects)} Without looking at the revision table in Section 1.4, list at least five problems across Figure~\ref{fig:ch01-03} and Figure~\ref{fig:ch01-05}, write one verifiable revision instruction for each, and state which of the six stages each problem should return to.
-\item \textbf{(Hands-on with \scidraw{})} Download one year of daily mean data from another USGS station with a nitrate sensor (or use a time series from your own research). Select the ``Data visualization'' route in the figure workflow guide (\sdtool{figure-workflow}), write and download a brief following the format in Section 1.4, upload the data in \sdtool{sci-vis}, and enter your plotting instructions. Check the output against your acceptance criteria item by item, record at least one revision instruction and its effect, and archive the entire process using the folder structure in Section 1.6.
+\item \textbf{(Hands-on with \scidraw{})} Download one year of daily mean data from another USGS station with a nitrate sensor (or use a time series from your own research). Write a brief in your own document following the format in Section 1.4, then choose ``Data figure'' in the figure workflow guide (\sdtool{figure-workflow}), follow step 1 into \sdtool{sci-vis}, upload the data, and paste in the plotting requirements from your brief. Check the output against your acceptance criteria item by item, record at least one revision instruction and its effect, and archive the entire process using the folder structure in Section 1.6.
 \end{enumerate}
 
 \section*{References}
