@@ -30,3 +30,6 @@ data/ch04/raw/GlobalCarbonBudget_v2025.xlsx
 # Internal task generators (contain local paths)
 production/mk-write-task.sh
 production/mk-fig-tasks.sh
+
+# PDFs are published as GitHub Release assets, not committed
+pdf/

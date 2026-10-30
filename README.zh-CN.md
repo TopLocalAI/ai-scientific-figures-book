@@ -2,41 +2,75 @@
 
 **从研究思路到论文配图** · TopLocalAI 开源双语书籍
 
-[English](README.md) · [中文 PDF](pdf/ai-scientific-figures-zh.pdf) · [English PDF](pdf/ai-scientific-figures-en.pdf)
+[English](README.md)
 
-围绕科研表达讲清如何确定绘图任务、使用 AI、核验内容并完成可追溯交付。全书统一以 **SciDraw AI** 组织实践，AI 融入各类图片的构思、制作、修改与检查。
+**v1.0.0，2026-10-30 发布。** 全书已完成：前言、13 章正文、附录 A–G 和封面。中文版 442 页，英文版 421 页（170 × 240 mm）。
 
-**当前为 v0.1.0 工作稿，日期 2026-10-29。** 中英文均包含前言、第一章、第二章、十三章规划、练习与参考资料。第三至十三章仍在计划中。
+## 下载
 
-## 阅读与构建
+- **[中文 PDF](https://github.com/TopLocalAI/ai-scientific-figures-book/releases/latest/download/ai-scientific-figures-zh.pdf)**
+- **[English PDF](https://github.com/TopLocalAI/ai-scientific-figures-book/releases/latest/download/ai-scientific-figures-en.pdf)**
 
-LaTeX 是正式编辑源：main.tex 为中文，main-en.tex 为英文；正文分别位于 chapters/zh/、chapters/en/。两版共用案例数据与来源记录，图注和数据图标签分别本地化。
+以上链接始终指向最新版本，每个 PDF 约 78 MB。历史版本见 [全部发布](https://github.com/TopLocalAI/ai-scientific-figures-book/releases)。
 
-安装包含 XeLaTeX、latexmk、中文支持、Fandol 字体和常用扩展包的 TeX Live 后：
+## 这本书讲什么
 
-    make check
+本书写给需要为论文、汇报和海报作图的研究生、博士后和科研人员。书中讲清楚：一张图要表达什么，怎样把研究内容写成绘图任务书，怎样借助 AI 推演构图、绘制数据图、处理实验图像和示意图，怎样逐项核对科学内容，以及怎样交付数据、提示词和修改过程都可追溯的图。案例覆盖生物医学、材料与能源、工程、地球与环境科学和数据科学。
+
+## 目录
+
+1. 建立你的 AI 科研绘图工作流
+2. 把研究内容变成一份绘图任务书
+3. 与 AI 一起推演构图和草图
+4. 建立整篇论文的视觉语言
+5. 用 AI 辅助数据可视化
+6. 方法图与实验流程图
+7. 机制图与结构示意图
+8. 实验图像的科学呈现
+9. 把多张图组织成论文组图
+10. 图形摘要：用一张图表达研究贡献
+11. 把“再好看一点”变成可执行的修改
+12. 从论文配图到汇报与海报
+13. 检查、导出与可追溯交付
+
+附录 A–G：绘图任务书模板、提示词与修改指令改写表、图注核对表、交付清单、术语表（中英对照）、案例与素材来源、尺寸与字号速查。
+
+## 用 SciDraw AI 练习
+
+全书以 [SciDraw AI](https://sci-draw.com) 作为练习平台，PDF 中提到的每个工具都可以直接点击打开。
+[科研绘图流程向导](https://sci-draw.com/zh/figure-workflow) 可以先选图的类型，再按 3–4 步的工具路线完成。
+
+## 阅读与编译
+
+LaTeX 是编辑源：`main.tex` 为中文版，`main-en.tex` 为英文版，正文分别在 `chapters/zh/` 和 `chapters/en/`。安装含 XeLaTeX、latexmk、中文支持和 Fandol 字体的 TeX Live 即可编译，不需要商业字体或 shell escape。
+
+    make check    # 检查书稿与案例完整性
     make          # 编译中英文
     make zh       # 只编译中文
     make en       # 只编译英文
 
-PDF 输出到 pdf/，临时编译文件保存在忽略的 build/。无需商业字体或 shell escape。仓库中的 PDF 是当前工作稿的阅读副本。
+PDF 输出到 `pdf/`，中间文件在 `build/`，两者都不纳入 git。Ubuntu 上 CI 安装的包为 texlive-xetex、texlive-lang-chinese、texlive-latex-extra、texlive-fonts-recommended、tex-gyre、fonts-texgyre、fonts-lmodern 和 latexmk。GitHub Actions 工作流 “Build bilingual PDFs” 可在 Actions 页面点 Run workflow 手动运行，编译出的两个 PDF 作为 artifact 上传。
 
-复现数据图时，先在虚拟环境安装 requirements.txt，运行 make figures，再编译。只有这一步需要 Python/Matplotlib；直接编译可使用已经保存的图版。
+仓库已保存全部图版，直接编译即可。需要重新生成图时：
 
-## 已写内容
+    python3 -m venv .venv
+    . .venv/bin/activate
+    python3 -m pip install -r requirements.txt
+    make figures  # 重新生成配对数据示例图
+    make
 
-- **第一章：建立 AI 科研绘图工作流。** 图片的问题、材料分类、路线选择与资料保存。
-- **第二章：把研究内容变成绘图任务书。** 对象、关系、证据状态、数据约束和验收条件。
-- **后续规划：** 构图、视觉语言、数据图、方法图、机制图、实验图像、组图与图注、图形摘要、修改、汇报与交付。
+`requirements.txt` 只覆盖配对数据示例；各章脚本（`scripts/chNN_*.py`）还需要 numpy、Pillow、pandas、SciPy、colorspacious 和 openpyxl。
 
-## 案例来源
+## 案例、数据与来源记录
 
-配对数据是人工编制的模拟教学数据：8 个虚构对象、16 个观测值。数据图由 Codex 编写的确定性脚本绘制。机制图是 Codex 内置图像生成的实际输出，附完整输入与核验记录。二者均不代表真实研究结果，也不冒充 SciDraw AI 的生成结果。
+书中的图有四类：图像生成模型出底图、再用 LaTeX/TikZ 加标注；用 matplotlib 基于公开数据或明确标注的模拟数据绘制的数据图；TikZ 绘制的示意图；开放许可的外部图像。案例包括 USGS 河流硝酸盐监测、胰岛素–GLUT4 信号通路、锂离子电池、基于模拟数据的钙钛矿太阳能电池组图、山火主题图形摘要和 BBBC022 显微图像。
 
-界面截图来自本地开发版，/figure-workflow 是开发中的配套入口；截图不意味着该功能已经公开上线。
+每张生成图所用的工具、提示词和修改过程记录在 [provenance/](provenance/README.md)；第三方素材的来源与许可见 [ASSETS.md](ASSETS.md)；数据说明见 [data/README.md](data/README.md)。HOT 和 Global Carbon Budget 的原始数据不随仓库分发，可用 `scripts/fetch_ch04_data.py` 下载。阅读和编译都不需要 API 密钥。
 
-见 [图版清单](ASSETS.md)、[数据说明](data/README.md)、[案例来源记录](provenance/README.md)。阅读和编译不需要任何 API 密钥。
+## 参与、许可与引用
 
-## 参与和许可
+欢迎修订表达、报告问题、补充经过核验的案例，详见 [贡献说明](CONTRIBUTING.md)。请保持中英文含义一致，保留来源记录，并把模拟数据、教学假设与真实研究证据区分清楚。
 
-欢迎修订表达、报告问题和补充经过核验的案例，详见 [贡献说明](CONTRIBUTING.md)。正文、原创教学数据及图版采用 **CC BY 4.0**，构建与绘图代码采用 **MIT**。许可范围、AI 素材及商标说明见 [LICENSE](LICENSE)。
+正文、图版和原创数据采用 [CC BY 4.0](LICENSES/CC-BY-4.0.txt)，代码采用 [MIT](LICENSES/MIT.txt)；第三方素材遵循各自的许可（见 [ASSETS.md](ASSETS.md)）。许可的具体范围、AI 生成素材和商标说明见 [LICENSE](LICENSE)。
+
+引用信息见 [CITATION.cff](CITATION.cff)。

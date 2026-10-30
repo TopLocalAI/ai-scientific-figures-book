@@ -2,51 +2,75 @@
 
 **From Research Ideas to Paper Figures** · An open bilingual book by TopLocalAI
 
-[简体中文](README.zh-CN.md) · [English PDF](pdf/ai-scientific-figures-en.pdf) · [中文 PDF](pdf/ai-scientific-figures-zh.pdf)
+[简体中文](README.zh-CN.md)
 
-Learn to define a figure's purpose, work with AI, inspect its scientific content, and deliver traceable results. **SciDraw AI** is the common practical platform. AI assistance is discussed throughout the book.
+**Version 1.0.0, 2026-10-30.** The book is complete: preface, 13 chapters, appendices A–G and cover. The English edition has 421 pages, the Chinese edition 442 pages (170 × 240 mm).
 
-**Status: v0.1.0 working draft, 2026-10-29.** Both editions contain the preface, Chapters 1 and 2, a thirteen-chapter roadmap, exercises, and references. Chapters 3–13 are planned, not completed.
+## Download
+
+- **[English PDF](https://github.com/TopLocalAI/ai-scientific-figures-book/releases/latest/download/ai-scientific-figures-en.pdf)**
+- **[中文 PDF](https://github.com/TopLocalAI/ai-scientific-figures-book/releases/latest/download/ai-scientific-figures-zh.pdf)**
+
+These links always point to the latest release; each PDF is about 78 MB. Earlier versions: [all releases](https://github.com/TopLocalAI/ai-scientific-figures-book/releases).
+
+## What the book is about
+
+The book is for graduate students, postdocs and other researchers who make figures for papers, talks and posters. It shows how to decide what a figure has to say, turn research content into a brief, work with AI on layouts, data plots, images and schematics, check the scientific content of every output, and deliver figures whose data, prompts and revisions can be traced. Worked cases come from biomedicine, materials and energy, engineering, earth and environmental science, and data science.
+
+## Contents
+
+1. Building Your AI Workflow for Scientific Figures
+2. Turning Research Content into a Figure Brief
+3. Working Out Layout and Sketches with AI
+4. A Visual Language for the Whole Paper
+5. Visualizing Data with AI Assistance
+6. Method and Workflow Diagrams
+7. Mechanism and Structure Schematics
+8. Presenting Experimental Images Honestly
+9. Assembling Panels into a Paper Figure
+10. Graphical Abstracts: One Image for One Contribution
+11. From "Make It Nicer" to Executable Revisions
+12. From Paper Figures to Talks and Posters
+13. Checking, Exporting and Delivering Traceable Figures
+
+Appendices A–G: figure brief templates, a prompt and revision-instruction rewrite table, a figure legend checklist, a pre-submission delivery checklist, a glossary, case studies and asset sources, and a dimension and font-size reference.
+
+## Practice with SciDraw AI
+
+[SciDraw AI](https://sci-draw.com) is the practice platform used throughout the book; every tool mentioned in the PDF is a clickable link.
+The [figure workflow guide](https://sci-draw.com/figure-workflow) lets you pick a figure type and follow a 3–4 step route of tools.
 
 ## Read and build
 
-The editable source is LaTeX: main.tex is Chinese; main-en.tex is English. Chapters live in chapters/zh/ and chapters/en/. Shared figures, data, and provenance keep the editions aligned.
+The source is LaTeX: `main-en.tex` (English) and `main.tex` (Chinese), with chapters in `chapters/en/` and `chapters/zh/`. Build with TeX Live (XeLaTeX, latexmk, Chinese support, Fandol fonts); no proprietary fonts or shell escape are needed.
 
-Use TeX Live with XeLaTeX, latexmk, Chinese language support, Fandol fonts, and the usual LaTeX extra packages. No proprietary system fonts or shell escape are required.
-
-    make check
+    make check           # manuscript and example integrity
     make                 # both PDFs
-    make zh              # Chinese only
     make en              # English only
+    make zh              # Chinese only
 
-PDFs are copied to pdf/; intermediate files stay in ignored build/. The committed PDFs are reading copies of this draft. On Ubuntu, the CI uses texlive-xetex, texlive-lang-chinese, texlive-latex-extra, texlive-fonts-recommended, tex-gyre, fonts-lmodern, and latexmk.
+PDFs are written to `pdf/` and intermediate files to `build/`; both are ignored by git. On Ubuntu, CI installs texlive-xetex, texlive-lang-chinese, texlive-latex-extra, texlive-fonts-recommended, tex-gyre, fonts-texgyre, fonts-lmodern and latexmk. The GitHub Actions workflow "Build bilingual PDFs" can be started from the Actions tab (Run workflow) and uploads both PDFs as an artifact.
 
-To regenerate the numerical examples:
+The saved figures are enough to build the book. To regenerate figures:
 
     python3 -m venv .venv
     . .venv/bin/activate
     python3 -m pip install -r requirements.txt
-    make figures
+    make figures         # regenerates the paired-data example
     make
 
-## What is inside
+`requirements.txt` covers the paired-data example; the per-chapter scripts (`scripts/chNN_*.py`) also use numpy, Pillow, pandas, SciPy, colorspacious and openpyxl.
 
-- **Chapter 1 — Build your AI scientific-figure workflow:** identify the question, choose a route, preserve data and source materials.
-- **Chapter 2 — Turn research content into a drawing brief:** define objects, relationships, evidence, constraints, and review criteria.
-- **Roadmap:** composition, visual language, data plots, methods, mechanisms, experimental images, panels and legends, graphical abstracts, revision, presentations, and delivery.
+## Examples, data and provenance
 
-## Examples and provenance
+Figures combine image-generation-model base images with LaTeX/TikZ labels, matplotlib plots from public or clearly labelled simulated data, TikZ diagrams, and openly licensed images. Cases include USGS river nitrate, insulin–GLUT4 signalling, a Li-ion battery, a perovskite solar cell multi-panel figure built from simulated data, a wildfire graphical abstract and BBBC022 microscopy images.
 
-The paired dataset contains eight fictional objects and sixteen observations. Codex wrote a deterministic plotting script that preserves all values. The mechanism figure is an actual output of Codex's built-in image generator, accompanied by its executed prompt and review. These are teaching examples, not real research findings and not SciDraw AI generation results.
+The tool, prompt and revisions behind each generated figure are recorded in [provenance/](provenance/README.md); third-party sources and licences are listed in [ASSETS.md](ASSETS.md); datasets are described in [data/README.md](data/README.md). HOT and Global Carbon Budget raw data are not redistributed; `scripts/fetch_ch04_data.py` downloads them. No API credentials are required to read or build the book.
 
-Interface screenshots show the local development guide. Its route /figure-workflow is a development reference, not a claim that the feature is publicly deployed.
+## Contribute, licence and citation
 
-See [ASSETS.md](ASSETS.md), [data/README.md](data/README.md), and [provenance/README.md](provenance/README.md). No API credentials are required to read or build the book.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md). Keep the Chinese and English editions aligned in meaning, preserve provenance, and keep simulated data and teaching assumptions clearly separate from research evidence.
 
-## Contribute and reuse
+Text, figures and original data: [CC BY 4.0](LICENSES/CC-BY-4.0.txt). Code: [MIT](LICENSES/MIT.txt). Third-party materials stay under their own terms ([ASSETS.md](ASSETS.md)). [LICENSE](LICENSE) defines the exact scope, including AI-generated assets and trademarks.
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md). Keep the Chinese and English learning objectives aligned, preserve source provenance, and clearly distinguish teaching assumptions from research evidence.
-
-Manuscript, original teaching data, and figures: [CC BY 4.0](LICENSES/CC-BY-4.0.txt). Scripts and reusable typesetting infrastructure: [MIT](LICENSES/MIT.txt). [LICENSE](LICENSE) defines the scope, including AI assets and trademarks.
-
-Citation metadata is available in [CITATION.cff](CITATION.cff).
+Citation metadata is in [CITATION.cff](CITATION.cff).

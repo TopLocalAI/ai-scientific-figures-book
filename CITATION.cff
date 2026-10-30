@@ -4,8 +4,8 @@ title: "Use AI to Make Better Scientific Figures: From Research Ideas to Paper F
 type: book
 authors:
   - name: "TopLocalAI contributors"
-version: 0.1.0
-date-released: 2026-10-29
+version: 1.0.0
+date-released: 2026-10-30
 repository-code: "https://github.com/TopLocalAI/ai-scientific-figures-book"
 url: "https://github.com/TopLocalAI/ai-scientific-figures-book"
 license: CC-BY-4.0
