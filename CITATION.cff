@@ -1,11 +1,19 @@
 cff-version: 1.2.0
-message: "Please cite the working draft when using the book or its teaching materials."
+message: "Please cite this book when using it or its teaching materials."
 title: "Use AI to Make Better Scientific Figures: From Research Ideas to Paper Figures"
 type: book
 authors:
-  - name: "TopLocalAI contributors"
+  - name: "TopLocalAI"
 version: 1.0.0
 date-released: 2026-10-30
+doi: 10.5281/zenodo.23794693
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23794693
+    description: "All versions (concept DOI)"
+  - type: doi
+    value: 10.5281/zenodo.23794694
+    description: "Version 1.0.0"
 repository-code: "https://github.com/TopLocalAI/ai-scientific-figures-book"
 url: "https://github.com/TopLocalAI/ai-scientific-figures-book"
 license: CC-BY-4.0

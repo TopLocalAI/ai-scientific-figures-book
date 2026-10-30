@@ -1,5 +1,7 @@
 # Use AI to Make Better Scientific Figures
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23794693.svg)](https://doi.org/10.5281/zenodo.23794693)
+
 **From Research Ideas to Paper Figures** · An open bilingual book by TopLocalAI
 
 [简体中文](README.zh-CN.md)
@@ -72,5 +74,9 @@ The tool, prompt and revisions behind each generated figure are recorded in [pro
 Please read [CONTRIBUTING.md](CONTRIBUTING.md). Keep the Chinese and English editions aligned in meaning, preserve provenance, and keep simulated data and teaching assumptions clearly separate from research evidence.
 
 Text, figures and original data: [CC BY 4.0](LICENSES/CC-BY-4.0.txt). Code: [MIT](LICENSES/MIT.txt). Third-party materials stay under their own terms ([ASSETS.md](ASSETS.md)). [LICENSE](LICENSE) defines the exact scope, including AI-generated assets and trademarks.
+
+Archived on Zenodo: [10.5281/zenodo.23794693](https://doi.org/10.5281/zenodo.23794693) (all versions; v1.0.0 is [10.5281/zenodo.23794694](https://doi.org/10.5281/zenodo.23794694)). Cite it as:
+
+> TopLocalAI. (2026). *Use AI to Make Better Scientific Figures: From Research Ideas to Paper Figures* (Version 1.0.0). Zenodo. https://doi.org/10.5281/zenodo.23794694
 
 Citation metadata is in [CITATION.cff](CITATION.cff).

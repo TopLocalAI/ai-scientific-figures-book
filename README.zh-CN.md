@@ -1,5 +1,7 @@
 # 用 AI 画好科研图
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23794693.svg)](https://doi.org/10.5281/zenodo.23794693)
+
 **从研究思路到论文配图** · TopLocalAI 开源双语书籍
 
 [English](README.md)
@@ -72,5 +74,9 @@ PDF 输出到 `pdf/`，中间文件在 `build/`，两者都不纳入 git。Ubunt
 欢迎修订表达、报告问题、补充经过核验的案例，详见 [贡献说明](CONTRIBUTING.md)。请保持中英文含义一致，保留来源记录，并把模拟数据、教学假设与真实研究证据区分清楚。
 
 正文、图版和原创数据采用 [CC BY 4.0](LICENSES/CC-BY-4.0.txt)，代码采用 [MIT](LICENSES/MIT.txt)；第三方素材遵循各自的许可（见 [ASSETS.md](ASSETS.md)）。许可的具体范围、AI 生成素材和商标说明见 [LICENSE](LICENSE)。
+
+本书已在 Zenodo 存档：[10.5281/zenodo.23794693](https://doi.org/10.5281/zenodo.23794693)（指向所有版本；v1.0.0 为 [10.5281/zenodo.23794694](https://doi.org/10.5281/zenodo.23794694)）。引用格式：
+
+> TopLocalAI. (2026). *Use AI to Make Better Scientific Figures: From Research Ideas to Paper Figures* (Version 1.0.0). Zenodo. https://doi.org/10.5281/zenodo.23794694
 
 引用信息见 [CITATION.cff](CITATION.cff)。
