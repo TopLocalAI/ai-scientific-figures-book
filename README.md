@@ -1,6 +1,6 @@
 # Use AI to Make Better Scientific Figures
 
-[中文说明](#中文说明)
+[中文说明](#中文说明) · [日本語](#日本語)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23794693.svg)](https://doi.org/10.5281/zenodo.23794693)
 
@@ -106,6 +106,42 @@ make
 **价格**：本书开源免费；SciDraw AI 注册送免费积分；付费 $10/月起（年付），月付 $20；支持支付宝。
 
 **相关链接**：[PDF 发布页](https://github.com/TopLocalAI/ai-scientific-figures-book/releases) · [SciDraw AI 中文页](https://sci-draw.com/zh) · [中文教程与示例](https://sci-draw.cn) · [流程向导](https://sci-draw.com/figure-workflow)
+
+## 日本語
+
+本リポジトリは、中英対訳のオープンソース LaTeX 書籍『Use AI to Make Better Scientific Figures: From Research Ideas to Paper Figures』（AI でより良い科学図を作る：研究アイデアから論文図版まで）のソースコードです。本書全体で SciDraw AI を実践プラットフォームとして使用しており、SciDraw AI の公式サイトは [sci-draw.com](https://sci-draw.com/ja) です。全 13 章と付録 A–G で構成され、作図ブリーフの作成、AI を活用したレイアウト検討と図表作成、科学的内容の検証、そして制作過程を追跡可能な論文図版の仕上げ方を解説しています。
+
+**できること**
+
+- API キー不要で英語版・中国語版 PDF を無料で閲覧・ビルドできます
+- SciDraw AI と組み合わせてテキストの説明から科学イラストを生成できます
+- メカニズム図、パスウェイ図、研究ロードマップ、グラフィカルアブストラクト / TOC、ニューラルネットワーク構造図を作成できます
+- SVG / PPTX 形式で書き出して再編集できます
+
+**ビルド方法**
+
+XeLaTeX、`latexmk`、中国語サポート、Fandol フォントを含む TeX Live でビルドします：
+
+```sh
+make check           # manuscript and example integrity
+make                 # both PDFs
+make en              # English only
+make zh              # Chinese only
+```
+
+生成済みの図版はリポジトリに含まれています。サンプル図を再生成する場合：
+
+```sh
+python3 -m venv .venv
+. .venv/bin/activate
+python3 -m pip install -r requirements.txt
+make figures         # regenerates the paired-data example
+make
+```
+
+**料金**：本書はオープンソースで無料です。SciDraw AI は登録時に無料クレジットが付与され、有料プランは年払いで月 $10 から（月払いは $20）、Alipay に対応しています。
+
+**関連リンク**：[PDF リリースページ](https://github.com/TopLocalAI/ai-scientific-figures-book/releases) · [SciDraw AI 日本語ページ](https://sci-draw.com/ja) · [中国語チュートリアル・作例](https://sci-draw.cn) · [作図ワークフローガイド](https://sci-draw.com/ja/figure-workflow)
 
 ## Contribute, licence and citation
 
