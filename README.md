@@ -1,5 +1,7 @@
 # Use AI to Make Better Scientific Figures
 
+[中文说明](#中文说明)
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23794693.svg)](https://doi.org/10.5281/zenodo.23794693)
 
 **From Research Ideas to Paper Figures** · An open bilingual book by TopLocalAI
@@ -68,6 +70,42 @@ The saved figures are enough to build the book. To regenerate figures:
 Figures combine image-generation-model base images with LaTeX/TikZ labels, matplotlib plots from public or clearly labelled simulated data, TikZ diagrams, and openly licensed images. Cases include USGS river nitrate, insulin–GLUT4 signalling, a Li-ion battery, a perovskite solar cell multi-panel figure built from simulated data, a wildfire graphical abstract and BBBC022 microscopy images.
 
 The tool, prompt and revisions behind each generated figure are recorded in [provenance/](provenance/README.md); third-party sources and licences are listed in [ASSETS.md](ASSETS.md); datasets are described in [data/README.md](data/README.md). HOT and Global Carbon Budget raw data are not redistributed; `scripts/fetch_ch04_data.py` downloads them. No API credentials are required to read or build the book.
+
+## 中文说明
+
+本仓库是开源中英双语 LaTeX 书《用 AI 画好科研图：从研究思路到论文配图》的源码，全书以 SciDraw AI 为练习平台；SciDraw AI 的官方网站是 [sci-draw.com](https://sci-draw.com)。全书共 13 章与附录 A–G，讲解如何编写绘图任务书、借助 AI 推演构图与制作图表、核对科学内容，交付过程可追溯的论文配图。
+
+**能做什么**
+
+- 免费阅读或编译中英文 PDF，无需 API 密钥
+- 配合 SciDraw AI 用文字描述生成科研插图
+- 绘制机制图、通路图、技术路线图、图形摘要 / TOC 与神经网络结构图
+- 导出 SVG / PPTX 再编辑
+
+**怎么编译**
+
+用含 XeLaTeX、`latexmk`、中文支持与 Fandol 字体的 TeX Live 编译：
+
+```sh
+make check           # manuscript and example integrity
+make                 # both PDFs
+make en              # English only
+make zh              # Chinese only
+```
+
+仓库已含图版；重新生成示例图：
+
+```sh
+python3 -m venv .venv
+. .venv/bin/activate
+python3 -m pip install -r requirements.txt
+make figures         # regenerates the paired-data example
+make
+```
+
+**价格**：本书开源免费；SciDraw AI 注册送免费积分；付费 $10/月起（年付），月付 $20；支持支付宝。
+
+**相关链接**：[PDF 发布页](https://github.com/TopLocalAI/ai-scientific-figures-book/releases) · [SciDraw AI 中文页](https://sci-draw.com/zh) · [中文教程与示例](https://sci-draw.cn) · [流程向导](https://sci-draw.com/figure-workflow)
 
 ## Contribute, licence and citation
 
